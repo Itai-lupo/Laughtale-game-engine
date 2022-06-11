@@ -1,6 +1,5 @@
 #include "renderer.h"
 #include "mesh.h"
-#include "meshRenderer.h"
 #include "shaderTypes.h"
 #include "LTEError.h"
 #include "app.h"
@@ -17,7 +16,7 @@ namespace LTE
 
     shaderRenderBuffer *renderer::submitShape(mesh *shape, material *shapeMatrial)
     {
-        shaderRenderBuffer *s  = windowManger::getWindow(shape->getWindowId())->assetLibrary->getAsset<shaderRenderBuffer>(shape->getShaderName());
+        shaderRenderBuffer *s  = Scene->assetLibrary->getAsset<shaderRenderBuffer>(shape->getShaderName());
         if(!s)
             return nullptr;
         s->pushShape(shape, shapeMatrial);
@@ -92,10 +91,6 @@ namespace LTE
                     for(const auto& [id, slot]: texturesToUse)
                         if(textures[id])
                             textures[id]->bind(slot);
-                    // indicesToRender = new openGLIndexBuffer(shaderBuffer->getIndecesData(), shaderBuffer->getIndecesCount());
-                    // indicesToRender->init();
-
-                    // indicesToRender->bind();
                     shaderBuffer->bind();
 
                     renderPipLine->DrawIndexed(shaderBuffer->getIndecesCount());

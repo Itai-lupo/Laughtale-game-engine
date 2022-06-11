@@ -72,7 +72,7 @@ class checkmate : public ::testing::Test
 
 
 
-TEST_F(checkmate, DISABLED_testGames)
+TEST_F(checkmate, testGames)
 {
     try
     {    /* code */

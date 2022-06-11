@@ -18,7 +18,6 @@
 #include "orthographicCameraControler.h"
 
 #include "mesh.h"
-#include "meshRenderer.h"
 #include "materialsManger.h"
 #include "material.h"
 

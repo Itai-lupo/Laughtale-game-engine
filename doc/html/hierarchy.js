@@ -28,7 +28,6 @@ var hierarchy =
       [ "LTE::material", "dc/dda/class_l_t_e_1_1material.html", null ],
       [ "LTE::mesh", "d0/d6c/class_l_t_e_1_1mesh.html", null ],
       [ "LTE::meshRenderer", "d2/df6/class_l_t_e_1_1mesh_renderer.html", null ],
-      [ "LTE::meshRenderer", "d2/df6/class_l_t_e_1_1mesh_renderer.html", null ],
       [ "LTE::squreCollider", "dd/d78/class_l_t_e_1_1squre_collider.html", null ],
       [ "LTE::transform", "d6/d08/class_l_t_e_1_1transform.html", null ],
       [ "bird", "da/dee/classbird.html", null ],

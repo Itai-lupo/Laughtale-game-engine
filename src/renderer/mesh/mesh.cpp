@@ -30,7 +30,7 @@ namespace LTE
     void mesh::setShaderName(const std::string& shaderName)
     {
         shaderToUse = shaderName;
-        windowManger::getWindow(winId)->assetLibrary->loadAssetFromFile(shaderName);
+        windowManger::getWindow(winId)->activeScene->assetLibrary->loadAssetFromFile(shaderName);
 
     }
 
@@ -84,7 +84,7 @@ namespace LTE
     void mesh::init(gameObject *parent)
     {
         window *win = windowManger::getWindow(winId);
-        windowManger::getWindow(winId)->assetLibrary->loadAssetFromFile(shaderToUse);
+        windowManger::getWindow(winId)->activeScene->assetLibrary->loadAssetFromFile(shaderToUse);
         win->activeScene->objects->push_back(parent);
     }
 

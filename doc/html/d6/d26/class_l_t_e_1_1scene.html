@@ -98,10 +98,12 @@ Collaboration diagram for LTE::scene:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/d89/class_l_t_e_1_1scene__coll__graph.png" border="0" usemap="#a_l_t_e_1_1scene_coll__map" alt="Collaboration graph"/></div>
 <map name="a_l_t_e_1_1scene_coll__map" id="a_l_t_e_1_1scene_coll__map">
-<area shape="rect" title=" " alt="" coords="76,171,165,197"/>
-<area shape="rect" href="../../d2/d49/class_l_t_e_1_1game_object.html" title=" " alt="" coords="5,81,129,108"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html" title=" " alt="" coords="153,81,253,108"/>
-<area shape="rect" href="../../d9/d4b/class_l_t_e_1_1component.html" title=" " alt="" coords="144,5,263,32"/>
+<area shape="rect" title=" " alt="" coords="283,171,369,197"/>
+<area shape="rect" href="../../df/d41/class_l_t_e_1_1collider_system2_d.html" title=" " alt="" coords="5,81,159,108"/>
+<area shape="rect" href="../../db/d3a/class_l_t_e_1_1asset_manager.html" title=" " alt="" coords="183,81,317,108"/>
+<area shape="rect" href="../../d2/d49/class_l_t_e_1_1game_object.html" title=" " alt="" coords="342,81,465,108"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html" title=" " alt="" coords="489,81,587,108"/>
+<area shape="rect" href="../../d9/d4b/class_l_t_e_1_1component.html" title=" " alt="" coords="480,5,596,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -123,6 +125,10 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:ab41b39ac613dff901107e78419ec8cad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d41/class_l_t_e_1_1collider_system2_d.html">colliderSystem2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d26/class_l_t_e_1_1scene.html#ab41b39ac613dff901107e78419ec8cad">sceneCollider</a></td></tr>
+<tr class="separator:ab41b39ac613dff901107e78419ec8cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa82b5f619926d077e98da48cc56807cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d3a/class_l_t_e_1_1asset_manager.html">assetManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d26/class_l_t_e_1_1scene.html#aa82b5f619926d077e98da48cc56807cb">assetLibrary</a></td></tr>
+<tr class="separator:aa82b5f619926d077e98da48cc56807cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af176ece946088c87257039d35836c0d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d49/class_l_t_e_1_1game_object.html">gameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">camera</a></td></tr>
 <tr class="separator:af176ece946088c87257039d35836c0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fd9ba2008e3dccd00bf9066057ba655"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d2/d49/class_l_t_e_1_1game_object.html">gameObject</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d26/class_l_t_e_1_1scene.html#a0fd9ba2008e3dccd00bf9066057ba655">objects</a></td></tr>
@@ -153,7 +159,14 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   18</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>            {</div>
+<div class="line"><span class="lineno">   21</span>                <a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#ab41b39ac613dff901107e78419ec8cad">sceneCollider</a> = <span class="keyword">new</span> colliderSystem2D();</div>
+<div class="line"><span class="lineno">   22</span>                <a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">backgroundColor</a> = <span class="keyword">new</span> material(glm::vec4({0.05f, 0.05f, 0.05f, 1.0f}));</div>
+<div class="line"><span class="lineno">   23</span>                <a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a0fd9ba2008e3dccd00bf9066057ba655">objects</a> = <span class="keyword">new</span> std::vector&lt;gameObject*&gt;();</div>
+<div class="line"><span class="lineno">   24</span>            }</div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a0fd9ba2008e3dccd00bf9066057ba655"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a0fd9ba2008e3dccd00bf9066057ba655">LTE::scene::objects</a></div><div class="ttdeci">std::vector&lt; gameObject * &gt; * objects</div><div class="ttdef"><b>Definition:</b> scene.h:33</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a175550c54709e4c719913e94b906b148"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">LTE::scene::backgroundColor</a></div><div class="ttdeci">material * backgroundColor</div><div class="ttdef"><b>Definition:</b> scene.h:35</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_ab41b39ac613dff901107e78419ec8cad"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#ab41b39ac613dff901107e78419ec8cad">LTE::scene::sceneCollider</a></div><div class="ttdeci">colliderSystem2D * sceneCollider</div><div class="ttdef"><b>Definition:</b> scene.h:28</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -179,7 +192,7 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   19</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -206,11 +219,11 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   50</span>            {</div>
-<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">camera</a>-&gt;<a class="code hl_function" href="../../d2/d49/class_l_t_e_1_1game_object.html#af885dbd7e72e830ae61ab37b6d52b8b6">getComponent</a>&lt;coreCameraControler&gt;()-&gt;getAspectRatio();</div>
-<div class="line"><span class="lineno">   52</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>            {</div>
+<div class="line"><span class="lineno">   63</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">camera</a>-&gt;<a class="code hl_function" href="../../d2/d49/class_l_t_e_1_1game_object.html#af885dbd7e72e830ae61ab37b6d52b8b6">getComponent</a>&lt;coreCameraControler&gt;()-&gt;getAspectRatio();</div>
+<div class="line"><span class="lineno">   64</span>            }</div>
 <div class="ttc" id="aclass_l_t_e_1_1game_object_html_af885dbd7e72e830ae61ab37b6d52b8b6"><div class="ttname"><a href="../../d2/d49/class_l_t_e_1_1game_object.html#af885dbd7e72e830ae61ab37b6d52b8b6">LTE::gameObject::getComponent</a></div><div class="ttdeci">T * getComponent()</div><div class="ttdef"><b>Definition:</b> entity.h:87</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_af176ece946088c87257039d35836c0d6"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">LTE::scene::camera</a></div><div class="ttdeci">gameObject * camera</div><div class="ttdef"><b>Definition:</b> scene.h:21</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_af176ece946088c87257039d35836c0d6"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">LTE::scene::camera</a></div><div class="ttdeci">gameObject * camera</div><div class="ttdef"><b>Definition:</b> scene.h:32</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -246,16 +259,15 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   28</span>            {</div>
-<div class="line"><span class="lineno">   29</span>                std::vector&lt;gameObject*&gt; objectWithName;</div>
-<div class="line"><span class="lineno">   30</span>                <span class="keywordflow">for</span>(gameObject *obj: *<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a0fd9ba2008e3dccd00bf9066057ba655">objects</a>)</div>
-<div class="line"><span class="lineno">   31</span>                {</div>
-<div class="line"><span class="lineno">   32</span>                    <span class="keywordflow">if</span>(obj-&gt;getName() == objectName)</div>
-<div class="line"><span class="lineno">   33</span>                        objectWithName.push_back((obj));</div>
-<div class="line"><span class="lineno">   34</span>                }</div>
-<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">return</span> objectWithName;</div>
-<div class="line"><span class="lineno">   36</span>            }</div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_a0fd9ba2008e3dccd00bf9066057ba655"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a0fd9ba2008e3dccd00bf9066057ba655">LTE::scene::objects</a></div><div class="ttdeci">std::vector&lt; gameObject * &gt; * objects</div><div class="ttdef"><b>Definition:</b> scene.h:22</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>            {</div>
+<div class="line"><span class="lineno">   41</span>                std::vector&lt;gameObject*&gt; objectWithName;</div>
+<div class="line"><span class="lineno">   42</span>                <span class="keywordflow">for</span>(gameObject *obj: *<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a0fd9ba2008e3dccd00bf9066057ba655">objects</a>)</div>
+<div class="line"><span class="lineno">   43</span>                {</div>
+<div class="line"><span class="lineno">   44</span>                    <span class="keywordflow">if</span>(obj-&gt;getName() == objectName)</div>
+<div class="line"><span class="lineno">   45</span>                        objectWithName.push_back((obj));</div>
+<div class="line"><span class="lineno">   46</span>                }</div>
+<div class="line"><span class="lineno">   47</span>                <span class="keywordflow">return</span> objectWithName;</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -284,15 +296,15 @@ template&lt;typename objectType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   39</span>            {</div>
-<div class="line"><span class="lineno">   40</span>                std::vector&lt;objectType&gt; objectWithName;</div>
-<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">for</span>(gameObject *obj: *<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a0fd9ba2008e3dccd00bf9066057ba655">objects</a>)</div>
-<div class="line"><span class="lineno">   42</span>                {</div>
-<div class="line"><span class="lineno">   43</span>                    <span class="keywordflow">if</span>(obj-&gt;getName() == objectName)</div>
-<div class="line"><span class="lineno">   44</span>                        objectWithName.push_back(<span class="keyword">static_cast&lt;</span>objectType<span class="keyword">&gt;</span>(obj));</div>
-<div class="line"><span class="lineno">   45</span>                }</div>
-<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">return</span> objectWithName;</div>
-<div class="line"><span class="lineno">   47</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>            {</div>
+<div class="line"><span class="lineno">   52</span>                std::vector&lt;objectType&gt; objectWithName;</div>
+<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">for</span>(gameObject *obj: *<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a0fd9ba2008e3dccd00bf9066057ba655">objects</a>)</div>
+<div class="line"><span class="lineno">   54</span>                {</div>
+<div class="line"><span class="lineno">   55</span>                    <span class="keywordflow">if</span>(obj-&gt;getName() == objectName &amp;&amp; <span class="keyword">static_cast&lt;</span>objectType<span class="keyword">&gt;</span>(obj))</div>
+<div class="line"><span class="lineno">   56</span>                        objectWithName.push_back(<span class="keyword">static_cast&lt;</span>objectType<span class="keyword">&gt;</span>(obj));</div>
+<div class="line"><span class="lineno">   57</span>                }</div>
+<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">return</span> objectWithName;</div>
+<div class="line"><span class="lineno">   59</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -331,6 +343,20 @@ template&lt;typename objectType &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa82b5f619926d077e98da48cc56807cb" name="aa82b5f619926d077e98da48cc56807cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa82b5f619926d077e98da48cc56807cb">&#9670;&nbsp;</a></span>assetLibrary</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d3a/class_l_t_e_1_1asset_manager.html">assetManager</a>* LTE::scene::assetLibrary</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a175550c54709e4c719913e94b906b148" name="a175550c54709e4c719913e94b906b148"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a175550c54709e4c719913e94b906b148">&#9670;&nbsp;</a></span>backgroundColor</h2>
 
@@ -367,6 +393,20 @@ template&lt;typename objectType &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;<a class="el" href="../../d2/d49/class_l_t_e_1_1game_object.html">gameObject</a>*&gt;* LTE::scene::objects</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab41b39ac613dff901107e78419ec8cad" name="ab41b39ac613dff901107e78419ec8cad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab41b39ac613dff901107e78419ec8cad">&#9670;&nbsp;</a></span>sceneCollider</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d41/class_l_t_e_1_1collider_system2_d.html">colliderSystem2D</a>* LTE::scene::sceneCollider</td>
         </tr>
       </table>
 </div><div class="memdoc">

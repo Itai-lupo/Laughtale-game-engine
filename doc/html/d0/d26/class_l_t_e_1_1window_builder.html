@@ -129,40 +129,34 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   20</span>        product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#a8e5dcaa5ea3a4910dbe6b17e1f03e44e">id</a> = <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a01ae35f37a9fb2f41dd19205e324ad90">app::getOSAbstractFactory</a>()-&gt;<a class="code hl_function" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a8374027cae5d825ab50e31d39ec2e779">createWindow</a>(product);</div>
 <div class="line"><span class="lineno">   21</span> </div>
 <div class="line"><span class="lineno">   22</span>        product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#a0509800988efeae03289808049a1c20d">context</a> = <span class="keyword">new</span> openGLContext(product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#a8e5dcaa5ea3a4910dbe6b17e1f03e44e">id</a>);</div>
-<div class="line"><span class="lineno">   23</span>        product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#aa0e4161cfa4c9c518bfa14328dd8a3d0">sceneCollider</a> = <span class="keyword">new</span> colliderSystem2D();</div>
-<div class="line"><span class="lineno">   24</span> </div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span>(!product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a>)</div>
-<div class="line"><span class="lineno">   26</span>        {</div>
-<div class="line"><span class="lineno">   27</span>            product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a> = <span class="keyword">new</span> scene();</div>
-<div class="line"><span class="lineno">   28</span>            product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#aef1907f05e0951d1e1e2d62a1a8a4529">assetLibrary</a> = <span class="keyword">new</span> assetManager(product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#a8e5dcaa5ea3a4910dbe6b17e1f03e44e">id</a>);</div>
-<div class="line"><span class="lineno">   29</span> </div>
-<div class="line"><span class="lineno">   30</span>            product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a>-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">backgroundColor</a> = <span class="keyword">new</span> material(glm::vec4({0.05f, 0.05f, 0.05f, 1.0f}));</div>
-<div class="line"><span class="lineno">   31</span>            <a class="code hl_typedef" href="../../dc/d59/namespace_l_t_e.html#a9a053246fe6d76fb97a3d9e95c94dbda">entityTaleId</a> camId = <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#acf283b437dde2e9300639fa4ee0e55dc">entityManger::addEntity</a>([=, <span class="keyword">this</span>](gameObject::gameObjectBuilder *builder){</div>
-<div class="line"><span class="lineno">   32</span>                builder-&gt;setObjectName(<span class="stringliteral">&quot;default camera&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">   33</span>                    setWindowId(product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#a8e5dcaa5ea3a4910dbe6b17e1f03e44e">id</a>)-&gt;</div>
-<div class="line"><span class="lineno">   34</span>                    setObjectTransform(glm::mat4(0.0f))-&gt;</div>
-<div class="line"><span class="lineno">   35</span>                    addComponent(<span class="keyword">new</span> orthographicCameraControler((<span class="keywordtype">float</span>)product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#ab2c769a3a5445d32d09186ed7816e337">Width</a>/(<span class="keywordtype">float</span>)product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#aa769f85656ebde3a1234aa9091d194b0">Height</a>));</div>
-<div class="line"><span class="lineno">   36</span>            });</div>
-<div class="line"><span class="lineno">   37</span>            product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a>-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">camera</a> = <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">entityManger::getEntityById</a>(camId);</div>
-<div class="line"><span class="lineno">   38</span>            product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a>-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a0fd9ba2008e3dccd00bf9066057ba655">objects</a> = <span class="keyword">new</span> std::vector&lt;gameObject*&gt;();</div>
-<div class="line"><span class="lineno">   39</span>        }</div>
-<div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">return</span> product;</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span>(!product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a>){</div>
+<div class="line"><span class="lineno">   25</span>            product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a> = <span class="keyword">new</span> scene();</div>
+<div class="line"><span class="lineno">   26</span>            product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a>-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#aa82b5f619926d077e98da48cc56807cb">assetLibrary</a> = <span class="keyword">new</span> assetManager(product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#a8e5dcaa5ea3a4910dbe6b17e1f03e44e">id</a>);</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="line"><span class="lineno">   28</span>        </div>
+<div class="line"><span class="lineno">   29</span>        <a class="code hl_typedef" href="../../dc/d59/namespace_l_t_e.html#a9a053246fe6d76fb97a3d9e95c94dbda">entityTaleId</a> camId = <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#acf283b437dde2e9300639fa4ee0e55dc">entityManger::addEntity</a>([=, <span class="keyword">this</span>](gameObject::gameObjectBuilder *builder){</div>
+<div class="line"><span class="lineno">   30</span>            builder-&gt;setObjectName(<span class="stringliteral">&quot;default camera&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">   31</span>                setWindowId(product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#a8e5dcaa5ea3a4910dbe6b17e1f03e44e">id</a>)-&gt;</div>
+<div class="line"><span class="lineno">   32</span>                setObjectTransform(glm::mat4(0.0f))-&gt;</div>
+<div class="line"><span class="lineno">   33</span>                addComponent(<span class="keyword">new</span> orthographicCameraControler((<span class="keywordtype">float</span>)product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#ab2c769a3a5445d32d09186ed7816e337">Width</a>/(<span class="keywordtype">float</span>)product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#aa769f85656ebde3a1234aa9091d194b0">Height</a>));</div>
+<div class="line"><span class="lineno">   34</span>        });</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>        product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a>-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">camera</a> = <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">entityManger::getEntityById</a>(camId);</div>
+<div class="line"><span class="lineno">   37</span>        </div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> product;</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1_o_s_abstract_factory_html_a8374027cae5d825ab50e31d39ec2e779"><div class="ttname"><a href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a8374027cae5d825ab50e31d39ec2e779">LTE::OSAbstractFactory::createWindow</a></div><div class="ttdeci">virtual windowPieceId createWindow(window *windowToCreate)=0</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1app_html_a01ae35f37a9fb2f41dd19205e324ad90"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#a01ae35f37a9fb2f41dd19205e324ad90">LTE::app::getOSAbstractFactory</a></div><div class="ttdeci">static OSAbstractFactory * getOSAbstractFactory()</div><div class="ttdef"><b>Definition:</b> app.h:22</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1entity_manger_html_acf283b437dde2e9300639fa4ee0e55dc"><div class="ttname"><a href="../../de/d44/class_l_t_e_1_1entity_manger.html#acf283b437dde2e9300639fa4ee0e55dc">LTE::entityManger::addEntity</a></div><div class="ttdeci">static entityTaleId addEntity(std::function&lt; void(gameObject::gameObjectBuilder *Builder)&gt; buildGameObject)</div><div class="ttdef"><b>Definition:</b> entity.cpp:24</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1entity_manger_html_ad019a4750f1350c7185cefe6072dcd6e"><div class="ttname"><a href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">LTE::entityManger::getEntityById</a></div><div class="ttdeci">static gameObject * getEntityById(entityTaleId id)</div><div class="ttdef"><b>Definition:</b> entity.cpp:48</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_a0fd9ba2008e3dccd00bf9066057ba655"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a0fd9ba2008e3dccd00bf9066057ba655">LTE::scene::objects</a></div><div class="ttdeci">std::vector&lt; gameObject * &gt; * objects</div><div class="ttdef"><b>Definition:</b> scene.h:22</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_a175550c54709e4c719913e94b906b148"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">LTE::scene::backgroundColor</a></div><div class="ttdeci">material * backgroundColor</div><div class="ttdef"><b>Definition:</b> scene.h:23</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_af176ece946088c87257039d35836c0d6"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">LTE::scene::camera</a></div><div class="ttdeci">gameObject * camera</div><div class="ttdef"><b>Definition:</b> scene.h:21</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1window_html_a0509800988efeae03289808049a1c20d"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#a0509800988efeae03289808049a1c20d">LTE::window::context</a></div><div class="ttdeci">graphicsContext * context</div><div class="ttdef"><b>Definition:</b> window.h:26</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1window_html_a8e5dcaa5ea3a4910dbe6b17e1f03e44e"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#a8e5dcaa5ea3a4910dbe6b17e1f03e44e">LTE::window::id</a></div><div class="ttdeci">windowPieceId id</div><div class="ttdef"><b>Definition:</b> window.h:35</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1window_html_aa0e4161cfa4c9c518bfa14328dd8a3d0"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#aa0e4161cfa4c9c518bfa14328dd8a3d0">LTE::window::sceneCollider</a></div><div class="ttdeci">colliderSystem2D * sceneCollider</div><div class="ttdef"><b>Definition:</b> window.h:28</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1window_html_aa769f85656ebde3a1234aa9091d194b0"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#aa769f85656ebde3a1234aa9091d194b0">LTE::window::Height</a></div><div class="ttdeci">unsigned int Height</div><div class="ttdef"><b>Definition:</b> window.h:33</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1window_html_ab2c769a3a5445d32d09186ed7816e337"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#ab2c769a3a5445d32d09186ed7816e337">LTE::window::Width</a></div><div class="ttdeci">unsigned int Width</div><div class="ttdef"><b>Definition:</b> window.h:33</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1window_html_acba19ea1d8f513ba9b320cefffd4af82"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">LTE::window::activeScene</a></div><div class="ttdeci">scene * activeScene</div><div class="ttdef"><b>Definition:</b> window.h:27</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1window_html_aef1907f05e0951d1e1e2d62a1a8a4529"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#aef1907f05e0951d1e1e2d62a1a8a4529">LTE::window::assetLibrary</a></div><div class="ttdeci">assetManager * assetLibrary</div><div class="ttdef"><b>Definition:</b> window.h:30</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_aa82b5f619926d077e98da48cc56807cb"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#aa82b5f619926d077e98da48cc56807cb">LTE::scene::assetLibrary</a></div><div class="ttdeci">assetManager * assetLibrary</div><div class="ttdef"><b>Definition:</b> scene.h:30</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_af176ece946088c87257039d35836c0d6"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">LTE::scene::camera</a></div><div class="ttdeci">gameObject * camera</div><div class="ttdef"><b>Definition:</b> scene.h:32</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1window_html_a0509800988efeae03289808049a1c20d"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#a0509800988efeae03289808049a1c20d">LTE::window::context</a></div><div class="ttdeci">graphicsContext * context</div><div class="ttdef"><b>Definition:</b> window.h:30</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1window_html_a8e5dcaa5ea3a4910dbe6b17e1f03e44e"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#a8e5dcaa5ea3a4910dbe6b17e1f03e44e">LTE::window::id</a></div><div class="ttdeci">windowPieceId id</div><div class="ttdef"><b>Definition:</b> window.h:28</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1window_html_aa769f85656ebde3a1234aa9091d194b0"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#aa769f85656ebde3a1234aa9091d194b0">LTE::window::Height</a></div><div class="ttdeci">unsigned int Height</div><div class="ttdef"><b>Definition:</b> window.h:26</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1window_html_ab2c769a3a5445d32d09186ed7816e337"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#ab2c769a3a5445d32d09186ed7816e337">LTE::window::Width</a></div><div class="ttdeci">unsigned int Width</div><div class="ttdef"><b>Definition:</b> window.h:26</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1window_html_acba19ea1d8f513ba9b320cefffd4af82"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">LTE::window::activeScene</a></div><div class="ttdeci">scene * activeScene</div><div class="ttdef"><b>Definition:</b> window.h:31</div></div>
 <div class="ttc" id="anamespace_l_t_e_html_a9a053246fe6d76fb97a3d9e95c94dbda"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a9a053246fe6d76fb97a3d9e95c94dbda">LTE::entityTaleId</a></div><div class="ttdeci">uint32_t entityTaleId</div><div class="ttdef"><b>Definition:</b> core.h:7</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -238,10 +232,10 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
-<div class="line"><span class="lineno">   70</span>        product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a> = activeScene;</div>
-<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
+<div class="line"><span class="lineno">   67</span>        product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a> = activeScene;</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -260,10 +254,10 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
-<div class="line"><span class="lineno">   58</span>        product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#aa769f85656ebde3a1234aa9091d194b0">Height</a> = height;</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#aa769f85656ebde3a1234aa9091d194b0">Height</a> = height;</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -282,11 +276,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   45</span>    {</div>
-<div class="line"><span class="lineno">   46</span>        product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acc46de1166ccb81e71f682f6e2761077">Title</a> = title;</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1window_html_acc46de1166ccb81e71f682f6e2761077"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#acc46de1166ccb81e71f682f6e2761077">LTE::window::Title</a></div><div class="ttdeci">std::string Title</div><div class="ttdef"><b>Definition:</b> window.h:32</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>        product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acc46de1166ccb81e71f682f6e2761077">Title</a> = title;</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="ttc" id="aclass_l_t_e_1_1window_html_acc46de1166ccb81e71f682f6e2761077"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#acc46de1166ccb81e71f682f6e2761077">LTE::window::Title</a></div><div class="ttdeci">std::string Title</div><div class="ttdef"><b>Definition:</b> window.h:25</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -305,10 +299,10 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
-<div class="line"><span class="lineno">   52</span>        product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#ab2c769a3a5445d32d09186ed7816e337">Width</a> = width;</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#ab2c769a3a5445d32d09186ed7816e337">Width</a> = width;</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -326,11 +320,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
-<div class="line"><span class="lineno">   64</span>        product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#adcfc6c1eaa45e93b9fb5017513eea1b0">useImGui</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1window_html_adcfc6c1eaa45e93b9fb5017513eea1b0"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#adcfc6c1eaa45e93b9fb5017513eea1b0">LTE::window::useImGui</a></div><div class="ttdeci">bool useImGui</div><div class="ttdef"><b>Definition:</b> window.h:34</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>    {</div>
+<div class="line"><span class="lineno">   61</span>        product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#adcfc6c1eaa45e93b9fb5017513eea1b0">useImGui</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+<div class="ttc" id="aclass_l_t_e_1_1window_html_adcfc6c1eaa45e93b9fb5017513eea1b0"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#adcfc6c1eaa45e93b9fb5017513eea1b0">LTE::window::useImGui</a></div><div class="ttdeci">bool useImGui</div><div class="ttdef"><b>Definition:</b> window.h:27</div></div>
 </div><!-- fragment -->
 </div>
 </div>

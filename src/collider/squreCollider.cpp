@@ -28,12 +28,12 @@ namespace LTE
     void squreCollider::init(gameObject *parent)
     {
         eventManger::addCoustemEventsRoute("collider/" + parent->getName() + "/");
-        windowManger::getWindow(winId)->sceneCollider->addSqureCollider(parent);
+        windowManger::getWindow(winId)->activeScene->sceneCollider->addSqureCollider(parent);
     }
 
     void squreCollider::end()
     {
-        windowManger::getWindow(winId)->sceneCollider->removeSqureCollider(parentId);
+        windowManger::getWindow(winId)->activeScene->sceneCollider->removeSqureCollider(parentId);
     }  
 
 

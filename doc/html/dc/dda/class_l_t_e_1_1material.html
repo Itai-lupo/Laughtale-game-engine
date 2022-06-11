@@ -694,21 +694,22 @@ Here is the caller graph for this function:</div>
 <p>Implements <a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html#a3e5d2369a819e87417e96290a73d2cd1">LTE::component</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
 <div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span>(texturePath != <span class="stringliteral">&quot;&quot;</span>){</div>
-<div class="line"><span class="lineno">   41</span>            tex = <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#aef1907f05e0951d1e1e2d62a1a8a4529">assetLibrary</a>-&gt;<a class="code hl_function" href="../../db/d3a/class_l_t_e_1_1asset_manager.html#a262ee7a127fcdce48003387a9dc8e933">getAsset</a>&lt;texture&gt;(texturePath);</div>
+<div class="line"><span class="lineno">   41</span>            tex = <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a>-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#aa82b5f619926d077e98da48cc56807cb">assetLibrary</a>-&gt;<a class="code hl_function" href="../../db/d3a/class_l_t_e_1_1asset_manager.html#a262ee7a127fcdce48003387a9dc8e933">getAsset</a>&lt;texture&gt;(texturePath);</div>
 <div class="line"><span class="lineno">   42</span>        }</div>
 <div class="line"><span class="lineno">   43</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1asset_manager_html_a262ee7a127fcdce48003387a9dc8e933"><div class="ttname"><a href="../../db/d3a/class_l_t_e_1_1asset_manager.html#a262ee7a127fcdce48003387a9dc8e933">LTE::assetManager::getAsset</a></div><div class="ttdeci">T * getAsset(const std::string &amp;filePath)</div><div class="ttdef"><b>Definition:</b> assetManager.h:25</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1component_html_ac469754e014b2f010a5a0a93facce4ff"><div class="ttname"><a href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">LTE::component::winId</a></div><div class="ttdeci">windowPieceId winId</div><div class="ttdef"><b>Definition:</b> component.h:12</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1window_html_aef1907f05e0951d1e1e2d62a1a8a4529"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#aef1907f05e0951d1e1e2d62a1a8a4529">LTE::window::assetLibrary</a></div><div class="ttdeci">assetManager * assetLibrary</div><div class="ttdef"><b>Definition:</b> window.h:30</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_aa82b5f619926d077e98da48cc56807cb"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#aa82b5f619926d077e98da48cc56807cb">LTE::scene::assetLibrary</a></div><div class="ttdeci">assetManager * assetLibrary</div><div class="ttdef"><b>Definition:</b> scene.h:30</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1window_html_acba19ea1d8f513ba9b320cefffd4af82"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">LTE::window::activeScene</a></div><div class="ttdeci">scene * activeScene</div><div class="ttdef"><b>Definition:</b> window.h:31</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1window_manger_html_aeb94c72d9ef01e6ec53328e2ba972628"><div class="ttname"><a href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">LTE::windowManger::getWindow</a></div><div class="ttdeci">static window * getWindow(windowPieceId windowId)</div><div class="ttdef"><b>Definition:</b> windowManger.cpp:53</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/dda/class_l_t_e_1_1material_ac5da84448c29b2b2aeab11dc8f08caae_cgraph.png" border="0" usemap="#adc/dda/class_l_t_e_1_1material_ac5da84448c29b2b2aeab11dc8f08caae_cgraph" alt=""/></div>
 <map name="adc/dda/class_l_t_e_1_1material_ac5da84448c29b2b2aeab11dc8f08caae_cgraph" id="adc/dda/class_l_t_e_1_1material_ac5da84448c29b2b2aeab11dc8f08caae_cgraph">
-<area shape="rect" title=" " alt="" coords="5,70,131,97"/>
-<area shape="rect" href="../../db/d3a/class_l_t_e_1_1asset_manager.html#a262ee7a127fcdce48003387a9dc8e933" title=" " alt="" coords="181,29,325,71"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628" title=" " alt="" coords="179,95,328,136"/>
+<area shape="rect" title=" " alt="" coords="5,70,127,97"/>
+<area shape="rect" href="../../db/d3a/class_l_t_e_1_1asset_manager.html#a262ee7a127fcdce48003387a9dc8e933" title=" " alt="" coords="177,29,317,71"/>
+<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628" title=" " alt="" coords="175,95,320,136"/>
 </map>
 </div>
 
@@ -752,16 +753,16 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
 <div class="line"><span class="lineno">   72</span>        texturePath = path;</div>
-<div class="line"><span class="lineno">   73</span>        this-&gt;tex = <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#aef1907f05e0951d1e1e2d62a1a8a4529">assetLibrary</a>-&gt;<a class="code hl_function" href="../../db/d3a/class_l_t_e_1_1asset_manager.html#a262ee7a127fcdce48003387a9dc8e933">getAsset</a>&lt;texture&gt;(path);</div>
+<div class="line"><span class="lineno">   73</span>        this-&gt;tex = <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628">windowManger::getWindow</a>(<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#ac469754e014b2f010a5a0a93facce4ff">winId</a>)-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a>-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#aa82b5f619926d077e98da48cc56807cb">assetLibrary</a>-&gt;<a class="code hl_function" href="../../db/d3a/class_l_t_e_1_1asset_manager.html#a262ee7a127fcdce48003387a9dc8e933">getAsset</a>&lt;texture&gt;(path);</div>
 <div class="line"><span class="lineno">   74</span>    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/dda/class_l_t_e_1_1material_ac866b5d9a068d1330232f572ea971040_cgraph.png" border="0" usemap="#adc/dda/class_l_t_e_1_1material_ac866b5d9a068d1330232f572ea971040_cgraph" alt=""/></div>
 <map name="adc/dda/class_l_t_e_1_1material_ac866b5d9a068d1330232f572ea971040_cgraph" id="adc/dda/class_l_t_e_1_1material_ac866b5d9a068d1330232f572ea971040_cgraph">
-<area shape="rect" title=" " alt="" coords="5,70,175,97"/>
-<area shape="rect" href="../../db/d3a/class_l_t_e_1_1asset_manager.html#a262ee7a127fcdce48003387a9dc8e933" title=" " alt="" coords="225,29,369,71"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628" title=" " alt="" coords="223,95,372,136"/>
+<area shape="rect" title=" " alt="" coords="5,70,171,97"/>
+<area shape="rect" href="../../db/d3a/class_l_t_e_1_1asset_manager.html#a262ee7a127fcdce48003387a9dc8e933" title=" " alt="" coords="221,29,361,71"/>
+<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#aeb94c72d9ef01e6ec53328e2ba972628" title=" " alt="" coords="219,95,364,136"/>
 </map>
 </div>
 

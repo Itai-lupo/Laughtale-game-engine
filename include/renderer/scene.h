@@ -8,6 +8,7 @@
 #include "material.h"
 
 #include "colliderSystem2D.h"
+#include "assetManager.h"
 
 
 namespace LTE
@@ -15,11 +16,22 @@ namespace LTE
     class scene
     {
         public:
-            scene(){}
+            scene()
+            {
+                sceneCollider = new colliderSystem2D();
+                backgroundColor = new material(glm::vec4({0.05f, 0.05f, 0.05f, 1.0f}));
+                objects = new std::vector<gameObject*>();
+            }
+
             ~scene(){}
+            
+            colliderSystem2D *sceneCollider;
+
+			assetManager *assetLibrary;
 
             gameObject *camera;
             std::vector<gameObject*> *objects;
+            
             material *backgroundColor;
 
             void removeById(entityTaleId id);
@@ -40,7 +52,7 @@ namespace LTE
                 std::vector<objectType> objectWithName;
                 for(gameObject *obj: *objects)
                 {
-                    if(obj->getName() == objectName)
+                    if(obj->getName() == objectName && static_cast<objectType>(obj))
                         objectWithName.push_back(static_cast<objectType>(obj));
                 }
                 return objectWithName;

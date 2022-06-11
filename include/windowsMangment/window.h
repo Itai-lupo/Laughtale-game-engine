@@ -8,7 +8,6 @@
 #include "graphicsContext.h"
 #include "scene.h"
 #include "renderApi.h"
-#include "assetManager.h"
 
 #include "events.h"
 #include "entity.h"
@@ -23,16 +22,15 @@ namespace LTE
 			static void onWindowResize(gameObject *eventEntity, coreEventData *sendor);
 
 		public:
-			graphicsContext *context; 
-			scene *activeScene;
-            colliderSystem2D *sceneCollider;
-			coreInput *inputManger;
-			assetManager *assetLibrary;
-			
 			std::string Title = "laughtale new window";
 			unsigned int Width = 1280, Height = 720;
 			bool useImGui = false;
 			windowPieceId id;
+
+			graphicsContext *context; 
+			scene *activeScene;
+			coreInput *inputManger;
+			
 
 
 			void init();

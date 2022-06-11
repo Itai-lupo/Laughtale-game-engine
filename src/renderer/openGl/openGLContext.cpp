@@ -31,7 +31,7 @@ namespace LTE
     void openGLContext::run()
     {
 
-        std::string thradName = "GL  " + std::to_string(windowId);
+        std::string thradName = "GL  " + windowManger::getWindow(windowId)->Title;
         prctl(PR_SET_NAME, thradName.c_str(), 0, 0, 0);
 
         app::getOsAPI()->makeContextCurrent(windowId);
@@ -74,7 +74,10 @@ namespace LTE
 
             eventManger::trigerEvent(sendorData);
 
-    		sendorData->win->sceneCollider->checkCollision();
+
+    		sendorData->win->activeScene->sceneCollider->checkCollision();
+
+
         }   
     }
 

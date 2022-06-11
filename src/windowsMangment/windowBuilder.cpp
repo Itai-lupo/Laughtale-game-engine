@@ -20,24 +20,21 @@ namespace LTE
         product->id = app::getOSAbstractFactory()->createWindow(product);
 
         product->context = new openGLContext(product->id);
-        product->sceneCollider = new colliderSystem2D();
 
-        if(!product->activeScene)
-        {
+        if(!product->activeScene){
             product->activeScene = new scene();
-    		product->assetLibrary = new assetManager(product->id);
-
-            product->activeScene->backgroundColor = new material(glm::vec4({0.05f, 0.05f, 0.05f, 1.0f}));
-            entityTaleId camId = entityManger::addEntity([=, this](gameObject::gameObjectBuilder *builder){
-                builder->setObjectName("default camera")->
-                    setWindowId(product->id)->
-                    setObjectTransform(glm::mat4(0.0f))->
-                    addComponent(new orthographicCameraControler((float)product->Width/(float)product->Height));
-            });
-            product->activeScene->camera = entityManger::getEntityById(camId);
-            product->activeScene->objects = new std::vector<gameObject*>();
+            product->activeScene->assetLibrary = new assetManager(product->id);
         }
+        
+        entityTaleId camId = entityManger::addEntity([=, this](gameObject::gameObjectBuilder *builder){
+            builder->setObjectName("default camera")->
+                setWindowId(product->id)->
+                setObjectTransform(glm::mat4(0.0f))->
+                addComponent(new orthographicCameraControler((float)product->Width/(float)product->Height));
+        });
 
+        product->activeScene->camera = entityManger::getEntityById(camId);
+        
         return product;
     }
 
