@@ -21,17 +21,20 @@ var namespace_l_t_e =
     [ "event", "da/df9/struct_l_t_e_1_1event.html", "da/df9/struct_l_t_e_1_1event" ],
     [ "eventManger", "d5/d7c/class_l_t_e_1_1event_manger.html", null ],
     [ "file", "df/d84/class_l_t_e_1_1file.html", "df/d84/class_l_t_e_1_1file" ],
+    [ "fileFactory", "d0/dac/class_l_t_e_1_1file_factory.html", "d0/dac/class_l_t_e_1_1file_factory" ],
     [ "fileManager", "df/dfd/class_l_t_e_1_1file_manager.html", null ],
     [ "filesFactory", "d5/d69/class_l_t_e_1_1files_factory.html", null ],
     [ "gameObject", "d2/d49/class_l_t_e_1_1game_object.html", "d2/d49/class_l_t_e_1_1game_object" ],
     [ "GameObjectNotFoundException", "d9/d22/class_l_t_e_1_1_game_object_not_found_exception.html", "d9/d22/class_l_t_e_1_1_game_object_not_found_exception" ],
     [ "glslFile", "d4/d18/class_l_t_e_1_1glsl_file.html", "d4/d18/class_l_t_e_1_1glsl_file" ],
+    [ "glslFileFactory", "db/dce/class_l_t_e_1_1glsl_file_factory.html", "db/dce/class_l_t_e_1_1glsl_file_factory" ],
     [ "graphicsContext", "d7/d20/class_l_t_e_1_1graphics_context.html", "d7/d20/class_l_t_e_1_1graphics_context" ],
     [ "guitar", "d4/d0d/class_l_t_e_1_1guitar.html", "d4/d0d/class_l_t_e_1_1guitar" ],
     [ "guitarString", "d4/d73/class_l_t_e_1_1guitar_string.html", "d4/d73/class_l_t_e_1_1guitar_string" ],
     [ "harmonica", "d4/d06/class_l_t_e_1_1harmonica.html", "d4/d06/class_l_t_e_1_1harmonica" ],
     [ "indexBuffer", "d6/d2f/class_l_t_e_1_1index_buffer.html", "d6/d2f/class_l_t_e_1_1index_buffer" ],
     [ "jpgFile", "d8/da1/class_l_t_e_1_1jpg_file.html", "d8/da1/class_l_t_e_1_1jpg_file" ],
+    [ "jpgFileFactory", "d2/d22/class_l_t_e_1_1jpg_file_factory.html", "d2/d22/class_l_t_e_1_1jpg_file_factory" ],
     [ "KeyData", "d2/df7/struct_l_t_e_1_1_key_data.html", "d2/df7/struct_l_t_e_1_1_key_data" ],
     [ "keyTypedData", "df/d3b/struct_l_t_e_1_1key_typed_data.html", "df/d3b/struct_l_t_e_1_1key_typed_data" ],
     [ "linuxAbstractFactory", "d6/df8/class_l_t_e_1_1linux_abstract_factory.html", "d6/df8/class_l_t_e_1_1linux_abstract_factory" ],
@@ -51,6 +54,7 @@ var namespace_l_t_e =
     [ "mouseMoveData", "d6/da3/struct_l_t_e_1_1mouse_move_data.html", "d6/da3/struct_l_t_e_1_1mouse_move_data" ],
     [ "mouseScrollData", "d5/d4d/struct_l_t_e_1_1mouse_scroll_data.html", "d5/d4d/struct_l_t_e_1_1mouse_scroll_data" ],
     [ "mp3File", "dd/da0/class_l_t_e_1_1mp3_file.html", "dd/da0/class_l_t_e_1_1mp3_file" ],
+    [ "mp3FileFactory", "dd/dcb/class_l_t_e_1_1mp3_file_factory.html", "dd/dcb/class_l_t_e_1_1mp3_file_factory" ],
     [ "note", "dd/dab/struct_l_t_e_1_1note.html", "dd/dab/struct_l_t_e_1_1note" ],
     [ "onUpdateData", "dd/d5d/struct_l_t_e_1_1on_update_data.html", "dd/d5d/struct_l_t_e_1_1on_update_data" ],
     [ "openGLAbsrtactFactory", "d3/d7a/class_l_t_e_1_1open_g_l_absrtact_factory.html", "d3/d7a/class_l_t_e_1_1open_g_l_absrtact_factory" ],
@@ -69,6 +73,7 @@ var namespace_l_t_e =
     [ "osc", "d6/dd7/class_l_t_e_1_1osc.html", null ],
     [ "PCMDeviceNotFoundException", "d3/d71/class_l_t_e_1_1_p_c_m_device_not_found_exception.html", "d3/d71/class_l_t_e_1_1_p_c_m_device_not_found_exception" ],
     [ "pngFile", "df/ddd/class_l_t_e_1_1png_file.html", "df/ddd/class_l_t_e_1_1png_file" ],
+    [ "pngFileFactory", "d2/d98/class_l_t_e_1_1png_file_factory.html", "d2/d98/class_l_t_e_1_1png_file_factory" ],
     [ "renderApi", "df/d3a/class_l_t_e_1_1render_api.html", "df/d3a/class_l_t_e_1_1render_api" ],
     [ "renderer", "d1/d10/class_l_t_e_1_1renderer.html", "d1/d10/class_l_t_e_1_1renderer" ],
     [ "router", "d7/d22/class_l_t_e_1_1router.html", "d7/d22/class_l_t_e_1_1router" ],
@@ -114,12 +119,6 @@ var namespace_l_t_e =
     [ "chords", "dc/d59/namespace_l_t_e.html#acda0aaed89ef27ddb8cace851349e007", [
       [ "openChord", "dc/d59/namespace_l_t_e.html#acda0aaed89ef27ddb8cace851349e007af67ab1a6a64004d74ef7874d68ca0376", null ]
     ] ],
-    [ "fileTypes", "dc/d59/namespace_l_t_e.html#a813c90e8423bdad4463eea7bd3ee89c7", [
-      [ "mp3", "dc/d59/namespace_l_t_e.html#a813c90e8423bdad4463eea7bd3ee89c7ab097c51e9a0728e696b108745c9ff281", null ],
-      [ "glsl", "dc/d59/namespace_l_t_e.html#a813c90e8423bdad4463eea7bd3ee89c7ab44384b505fec5ed92c3caa132bfc0ed", null ],
-      [ "png", "dc/d59/namespace_l_t_e.html#a813c90e8423bdad4463eea7bd3ee89c7ac98e5ff56948c8736375d3398118aa48", null ],
-      [ "jpg", "dc/d59/namespace_l_t_e.html#a813c90e8423bdad4463eea7bd3ee89c7a2d91fb1f4c98708351f746f2140194f1", null ]
-    ] ],
     [ "renderAPIType", "dc/d59/namespace_l_t_e.html#a1549406e7962ca62439f148b6bec5d60", [
       [ "OpenGL", "dc/d59/namespace_l_t_e.html#a1549406e7962ca62439f148b6bec5d60a48cb9daa41ed1838d1f352a141725d37", null ]
     ] ],
@@ -148,6 +147,5 @@ var namespace_l_t_e =
     [ "ImGuiMouseScrolled", "dc/d59/namespace_l_t_e.html#ab6b2d2c2a7d71b40fe4e0bfe4c6958e6", null ],
     [ "ImGuiWindowResize", "dc/d59/namespace_l_t_e.html#a756a355af550b9c5cb07d30c6383d694", null ],
     [ "initImGui", "dc/d59/namespace_l_t_e.html#abc483098a80a0f09e482314a674cd430", null ],
-    [ "onImGuiUpdate", "dc/d59/namespace_l_t_e.html#afea151dc9fd2a8f71e4bbfbc602578fb", null ],
-    [ "stringToFileType", "dc/d59/namespace_l_t_e.html#a3f3cde7e6e1be0676045b00a64bc7635", null ]
+    [ "onImGuiUpdate", "dc/d59/namespace_l_t_e.html#afea151dc9fd2a8f71e4bbfbc602578fb", null ]
 ];

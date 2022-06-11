@@ -168,7 +168,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   82</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -194,7 +194,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   83</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -325,33 +325,37 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   51</span>            <span class="keywordtype">bool</span> goDown = eventData-&gt;<a class="code hl_variable" href="../../d3/d94/struct_l_t_e_1_1core_event_data.html#a788cadcacee6881178440a8394f76569">win</a>-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#a75d9759c617ba474299029e2c58a45d4">inputManger</a>-&gt;<a class="code hl_function" href="../../db/dd9/class_l_t_e_1_1core_input.html#ad9dd2d2737e633890b0388d85b6b87cd">isKeyPressed</a>(<a class="code hl_define" href="../../dc/d0e/keycodes_8h.html#af80cc6c08ba66ac9e4f002f4af9f3c16">LT_KEY_DOWN</a>);</div>
 <div class="line"><span class="lineno">   52</span>            </div>
 <div class="line"><span class="lineno">   53</span>            playerMatreial-&gt;<a class="code hl_function" href="../../dc/dda/class_l_t_e_1_1material.html#ac6bf65919f261b88ba80bdb79bcbb440">setTileIndex</a>(1, 3);</div>
-<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span>(goRight)</div>
-<div class="line"><span class="lineno">   55</span>            {</div>
-<div class="line"><span class="lineno">   56</span>                playerMatreial-&gt;<a class="code hl_function" href="../../dc/dda/class_l_t_e_1_1material.html#ac6bf65919f261b88ba80bdb79bcbb440">setTileIndex</a>(animationCounter, 1);</div>
-<div class="line"><span class="lineno">   57</span>                playerPostion-&gt;changeXPostion(playerSpeed * eventData-&gt;<a class="code hl_variable" href="../../dd/d5d/struct_l_t_e_1_1on_update_data.html#ac21c49f170b64f729a9496080a21b3bd">DeltaTime</a> / 1000.0f);</div>
-<div class="line"><span class="lineno">   58</span>            } </div>
-<div class="line"><span class="lineno">   59</span>            </div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span>(goLeft)</div>
-<div class="line"><span class="lineno">   61</span>            {</div>
-<div class="line"><span class="lineno">   62</span>                playerMatreial-&gt;<a class="code hl_function" href="../../dc/dda/class_l_t_e_1_1material.html#ac6bf65919f261b88ba80bdb79bcbb440">setTileIndex</a>(animationCounter, 2);</div>
-<div class="line"><span class="lineno">   63</span>                playerPostion-&gt;changeXPostion(-playerSpeed  * eventData-&gt;<a class="code hl_variable" href="../../dd/d5d/struct_l_t_e_1_1on_update_data.html#ac21c49f170b64f729a9496080a21b3bd">DeltaTime</a> / 1000.0f);</div>
-<div class="line"><span class="lineno">   64</span>            } </div>
-<div class="line"><span class="lineno">   65</span>            </div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span>(goUp)</div>
-<div class="line"><span class="lineno">   67</span>            {</div>
-<div class="line"><span class="lineno">   68</span>                playerMatreial-&gt;<a class="code hl_function" href="../../dc/dda/class_l_t_e_1_1material.html#ac6bf65919f261b88ba80bdb79bcbb440">setTileIndex</a>(animationCounter, 0);</div>
-<div class="line"><span class="lineno">   69</span>                playerPostion-&gt;changeYPostion(playerSpeed  * eventData-&gt;<a class="code hl_variable" href="../../dd/d5d/struct_l_t_e_1_1on_update_data.html#ac21c49f170b64f729a9496080a21b3bd">DeltaTime</a> / 1000.0f);</div>
-<div class="line"><span class="lineno">   70</span>            } </div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>            glm::vec2 delta = { </div>
+<div class="line"><span class="lineno">   56</span>                (goRight - goLeft),</div>
+<div class="line"><span class="lineno">   57</span>                (goUp - goDown),</div>
+<div class="line"><span class="lineno">   58</span>               };</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span>((delta == glm::vec2({0, 0})))</div>
+<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   62</span>                </div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>            delta = glm::normalize(delta) * (playerSpeed * eventData-&gt;<a class="code hl_variable" href="../../dd/d5d/struct_l_t_e_1_1on_update_data.html#ac21c49f170b64f729a9496080a21b3bd">DeltaTime</a> / 1000.0f);</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>            playerPostion-&gt;changeXPostion(delta.x);</div>
+<div class="line"><span class="lineno">   67</span>            playerPostion-&gt;changeYPostion(delta.y);</div>
+<div class="line"><span class="lineno">   68</span>            </div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span>(goRight)</div>
+<div class="line"><span class="lineno">   70</span>                playerMatreial-&gt;<a class="code hl_function" href="../../dc/dda/class_l_t_e_1_1material.html#ac6bf65919f261b88ba80bdb79bcbb440">setTileIndex</a>(animationCounter, 1);</div>
 <div class="line"><span class="lineno">   71</span>            </div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">if</span>(goDown)</div>
-<div class="line"><span class="lineno">   73</span>            {</div>
-<div class="line"><span class="lineno">   74</span>                playerMatreial-&gt;<a class="code hl_function" href="../../dc/dda/class_l_t_e_1_1material.html#ac6bf65919f261b88ba80bdb79bcbb440">setTileIndex</a>(animationCounter, 3);</div>
-<div class="line"><span class="lineno">   75</span>                playerPostion-&gt;changeYPostion(-playerSpeed  * eventData-&gt;<a class="code hl_variable" href="../../dd/d5d/struct_l_t_e_1_1on_update_data.html#ac21c49f170b64f729a9496080a21b3bd">DeltaTime</a> / 1000.0f);</div>
-<div class="line"><span class="lineno">   76</span>            } </div>
-<div class="line"><span class="lineno">   77</span>            </div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span>(updateCounter++ % 8 == 0)</div>
-<div class="line"><span class="lineno">   79</span>                animationCounter += animationCounter++ % 4;</div>
-<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   72</span>            </div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span>(goLeft)</div>
+<div class="line"><span class="lineno">   74</span>                playerMatreial-&gt;<a class="code hl_function" href="../../dc/dda/class_l_t_e_1_1material.html#ac6bf65919f261b88ba80bdb79bcbb440">setTileIndex</a>(animationCounter, 2);</div>
+<div class="line"><span class="lineno">   75</span>            </div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span>(goUp)</div>
+<div class="line"><span class="lineno">   77</span>                playerMatreial-&gt;<a class="code hl_function" href="../../dc/dda/class_l_t_e_1_1material.html#ac6bf65919f261b88ba80bdb79bcbb440">setTileIndex</a>(animationCounter, 0);</div>
+<div class="line"><span class="lineno">   78</span>                     </div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">if</span>(goDown)</div>
+<div class="line"><span class="lineno">   80</span>                playerMatreial-&gt;<a class="code hl_function" href="../../dc/dda/class_l_t_e_1_1material.html#ac6bf65919f261b88ba80bdb79bcbb440">setTileIndex</a>(animationCounter, 3); </div>
+<div class="line"><span class="lineno">   81</span>            </div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span>(updateCounter++ % 8 == 0)</div>
+<div class="line"><span class="lineno">   83</span>                animationCounter += animationCounter++ % 4;</div>
+<div class="line"><span class="lineno">   84</span>        }</div>
 <div class="ttc" id="aclass_l_t_e_1_1core_input_html_ad9dd2d2737e633890b0388d85b6b87cd"><div class="ttname"><a href="../../db/dd9/class_l_t_e_1_1core_input.html#ad9dd2d2737e633890b0388d85b6b87cd">LTE::coreInput::isKeyPressed</a></div><div class="ttdeci">virtual bool isKeyPressed(int keycode)=0</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1game_object_html_a568b30b81a33465e74c3c39663d1b5c0"><div class="ttname"><a href="../../d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0">LTE::gameObject::getTransform</a></div><div class="ttdeci">transform * getTransform()</div><div class="ttdef"><b>Definition:</b> entity.h:148</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1game_object_html_af885dbd7e72e830ae61ab37b6d52b8b6"><div class="ttname"><a href="../../d2/d49/class_l_t_e_1_1game_object.html#af885dbd7e72e830ae61ab37b6d52b8b6">LTE::gameObject::getComponent</a></div><div class="ttdeci">T * getComponent()</div><div class="ttdef"><b>Definition:</b> entity.h:87</div></div>

@@ -125,7 +125,9 @@
         "filesystem": "cpp",
         "*.def": "cpp",
         "*.inc": "cpp",
-        "assetmanager.h": "c"
+        "assetmanager.h": "c",
+        "strstream": "cpp",
+        "span": "cpp"
     },
     "files.exclude": {
         ".gitignore": true,

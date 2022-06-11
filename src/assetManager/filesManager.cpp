@@ -22,8 +22,11 @@ namespace LTE
                 std::string filePath = std::string(dirEntry.path()).erase(0, 2);
 
                 file *fileInDirEntry = filesFactory::createFile(filePath, fileType);
-                fileInDirEntry->loadFileData();
-                filesTree.addValue(filePath, fileInDirEntry);
+                if(fileInDirEntry)
+                {
+                    fileInDirEntry->loadFileData();
+                    filesTree.addValue(filePath, fileInDirEntry);
+                }
             }
         }
     }

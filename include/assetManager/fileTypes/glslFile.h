@@ -25,4 +25,16 @@ namespace LTE
             virtual void loadFileData();
 
     };
+
+    class glslFileFactory: public fileFactory
+    {
+        public:
+            glslFileFactory(){}
+    
+            virtual file* createFile(const std::string& filePath)
+            {
+                return new glslFile(filePath);
+            }
+    };
+
 }

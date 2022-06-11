@@ -18,4 +18,11 @@ namespace LTE
 
             std::string getFilePath(){ return filePath; }
     }; 
+
+    class fileFactory
+    {
+        public:
+            virtual ~fileFactory() = default;
+            virtual file* createFile(const std::string& filePath) = 0;
+    };
 }

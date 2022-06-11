@@ -10,5 +10,6 @@ var searchData=
   ['pilardestroyer_7',['pilarDestroyer',['../d8/d09/classpilar_destroyer.html',1,'']]],
   ['pilarsummener_8',['pilarSummener',['../d3/ded/classpilar_summener.html',1,'']]],
   ['player_9',['player',['../dc/d2e/classplayer.html',1,'']]],
-  ['pngfile_10',['pngFile',['../df/ddd/class_l_t_e_1_1png_file.html',1,'LTE']]]
+  ['pngfile_10',['pngFile',['../df/ddd/class_l_t_e_1_1png_file.html',1,'LTE']]],
+  ['pngfilefactory_11',['pngFileFactory',['../d2/d98/class_l_t_e_1_1png_file_factory.html',1,'LTE']]]
 ];

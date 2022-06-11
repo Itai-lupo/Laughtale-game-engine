@@ -85,6 +85,12 @@ var hierarchy =
       [ "LTE::mp3File", "dd/da0/class_l_t_e_1_1mp3_file.html", null ],
       [ "LTE::pngFile", "df/ddd/class_l_t_e_1_1png_file.html", null ]
     ] ],
+    [ "LTE::fileFactory", "d0/dac/class_l_t_e_1_1file_factory.html", [
+      [ "LTE::glslFileFactory", "db/dce/class_l_t_e_1_1glsl_file_factory.html", null ],
+      [ "LTE::jpgFileFactory", "d2/d22/class_l_t_e_1_1jpg_file_factory.html", null ],
+      [ "LTE::mp3FileFactory", "dd/dcb/class_l_t_e_1_1mp3_file_factory.html", null ],
+      [ "LTE::pngFileFactory", "d2/d98/class_l_t_e_1_1png_file_factory.html", null ]
+    ] ],
     [ "LTE::fileManager", "df/dfd/class_l_t_e_1_1file_manager.html", null ],
     [ "LTE::filesFactory", "d5/d69/class_l_t_e_1_1files_factory.html", null ],
     [ "LTE::gameObject", "d2/d49/class_l_t_e_1_1game_object.html", null ],

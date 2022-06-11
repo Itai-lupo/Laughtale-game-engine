@@ -16,4 +16,16 @@ namespace LTE
             virtual void loadFileData();
 
     }; 
+
+
+    class jpgFileFactory: public fileFactory
+    {
+        public:
+            jpgFileFactory(){}
+    
+            virtual file* createFile(const std::string& filePath)
+            {
+                return new jpgFile(filePath);
+            }
+    };
 }

@@ -51,29 +51,33 @@ class player: public LTE::component
             bool goDown = eventData->win->inputManger->isKeyPressed(LT_KEY_DOWN);
             
             playerMatreial->setTileIndex(1, 3);
+
+            glm::vec2 delta = { 
+                (goRight - goLeft),
+                (goUp - goDown),
+               };
+
+            if((delta == glm::vec2({0, 0})))
+                return;
+                
+
+            delta = glm::normalize(delta) * (playerSpeed * eventData->DeltaTime / 1000.0f);
+
+            playerPostion->changeXPostion(delta.x);
+            playerPostion->changeYPostion(delta.y);
+            
             if(goRight)
-            {
                 playerMatreial->setTileIndex(animationCounter, 1);
-                playerPostion->changeXPostion(playerSpeed * eventData->DeltaTime / 1000.0f);
-            } 
+            
             
             if(goLeft)
-            {
                 playerMatreial->setTileIndex(animationCounter, 2);
-                playerPostion->changeXPostion(-playerSpeed  * eventData->DeltaTime / 1000.0f);
-            } 
             
             if(goUp)
-            {
                 playerMatreial->setTileIndex(animationCounter, 0);
-                playerPostion->changeYPostion(playerSpeed  * eventData->DeltaTime / 1000.0f);
-            } 
-            
+                     
             if(goDown)
-            {
-                playerMatreial->setTileIndex(animationCounter, 3);
-                playerPostion->changeYPostion(-playerSpeed  * eventData->DeltaTime / 1000.0f);
-            } 
+                playerMatreial->setTileIndex(animationCounter, 3); 
             
             if(updateCounter++ % 8 == 0)
                 animationCounter += animationCounter++ % 4;

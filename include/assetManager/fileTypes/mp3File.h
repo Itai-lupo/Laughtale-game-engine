@@ -14,4 +14,16 @@ namespace LTE
             virtual void loadFileData();
 
     }; 
+
+
+    class mp3FileFactory: public fileFactory
+    {
+        public:
+            mp3FileFactory(){}
+    
+            virtual file* createFile(const std::string& filePath)
+            {
+                return new mp3File(filePath);
+            }
+    };
 }
