@@ -1,103 +1,99 @@
-#include "openGLContext.h"
-#include "app.h"
-#include "openGLrenderApi.h"
-#include "glad/glad.h"
-#include <GLFW/glfw3.h>
-#include <sys/prctl.h>
-#include "windowManger.h"
-#include "app.h"
-#include "ImGuiEvents.h"
+// #include "openGLContext.h"
+// #include "app.h"
+// #include "openGLrenderApi.h"
+// #include <sys/prctl.h>
+// #include "windowManger.h"
+// #include "app.h"
+// #include "ImGuiEvents.h"
 
-namespace LTE
-{
-    void openGLContext::Init()
-    {
-        app::getOsAPI()->makeContextCurrent(windowId);
-        int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-        LAUGHTALE_ENGINR_CONDTION_LOG_FATAL("Failed to initialize Glad!", status != 1);
+// namespace LTE
+// {
+//     void openGLContext::Init()
+//     {
+//         app::getOsAPI()->makeContextCurrent(windowId);
 
-        api = new openGLRenderApi();
-        api->init();
+//         api = new openGLRenderApi();
+//         api->init();
 
-        contextThread = new std::thread(&openGLContext::run, this);
-    }
+//         contextThread = new std::thread(&openGLContext::run, this);
+//     }
 
-    openGLContext::~openGLContext()
-    {
-        windowRun = false;
-        contextThread->join();
-    }
+//     openGLContext::~openGLContext()
+//     {
+//         windowRun = false;
+//         contextThread->join();
+//     }
 
-    void openGLContext::run()
-    {
+//     void openGLContext::run()
+//     {
 
-        std::string thradName = "GL  " + windowManger::getWindow(windowId)->Title;
-        prctl(PR_SET_NAME, thradName.c_str(), 0, 0, 0);
+//         std::string thradName = "GL  " + windowManger::getWindow(windowId)->Title;
+//         prctl(PR_SET_NAME, thradName.c_str(), 0, 0, 0);
 
-        app::getOsAPI()->makeContextCurrent(windowId);
+//         app::getOsAPI()->makeContextCurrent(windowId);
 
-        uint64_t startTime = app::getTime();
-        uint64_t now = app::getTime();
+//         uint64_t startTime = app::getTime();
+//         uint64_t now = app::getTime();
 
-        onUpdateData *sendorData = new onUpdateData(startTime, startTime, 0);
+//         onUpdateData *sendorData = new onUpdateData(startTime, startTime, 0);
 
-        sendorData->win = windowManger::getWindow(windowId);
-        sendorData->windowId = windowId;
-        sendorData->route = "window render/" + sendorData->win->Title + "/";
+//         sendorData->win = windowManger::getWindow(windowId);
+//         sendorData->windowId = windowId;
+//         sendorData->route = "window render/" + sendorData->win->Title + "/";
 
-        eventManger::addCoustemEventsRoute("window render/" + sendorData->win->Title + "/");
+//         eventManger::addCoustemEventsRoute("window render/" + sendorData->win->Title + "/");
         
-        contextRenderEngine = new renderer(windowId, getRenderApi());
+//         contextRenderEngine = new renderer(windowId, getRenderApi());
         
-        while (!app::isRuning){}
+//         while (!app::isRuning){}
         
-        while (app::keepRunning && windowRun)
-        {
-            now = app::getTime();
-            sendorData->DeltaTime = now - sendorData->currentTime;
-            sendorData->currentTime = now;
+//         while (app::keepRunning && windowRun)
+//         {
+//             now = app::getTime();
+//             sendorData->DeltaTime = now - sendorData->currentTime;
+//             sendorData->currentTime = now;
             
-            meshFactory->build();
+//             meshFactory->build();
 
-            if(changeViewPort)
-            {
-                api->SetViewport(x, y, width, height);
-                changeViewPort = false;
-            }
+//             if(changeViewPort)
+//             {
+//                 api->SetViewport(x, y, width, height);
+//                 changeViewPort = false;
+//             }
             
-            contextRenderEngine->renderScene();
+//             contextRenderEngine->renderScene();
 
-            if(sendorData->win->useImGui)
-                onImGuiUpdate(sendorData->win, sendorData);
+//             if(sendorData->win->useImGui)
+//                 onImGuiUpdate(sendorData->win, sendorData);
             
-            SwapBuffers();
+//             SwapBuffers();
 
-            eventManger::trigerEvent(sendorData);
-
-
-    		sendorData->win->activeScene->sceneCollider->checkCollision();
+//             eventManger::trigerEvent(sendorData);
 
 
-        }   
-    }
+//     		sendorData->win->activeScene->sceneCollider->checkCollision();
 
-    void openGLContext::SwapBuffers()
-    {
-        app::getOsAPI()->swapBuffers(windowId);
-    }
 
-    renderApi *openGLContext::getRenderApi()
-    {
-        return api;
-    }    
+//         }   
+//     }
 
-    void openGLContext::setViewPort(int x, int y, int width, int height)
-    {
-        this->x = x;
-        this->y = y;
-        this->width = width;
-        this->height = height;
-        changeViewPort = true;
-    }
+//     void openGLContext::SwapBuffers()
+//     {
+//         app::getOsAPI()->swapBuffers(windowId);
+//     }
 
-} 
+//     renderApi *openGLContext::getRenderApi()
+//     {
+//         return api;
+//     }    
+
+//     void openGLContext::setViewPort(int x, int y, int width, int height)
+//     {
+//         this->x = x;
+//         this->y = y;
+//         this->width = width;
+//         this->height = height;
+//         changeViewPort = true;
+//     }
+
+// } 

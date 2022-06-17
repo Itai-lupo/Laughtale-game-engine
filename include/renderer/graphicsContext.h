@@ -1,21 +1,39 @@
 #pragma once
 #include "renderApi.h"
 #include "meshAbsrtactFactory.h"
+#include "core.h"
+#include "renderer.h"
+
+#include <thread>
 
 namespace LTE
 {
     class graphicsContext
 	{
         private:
-            virtual renderApi *getRenderApi() = 0;
+            renderApi *getRenderApi();
+		    windowPieceId windowId;
+            renderApi *api;
+            meshAbsrtactFactory *meshFactory;
+            std::thread *contextThread;
+            renderer *contextRenderEngine;
+
+            bool changeViewPort = false;
+            int x, y, width, height;
+
+            void run();
+
 
         public:
-            virtual void Init() = 0;
-            virtual void SwapBuffers() = 0;
+            bool windowRun = true;
+
+            void Init();
+            void SwapBuffers();
 	
-            virtual meshAbsrtactFactory *getMeshFactory() = 0;
-            virtual void setViewPort(int x, int y, int width, int height) = 0;
+            meshAbsrtactFactory *getMeshFactory(){ return meshFactory; }
+            void setViewPort(int x, int y, int width, int height);
             
-            virtual ~graphicsContext() = default;
+            graphicsContext(windowPieceId windowId, renderAPIType type);
+            ~graphicsContext();
     };
 }

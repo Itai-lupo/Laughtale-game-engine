@@ -2,6 +2,7 @@ var class_l_t_e_1_1linux_a_p_i =
 [
     [ "~linuxAPI", "d1/db3/class_l_t_e_1_1linux_a_p_i.html#aa04739ce7b65698e0adf4587a939a860", null ],
     [ "closeWindow", "d1/db3/class_l_t_e_1_1linux_a_p_i.html#a7a2943e7b14fbd69510cc07cd4fb00ab", null ],
+    [ "getProcAddress", "d1/db3/class_l_t_e_1_1linux_a_p_i.html#a743a755f0773d19c5e6a1c98688e2ace", null ],
     [ "isWindowOpen", "d1/db3/class_l_t_e_1_1linux_a_p_i.html#a551ea63eae9132ddbcd94465536199ca", null ],
     [ "makeContextCurrent", "d1/db3/class_l_t_e_1_1linux_a_p_i.html#a27a5ba6865d394b9c539ec8aed960a57", null ],
     [ "pollEvents", "d1/db3/class_l_t_e_1_1linux_a_p_i.html#a3d81861615e822576571f82d350cb122", null ],

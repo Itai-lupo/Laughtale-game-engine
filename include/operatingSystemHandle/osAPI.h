@@ -20,5 +20,7 @@ namespace LTE {
             virtual void closeWindow(windowPieceId winId) = 0;
             virtual void swapBuffers(windowPieceId winId) = 0;
 
+            virtual void *getProcAddress() = 0;
+
 	};
 }

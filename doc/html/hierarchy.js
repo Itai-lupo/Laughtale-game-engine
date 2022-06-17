@@ -94,9 +94,10 @@ var hierarchy =
     [ "LTE::filesFactory", "d5/d69/class_l_t_e_1_1files_factory.html", null ],
     [ "LTE::gameObject", "d2/d49/class_l_t_e_1_1game_object.html", null ],
     [ "LTE::gameObject::gameObjectBuilder", "d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html", null ],
-    [ "LTE::graphicsContext", "d7/d20/class_l_t_e_1_1graphics_context.html", [
-      [ "LTE::openGLContext", "db/d92/class_l_t_e_1_1open_g_l_context.html", null ]
+    [ "LTE::graphicsAPIAbstractFactory", "d0/d7f/class_l_t_e_1_1graphics_a_p_i_abstract_factory.html", [
+      [ "LTE::openGLAPIAbstractFactory", "df/dcb/class_l_t_e_1_1open_g_l_a_p_i_abstract_factory.html", null ]
     ] ],
+    [ "LTE::graphicsContext", "d7/d20/class_l_t_e_1_1graphics_context.html", null ],
     [ "LTE::indexBuffer", "d6/d2f/class_l_t_e_1_1index_buffer.html", [
       [ "LTE::openGLIndexBuffer", "d1/de5/class_l_t_e_1_1open_g_l_index_buffer.html", null ]
     ] ],

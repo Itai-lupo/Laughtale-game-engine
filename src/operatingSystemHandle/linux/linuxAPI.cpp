@@ -32,4 +32,10 @@ namespace LTE
 	{
         glfwSwapBuffers((GLFWwindow*)winId);
 	}
+
+	void *linuxAPI::getProcAddress()
+	{
+		return (void*)glfwGetProcAddress;
+	}
+
 }

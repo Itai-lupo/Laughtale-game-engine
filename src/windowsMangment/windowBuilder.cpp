@@ -3,7 +3,7 @@
 #include "core.h"
 #include "window.h"
 #include "app.h"
-#include "openGL/openGLContext.h"
+#include "graphicsContext.h"
 #include "windowBuilder.h"
 
 #include "orthographicCameraControler.h"
@@ -19,7 +19,7 @@ namespace LTE
     {
         product->id = app::getOSAbstractFactory()->createWindow(product);
 
-        product->context = new openGLContext(product->id);
+        product->context = new graphicsContext(product->id, OpenGL);
 
         if(!product->activeScene){
             product->activeScene = new scene();

@@ -108,6 +108,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a01ae35f37a9fb2f41dd19205e324ad90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20078832f060b3cce9ded4e5f067cfa4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/da3/class_l_t_e_1_1os_a_p_i.html">osAPI</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d13/class_l_t_e_1_1app.html#a20078832f060b3cce9ded4e5f067cfa4">getOsAPI</a> ()</td></tr>
 <tr class="separator:a20078832f060b3cce9ded4e5f067cfa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac05f4113f501e1e83f36a9546ddfae3d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d7f/class_l_t_e_1_1graphics_a_p_i_abstract_factory.html">graphicsAPIAbstractFactory</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d13/class_l_t_e_1_1app.html#ac05f4113f501e1e83f36a9546ddfae3d">getGraphicAPIFactory</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a1549406e7962ca62439f148b6bec5d60">renderAPIType</a> type)</td></tr>
+<tr class="separator:ac05f4113f501e1e83f36a9546ddfae3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -139,23 +141,23 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
-<div class="line"><span class="lineno">   44</span>        <a class="code hl_variable" href="../../d0/d13/class_l_t_e_1_1app.html#a5adef4179f126155e3d437262ee1c315">keepRunning</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   45</span>        <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a2bae0fc540e166323381f7a8196ab083">eventManger::close</a>();</div>
-<div class="line"><span class="lineno">   46</span>        <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#a36e406876304ba1cff334e6f8849e4eb">entityManger::close</a>();</div>
-<div class="line"><span class="lineno">   47</span>        <a class="code hl_function" href="../../de/d01/class_l_t_e_1_1sound_engine.html#ac22cd141150c6a59ef28993c06936837">soundEngine::close</a>();</div>
-<div class="line"><span class="lineno">   48</span>        <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#a6ecf67fe5928e63ba34ea590f5f41cee">windowManger::close</a>();</div>
-<div class="line"><span class="lineno">   49</span>        <a class="code hl_function" href="../../df/d4f/class_l_t_e_1_1materials_manger.html#a8b8ed9bdc8b605a34e400ef063bbbaaa">materialsManger::close</a>();</div>
-<div class="line"><span class="lineno">   50</span>        <a class="code hl_function" href="../../db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#a7c5cb8c18c0087c64f0f390a8303381d">GMNM::connectionsManager::close</a>();</div>
-<div class="line"><span class="lineno">   51</span>        <a class="code hl_function" href="../../df/dfd/class_l_t_e_1_1file_manager.html#a0550027aeb21cef2e23920c280d8a1bd">fileManager::close</a>();</div>
-<div class="line"><span class="lineno">   52</span>        <a class="code hl_function" href="../../d3/d08/class_l_t_e_1_1logger.html#ae651e5c9c40cb1a56ad4c0c7df3930fd">logger::close</a>();</div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>        <span class="keyword">delete</span> osFactory;</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keyword">delete</span> os;</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="../../d0/d13/class_l_t_e_1_1app.html#a5adef4179f126155e3d437262ee1c315">keepRunning</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   48</span>        <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a2bae0fc540e166323381f7a8196ab083">eventManger::close</a>();</div>
+<div class="line"><span class="lineno">   49</span>        <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#a36e406876304ba1cff334e6f8849e4eb">entityManger::close</a>();</div>
+<div class="line"><span class="lineno">   50</span>        <a class="code hl_function" href="../../de/d01/class_l_t_e_1_1sound_engine.html#ac22cd141150c6a59ef28993c06936837">soundEngine::close</a>();</div>
+<div class="line"><span class="lineno">   51</span>        <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#a6ecf67fe5928e63ba34ea590f5f41cee">windowManger::close</a>();</div>
+<div class="line"><span class="lineno">   52</span>        <a class="code hl_function" href="../../df/d4f/class_l_t_e_1_1materials_manger.html#a8b8ed9bdc8b605a34e400ef063bbbaaa">materialsManger::close</a>();</div>
+<div class="line"><span class="lineno">   53</span>        <a class="code hl_function" href="../../db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#a7c5cb8c18c0087c64f0f390a8303381d">GMNM::connectionsManager::close</a>();</div>
+<div class="line"><span class="lineno">   54</span>        <a class="code hl_function" href="../../df/dfd/class_l_t_e_1_1file_manager.html#a0550027aeb21cef2e23920c280d8a1bd">fileManager::close</a>();</div>
+<div class="line"><span class="lineno">   55</span>        <a class="code hl_function" href="../../d3/d08/class_l_t_e_1_1logger.html#ae651e5c9c40cb1a56ad4c0c7df3930fd">logger::close</a>();</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>        <span class="keyword">delete</span> osFactory;</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keyword">delete</span> os;</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1_g_m_n_m_1_1connections_manager_html_a7c5cb8c18c0087c64f0f390a8303381d"><div class="ttname"><a href="../../db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#a7c5cb8c18c0087c64f0f390a8303381d">LTE::GMNM::connectionsManager::close</a></div><div class="ttdeci">static void close()</div><div class="ttdef"><b>Definition:</b> connectionsManager.cpp:19</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1app_html_a5adef4179f126155e3d437262ee1c315"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#a5adef4179f126155e3d437262ee1c315">LTE::app::keepRunning</a></div><div class="ttdeci">static bool keepRunning</div><div class="ttdef"><b>Definition:</b> app.h:20</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1app_html_a5adef4179f126155e3d437262ee1c315"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#a5adef4179f126155e3d437262ee1c315">LTE::app::keepRunning</a></div><div class="ttdeci">static bool keepRunning</div><div class="ttdef"><b>Definition:</b> app.h:22</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1entity_manger_html_a36e406876304ba1cff334e6f8849e4eb"><div class="ttname"><a href="../../de/d44/class_l_t_e_1_1entity_manger.html#a36e406876304ba1cff334e6f8849e4eb">LTE::entityManger::close</a></div><div class="ttdeci">static void close()</div><div class="ttdef"><b>Definition:</b> entity.cpp:18</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1event_manger_html_a2bae0fc540e166323381f7a8196ab083"><div class="ttname"><a href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a2bae0fc540e166323381f7a8196ab083">LTE::eventManger::close</a></div><div class="ttdeci">static void close()</div><div class="ttdef"><b>Definition:</b> events.cpp:44</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1file_manager_html_a0550027aeb21cef2e23920c280d8a1bd"><div class="ttname"><a href="../../df/dfd/class_l_t_e_1_1file_manager.html#a0550027aeb21cef2e23920c280d8a1bd">LTE::fileManager::close</a></div><div class="ttdeci">static void close()</div><div class="ttdef"><b>Definition:</b> filesManager.cpp:34</div></div>
@@ -196,6 +198,55 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="ac05f4113f501e1e83f36a9546ddfae3d" name="ac05f4113f501e1e83f36a9546ddfae3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac05f4113f501e1e83f36a9546ddfae3d">&#9670;&nbsp;</a></span>getGraphicAPIFactory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d7f/class_l_t_e_1_1graphics_a_p_i_abstract_factory.html">graphicsAPIAbstractFactory</a> * LTE::app::getGraphicAPIFactory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a1549406e7962ca62439f148b6bec5d60">renderAPIType</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">switch</span> (type)</div>
+<div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a1549406e7962ca62439f148b6bec5d60a48cb9daa41ed1838d1f352a141725d37">OpenGL</a>:</div>
+<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">return</span> openGLApiFactory;</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   76</span>        </div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">   78</span>            <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a9d905beb21802d8bef4629dc7004acb4">LAUGHTALE_ENGINR_LOG_FATAL</a>(<span class="stringliteral">&quot;no render api of type: &quot;</span> &lt;&lt; type);</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
+<div class="ttc" id="alogger_8h_html_a9d905beb21802d8bef4629dc7004acb4"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#a9d905beb21802d8bef4629dc7004acb4">LAUGHTALE_ENGINR_LOG_FATAL</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_FATAL(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:9</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a1549406e7962ca62439f148b6bec5d60a48cb9daa41ed1838d1f352a141725d37"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a1549406e7962ca62439f148b6bec5d60a48cb9daa41ed1838d1f352a141725d37">LTE::OpenGL</a></div><div class="ttdeci">@ OpenGL</div><div class="ttdef"><b>Definition:</b> core.h:17</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d13/class_l_t_e_1_1app_ac05f4113f501e1e83f36a9546ddfae3d_icgraph.png" border="0" usemap="#ad0/d13/class_l_t_e_1_1app_ac05f4113f501e1e83f36a9546ddfae3d_icgraph" alt=""/></div>
+<map name="ad0/d13/class_l_t_e_1_1app_ac05f4113f501e1e83f36a9546ddfae3d_icgraph" id="ad0/d13/class_l_t_e_1_1app_ac05f4113f501e1e83f36a9546ddfae3d_icgraph">
+<area shape="rect" title=" " alt="" coords="199,13,405,39"/>
+<area shape="rect" href="../../d7/d20/class_l_t_e_1_1graphics_context.html#ac6a48c5208edf85d67f1c4a92ea5f3f9" title=" " alt="" coords="5,5,151,47"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a01ae35f37a9fb2f41dd19205e324ad90" name="a01ae35f37a9fb2f41dd19205e324ad90"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a01ae35f37a9fb2f41dd19205e324ad90">&#9670;&nbsp;</a></span>getOSAbstractFactory()</h2>
 
@@ -218,7 +269,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   22</span>{ <span class="keywordflow">return</span> osFactory; }</div>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>{ <span class="keywordflow">return</span> osFactory; }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -260,17 +311,18 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   23</span>{ <span class="keywordflow">return</span> os; }</div>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>{ <span class="keywordflow">return</span> os; }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/d13/class_l_t_e_1_1app_a20078832f060b3cce9ded4e5f067cfa4_icgraph.png" border="0" usemap="#ad0/d13/class_l_t_e_1_1app_a20078832f060b3cce9ded4e5f067cfa4_icgraph" alt=""/></div>
 <map name="ad0/d13/class_l_t_e_1_1app_a20078832f060b3cce9ded4e5f067cfa4_icgraph" id="ad0/d13/class_l_t_e_1_1app_a20078832f060b3cce9ded4e5f067cfa4_icgraph">
-<area shape="rect" title=" " alt="" coords="396,71,536,98"/>
-<area shape="rect" href="../../d4/d38/class_l_t_e_1_1window.html#ada64ce70730800b0efe780533eb4369c" title=" " alt="" coords="214,13,337,39"/>
-<area shape="rect" href="../../db/d92/class_l_t_e_1_1open_g_l_context.html#a9f58d353018d6f9a6871509d88006a74" title=" " alt="" coords="203,64,348,105"/>
-<area shape="rect" href="../../db/d92/class_l_t_e_1_1open_g_l_context.html#aba3f07059dcbdb11c66f84d2ca3dd8c0" title=" " alt="" coords="203,129,348,171"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#acc2b710e8936b1ba64fd0f2ef7f7b636" title=" " alt="" coords="5,5,155,47"/>
+<area shape="rect" title=" " alt="" coords="572,101,708,127"/>
+<area shape="rect" href="../../d7/d20/class_l_t_e_1_1graphics_context.html#ac4ded240dde4a332983804d800e582d7" title=" " alt="" coords="372,5,517,47"/>
+<area shape="rect" href="../../d4/d38/class_l_t_e_1_1window.html#ada64ce70730800b0efe780533eb4369c" title=" " alt="" coords="199,42,317,69"/>
+<area shape="rect" href="../../d0/d71/class_l_t_e_1_1open_g_l_render_api.html#ac4920b2bd8edb93ab5e0476ecee8c4b1" title=" " alt="" coords="365,123,524,164"/>
+<area shape="rect" href="../../d7/d20/class_l_t_e_1_1graphics_context.html#a4445240a7b179f872cbbcdb80ff191b8" title=" " alt="" coords="372,188,517,229"/>
+<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#acc2b710e8936b1ba64fd0f2ef7f7b636" title=" " alt="" coords="5,35,151,76"/>
 </map>
 </div>
 
@@ -298,9 +350,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">return</span> std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(std::chrono::system_clock::now().time_since_epoch()).count();</div>
-<div class="line"><span class="lineno">   63</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>    {</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">return</span> std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(std::chrono::system_clock::now().time_since_epoch()).count();</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -337,23 +389,23 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
-<div class="line"><span class="lineno">   25</span>        <a class="code hl_variable" href="../../d0/d13/class_l_t_e_1_1app.html#a5adef4179f126155e3d437262ee1c315">keepRunning</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   26</span>        std::string pathToLogs =  <span class="stringliteral">&quot;./logs/&quot;</span>;</div>
-<div class="line"><span class="lineno">   27</span>        std::string projectName =  <span class="stringliteral">&quot;LTE&quot;</span>;</div>
-<div class="line"><span class="lineno">   28</span>        <a class="code hl_function" href="../../d3/d08/class_l_t_e_1_1logger.html#a4a69e456b62e7e8488d991e722df1f56">logger::init</a>(pathToLogs, projectName);</div>
-<div class="line"><span class="lineno">   29</span>        <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a9ecc1ecb9f354fc459738f61f7d3e6f2">eventManger::init</a>();</div>
-<div class="line"><span class="lineno">   30</span>        <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#a22225c885988d58d0c7cbf399f0b117f">entityManger::init</a>();</div>
-<div class="line"><span class="lineno">   31</span> </div>
-<div class="line"><span class="lineno">   32</span>        osFactory = <a class="code hl_function" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a277b2812717cc421fa344980088af6ba">OSAbstractFactory::init</a>();</div>
-<div class="line"><span class="lineno">   33</span>        os = osFactory-&gt;<a class="code hl_function" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#ab919ce364eba9e5575e9bbd39bdec65a">createOsApi</a>();</div>
-<div class="line"><span class="lineno">   34</span>        <a class="code hl_function" href="../../df/dfd/class_l_t_e_1_1file_manager.html#ab40d984a2e0e9a2852de6d1bd1ae6d01">fileManager::init</a>();</div>
-<div class="line"><span class="lineno">   35</span>        </div>
-<div class="line"><span class="lineno">   36</span>        <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#ad294dcc77093b36c11e405d8831f39e0">windowManger::init</a>();</div>
-<div class="line"><span class="lineno">   37</span>        <a class="code hl_function" href="../../de/d01/class_l_t_e_1_1sound_engine.html#a5d8a53854ed29724942f958999b2f595">soundEngine::init</a>();</div>
-<div class="line"><span class="lineno">   38</span>        <a class="code hl_function" href="../../df/d4f/class_l_t_e_1_1materials_manger.html#ac5990387a4ca87145dba87b8098dbcc4">materialsManger::init</a>();</div>
-<div class="line"><span class="lineno">   39</span>        <a class="code hl_function" href="../../db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#aec513c0c085e0ada94be461af3d8463f">GMNM::connectionsManager::init</a>();</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        <a class="code hl_variable" href="../../d0/d13/class_l_t_e_1_1app.html#a5adef4179f126155e3d437262ee1c315">keepRunning</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   29</span>        std::string pathToLogs =  <span class="stringliteral">&quot;./logs/&quot;</span>;</div>
+<div class="line"><span class="lineno">   30</span>        std::string projectName =  <span class="stringliteral">&quot;LTE&quot;</span>;</div>
+<div class="line"><span class="lineno">   31</span>        <a class="code hl_function" href="../../d3/d08/class_l_t_e_1_1logger.html#a4a69e456b62e7e8488d991e722df1f56">logger::init</a>(pathToLogs, projectName);</div>
+<div class="line"><span class="lineno">   32</span>        <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a9ecc1ecb9f354fc459738f61f7d3e6f2">eventManger::init</a>();</div>
+<div class="line"><span class="lineno">   33</span>        <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#a22225c885988d58d0c7cbf399f0b117f">entityManger::init</a>();</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>        osFactory = <a class="code hl_function" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a277b2812717cc421fa344980088af6ba">OSAbstractFactory::init</a>();</div>
+<div class="line"><span class="lineno">   36</span>        os = osFactory-&gt;<a class="code hl_function" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#ab919ce364eba9e5575e9bbd39bdec65a">createOsApi</a>();</div>
+<div class="line"><span class="lineno">   37</span>        <a class="code hl_function" href="../../df/dfd/class_l_t_e_1_1file_manager.html#ab40d984a2e0e9a2852de6d1bd1ae6d01">fileManager::init</a>();</div>
+<div class="line"><span class="lineno">   38</span>        </div>
+<div class="line"><span class="lineno">   39</span>        <a class="code hl_function" href="../../de/de3/class_l_t_e_1_1window_manger.html#ad294dcc77093b36c11e405d8831f39e0">windowManger::init</a>();</div>
+<div class="line"><span class="lineno">   40</span>        <a class="code hl_function" href="../../de/d01/class_l_t_e_1_1sound_engine.html#a5d8a53854ed29724942f958999b2f595">soundEngine::init</a>();</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_function" href="../../df/d4f/class_l_t_e_1_1materials_manger.html#ac5990387a4ca87145dba87b8098dbcc4">materialsManger::init</a>();</div>
+<div class="line"><span class="lineno">   42</span>        <a class="code hl_function" href="../../db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#aec513c0c085e0ada94be461af3d8463f">GMNM::connectionsManager::init</a>();</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1_g_m_n_m_1_1connections_manager_html_aec513c0c085e0ada94be461af3d8463f"><div class="ttname"><a href="../../db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#aec513c0c085e0ada94be461af3d8463f">LTE::GMNM::connectionsManager::init</a></div><div class="ttdeci">static void init()</div><div class="ttdef"><b>Definition:</b> connectionsManager.cpp:14</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1_o_s_abstract_factory_html_a277b2812717cc421fa344980088af6ba"><div class="ttname"><a href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a277b2812717cc421fa344980088af6ba">LTE::OSAbstractFactory::init</a></div><div class="ttdeci">static OSAbstractFactory * init()</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1_o_s_abstract_factory_html_ab919ce364eba9e5575e9bbd39bdec65a"><div class="ttname"><a href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#ab919ce364eba9e5575e9bbd39bdec65a">LTE::OSAbstractFactory::createOsApi</a></div><div class="ttdeci">virtual osAPI * createOsApi()=0</div></div>
@@ -426,24 +478,24 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
-<div class="line"><span class="lineno">   67</span>        uint64_t startTime = <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a953193252ca7e18a1663ed97d1b8c52b">getTime</a>();</div>
-<div class="line"><span class="lineno">   68</span>        uint64_t now = <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a953193252ca7e18a1663ed97d1b8c52b">getTime</a>();</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>        onUpdateData *updateData = <span class="keyword">new</span> onUpdateData(startTime, startTime, 0);</div>
-<div class="line"><span class="lineno">   71</span>        </div>
-<div class="line"><span class="lineno">   72</span>        <a class="code hl_variable" href="../../d0/d13/class_l_t_e_1_1app.html#adb1c95327f5af6215b9fff08d70b6f3a">isRuning</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">while</span> (<a class="code hl_variable" href="../../d0/d13/class_l_t_e_1_1app.html#a5adef4179f126155e3d437262ee1c315">keepRunning</a>)</div>
-<div class="line"><span class="lineno">   74</span>        {</div>
-<div class="line"><span class="lineno">   75</span>            os-&gt;<a class="code hl_function" href="../../d8/da3/class_l_t_e_1_1os_a_p_i.html#a14672b329ccd46b1710bfd6d333cd769">pollEvents</a>();</div>
-<div class="line"><span class="lineno">   76</span>            now = <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a953193252ca7e18a1663ed97d1b8c52b">getTime</a>();</div>
-<div class="line"><span class="lineno">   77</span>            updateData-&gt;DeltaTime = now - updateData-&gt;currentTime;</div>
-<div class="line"><span class="lineno">   78</span>            updateData-&gt;currentTime = now;</div>
-<div class="line"><span class="lineno">   79</span>            <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a6f730330512165c10082af76303ddea8">eventManger::trigerEvent</a>(updateData);</div>
-<div class="line"><span class="lineno">   80</span>        }   </div>
-<div class="line"><span class="lineno">   81</span>    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1app_html_a953193252ca7e18a1663ed97d1b8c52b"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#a953193252ca7e18a1663ed97d1b8c52b">LTE::app::getTime</a></div><div class="ttdeci">static uint64_t getTime()</div><div class="ttdef"><b>Definition:</b> app.cpp:60</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1app_html_adb1c95327f5af6215b9fff08d70b6f3a"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#adb1c95327f5af6215b9fff08d70b6f3a">LTE::app::isRuning</a></div><div class="ttdeci">static bool isRuning</div><div class="ttdef"><b>Definition:</b> app.h:21</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>        uint64_t startTime = <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a953193252ca7e18a1663ed97d1b8c52b">getTime</a>();</div>
+<div class="line"><span class="lineno">   86</span>        uint64_t now = <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a953193252ca7e18a1663ed97d1b8c52b">getTime</a>();</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>        onUpdateData *updateData = <span class="keyword">new</span> onUpdateData(startTime, startTime, 0);</div>
+<div class="line"><span class="lineno">   89</span>        </div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_variable" href="../../d0/d13/class_l_t_e_1_1app.html#adb1c95327f5af6215b9fff08d70b6f3a">isRuning</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">while</span> (<a class="code hl_variable" href="../../d0/d13/class_l_t_e_1_1app.html#a5adef4179f126155e3d437262ee1c315">keepRunning</a>)</div>
+<div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            os-&gt;<a class="code hl_function" href="../../d8/da3/class_l_t_e_1_1os_a_p_i.html#a14672b329ccd46b1710bfd6d333cd769">pollEvents</a>();</div>
+<div class="line"><span class="lineno">   94</span>            now = <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a953193252ca7e18a1663ed97d1b8c52b">getTime</a>();</div>
+<div class="line"><span class="lineno">   95</span>            updateData-&gt;DeltaTime = now - updateData-&gt;currentTime;</div>
+<div class="line"><span class="lineno">   96</span>            updateData-&gt;currentTime = now;</div>
+<div class="line"><span class="lineno">   97</span>            <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a6f730330512165c10082af76303ddea8">eventManger::trigerEvent</a>(updateData);</div>
+<div class="line"><span class="lineno">   98</span>        }   </div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="ttc" id="aclass_l_t_e_1_1app_html_a953193252ca7e18a1663ed97d1b8c52b"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#a953193252ca7e18a1663ed97d1b8c52b">LTE::app::getTime</a></div><div class="ttdeci">static uint64_t getTime()</div><div class="ttdef"><b>Definition:</b> app.cpp:63</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1app_html_adb1c95327f5af6215b9fff08d70b6f3a"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#adb1c95327f5af6215b9fff08d70b6f3a">LTE::app::isRuning</a></div><div class="ttdeci">static bool isRuning</div><div class="ttdef"><b>Definition:</b> app.h:23</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1event_manger_html_a6f730330512165c10082af76303ddea8"><div class="ttname"><a href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a6f730330512165c10082af76303ddea8">LTE::eventManger::trigerEvent</a></div><div class="ttdeci">static void trigerEvent(coreEventData *sendor)</div><div class="ttdef"><b>Definition:</b> events.cpp:77</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1os_a_p_i_html_a14672b329ccd46b1710bfd6d333cd769"><div class="ttname"><a href="../../d8/da3/class_l_t_e_1_1os_a_p_i.html#a14672b329ccd46b1710bfd6d333cd769">LTE::osAPI::pollEvents</a></div><div class="ttdeci">virtual void pollEvents()=0</div></div>
 </div><!-- fragment --><div class="dynheader">

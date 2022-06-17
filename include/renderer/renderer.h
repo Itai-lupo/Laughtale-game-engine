@@ -1,5 +1,4 @@
 #pragma once
-#include "window.h"
 #include "renderApi.h"
 #include "vertexArray.h"
 #include "shader.h"
@@ -17,7 +16,6 @@ namespace LTE
     {
         private:
             indexBuffer *indicesToRender;
-            window *win;
             scene *Scene;
             renderApi *renderPipLine;
             std::set<shaderRenderBuffer*> shadersToRender;

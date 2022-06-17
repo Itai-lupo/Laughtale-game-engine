@@ -2,6 +2,7 @@
 #include "core.h"
 #include "OSAbstractFactory.h"
 #include "osAPI.h"
+#include "graphicsAPIAbstractFactory.h"
 
 namespace LTE
 {
@@ -10,7 +11,8 @@ namespace LTE
         private:
             static inline OSAbstractFactory *osFactory;
             static inline osAPI *os;
-
+            
+            static graphicsAPIAbstractFactory *openGLApiFactory;
         public:
             static void init();
             static void close();
@@ -21,5 +23,6 @@ namespace LTE
             static inline bool isRuning;
             static OSAbstractFactory *getOSAbstractFactory(){ return osFactory; }
             static osAPI *getOsAPI(){ return os; }
+            static graphicsAPIAbstractFactory *getGraphicAPIFactory(renderAPIType type);
     };
 }; 

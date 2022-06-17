@@ -1,5 +1,6 @@
 #include "renderer.h"
 #include "mesh.h"
+#include "windowManger.h"
 #include "shaderTypes.h"
 #include "LTEError.h"
 #include "app.h"
@@ -9,7 +10,7 @@
 namespace LTE
 {
     renderer::renderer(windowPieceId winId, renderApi *renderPipLine): 
-        win(windowManger::getWindow(winId)), Scene(win->activeScene), renderPipLine(renderPipLine)
+        Scene(windowManger::getWindow(winId)->activeScene), renderPipLine(renderPipLine)
     {
 
     }

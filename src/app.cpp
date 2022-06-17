@@ -15,9 +15,12 @@
 #include <chrono>
 #include <string>
 
+#include "openGLAPIAbstractFactory.h"
 
 namespace LTE
 {
+    graphicsAPIAbstractFactory *app::openGLApiFactory = new openGLAPIAbstractFactory();
+
     bool app::keepRunning = true;
     
     void app::init()
@@ -60,6 +63,21 @@ namespace LTE
     uint64_t app::getTime()
     {
         return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+    }
+
+
+    graphicsAPIAbstractFactory *app::getGraphicAPIFactory(renderAPIType type)
+    {
+        switch (type)
+        {
+        case OpenGL:
+                return openGLApiFactory;
+            break;
+        
+        default:
+            LAUGHTALE_ENGINR_LOG_FATAL("no render api of type: " << type);
+            break;
+        }
     }
 
     void app::run()

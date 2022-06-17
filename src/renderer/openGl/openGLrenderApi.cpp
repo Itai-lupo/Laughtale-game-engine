@@ -1,11 +1,18 @@
 #include "openGLrenderApi.h"
 #include "glad/glad.h"
 #include "handleOpenGlErrors.h"
+#include <GLFW/glfw3.h>
+
+#include "app.h"
+#include "logger.h"
 
 namespace LTE
 {
     void openGLRenderApi::init()
     {
+        int status = gladLoadGLLoader((GLADloadproc)app::getOsAPI()->getProcAddress());
+        LAUGHTALE_ENGINR_CONDTION_LOG_FATAL("Failed to initialize Glad!", status != 1);
+
         GL_CALL(glEnable(GL_BLEND));
         GL_CALL(glEnable(GL_DEPTH_TEST));
         GL_CALL(glEnable(GL_ALPHA_TEST));

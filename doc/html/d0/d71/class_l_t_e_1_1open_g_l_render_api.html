@@ -159,9 +159,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../df/d3a/class_l_t_e_1_1render_api.html#a487b5438ff6895578e9955b15a6fc9a5">LTE::renderApi</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
-<div class="line"><span class="lineno">   23</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT));</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT));</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
 <div class="ttc" id="ahandle_open_gl_errors_8h_html_add165165c35549fda9fb0100e16e9739"><div class="ttname"><a href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a></div><div class="ttdeci">#define GL_CALL(x)</div><div class="ttdef"><b>Definition:</b> handleOpenGlErrors.h:4</div></div>
 </div><!-- fragment -->
 </div>
@@ -191,10 +191,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../df/d3a/class_l_t_e_1_1render_api.html#aba2eef47b441a4a6abf4d35f0f084798">LTE::renderApi</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
-<div class="line"><span class="lineno">   28</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glDrawElements(GL_TRIANGLES, count, GL_UNSIGNED_INT, <span class="keyword">nullptr</span>));</div>
-<div class="line"><span class="lineno">   29</span>        </div>
-<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glDrawElements(GL_TRIANGLES, count, GL_UNSIGNED_INT, <span class="keyword">nullptr</span>));</div>
+<div class="line"><span class="lineno">   36</span>        </div>
+<div class="line"><span class="lineno">   37</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -222,14 +222,28 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../df/d3a/class_l_t_e_1_1render_api.html#aad14461082fb79a5b682f12df0256c07">LTE::renderApi</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
-<div class="line"><span class="lineno">    9</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glEnable(GL_BLEND));</div>
-<div class="line"><span class="lineno">   10</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glEnable(GL_DEPTH_TEST));</div>
-<div class="line"><span class="lineno">   11</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glEnable(GL_ALPHA_TEST));</div>
-<div class="line"><span class="lineno">   12</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));</div>
-<div class="line"><span class="lineno">   13</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glAlphaFunc(GL_GREATER, 0))</div>
-<div class="line"><span class="lineno">   14</span>    }</div>
-</div><!-- fragment -->
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordtype">int</span> status = gladLoadGLLoader((GLADloadproc)<a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a20078832f060b3cce9ded4e5f067cfa4">app::getOsAPI</a>()-&gt;getProcAddress());</div>
+<div class="line"><span class="lineno">   14</span>        <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a3052079577798185a0dafda4915fa760">LAUGHTALE_ENGINR_CONDTION_LOG_FATAL</a>(<span class="stringliteral">&quot;Failed to initialize Glad!&quot;</span>, status != 1);</div>
+<div class="line"><span class="lineno">   15</span> </div>
+<div class="line"><span class="lineno">   16</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glEnable(GL_BLEND));</div>
+<div class="line"><span class="lineno">   17</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glEnable(GL_DEPTH_TEST));</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glEnable(GL_ALPHA_TEST));</div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));</div>
+<div class="line"><span class="lineno">   20</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glAlphaFunc(GL_GREATER, 0))</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="ttc" id="aclass_l_t_e_1_1app_html_a20078832f060b3cce9ded4e5f067cfa4"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#a20078832f060b3cce9ded4e5f067cfa4">LTE::app::getOsAPI</a></div><div class="ttdeci">static osAPI * getOsAPI()</div><div class="ttdef"><b>Definition:</b> app.h:25</div></div>
+<div class="ttc" id="alogger_8h_html_a3052079577798185a0dafda4915fa760"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#a3052079577798185a0dafda4915fa760">LAUGHTALE_ENGINR_CONDTION_LOG_FATAL</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_CONDTION_LOG_FATAL(toLog, condition)</div><div class="ttdef"><b>Definition:</b> logger.h:13</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d71/class_l_t_e_1_1open_g_l_render_api_ac4920b2bd8edb93ab5e0476ecee8c4b1_cgraph.png" border="0" usemap="#ad0/d71/class_l_t_e_1_1open_g_l_render_api_ac4920b2bd8edb93ab5e0476ecee8c4b1_cgraph" alt=""/></div>
+<map name="ad0/d71/class_l_t_e_1_1open_g_l_render_api_ac4920b2bd8edb93ab5e0476ecee8c4b1_cgraph" id="ad0/d71/class_l_t_e_1_1open_g_l_render_api_ac4920b2bd8edb93ab5e0476ecee8c4b1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,164,47"/>
+<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#a20078832f060b3cce9ded4e5f067cfa4" title=" " alt="" coords="212,13,348,39"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a007137cc8e8d9c82488bd2667a8b4180" name="a007137cc8e8d9c82488bd2667a8b4180"></a>
@@ -257,9 +271,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../df/d3a/class_l_t_e_1_1render_api.html#a559ae0985986d43e165a90019c3b07a0">LTE::renderApi</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
-<div class="line"><span class="lineno">   18</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glClearColor(color.r, color.g, color.b, color.a));</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glClearColor(color.r, color.g, color.b, color.a));</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -310,9 +324,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../df/d3a/class_l_t_e_1_1render_api.html#a06fe9698f93bcb0502b36fa9f3e397c8">LTE::renderApi</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
-<div class="line"><span class="lineno">   34</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glViewport(x, y, width, height));</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glViewport(x, y, width, height));</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
