@@ -19,6 +19,7 @@ namespace LTE {
             virtual void makeContextCurrent(windowPieceId winId) = 0;
             virtual void closeWindow(windowPieceId winId) = 0;
             virtual void swapBuffers(windowPieceId winId) = 0;
+            virtual void destroyWindow(windowPieceId winId) = 0;
 
             virtual void *getProcAddress() = 0;
 

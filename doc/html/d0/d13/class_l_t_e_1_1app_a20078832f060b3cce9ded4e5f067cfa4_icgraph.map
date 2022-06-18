@@ -1,8 +1,9 @@
 <map id="LTE::app::getOsAPI" name="LTE::app::getOsAPI">
-<area shape="rect" id="node1" title=" " alt="" coords="572,101,708,127"/>
+<area shape="rect" id="node1" title=" " alt="" coords="572,130,708,157"/>
 <area shape="rect" id="node2" href="$d7/d20/class_l_t_e_1_1graphics_context.html#ac4ded240dde4a332983804d800e582d7" title=" " alt="" coords="372,5,517,47"/>
 <area shape="rect" id="node3" href="$d4/d38/class_l_t_e_1_1window.html#ada64ce70730800b0efe780533eb4369c" title=" " alt="" coords="199,42,317,69"/>
 <area shape="rect" id="node5" href="$d0/d71/class_l_t_e_1_1open_g_l_render_api.html#ac4920b2bd8edb93ab5e0476ecee8c4b1" title=" " alt="" coords="365,123,524,164"/>
 <area shape="rect" id="node6" href="$d7/d20/class_l_t_e_1_1graphics_context.html#a4445240a7b179f872cbbcdb80ff191b8" title=" " alt="" coords="372,188,517,229"/>
+<area shape="rect" id="node7" href="$d4/d38/class_l_t_e_1_1window.html#a4568b8ca13acdca177586c50315a5aa7" title=" " alt="" coords="368,254,521,281"/>
 <area shape="rect" id="node4" href="$de/de3/class_l_t_e_1_1window_manger.html#acc2b710e8936b1ba64fd0f2ef7f7b636" title=" " alt="" coords="5,35,151,76"/>
 </map>

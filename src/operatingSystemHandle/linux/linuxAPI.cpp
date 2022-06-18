@@ -33,6 +33,13 @@ namespace LTE
         glfwSwapBuffers((GLFWwindow*)winId);
 	}
 
+	void linuxAPI::destroyWindow(windowPieceId winId)
+	{
+        glfwDestroyWindow((GLFWwindow*)winId);
+
+	}
+
+
 	void *linuxAPI::getProcAddress()
 	{
 		return (void*)glfwGetProcAddress;

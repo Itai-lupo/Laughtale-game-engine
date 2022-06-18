@@ -17,6 +17,11 @@ namespace LTE
     
     void windowManger::close()
     {
+        for (window* win: windows)
+        {
+            delete win;
+        }
+        
         delete buildWindow;
     }    
 

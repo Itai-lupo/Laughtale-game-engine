@@ -37,6 +37,8 @@ namespace LTE
 	{
 		delete context;
 		delete activeScene;
+
+		app::getOsAPI()->closeWindow(id);
 		
 		eventManger::removeEvent("Window resize/handel window resize/" + Title);
 		eventManger::removeEvent("App update/winow render/" + Title);

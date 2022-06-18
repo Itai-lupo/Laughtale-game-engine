@@ -96,6 +96,8 @@ namespace LTE
             updateData->currentTime = now;
             eventManger::trigerEvent(updateData);
         }   
+        isRuning = false;
+
     }
 };
 
