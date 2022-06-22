@@ -131,7 +131,7 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   22</span>        product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#a0509800988efeae03289808049a1c20d">context</a> = <span class="keyword">new</span> graphicsContext(product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#a8e5dcaa5ea3a4910dbe6b17e1f03e44e">id</a>, <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a1549406e7962ca62439f148b6bec5d60a48cb9daa41ed1838d1f352a141725d37">OpenGL</a>);</div>
 <div class="line"><span class="lineno">   23</span> </div>
 <div class="line"><span class="lineno">   24</span>        <span class="keywordflow">if</span>(!product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a>){</div>
-<div class="line"><span class="lineno">   25</span>            product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a> = <span class="keyword">new</span> scene();</div>
+<div class="line"><span class="lineno">   25</span>            product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a> = <span class="keyword">new</span> scene(product);</div>
 <div class="line"><span class="lineno">   26</span>            product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">activeScene</a>-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#aa82b5f619926d077e98da48cc56807cb">assetLibrary</a> = <span class="keyword">new</span> assetManager(product-&gt;<a class="code hl_variable" href="../../d4/d38/class_l_t_e_1_1window.html#a8e5dcaa5ea3a4910dbe6b17e1f03e44e">id</a>);</div>
 <div class="line"><span class="lineno">   27</span>        }</div>
 <div class="line"><span class="lineno">   28</span>        </div>
@@ -150,14 +150,14 @@ Public Member Functions</h2></td></tr>
 <div class="ttc" id="aclass_l_t_e_1_1app_html_a01ae35f37a9fb2f41dd19205e324ad90"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#a01ae35f37a9fb2f41dd19205e324ad90">LTE::app::getOSAbstractFactory</a></div><div class="ttdeci">static OSAbstractFactory * getOSAbstractFactory()</div><div class="ttdef"><b>Definition:</b> app.h:24</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1entity_manger_html_acf283b437dde2e9300639fa4ee0e55dc"><div class="ttname"><a href="../../de/d44/class_l_t_e_1_1entity_manger.html#acf283b437dde2e9300639fa4ee0e55dc">LTE::entityManger::addEntity</a></div><div class="ttdeci">static entityTaleId addEntity(std::function&lt; void(gameObject::gameObjectBuilder *Builder)&gt; buildGameObject)</div><div class="ttdef"><b>Definition:</b> entity.cpp:24</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1entity_manger_html_ad019a4750f1350c7185cefe6072dcd6e"><div class="ttname"><a href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">LTE::entityManger::getEntityById</a></div><div class="ttdeci">static gameObject * getEntityById(entityTaleId id)</div><div class="ttdef"><b>Definition:</b> entity.cpp:48</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_aa82b5f619926d077e98da48cc56807cb"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#aa82b5f619926d077e98da48cc56807cb">LTE::scene::assetLibrary</a></div><div class="ttdeci">assetManager * assetLibrary</div><div class="ttdef"><b>Definition:</b> scene.h:30</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_af176ece946088c87257039d35836c0d6"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">LTE::scene::camera</a></div><div class="ttdeci">gameObject * camera</div><div class="ttdef"><b>Definition:</b> scene.h:32</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_aa82b5f619926d077e98da48cc56807cb"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#aa82b5f619926d077e98da48cc56807cb">LTE::scene::assetLibrary</a></div><div class="ttdeci">assetManager * assetLibrary</div><div class="ttdef"><b>Definition:</b> scene.h:33</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_af176ece946088c87257039d35836c0d6"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">LTE::scene::camera</a></div><div class="ttdeci">gameObject * camera</div><div class="ttdef"><b>Definition:</b> scene.h:35</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1window_html_a0509800988efeae03289808049a1c20d"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#a0509800988efeae03289808049a1c20d">LTE::window::context</a></div><div class="ttdeci">graphicsContext * context</div><div class="ttdef"><b>Definition:</b> window.h:30</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1window_html_a8e5dcaa5ea3a4910dbe6b17e1f03e44e"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#a8e5dcaa5ea3a4910dbe6b17e1f03e44e">LTE::window::id</a></div><div class="ttdeci">windowPieceId id</div><div class="ttdef"><b>Definition:</b> window.h:28</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1window_html_aa769f85656ebde3a1234aa9091d194b0"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#aa769f85656ebde3a1234aa9091d194b0">LTE::window::Height</a></div><div class="ttdeci">unsigned int Height</div><div class="ttdef"><b>Definition:</b> window.h:26</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1window_html_ab2c769a3a5445d32d09186ed7816e337"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#ab2c769a3a5445d32d09186ed7816e337">LTE::window::Width</a></div><div class="ttdeci">unsigned int Width</div><div class="ttdef"><b>Definition:</b> window.h:26</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1window_html_acba19ea1d8f513ba9b320cefffd4af82"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#acba19ea1d8f513ba9b320cefffd4af82">LTE::window::activeScene</a></div><div class="ttdeci">scene * activeScene</div><div class="ttdef"><b>Definition:</b> window.h:31</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a1549406e7962ca62439f148b6bec5d60a48cb9daa41ed1838d1f352a141725d37"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a1549406e7962ca62439f148b6bec5d60a48cb9daa41ed1838d1f352a141725d37">LTE::OpenGL</a></div><div class="ttdeci">@ OpenGL</div><div class="ttdef"><b>Definition:</b> core.h:17</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a1549406e7962ca62439f148b6bec5d60a48cb9daa41ed1838d1f352a141725d37"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a1549406e7962ca62439f148b6bec5d60a48cb9daa41ed1838d1f352a141725d37">LTE::OpenGL</a></div><div class="ttdeci">@ OpenGL</div><div class="ttdef"><b>Definition:</b> core.h:18</div></div>
 <div class="ttc" id="anamespace_l_t_e_html_a9a053246fe6d76fb97a3d9e95c94dbda"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a9a053246fe6d76fb97a3d9e95c94dbda">LTE::entityTaleId</a></div><div class="ttdeci">uint32_t entityTaleId</div><div class="ttdef"><b>Definition:</b> core.h:7</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -182,8 +182,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/d26/class_l_t_e_1_1window_builder_ad1ca0242c2cde62734d35a098d5a7d84_icgraph.png" border="0" usemap="#ad0/d26/class_l_t_e_1_1window_builder_ad1ca0242c2cde62734d35a098d5a7d84_icgraph" alt=""/></div>
 <map name="ad0/d26/class_l_t_e_1_1window_builder_ad1ca0242c2cde62734d35a098d5a7d84_icgraph" id="ad0/d26/class_l_t_e_1_1window_builder_ad1ca0242c2cde62734d35a098d5a7d84_icgraph">
-<area shape="rect" title=" " alt="" coords="203,5,341,47"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#acc2b710e8936b1ba64fd0f2ef7f7b636" title=" " alt="" coords="5,5,155,47"/>
+<area shape="rect" title=" " alt="" coords="301,5,437,47"/>
+<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#acc2b710e8936b1ba64fd0f2ef7f7b636" title=" " alt="" coords="108,5,253,47"/>
+<area shape="rect" href="../../da/dd9/obj_loading_8test_8cpp.html#ab7d3cf99cb7404dcda115544ab7a09c6" title=" " alt="" coords="5,13,60,39"/>
 </map>
 </div>
 
@@ -211,8 +212,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/d26/class_l_t_e_1_1window_builder_ae4c402df966a6313a04f0778ce527fe7_icgraph.png" border="0" usemap="#ad0/d26/class_l_t_e_1_1window_builder_ae4c402df966a6313a04f0778ce527fe7_icgraph" alt=""/></div>
 <map name="ad0/d26/class_l_t_e_1_1window_builder_ae4c402df966a6313a04f0778ce527fe7_icgraph" id="ad0/d26/class_l_t_e_1_1window_builder_ae4c402df966a6313a04f0778ce527fe7_icgraph">
-<area shape="rect" title=" " alt="" coords="203,5,341,47"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#acc2b710e8936b1ba64fd0f2ef7f7b636" title=" " alt="" coords="5,5,155,47"/>
+<area shape="rect" title=" " alt="" coords="301,5,437,47"/>
+<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#acc2b710e8936b1ba64fd0f2ef7f7b636" title=" " alt="" coords="108,5,253,47"/>
+<area shape="rect" href="../../da/dd9/obj_loading_8test_8cpp.html#ab7d3cf99cb7404dcda115544ab7a09c6" title=" " alt="" coords="5,13,60,39"/>
 </map>
 </div>
 
@@ -282,7 +284,16 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">   45</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1window_html_acc46de1166ccb81e71f682f6e2761077"><div class="ttname"><a href="../../d4/d38/class_l_t_e_1_1window.html#acc46de1166ccb81e71f682f6e2761077">LTE::window::Title</a></div><div class="ttdeci">std::string Title</div><div class="ttdef"><b>Definition:</b> window.h:25</div></div>
-</div><!-- fragment -->
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d26/class_l_t_e_1_1window_builder_ab29e5b4593b928c324455c9c16958a0a_icgraph.png" border="0" usemap="#ad0/d26/class_l_t_e_1_1window_builder_ab29e5b4593b928c324455c9c16958a0a_icgraph" alt=""/></div>
+<map name="ad0/d26/class_l_t_e_1_1window_builder_ab29e5b4593b928c324455c9c16958a0a_icgraph" id="ad0/d26/class_l_t_e_1_1window_builder_ab29e5b4593b928c324455c9c16958a0a_icgraph">
+<area shape="rect" title=" " alt="" coords="108,5,244,47"/>
+<area shape="rect" href="../../da/dd9/obj_loading_8test_8cpp.html#ab7d3cf99cb7404dcda115544ab7a09c6" title=" " alt="" coords="5,13,60,39"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a883e2fd4254e8f8aaa47ef5eaada47d2" name="a883e2fd4254e8f8aaa47ef5eaada47d2"></a>

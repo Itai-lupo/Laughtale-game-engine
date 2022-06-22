@@ -10,21 +10,24 @@
 #include "colliderSystem2D.h"
 #include "assetManager.h"
 
+#include "framebuffer.h"
+
 
 namespace LTE
 {
+    class batchRenderer;
+    class window;
+
     class scene
     {
+        private:
+            framebuffer *fbo;
+            batchRenderer *render;
         public:
-            scene()
-            {
-                sceneCollider = new colliderSystem2D();
-                backgroundColor = new material(glm::vec4({0.05f, 0.05f, 0.05f, 1.0f}));
-                objects = new std::vector<gameObject*>();
-            }
-
+            scene(window *parentWindow);
             ~scene(){}
             
+
             colliderSystem2D *sceneCollider;
 
 			assetManager *assetLibrary;
@@ -62,6 +65,8 @@ namespace LTE
             {
                 return camera->getComponent<coreCameraControler>()->getAspectRatio();
             }
+
+            static void renderScene(LTE::gameObject *e, LTE::coreEventData *sendor);
     };
 
 }

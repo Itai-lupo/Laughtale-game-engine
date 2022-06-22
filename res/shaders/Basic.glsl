@@ -2,16 +2,18 @@
 #version 330 core 
 
 
-layout(location = 0) in vec4 postion;
+layout(location = 0) in vec3 postion;
+layout(location = 1) in vec2 texCoord;
 
-out vec2 v_TextCoord;
+out vec4 MatrialColor;
+out vec2 textCoord;
 
-uniform mat4 viewProjection;
-uniform mat4 transform;
+
 
 void main(){
-   gl_Position = viewProjection * transform * postion;
-   v_TextCoord.xy = postion.xy;
+   gl_Position =  vec4(postion, 1.0);
+   // MatrialColor = MatColor;
+   textCoord = texCoord;
 };
 
 
@@ -20,12 +22,27 @@ void main(){
 #shader fragment
 #version 330 core 
 
+
 layout(location = 0) out vec4 color;
 
-in vec2 v_TextCoord;
+// in vec4 MatrialColor;
+in vec2 textCoord;
 
-uniform vec4 colorOffset;
+uniform vec4 MatColor;
+uniform sampler2D textureData;
+
+vec4 calcColor(vec4 textureColor)
+{
+   if(textureColor.rgba == vec4(0.0))
+      return vec4(0.0);
+      
+   return textureColor + MatColor;
+
+}
 
 void main(){
-   color = vec4( v_TextCoord.x  + colorOffset.x, v_TextCoord.y + v_TextCoord.x, v_TextCoord.y + colorOffset.y, 1.0f);
+   vec4 textureColor;
+   textureColor = texture(textureData, textCoord);
+
+   color = calcColor(textureColor);
 };

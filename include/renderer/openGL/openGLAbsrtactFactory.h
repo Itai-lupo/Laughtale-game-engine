@@ -10,6 +10,7 @@
 #include "openGLVertexBuffer.h"
 #include "openGLIndexBuffer.h"
 #include "openGLTexture.h"
+#include "openGLFramebuffer.h"
 
 namespace LTE
 {
@@ -53,6 +54,14 @@ namespace LTE
                 needToInit.push(t);
                 return t;
             }
+
+            virtual framebuffer *createFramebuffer(uint32_t width, uint32_t hight) override
+            {
+                openGLFramebuffer *fbo = new openGLFramebuffer(width, hight);
+                needToInit.push(fbo);
+                return fbo;
+            }
+
 
             virtual void build() override
             {

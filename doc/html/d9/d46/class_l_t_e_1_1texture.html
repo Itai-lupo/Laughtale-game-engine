@@ -123,10 +123,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a36fbeab90ae4e53b49d01676f1714b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7f8b21d3da7066fa118067321e4ecdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a898790d5239608a12252fcc80608e2fa">textureId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d46/class_l_t_e_1_1texture.html#af7f8b21d3da7066fa118067321e4ecdf">getId</a> ()</td></tr>
 <tr class="separator:af7f8b21d3da7066fa118067321e4ecdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4162bd9660c75a841fbae6dec00f2ea6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d59/namespace_l_t_e.html#affbe7fac9e66d0a69d29a96b1a9f8ea1">textureFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d46/class_l_t_e_1_1texture.html#a4162bd9660c75a841fbae6dec00f2ea6">getFormat</a> ()</td></tr>
+<tr class="separator:a4162bd9660c75a841fbae6dec00f2ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a6d472b5864a142b7caa13ec71b17fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d46/class_l_t_e_1_1texture.html#a1a6d472b5864a142b7caa13ec71b17fb">getWidth</a> ()</td></tr>
 <tr class="separator:a1a6d472b5864a142b7caa13ec71b17fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24cf9325098472ec1d7482bfe6381e40"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d46/class_l_t_e_1_1texture.html#a24cf9325098472ec1d7482bfe6381e40">getHeight</a> ()</td></tr>
 <tr class="separator:a24cf9325098472ec1d7482bfe6381e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a143224b76f95d510307884fd3182b0f5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d46/class_l_t_e_1_1texture.html#a143224b76f95d510307884fd3182b0f5">setDimensions</a> (const glm::vec2 dimensions)=0</td></tr>
+<tr class="separator:a143224b76f95d510307884fd3182b0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3508283ff09db716e7adb442223d5fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d46/class_l_t_e_1_1texture.html#af3508283ff09db716e7adb442223d5fa">useSpriteSheet</a> ()</td></tr>
 <tr class="separator:af3508283ff09db716e7adb442223d5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca0c4147d23f20f27635638e482025a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d46/class_l_t_e_1_1texture.html#aca0c4147d23f20f27635638e482025a1">useCustemSpriteSheet</a> ()</td></tr>
@@ -171,6 +175,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a00f5455548e42c2613760eb66bff49ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f21f7afba47f86c887590a80425c9b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d46/class_l_t_e_1_1texture.html#a1f21f7afba47f86c887590a80425c9b1">height</a></td></tr>
 <tr class="separator:a1f21f7afba47f86c887590a80425c9b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae43591b9a15d387869621edd9a7fa7bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d59/namespace_l_t_e.html#affbe7fac9e66d0a69d29a96b1a9f8ea1">textureFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d46/class_l_t_e_1_1texture.html#ae43591b9a15d387869621edd9a7fa7bd">format</a></td></tr>
+<tr class="separator:ae43591b9a15d387869621edd9a7fa7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af3504464a6c3dc86148ce0b178de4e7a" name="af3504464a6c3dc86148ce0b178de4e7a"></a>
@@ -196,8 +202,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   37</span>: <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a60a1b4914b9854c0e3414f9b0c7eb0c7">path</a>(<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a60a1b4914b9854c0e3414f9b0c7eb0c7">path</a>){}</div>
-<div class="ttc" id="aclass_l_t_e_1_1texture_html_a60a1b4914b9854c0e3414f9b0c7eb0c7"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a60a1b4914b9854c0e3414f9b0c7eb0c7">LTE::texture::path</a></div><div class="ttdeci">std::string path</div><div class="ttdef"><b>Definition:</b> texture.h:25</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>: <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a60a1b4914b9854c0e3414f9b0c7eb0c7">path</a>(<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a60a1b4914b9854c0e3414f9b0c7eb0c7">path</a>){}</div>
+<div class="ttc" id="aclass_l_t_e_1_1texture_html_a60a1b4914b9854c0e3414f9b0c7eb0c7"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a60a1b4914b9854c0e3414f9b0c7eb0c7">LTE::texture::path</a></div><div class="ttdeci">std::string path</div><div class="ttdef"><b>Definition:</b> texture.h:43</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -257,11 +263,39 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d46/class_l_t_e_1_1texture_a36fbeab90ae4e53b49d01676f1714b7d_icgraph.png" border="0" usemap="#ad9/d46/class_l_t_e_1_1texture_a36fbeab90ae4e53b49d01676f1714b7d_icgraph" alt=""/></div>
 <map name="ad9/d46/class_l_t_e_1_1texture_a36fbeab90ae4e53b49d01676f1714b7d_icgraph" id="ad9/d46/class_l_t_e_1_1texture_a36fbeab90ae4e53b49d01676f1714b7d_icgraph">
-<area shape="rect" title=" " alt="" coords="185,5,312,32"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#aa5bfe858eb0ccf8fd89b594642954aa6" title=" " alt="" coords="5,5,137,32"/>
+<area shape="rect" title=" " alt="" coords="227,35,348,61"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#aa5bfe858eb0ccf8fd89b594642954aa6" title=" " alt="" coords="28,5,156,32"/>
+<area shape="rect" href="../../d3/dcb/class_l_t_e_1_1simple_quad_renderer.html#a84ddd4c92a037c2bc00c281ec19cc19f" title=" " alt="" coords="5,57,179,98"/>
 </map>
 </div>
 
+</div>
+</div>
+<a id="a4162bd9660c75a841fbae6dec00f2ea6" name="a4162bd9660c75a841fbae6dec00f2ea6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4162bd9660c75a841fbae6dec00f2ea6">&#9670;&nbsp;</a></span>getFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d59/namespace_l_t_e.html#affbe7fac9e66d0a69d29a96b1a9f8ea1">textureFormat</a> LTE::texture::getFormat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   61</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#ae43591b9a15d387869621edd9a7fa7bd">format</a>; }</div>
+<div class="ttc" id="aclass_l_t_e_1_1texture_html_ae43591b9a15d387869621edd9a7fa7bd"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#ae43591b9a15d387869621edd9a7fa7bd">LTE::texture::format</a></div><div class="ttdeci">textureFormat format</div><div class="ttdef"><b>Definition:</b> texture.h:53</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a24cf9325098472ec1d7482bfe6381e40" name="a24cf9325098472ec1d7482bfe6381e40"></a>
@@ -286,8 +320,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   44</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a1f21f7afba47f86c887590a80425c9b1">height</a>;}</div>
-<div class="ttc" id="aclass_l_t_e_1_1texture_html_a1f21f7afba47f86c887590a80425c9b1"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a1f21f7afba47f86c887590a80425c9b1">LTE::texture::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> texture.h:34</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a1f21f7afba47f86c887590a80425c9b1">height</a>;}</div>
+<div class="ttc" id="aclass_l_t_e_1_1texture_html_a1f21f7afba47f86c887590a80425c9b1"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a1f21f7afba47f86c887590a80425c9b1">LTE::texture::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> texture.h:52</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -313,17 +347,17 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   41</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#ac57a044d3fb566dfa18840db93642c5c">id</a>; }</div>
-<div class="ttc" id="aclass_l_t_e_1_1texture_html_ac57a044d3fb566dfa18840db93642c5c"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#ac57a044d3fb566dfa18840db93642c5c">LTE::texture::id</a></div><div class="ttdeci">textureId id</div><div class="ttdef"><b>Definition:</b> texture.h:26</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#ac57a044d3fb566dfa18840db93642c5c">id</a>; }</div>
+<div class="ttc" id="aclass_l_t_e_1_1texture_html_ac57a044d3fb566dfa18840db93642c5c"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#ac57a044d3fb566dfa18840db93642c5c">LTE::texture::id</a></div><div class="ttdeci">textureId id</div><div class="ttdef"><b>Definition:</b> texture.h:44</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d46/class_l_t_e_1_1texture_af7f8b21d3da7066fa118067321e4ecdf_icgraph.png" border="0" usemap="#ad9/d46/class_l_t_e_1_1texture_af7f8b21d3da7066fa118067321e4ecdf_icgraph" alt=""/></div>
 <map name="ad9/d46/class_l_t_e_1_1texture_af7f8b21d3da7066fa118067321e4ecdf_icgraph" id="ad9/d46/class_l_t_e_1_1texture_af7f8b21d3da7066fa118067321e4ecdf_icgraph">
-<area shape="rect" title=" " alt="" coords="673,13,800,39"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#afb1ecde3f0f2a624000b7f30336b6d99" title=" " alt="" coords="449,13,625,39"/>
-<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="235,5,401,47"/>
-<area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="5,13,187,39"/>
+<area shape="rect" title=" " alt="" coords="628,13,755,39"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#afb1ecde3f0f2a624000b7f30336b6d99" title=" " alt="" coords="404,13,580,39"/>
+<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="189,5,356,47"/>
+<area shape="rect" href="../../dc/ddb/class_l_t_e_1_1batch_renderer.html#a4ce0e8492103711b80fe7ecb673253d4" title=" " alt="" coords="5,5,141,47"/>
 </map>
 </div>
 
@@ -352,21 +386,21 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   86</span>            {</div>
-<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#aa99376c37fc57fec699f048107dba084">custumSpriteDimensions</a>[spriteId].size / glm::vec2((<span class="keywordtype">float</span>)<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a00f5455548e42c2613760eb66bff49ed">width</a>, (<span class="keywordtype">float</span>)<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a1f21f7afba47f86c887590a80425c9b1">height</a>);</div>
-<div class="line"><span class="lineno">   88</span>            }</div>
-<div class="ttc" id="aclass_l_t_e_1_1texture_html_a00f5455548e42c2613760eb66bff49ed"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a00f5455548e42c2613760eb66bff49ed">LTE::texture::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> texture.h:34</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1texture_html_aa99376c37fc57fec699f048107dba084"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#aa99376c37fc57fec699f048107dba084">LTE::texture::custumSpriteDimensions</a></div><div class="ttdeci">std::vector&lt; spriteDimensionsData &gt; custumSpriteDimensions</div><div class="ttdef"><b>Definition:</b> texture.h:32</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>            {</div>
+<div class="line"><span class="lineno">  109</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#aa99376c37fc57fec699f048107dba084">custumSpriteDimensions</a>[spriteId].size / glm::vec2((<span class="keywordtype">float</span>)<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a00f5455548e42c2613760eb66bff49ed">width</a>, (<span class="keywordtype">float</span>)<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a1f21f7afba47f86c887590a80425c9b1">height</a>);</div>
+<div class="line"><span class="lineno">  110</span>            }</div>
+<div class="ttc" id="aclass_l_t_e_1_1texture_html_a00f5455548e42c2613760eb66bff49ed"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a00f5455548e42c2613760eb66bff49ed">LTE::texture::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> texture.h:52</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1texture_html_aa99376c37fc57fec699f048107dba084"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#aa99376c37fc57fec699f048107dba084">LTE::texture::custumSpriteDimensions</a></div><div class="ttdeci">std::vector&lt; spriteDimensionsData &gt; custumSpriteDimensions</div><div class="ttdef"><b>Definition:</b> texture.h:50</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d46/class_l_t_e_1_1texture_af9189263f59b3b9ae7e23a35bdd8322c_icgraph.png" border="0" usemap="#ad9/d46/class_l_t_e_1_1texture_af9189263f59b3b9ae7e23a35bdd8322c_icgraph" alt=""/></div>
 <map name="ad9/d46/class_l_t_e_1_1texture_af9189263f59b3b9ae7e23a35bdd8322c_icgraph" id="ad9/d46/class_l_t_e_1_1texture_af9189263f59b3b9ae7e23a35bdd8322c_icgraph">
-<area shape="rect" title=" " alt="" coords="663,46,863,73"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a60c9114c31494e7310bfded8f3b7713b" title=" " alt="" coords="449,5,615,47"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6" title=" " alt="" coords="449,71,615,112"/>
-<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="235,39,401,80"/>
-<area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="5,46,187,73"/>
+<area shape="rect" title=" " alt="" coords="617,46,817,73"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a60c9114c31494e7310bfded8f3b7713b" title=" " alt="" coords="404,5,569,47"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6" title=" " alt="" coords="404,71,569,112"/>
+<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="189,39,356,80"/>
+<area shape="rect" href="../../dc/ddb/class_l_t_e_1_1batch_renderer.html#a4ce0e8492103711b80fe7ecb673253d4" title=" " alt="" coords="5,39,141,80"/>
 </map>
 </div>
 
@@ -395,19 +429,19 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   81</span>            {</div>
-<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#aa99376c37fc57fec699f048107dba084">custumSpriteDimensions</a>[spriteId].start / glm::vec2((<span class="keywordtype">float</span>)<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a00f5455548e42c2613760eb66bff49ed">width</a>, (<span class="keywordtype">float</span>)<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a1f21f7afba47f86c887590a80425c9b1">height</a>);</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>            {</div>
+<div class="line"><span class="lineno">  104</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#aa99376c37fc57fec699f048107dba084">custumSpriteDimensions</a>[spriteId].start / glm::vec2((<span class="keywordtype">float</span>)<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a00f5455548e42c2613760eb66bff49ed">width</a>, (<span class="keywordtype">float</span>)<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a1f21f7afba47f86c887590a80425c9b1">height</a>);</div>
+<div class="line"><span class="lineno">  105</span>            }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d46/class_l_t_e_1_1texture_afbdd86adf9565757d56fed61d940ed6a_icgraph.png" border="0" usemap="#ad9/d46/class_l_t_e_1_1texture_afbdd86adf9565757d56fed61d940ed6a_icgraph" alt=""/></div>
 <map name="ad9/d46/class_l_t_e_1_1texture_afbdd86adf9565757d56fed61d940ed6a_icgraph" id="ad9/d46/class_l_t_e_1_1texture_afbdd86adf9565757d56fed61d940ed6a_icgraph">
-<area shape="rect" title=" " alt="" coords="663,46,865,73"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a60c9114c31494e7310bfded8f3b7713b" title=" " alt="" coords="449,5,615,47"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6" title=" " alt="" coords="449,71,615,112"/>
-<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="235,39,401,80"/>
-<area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="5,46,187,73"/>
+<area shape="rect" title=" " alt="" coords="617,46,820,73"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a60c9114c31494e7310bfded8f3b7713b" title=" " alt="" coords="404,5,569,47"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6" title=" " alt="" coords="404,71,569,112"/>
+<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="189,39,356,80"/>
+<area shape="rect" href="../../dc/ddb/class_l_t_e_1_1batch_renderer.html#a4ce0e8492103711b80fe7ecb673253d4" title=" " alt="" coords="5,39,141,80"/>
 </map>
 </div>
 
@@ -436,19 +470,19 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   70</span>            {</div>
-<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">return</span> spriteXId * (<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a67aa31cd980b6d31ad91cd5a661d5ebe">spriteDimensions</a>.x / (float)<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a00f5455548e42c2613760eb66bff49ed">width</a>);</div>
-<div class="line"><span class="lineno">   72</span>            }</div>
-<div class="ttc" id="aclass_l_t_e_1_1texture_html_a67aa31cd980b6d31ad91cd5a661d5ebe"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a67aa31cd980b6d31ad91cd5a661d5ebe">LTE::texture::spriteDimensions</a></div><div class="ttdeci">glm::vec2 spriteDimensions</div><div class="ttdef"><b>Definition:</b> texture.h:31</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>            {</div>
+<div class="line"><span class="lineno">   93</span>                <span class="keywordflow">return</span> spriteXId * (<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a67aa31cd980b6d31ad91cd5a661d5ebe">spriteDimensions</a>.x / (float)<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a00f5455548e42c2613760eb66bff49ed">width</a>);</div>
+<div class="line"><span class="lineno">   94</span>            }</div>
+<div class="ttc" id="aclass_l_t_e_1_1texture_html_a67aa31cd980b6d31ad91cd5a661d5ebe"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a67aa31cd980b6d31ad91cd5a661d5ebe">LTE::texture::spriteDimensions</a></div><div class="ttdeci">glm::vec2 spriteDimensions</div><div class="ttdef"><b>Definition:</b> texture.h:49</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d46/class_l_t_e_1_1texture_ad5a48a2ed940ab7356ecbb2eb399c4aa_icgraph.png" border="0" usemap="#ad9/d46/class_l_t_e_1_1texture_ad5a48a2ed940ab7356ecbb2eb399c4aa_icgraph" alt=""/></div>
 <map name="ad9/d46/class_l_t_e_1_1texture_ad5a48a2ed940ab7356ecbb2eb399c4aa_icgraph" id="ad9/d46/class_l_t_e_1_1texture_ad5a48a2ed940ab7356ecbb2eb399c4aa_icgraph">
-<area shape="rect" title=" " alt="" coords="663,13,821,39"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a60c9114c31494e7310bfded8f3b7713b" title=" " alt="" coords="449,5,615,47"/>
-<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="235,5,401,47"/>
-<area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="5,13,187,39"/>
+<area shape="rect" title=" " alt="" coords="617,13,776,39"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a60c9114c31494e7310bfded8f3b7713b" title=" " alt="" coords="404,5,569,47"/>
+<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="189,5,356,47"/>
+<area shape="rect" href="../../dc/ddb/class_l_t_e_1_1batch_renderer.html#a4ce0e8492103711b80fe7ecb673253d4" title=" " alt="" coords="5,5,141,47"/>
 </map>
 </div>
 
@@ -476,18 +510,18 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   96</span>            {</div>
-<div class="line"><span class="lineno">   97</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a67aa31cd980b6d31ad91cd5a661d5ebe">spriteDimensions</a>.x / (float)<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a00f5455548e42c2613760eb66bff49ed">width</a>;</div>
-<div class="line"><span class="lineno">   98</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>            {</div>
+<div class="line"><span class="lineno">  119</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a67aa31cd980b6d31ad91cd5a661d5ebe">spriteDimensions</a>.x / (float)<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a00f5455548e42c2613760eb66bff49ed">width</a>;</div>
+<div class="line"><span class="lineno">  120</span>            }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d46/class_l_t_e_1_1texture_a698a93e7e35890f41319b6c5f333a241_icgraph.png" border="0" usemap="#ad9/d46/class_l_t_e_1_1texture_a698a93e7e35890f41319b6c5f333a241_icgraph" alt=""/></div>
 <map name="ad9/d46/class_l_t_e_1_1texture_a698a93e7e35890f41319b6c5f333a241_icgraph" id="ad9/d46/class_l_t_e_1_1texture_a698a93e7e35890f41319b6c5f333a241_icgraph">
-<area shape="rect" title=" " alt="" coords="663,13,851,39"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a60c9114c31494e7310bfded8f3b7713b" title=" " alt="" coords="449,5,615,47"/>
-<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="235,5,401,47"/>
-<area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="5,13,187,39"/>
+<area shape="rect" title=" " alt="" coords="617,13,805,39"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a60c9114c31494e7310bfded8f3b7713b" title=" " alt="" coords="404,5,569,47"/>
+<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="189,5,356,47"/>
+<area shape="rect" href="../../dc/ddb/class_l_t_e_1_1batch_renderer.html#a4ce0e8492103711b80fe7ecb673253d4" title=" " alt="" coords="5,5,141,47"/>
 </map>
 </div>
 
@@ -516,18 +550,18 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   76</span>            {</div>
-<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">return</span> spriteYId * (<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a67aa31cd980b6d31ad91cd5a661d5ebe">spriteDimensions</a>.y / (float)<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a1f21f7afba47f86c887590a80425c9b1">height</a>);</div>
-<div class="line"><span class="lineno">   78</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>            {</div>
+<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">return</span> spriteYId * (<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a67aa31cd980b6d31ad91cd5a661d5ebe">spriteDimensions</a>.y / (float)<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a1f21f7afba47f86c887590a80425c9b1">height</a>);</div>
+<div class="line"><span class="lineno">  100</span>            }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d46/class_l_t_e_1_1texture_ad9d9d1833780c2d7dde35f10ff04cebe_icgraph.png" border="0" usemap="#ad9/d46/class_l_t_e_1_1texture_ad9d9d1833780c2d7dde35f10ff04cebe_icgraph" alt=""/></div>
 <map name="ad9/d46/class_l_t_e_1_1texture_ad9d9d1833780c2d7dde35f10ff04cebe_icgraph" id="ad9/d46/class_l_t_e_1_1texture_ad9d9d1833780c2d7dde35f10ff04cebe_icgraph">
-<area shape="rect" title=" " alt="" coords="663,13,821,39"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6" title=" " alt="" coords="449,5,615,47"/>
-<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="235,5,401,47"/>
-<area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="5,13,187,39"/>
+<area shape="rect" title=" " alt="" coords="617,13,776,39"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6" title=" " alt="" coords="404,5,569,47"/>
+<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="189,5,356,47"/>
+<area shape="rect" href="../../dc/ddb/class_l_t_e_1_1batch_renderer.html#a4ce0e8492103711b80fe7ecb673253d4" title=" " alt="" coords="5,5,141,47"/>
 </map>
 </div>
 
@@ -555,18 +589,18 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   91</span>            {</div>
-<div class="line"><span class="lineno">   92</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a67aa31cd980b6d31ad91cd5a661d5ebe">spriteDimensions</a>.y / (float)<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a1f21f7afba47f86c887590a80425c9b1">height</a>;</div>
-<div class="line"><span class="lineno">   93</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>            {</div>
+<div class="line"><span class="lineno">  114</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a67aa31cd980b6d31ad91cd5a661d5ebe">spriteDimensions</a>.y / (float)<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a1f21f7afba47f86c887590a80425c9b1">height</a>;</div>
+<div class="line"><span class="lineno">  115</span>            }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d46/class_l_t_e_1_1texture_a38274140d54e73b14338d34117cd84e7_icgraph.png" border="0" usemap="#ad9/d46/class_l_t_e_1_1texture_a38274140d54e73b14338d34117cd84e7_icgraph" alt=""/></div>
 <map name="ad9/d46/class_l_t_e_1_1texture_a38274140d54e73b14338d34117cd84e7_icgraph" id="ad9/d46/class_l_t_e_1_1texture_a38274140d54e73b14338d34117cd84e7_icgraph">
-<area shape="rect" title=" " alt="" coords="663,13,851,39"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6" title=" " alt="" coords="449,5,615,47"/>
-<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="235,5,401,47"/>
-<area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="5,13,187,39"/>
+<area shape="rect" title=" " alt="" coords="617,13,805,39"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6" title=" " alt="" coords="404,5,569,47"/>
+<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="189,5,356,47"/>
+<area shape="rect" href="../../dc/ddb/class_l_t_e_1_1batch_renderer.html#a4ce0e8492103711b80fe7ecb673253d4" title=" " alt="" coords="5,5,141,47"/>
 </map>
 </div>
 
@@ -594,8 +628,36 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   43</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a00f5455548e42c2613760eb66bff49ed">width</a>;}</div>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a00f5455548e42c2613760eb66bff49ed">width</a>;}</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a143224b76f95d510307884fd3182b0f5" name="a143224b76f95d510307884fd3182b0f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a143224b76f95d510307884fd3182b0f5">&#9670;&nbsp;</a></span>setDimensions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void LTE::texture::setDimensions </td>
+          <td>(</td>
+          <td class="paramtype">const glm::vec2&#160;</td>
+          <td class="paramname"><em>dimensions</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../d9/ddf/class_l_t_e_1_1open_g_l_texture.html#acaa4e68f111bb99f911410b0fc5d0a9d">LTE::openGLTexture</a>.</p>
+
 </div>
 </div>
 <a id="ada408b233b494dded1ec330a1bed7660" name="ada408b233b494dded1ec330a1bed7660"></a>
@@ -621,11 +683,11 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   57</span>            {</div>
-<div class="line"><span class="lineno">   58</span>                this-&gt;<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a67aa31cd980b6d31ad91cd5a661d5ebe">spriteDimensions</a> = <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a67aa31cd980b6d31ad91cd5a661d5ebe">spriteDimensions</a>;</div>
-<div class="line"><span class="lineno">   59</span>                <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a675c16dbcb447427e948a229eb52fba0">isSpriteSheet</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   60</span>            }</div>
-<div class="ttc" id="aclass_l_t_e_1_1texture_html_a675c16dbcb447427e948a229eb52fba0"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a675c16dbcb447427e948a229eb52fba0">LTE::texture::isSpriteSheet</a></div><div class="ttdeci">bool isSpriteSheet</div><div class="ttdef"><b>Definition:</b> texture.h:29</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>            {</div>
+<div class="line"><span class="lineno">   80</span>                this-&gt;<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a67aa31cd980b6d31ad91cd5a661d5ebe">spriteDimensions</a> = <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a67aa31cd980b6d31ad91cd5a661d5ebe">spriteDimensions</a>;</div>
+<div class="line"><span class="lineno">   81</span>                <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a675c16dbcb447427e948a229eb52fba0">isSpriteSheet</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   82</span>            }</div>
+<div class="ttc" id="aclass_l_t_e_1_1texture_html_a675c16dbcb447427e948a229eb52fba0"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a675c16dbcb447427e948a229eb52fba0">LTE::texture::isSpriteSheet</a></div><div class="ttdeci">bool isSpriteSheet</div><div class="ttdef"><b>Definition:</b> texture.h:47</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -652,12 +714,12 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   63</span>            {</div>
-<div class="line"><span class="lineno">   64</span>                this-&gt;<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#aa99376c37fc57fec699f048107dba084">custumSpriteDimensions</a> = <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a67aa31cd980b6d31ad91cd5a661d5ebe">spriteDimensions</a>;</div>
-<div class="line"><span class="lineno">   65</span>                <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a675c16dbcb447427e948a229eb52fba0">isSpriteSheet</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   66</span>                <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a383f0de330f65071e260b22e02393d9d">isCustumSpriteSheet</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   67</span>            }</div>
-<div class="ttc" id="aclass_l_t_e_1_1texture_html_a383f0de330f65071e260b22e02393d9d"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a383f0de330f65071e260b22e02393d9d">LTE::texture::isCustumSpriteSheet</a></div><div class="ttdeci">bool isCustumSpriteSheet</div><div class="ttdef"><b>Definition:</b> texture.h:30</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>            {</div>
+<div class="line"><span class="lineno">   86</span>                this-&gt;<a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#aa99376c37fc57fec699f048107dba084">custumSpriteDimensions</a> = <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a67aa31cd980b6d31ad91cd5a661d5ebe">spriteDimensions</a>;</div>
+<div class="line"><span class="lineno">   87</span>                <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a675c16dbcb447427e948a229eb52fba0">isSpriteSheet</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   88</span>                <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a383f0de330f65071e260b22e02393d9d">isCustumSpriteSheet</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   89</span>            }</div>
+<div class="ttc" id="aclass_l_t_e_1_1texture_html_a383f0de330f65071e260b22e02393d9d"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a383f0de330f65071e260b22e02393d9d">LTE::texture::isCustumSpriteSheet</a></div><div class="ttdeci">bool isCustumSpriteSheet</div><div class="ttdef"><b>Definition:</b> texture.h:48</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -683,19 +745,19 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   52</span>            {</div>
-<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a383f0de330f65071e260b22e02393d9d">isCustumSpriteSheet</a>;</div>
-<div class="line"><span class="lineno">   54</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>            {</div>
+<div class="line"><span class="lineno">   75</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a383f0de330f65071e260b22e02393d9d">isCustumSpriteSheet</a>;</div>
+<div class="line"><span class="lineno">   76</span>            }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d46/class_l_t_e_1_1texture_aca0c4147d23f20f27635638e482025a1_icgraph.png" border="0" usemap="#ad9/d46/class_l_t_e_1_1texture_aca0c4147d23f20f27635638e482025a1_icgraph" alt=""/></div>
 <map name="ad9/d46/class_l_t_e_1_1texture_aca0c4147d23f20f27635638e482025a1_icgraph" id="ad9/d46/class_l_t_e_1_1texture_aca0c4147d23f20f27635638e482025a1_icgraph">
-<area shape="rect" title=" " alt="" coords="663,39,860,80"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a60c9114c31494e7310bfded8f3b7713b" title=" " alt="" coords="449,5,615,47"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6" title=" " alt="" coords="449,71,615,112"/>
-<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="235,39,401,80"/>
-<area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="5,46,187,73"/>
+<area shape="rect" title=" " alt="" coords="617,39,815,80"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a60c9114c31494e7310bfded8f3b7713b" title=" " alt="" coords="404,5,569,47"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6" title=" " alt="" coords="404,71,569,112"/>
+<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="189,39,356,80"/>
+<area shape="rect" href="../../dc/ddb/class_l_t_e_1_1batch_renderer.html#a4ce0e8492103711b80fe7ecb673253d4" title=" " alt="" coords="5,39,141,80"/>
 </map>
 </div>
 
@@ -723,19 +785,19 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   47</span>            {</div>
-<div class="line"><span class="lineno">   48</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a675c16dbcb447427e948a229eb52fba0">isSpriteSheet</a>;</div>
-<div class="line"><span class="lineno">   49</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>            {</div>
+<div class="line"><span class="lineno">   70</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d46/class_l_t_e_1_1texture.html#a675c16dbcb447427e948a229eb52fba0">isSpriteSheet</a>;</div>
+<div class="line"><span class="lineno">   71</span>            }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d46/class_l_t_e_1_1texture_af3508283ff09db716e7adb442223d5fa_icgraph.png" border="0" usemap="#ad9/d46/class_l_t_e_1_1texture_af3508283ff09db716e7adb442223d5fa_icgraph" alt=""/></div>
 <map name="ad9/d46/class_l_t_e_1_1texture_af3508283ff09db716e7adb442223d5fa_icgraph" id="ad9/d46/class_l_t_e_1_1texture_af3508283ff09db716e7adb442223d5fa_icgraph">
-<area shape="rect" title=" " alt="" coords="663,46,849,73"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a60c9114c31494e7310bfded8f3b7713b" title=" " alt="" coords="449,5,615,47"/>
-<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6" title=" " alt="" coords="449,71,615,112"/>
-<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="235,39,401,80"/>
-<area shape="rect" href="../../d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="5,46,187,73"/>
+<area shape="rect" title=" " alt="" coords="617,46,804,73"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a60c9114c31494e7310bfded8f3b7713b" title=" " alt="" coords="404,5,569,47"/>
+<area shape="rect" href="../../dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6" title=" " alt="" coords="404,71,569,112"/>
+<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="189,39,356,80"/>
+<area shape="rect" href="../../dc/ddb/class_l_t_e_1_1batch_renderer.html#a4ce0e8492103711b80fe7ecb673253d4" title=" " alt="" coords="5,39,141,80"/>
 </map>
 </div>
 
@@ -775,6 +837,28 @@ Here is the caller graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;<a class="el" href="../../d7/d91/struct_l_t_e_1_1sprite_dimensions_data.html">spriteDimensionsData</a>&gt; LTE::texture::custumSpriteDimensions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae43591b9a15d387869621edd9a7fa7bd" name="ae43591b9a15d387869621edd9a7fa7bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae43591b9a15d387869621edd9a7fa7bd">&#9670;&nbsp;</a></span>format</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d59/namespace_l_t_e.html#affbe7fac9e66d0a69d29a96b1a9f8ea1">textureFormat</a> LTE::texture::format</td>
         </tr>
       </table>
   </td>

@@ -1,17 +1,11 @@
 #include "window.h"
 #include "ImGuiEvents.h"
 #include "openGLrenderApi.h"
-#include "renderer.h"
 #include "app.h"
 
 namespace LTE 
 {
 	void window::init(){
-		if(useImGui)
-		{
-			app::getOsAPI()->makeContextCurrent(id);
-			initImGui(id);
-		}
 
 		eventManger::addCoustemEventsRoute("Window resize/handel window resize/");
 		
@@ -21,6 +15,11 @@ namespace LTE
 				setWindowId(id)->add();
 
         context->Init();
+		if(useImGui)
+		{
+			app::getOsAPI()->makeContextCurrent(id);
+			initImGui(id);
+		}
 		
 	}
 

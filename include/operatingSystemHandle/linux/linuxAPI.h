@@ -18,6 +18,7 @@ namespace LTE
             virtual void closeWindow(windowPieceId winId) override;
             virtual void swapBuffers(windowPieceId winId) override;
             virtual void destroyWindow(windowPieceId winId) override;
+	      virtual windowPieceId getCurrentContextWindowId() override;
             
             virtual void *getProcAddress() override;
 

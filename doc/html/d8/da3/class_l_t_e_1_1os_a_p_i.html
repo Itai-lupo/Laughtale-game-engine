@@ -120,6 +120,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5797efa13ff7fb2f6fb37e1aa7a0940e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f3c644664d54c068dde4c9eb91c3643"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da3/class_l_t_e_1_1os_a_p_i.html#a1f3c644664d54c068dde4c9eb91c3643">destroyWindow</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> winId)=0</td></tr>
 <tr class="separator:a1f3c644664d54c068dde4c9eb91c3643"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ddb9707ee3d1b1a6fb1402952857da8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da3/class_l_t_e_1_1os_a_p_i.html#a8ddb9707ee3d1b1a6fb1402952857da8">getCurrentContextWindowId</a> ()=0</td></tr>
+<tr class="separator:a8ddb9707ee3d1b1a6fb1402952857da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a75830f8d67f328fef2e6bf226face3"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da3/class_l_t_e_1_1os_a_p_i.html#a0a75830f8d67f328fef2e6bf226face3">getProcAddress</a> ()=0</td></tr>
 <tr class="separator:a0a75830f8d67f328fef2e6bf226face3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -215,6 +217,33 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a8ddb9707ee3d1b1a6fb1402952857da8" name="a8ddb9707ee3d1b1a6fb1402952857da8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ddb9707ee3d1b1a6fb1402952857da8">&#9670;&nbsp;</a></span>getCurrentContextWindowId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../dc/d59/namespace_l_t_e.html#a8ae7e0c0e39c6dfb8804ee2eecf2c6c2">windowPieceId</a> LTE::osAPI::getCurrentContextWindowId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../d1/db3/class_l_t_e_1_1linux_a_p_i.html#abc286af0b65c6f031cab3583780d7036">LTE::linuxAPI</a>.</p>
+
+</div>
+</div>
 <a id="a0a75830f8d67f328fef2e6bf226face3" name="a0a75830f8d67f328fef2e6bf226face3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0a75830f8d67f328fef2e6bf226face3">&#9670;&nbsp;</a></span>getProcAddress()</h2>
 
@@ -300,10 +329,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/da3/class_l_t_e_1_1os_a_p_i_a4bce7a61917e2d10b4acab9dfafe2f72_icgraph.png" border="0" usemap="#ad8/da3/class_l_t_e_1_1os_a_p_i_a4bce7a61917e2d10b4acab9dfafe2f72_icgraph" alt=""/></div>
 <map name="ad8/da3/class_l_t_e_1_1os_a_p_i_a4bce7a61917e2d10b4acab9dfafe2f72_icgraph" id="ad8/da3/class_l_t_e_1_1os_a_p_i_a4bce7a61917e2d10b4acab9dfafe2f72_icgraph">
-<area shape="rect" title=" " alt="" coords="559,42,771,69"/>
-<area shape="rect" href="../../d7/d20/class_l_t_e_1_1graphics_context.html#ac4ded240dde4a332983804d800e582d7" title=" " alt="" coords="365,5,511,47"/>
-<area shape="rect" href="../../d4/d38/class_l_t_e_1_1window.html#ada64ce70730800b0efe780533eb4369c" title=" " alt="" coords="199,42,317,69"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#acc2b710e8936b1ba64fd0f2ef7f7b636" title=" " alt="" coords="5,35,151,76"/>
+<area shape="rect" title=" " alt="" coords="661,42,873,69"/>
+<area shape="rect" href="../../d7/d20/class_l_t_e_1_1graphics_context.html#ac4ded240dde4a332983804d800e582d7" title=" " alt="" coords="468,5,613,47"/>
+<area shape="rect" href="../../d4/d38/class_l_t_e_1_1window.html#ada64ce70730800b0efe780533eb4369c" title=" " alt="" coords="301,42,420,69"/>
+<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#acc2b710e8936b1ba64fd0f2ef7f7b636" title=" " alt="" coords="108,35,253,76"/>
+<area shape="rect" href="../../da/dd9/obj_loading_8test_8cpp.html#ab7d3cf99cb7404dcda115544ab7a09c6" title=" " alt="" coords="5,42,60,69"/>
 </map>
 </div>
 
@@ -340,7 +370,7 @@ Here is the caller graph for this function:</div>
 <map name="ad8/da3/class_l_t_e_1_1os_a_p_i_a14672b329ccd46b1710bfd6d333cd769_icgraph" id="ad8/da3/class_l_t_e_1_1os_a_p_i_a14672b329ccd46b1710bfd6d333cd769_icgraph">
 <area shape="rect" title=" " alt="" coords="269,31,424,57"/>
 <area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#a7b535edbec187f8513e06b4208ba73dc" title=" " alt="" coords="124,31,221,57"/>
-<area shape="rect" href="../../db/dd3/sound_8test_8cpp.html#a3998186a574db417e7fcfdc402eb38ca" title=" " alt="" coords="13,5,68,32"/>
+<area shape="rect" href="../../da/dd9/obj_loading_8test_8cpp.html#ab7d3cf99cb7404dcda115544ab7a09c6" title=" " alt="" coords="13,5,68,32"/>
 <area shape="rect" href="../../d2/dde/checkmate_8cpp.html#aa6676f80bb1510c1fba42d345c814f03" title=" " alt="" coords="5,56,76,83"/>
 </map>
 </div>

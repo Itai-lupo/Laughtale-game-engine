@@ -1,5 +1,6 @@
 <map id="LTE::material::getRGBA" name="LTE::material::getRGBA">
-<area shape="rect" id="node1" title=" " alt="" coords="449,13,608,39"/>
-<area shape="rect" id="node2" href="$d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="235,5,401,47"/>
-<area shape="rect" id="node3" href="$d1/d10/class_l_t_e_1_1renderer.html#a593a79a85c12d6469425a703fecbde6d" title=" " alt="" coords="5,13,187,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="411,46,569,73"/>
+<area shape="rect" id="node2" href="$d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="193,5,359,47"/>
+<area shape="rect" id="node4" href="$d3/dcb/class_l_t_e_1_1simple_quad_renderer.html#a84ddd4c92a037c2bc00c281ec19cc19f" title=" " alt="" coords="189,71,363,112"/>
+<area shape="rect" id="node3" href="$dc/ddb/class_l_t_e_1_1batch_renderer.html#a4ce0e8492103711b80fe7ecb673253d4" title=" " alt="" coords="5,5,141,47"/>
 </map>

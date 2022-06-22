@@ -9,6 +9,24 @@
 
 namespace LTE
 {
+	enum class textureFormat
+	{
+		None = 0,
+
+		// Color
+		RGBA8,
+		RED_INTEGER,
+        RGB8,
+        RG8,
+        R8,
+
+		// Depth/stencil
+		DEPTH24STENCIL8,
+
+		// Defaults
+		Depth = DEPTH24STENCIL8
+	};
+
     struct spriteDimensionsData
     {
         glm::vec2 start;
@@ -32,6 +50,7 @@ namespace LTE
             std::vector<spriteDimensionsData> custumSpriteDimensions;
             
             int width, height;
+            textureFormat format;
 
         public:
             texture(const std::string& path): path(path){}
@@ -39,9 +58,12 @@ namespace LTE
 
             virtual void bind(int slot) = 0;
             textureId getId(){ return id; }
+            textureFormat getFormat(){ return format; }
 
             int getWidth(){return width;}
             int getHeight(){return height;}
+
+            virtual void setDimensions(const glm::vec2 dimensions) = 0;
 
             bool useSpriteSheet()
             {

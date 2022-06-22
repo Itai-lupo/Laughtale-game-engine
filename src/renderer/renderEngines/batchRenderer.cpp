@@ -1,4 +1,4 @@
-#include "renderer.h"
+#include "batchRenderer.h"
 #include "mesh.h"
 #include "windowManger.h"
 #include "shaderTypes.h"
@@ -9,13 +9,8 @@
 
 namespace LTE
 {
-    renderer::renderer(windowPieceId winId, renderApi *renderPipLine): 
-        Scene(windowManger::getWindow(winId)->activeScene), renderPipLine(renderPipLine)
-    {
 
-    }
-
-    shaderRenderBuffer *renderer::submitShape(mesh *shape, material *shapeMatrial)
+    shaderRenderBuffer *batchRenderer::submitShape(mesh *shape, material *shapeMatrial)
     {
         shaderRenderBuffer *s  = Scene->assetLibrary->getAsset<shaderRenderBuffer>(shape->getShaderName());
         if(!s)
@@ -24,7 +19,7 @@ namespace LTE
         return s;
     }
 
-    void renderer::sortSceneToRender()
+    void batchRenderer::sortSceneToRender()
     {
         std::sort(
             Scene->objects->begin(),
@@ -44,7 +39,7 @@ namespace LTE
             });
     }
 
-    void renderer::batchSceneData()
+    void batchRenderer::batchSceneData()
     {
 
         for(gameObject *toRender: *Scene->objects)
@@ -71,7 +66,7 @@ namespace LTE
         }
     }
 
-    void renderer::batchRenderScene()
+    void batchRenderer::batchRenderScene()
     {
         for(auto& shaderBuffer: shadersToRender)
         {
@@ -111,7 +106,7 @@ namespace LTE
         }
     }
 
-    void renderer::renderScene()
+    void batchRenderer::renderScene()
     {
         ViewProjectionMatrix = Scene->camera->getComponent<coreCameraControler>()->getCamera()->getViewProjectionMatrix();
         

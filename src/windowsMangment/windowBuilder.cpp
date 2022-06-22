@@ -22,7 +22,7 @@ namespace LTE
         product->context = new graphicsContext(product->id, OpenGL);
 
         if(!product->activeScene){
-            product->activeScene = new scene();
+            product->activeScene = new scene(product);
             product->activeScene->assetLibrary = new assetManager(product->id);
         }
         

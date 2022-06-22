@@ -39,6 +39,12 @@ namespace LTE
 
 	}
 
+	windowPieceId linuxAPI::getCurrentContextWindowId()
+	{
+		return (windowPieceId)glfwGetCurrentContext();
+	}
+	
+
 
 	void *linuxAPI::getProcAddress()
 	{

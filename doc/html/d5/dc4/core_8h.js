@@ -4,6 +4,7 @@ var core_8h =
     [ "connectionId", "d5/dc4/core_8h.html#ac6d5832948f68fe70c846157ac9ad55d", null ],
     [ "entityTaleId", "d5/dc4/core_8h.html#a9a053246fe6d76fb97a3d9e95c94dbda", null ],
     [ "eventLaughId", "d5/dc4/core_8h.html#a0e8bc231377ff780288f8eb847a80328", null ],
+    [ "framebufferId", "d5/dc4/core_8h.html#a50a5c0c325cc38b40cb1e73dee26fc2c", null ],
     [ "materialId", "d5/dc4/core_8h.html#af716e48d1fb65bf5074895482525a959", null ],
     [ "packetId", "d5/dc4/core_8h.html#aa2840f977937eeb2d93840e06e78e7b8", null ],
     [ "textureId", "d5/dc4/core_8h.html#a898790d5239608a12252fcc80608e2fa", null ],

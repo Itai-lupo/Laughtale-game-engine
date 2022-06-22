@@ -13,5 +13,6 @@ var searchData=
   ['corecamera_2eh_10',['coreCamera.h',['../d0/d52/core_camera_8h.html',1,'']]],
   ['corecameracontroler_2eh_11',['coreCameraControler.h',['../dd/d4f/core_camera_controler_8h.html',1,'']]],
   ['coreeventdata_2eh_12',['coreEventData.h',['../d7/d63/core_event_data_8h.html',1,'']]],
-  ['coreinput_2eh_13',['coreInput.h',['../d7/d38/core_input_8h.html',1,'']]]
+  ['coreinput_2eh_13',['coreInput.h',['../d7/d38/core_input_8h.html',1,'']]],
+  ['corerenderer_2eh_14',['coreRenderer.h',['../d7/d77/core_renderer_8h.html',1,'']]]
 ];

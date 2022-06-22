@@ -4,6 +4,8 @@
 #include "windowManger.h"
 #include "app.h"
 #include "ImGuiEvents.h"
+#include "batchRenderer.h"
+#include "simpleQuadRenderer.h"
 
 namespace LTE
 {
@@ -44,9 +46,12 @@ namespace LTE
         sendorData->windowId = windowId;
         sendorData->route = "window render/" + sendorData->win->Title + "/";
 
+        const std::string textureToRender = sendorData->win->Title + "/" + "screen texture"; 
+        
+        sendorData->win->activeScene->assetLibrary->saveAsset(meshFactory->createTexture(""), textureToRender);
         eventManger::addCoustemEventsRoute("window render/" + sendorData->win->Title + "/");
         
-        contextRenderEngine = new renderer(windowId, getRenderApi());
+        contextRenderEngine = new simpleQuadRenderer(textureToRender, sendorData->win->activeScene, getRenderApi());
         
         while (!app::isRuning){}
         

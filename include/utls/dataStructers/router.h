@@ -149,7 +149,7 @@ namespace LTE
                 
                 if(!childs[token])
                 {
-                    LAUGHTALE_ENGINR_LOG_ERROR("path: " << route << " wa'snt fount, please add the route before adding values");
+                    LAUGHTALE_ENGINR_LOG_ERROR("path: " << route << " wa'snt found, please add the route before adding values");
                     return values["NULL DEFUALT VALUE PATH 123481455"];
                 }
                 return childs[token]->getValue(route);

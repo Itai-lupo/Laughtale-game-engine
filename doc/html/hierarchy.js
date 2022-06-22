@@ -61,6 +61,10 @@ var hierarchy =
     [ "LTE::coreInput", "db/dd9/class_l_t_e_1_1core_input.html", [
       [ "LTE::linuxInput", "dc/d59/class_l_t_e_1_1linux_input.html", null ]
     ] ],
+    [ "LTE::coreRenderer", "d3/d3b/class_l_t_e_1_1core_renderer.html", [
+      [ "LTE::batchRenderer", "dc/ddb/class_l_t_e_1_1batch_renderer.html", null ],
+      [ "LTE::simpleQuadRenderer", "d3/dcb/class_l_t_e_1_1simple_quad_renderer.html", null ]
+    ] ],
     [ "LTE::GMNM::dataCryptographer", "de/d78/class_l_t_e_1_1_g_m_n_m_1_1data_cryptographer.html", [
       [ "LTE::GMNM::noEncrption", "d9/dc0/class_l_t_e_1_1_g_m_n_m_1_1no_encrption.html", null ]
     ] ],
@@ -92,6 +96,9 @@ var hierarchy =
     ] ],
     [ "LTE::fileManager", "df/dfd/class_l_t_e_1_1file_manager.html", null ],
     [ "LTE::filesFactory", "d5/d69/class_l_t_e_1_1files_factory.html", null ],
+    [ "LTE::framebuffer", "da/da3/class_l_t_e_1_1framebuffer.html", [
+      [ "LTE::openGLFramebuffer", "d1/d9c/class_l_t_e_1_1open_g_l_framebuffer.html", null ]
+    ] ],
     [ "LTE::gameObject", "d2/d49/class_l_t_e_1_1game_object.html", null ],
     [ "LTE::gameObject::gameObjectBuilder", "d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html", null ],
     [ "LTE::graphicsAPIAbstractFactory", "d0/d7f/class_l_t_e_1_1graphics_a_p_i_abstract_factory.html", [
@@ -113,6 +120,7 @@ var hierarchy =
     [ "LTE::note", "dd/dab/struct_l_t_e_1_1note.html", null ],
     [ "LTE::openGLBase", "dd/d88/class_l_t_e_1_1open_g_l_base.html", [
       [ "LTE::OpenGLVertexBuffer", "d3/d42/class_l_t_e_1_1_open_g_l_vertex_buffer.html", null ],
+      [ "LTE::openGLFramebuffer", "d1/d9c/class_l_t_e_1_1open_g_l_framebuffer.html", null ],
       [ "LTE::openGLIndexBuffer", "d1/de5/class_l_t_e_1_1open_g_l_index_buffer.html", null ],
       [ "LTE::openGLShader", "d0/d99/class_l_t_e_1_1open_g_l_shader.html", null ],
       [ "LTE::openGLTexture", "d9/ddf/class_l_t_e_1_1open_g_l_texture.html", null ],
@@ -135,7 +143,6 @@ var hierarchy =
     [ "LTE::renderApi", "df/d3a/class_l_t_e_1_1render_api.html", [
       [ "LTE::openGLRenderApi", "d0/d71/class_l_t_e_1_1open_g_l_render_api.html", null ]
     ] ],
-    [ "LTE::renderer", "d1/d10/class_l_t_e_1_1renderer.html", null ],
     [ "LTE::router< T >", "d7/d22/class_l_t_e_1_1router.html", null ],
     [ "LTE::router< LTE::asset * >", "d7/d22/class_l_t_e_1_1router.html", null ],
     [ "LTE::router< LTE::event * >", "d7/d22/class_l_t_e_1_1router.html", null ],

@@ -7,17 +7,17 @@
 #include "scene.h"
 #include "shaderRenderBuffer.h"
 
+#include "coreRenderer.h"
+
 #include <map>
 #include <set>
 
 namespace LTE
 {
-    class renderer
+    class batchRenderer: public coreRenderer
     {
         private:
             indexBuffer *indicesToRender;
-            scene *Scene;
-            renderApi *renderPipLine;
             std::set<shaderRenderBuffer*> shadersToRender;
             std::map<textureId, int> texturesToUse;
             uint8_t textureCounter = 0;
@@ -31,7 +31,7 @@ namespace LTE
 
 
         public:                
-            renderer(windowPieceId winId, renderApi *renderPipLine);
+            batchRenderer(scene *Scene, renderApi *renderPipLine): coreRenderer(Scene, renderPipLine){}
 
             shaderRenderBuffer *submitShape(mesh *shape, material *shapeMatrial);
 

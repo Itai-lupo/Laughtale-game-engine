@@ -113,7 +113,6 @@ namespace LTE
     {
         if(m_UniformLoctionCache.find(name) != m_UniformLoctionCache.end()) 
             return m_UniformLoctionCache[name];
-
         GL_CALL(m_UniformLoctionCache[name] = glGetUniformLocation(rendererID, name.c_str()));
         return m_UniformLoctionCache[name];
     }
