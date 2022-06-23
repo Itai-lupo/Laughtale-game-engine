@@ -17,6 +17,9 @@ namespace LTE
     class batchRenderer: public coreRenderer
     {
         private:
+
+            scene *Scene;
+
             indexBuffer *indicesToRender;
             std::set<shaderRenderBuffer*> shadersToRender;
             std::map<textureId, int> texturesToUse;
@@ -31,7 +34,7 @@ namespace LTE
 
 
         public:                
-            batchRenderer(scene *Scene, renderApi *renderPipLine): coreRenderer(Scene, renderPipLine){}
+            batchRenderer(scene *Scene, renderApi *renderPipLine): coreRenderer(renderPipLine), Scene(Scene){}
 
             shaderRenderBuffer *submitShape(mesh *shape, material *shapeMatrial);
 

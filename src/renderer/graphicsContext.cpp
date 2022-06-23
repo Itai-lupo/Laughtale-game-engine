@@ -48,10 +48,10 @@ namespace LTE
 
         const std::string textureToRender = sendorData->win->Title + "/" + "screen texture"; 
         
-        sendorData->win->activeScene->assetLibrary->saveAsset(meshFactory->createTexture(""), textureToRender);
+        // sendorData->win->activeScene->assetLibrary->saveAsset(meshFactory->createTexture(""), textureToRender);
         eventManger::addCoustemEventsRoute("window render/" + sendorData->win->Title + "/");
         
-        contextRenderEngine = new simpleQuadRenderer(textureToRender, sendorData->win->activeScene, getRenderApi());
+        contextRenderEngine = new simpleQuadRenderer(textureToRender, getRenderApi());
         
         while (!app::isRuning){}
         
@@ -79,7 +79,7 @@ namespace LTE
             eventManger::trigerEvent(sendorData);
 
 
-    		sendorData->win->activeScene->sceneCollider->checkCollision();
+    		// sendorData->win->activeScene->sceneCollider->checkCollision();
 
 
         }   

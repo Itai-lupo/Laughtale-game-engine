@@ -28,7 +28,6 @@ namespace LTE
 			windowPieceId id;
 
 			graphicsContext *context; 
-			scene *activeScene;
 			coreInput *inputManger;
 			
 
