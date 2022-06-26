@@ -16,7 +16,7 @@ namespace LTE
         file* f = fileManager::getFile(filePath);
         if(!f)
             return;
-        asset *fileAsset = f->genrateAssetForWindow(parentWindowId);
+        asset *fileAsset = f->genrateAsset();
         saveAsset(fileAsset, filePath);
     }
 

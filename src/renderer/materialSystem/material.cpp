@@ -38,7 +38,7 @@ namespace LTE
     void material::init(gameObject *parent)
     {
         if(texturePath != ""){
-            tex = windowManger::getWindow(winId)->activeScene->assetLibrary->getAsset<texture>(texturePath);
+            tex = assetManager::getAsset<texture>(texturePath);
         }
     }
 
@@ -70,7 +70,7 @@ namespace LTE
     void material::setTexture(const std::string& path)
     {
         texturePath = path;
-        this->tex = windowManger::getWindow(winId)->activeScene->assetLibrary->getAsset<texture>(path);
+        assetManager::getAsset<texture>(path);
     }
 
     void material::setBaseColor(glm::vec4 baseColor)

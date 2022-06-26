@@ -12,7 +12,7 @@ namespace LTE
 
             virtual ~jpgFile();
 
-            virtual asset *genrateAssetForWindow(windowPieceId);
+            virtual asset *genrateAsset();
             virtual void loadFileData();
 
     }; 

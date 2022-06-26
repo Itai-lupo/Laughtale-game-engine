@@ -7,7 +7,6 @@
 
 namespace LTE
 {
-    openGLVertexArray::openGLVertexArray(VertexBuffer *vb): vb(vb){}
 
     openGLVertexArray::~openGLVertexArray()
     {
@@ -17,12 +16,15 @@ namespace LTE
     void openGLVertexArray::init()
     {
         GL_CALL(glGenVertexArrays(1, &rendererId));
-        AddBuffer(vb);
+        setBuffer();
     }
 
-    void openGLVertexArray::AddBuffer(VertexBuffer *vb)
+    void openGLVertexArray::setBuffer()
     {
+        vb = parentContainer->getVB();
         LAUGHTALE_ENGINR_CONDTION_LOG_FATAL("no vertex buffer layout", vb->getElements().size() == 0);
+        
+        
         bind();
         const auto& elements = vb->getElements();
 
@@ -39,6 +41,8 @@ namespace LTE
 
     void openGLVertexArray::bind()
     {
+        if(vb != parentContainer->getVB())
+            setBuffer();
         GL_CALL(glBindVertexArray(rendererId));
     }
 

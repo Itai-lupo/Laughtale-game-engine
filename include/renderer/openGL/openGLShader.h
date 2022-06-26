@@ -8,7 +8,7 @@
 namespace LTE
 {
 
-    class openGLShader : public shader, public openGLBase
+    class openGLShader : public shaderRenderApi, public openGLBase
     {
         private:
                 std::unordered_map<std::string, int> m_UniformLoctionCache;
@@ -19,12 +19,9 @@ namespace LTE
                 void createShader();
                 int GetUniformLocation(const std::string& name);
 
-                std::string vertexSource;
-                std::string fragmentSource;
-
         public:
-            openGLShader(const std::string& vertexSource, const std::string& fragmentSource): vertexSource(vertexSource), fragmentSource(fragmentSource){}
-            
+            openGLShader(shader *parentContainer): shaderRenderApi(parentContainer){}
+
             ~openGLShader();
 
             virtual void init() override;

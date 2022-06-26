@@ -10,23 +10,20 @@ namespace LTE
     class assetManager
     {
         private:
-            windowPieceId parentWindowId;
-            router<asset*> assetsTree;
+            static inline router<asset*> assetsTree;
 
         public:
-            assetManager(windowPieceId parentWindowId): parentWindowId(parentWindowId){}
 
-
-            void saveAsset(asset *toSave, const std::string& filePath);
-            void loadAssetFromFile(const std::string& filePath);
+            static void saveAsset(asset *toSave, const std::string& filePath);
+            static void loadAssetFromFile(const std::string& filePath);
 
             template <typename T>
-            T *getAsset(const std::string& filePath)
+            static T *getAsset(const std::string& filePath)
             {
                 return static_cast<T*>(getAsset(filePath));
             }
 
-            asset *getAsset(const std::string& filePath);
+            static asset *getAsset(const std::string& filePath);
 
     };
 }

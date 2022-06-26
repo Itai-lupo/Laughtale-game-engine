@@ -5,16 +5,19 @@
 
 namespace LTE
 {
-    class openGLVertexArray: public vertexArray, public openGLBase
+    class openGLVertexArray: public vertexArrayRenderApi, public openGLBase
     {
         private:
             uint32_t rendererId = 0;
             VertexBuffer *vb;
+        
+            void setBuffer();
+        
         public:
-            openGLVertexArray(VertexBuffer *vb);
+            openGLVertexArray(vertexArray *parentContainer): vertexArrayRenderApi(parentContainer){}
             ~openGLVertexArray();
+
             virtual void init() override;
-            virtual void AddBuffer(VertexBuffer *vb) override;
             virtual void bind() override;
             virtual void unbind() override;
     };

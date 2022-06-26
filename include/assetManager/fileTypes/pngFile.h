@@ -11,7 +11,7 @@ namespace LTE
 
             virtual ~pngFile();
 
-            virtual asset *genrateAssetForWindow(windowPieceId);
+            virtual asset *genrateAsset();
             virtual void loadFileData();
 
     }; 

@@ -127,7 +127,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   25</span>                : stride(0){}</div>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>                : stride(0){}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -154,16 +154,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   34</span>{ <span class="keywordflow">return</span> elements; }</div>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>{ <span class="keywordflow">return</span> elements; }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/db3/class_l_t_e_1_1_vertex_buffer_layout_ab5b19bd4bf4252393f6ca9792d96eaac_icgraph.png" border="0" usemap="#ad9/db3/class_l_t_e_1_1_vertex_buffer_layout_ab5b19bd4bf4252393f6ca9792d96eaac_icgraph" alt=""/></div>
 <map name="ad9/db3/class_l_t_e_1_1_vertex_buffer_layout_ab5b19bd4bf4252393f6ca9792d96eaac_icgraph" id="ad9/db3/class_l_t_e_1_1_vertex_buffer_layout_ab5b19bd4bf4252393f6ca9792d96eaac_icgraph">
-<area shape="rect" title=" " alt="" coords="617,5,784,47"/>
-<area shape="rect" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#a43d58bf06d7adb781024c7dba4d9f111" title=" " alt="" coords="435,5,569,47"/>
-<area shape="rect" href="../../d7/ddd/class_l_t_e_1_1open_g_l_vertex_array.html#a8ea8760c9405beb456fc3a5dbc65904e" title=" " alt="" coords="220,5,387,47"/>
-<area shape="rect" href="../../d7/ddd/class_l_t_e_1_1open_g_l_vertex_array.html#a00a61ba4f79bfee922b5b5f7b23a5286" title=" " alt="" coords="5,5,172,47"/>
+<area shape="rect" title=" " alt="" coords="183,5,345,47"/>
+<area shape="rect" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#a43d58bf06d7adb781024c7dba4d9f111" title=" " alt="" coords="5,5,135,47"/>
 </map>
 </div>
 
@@ -191,16 +189,14 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   35</span>{ <span class="keywordflow">return</span> stride; };</div>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>{ <span class="keywordflow">return</span> stride; };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/db3/class_l_t_e_1_1_vertex_buffer_layout_a05021a802a1969d03742daa14a13af14_icgraph.png" border="0" usemap="#ad9/db3/class_l_t_e_1_1_vertex_buffer_layout_a05021a802a1969d03742daa14a13af14_icgraph" alt=""/></div>
 <map name="ad9/db3/class_l_t_e_1_1_vertex_buffer_layout_a05021a802a1969d03742daa14a13af14_icgraph" id="ad9/db3/class_l_t_e_1_1_vertex_buffer_layout_a05021a802a1969d03742daa14a13af14_icgraph">
-<area shape="rect" title=" " alt="" coords="617,5,784,47"/>
-<area shape="rect" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#a29ed041ca0a7fd4081fc6dc468ecdc9d" title=" " alt="" coords="435,5,569,47"/>
-<area shape="rect" href="../../d7/ddd/class_l_t_e_1_1open_g_l_vertex_array.html#a8ea8760c9405beb456fc3a5dbc65904e" title=" " alt="" coords="220,5,387,47"/>
-<area shape="rect" href="../../d7/ddd/class_l_t_e_1_1open_g_l_vertex_array.html#a00a61ba4f79bfee922b5b5f7b23a5286" title=" " alt="" coords="5,5,172,47"/>
+<area shape="rect" title=" " alt="" coords="183,5,345,47"/>
+<area shape="rect" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#a29ed041ca0a7fd4081fc6dc468ecdc9d" title=" " alt="" coords="5,5,135,47"/>
 </map>
 </div>
 
@@ -229,11 +225,11 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   28</span>            {</div>
-<div class="line"><span class="lineno">   29</span>                stride += ElementToPush.sizeOfType * ElementToPush.count;</div>
-<div class="line"><span class="lineno">   30</span>                elements.push_back(ElementToPush);</div>
-<div class="line"><span class="lineno">   31</span>                <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>            {</div>
+<div class="line"><span class="lineno">   33</span>                stride += ElementToPush.sizeOfType * ElementToPush.count;</div>
+<div class="line"><span class="lineno">   34</span>                elements.push_back(ElementToPush);</div>
+<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   36</span>            }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -241,8 +237,8 @@ Here is the caller graph for this function:</div>
 <map name="ad9/db3/class_l_t_e_1_1_vertex_buffer_layout_a8073f972948efa928cf89936f8583f09_icgraph" id="ad9/db3/class_l_t_e_1_1_vertex_buffer_layout_a8073f972948efa928cf89936f8583f09_icgraph">
 <area shape="rect" title=" " alt="" coords="404,39,567,80"/>
 <area shape="rect" href="../../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#aa6265877a30dd83bf4221c87447b9a07" title=" " alt="" coords="227,39,356,80"/>
-<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#a539766ee4c8c5d615c8e398ea64ad202" title=" " alt="" coords="9,5,175,47"/>
-<area shape="rect" href="../../d3/dcb/class_l_t_e_1_1simple_quad_renderer.html#a79d1d8aa1bfbb13d45ac037173039b73" title=" " alt="" coords="5,71,179,112"/>
+<area shape="rect" href="../../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#a006a3e4f977ab95f1cf40b941f0c9fe7" title=" " alt="" coords="9,5,175,47"/>
+<area shape="rect" href="../../d3/dcb/class_l_t_e_1_1simple_quad_renderer.html#a01b0c455636fd52916861a3cef57b619" title=" " alt="" coords="5,71,179,112"/>
 </map>
 </div>
 

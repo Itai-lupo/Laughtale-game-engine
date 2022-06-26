@@ -23,11 +23,12 @@ namespace LTE
         private:
             framebuffer *fbo;
             batchRenderer *render;
+    
         public:
-            scene(window *parentWindow);
+            scene();
             ~scene(){}
-            
 
+            sceneId id;
             colliderSystem2D *sceneCollider;
 
 			assetManager *assetLibrary;

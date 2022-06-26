@@ -6,7 +6,6 @@
 #include "graphicsContext.h"
 #include "windowBuilder.h"
 
-#include "orthographicCameraControler.h"
 
 namespace LTE
 {
@@ -21,19 +20,7 @@ namespace LTE
 
         product->context = new graphicsContext(product->id, OpenGL);
 
-        if(!product->activeScene){
-            product->activeScene = new scene(product);
-            product->activeScene->assetLibrary = new assetManager(product->id);
-        }
         
-        entityTaleId camId = entityManger::addEntity([=, this](gameObject::gameObjectBuilder *builder){
-            builder->setObjectName("default camera")->
-                setWindowId(product->id)->
-                setObjectTransform(glm::mat4(0.0f))->
-                addComponent(new orthographicCameraControler((float)product->Width/(float)product->Height));
-        });
-
-        product->activeScene->camera = entityManger::getEntityById(camId);
         
         return product;
     }
@@ -59,12 +46,6 @@ namespace LTE
     windowBuilder *windowBuilder::useImGui()
     {
         product->useImGui = true;
-        return this;
-    }
-
-    windowBuilder *windowBuilder::setActiveScene(scene *activeScene)
-    {
-        product->activeScene = activeScene;
         return this;
     }
 }

@@ -5,7 +5,7 @@ namespace LTE
     mp3File::mp3File(const std::string& filePath): file(filePath){}
 
     mp3File::~mp3File(){}
-    asset *mp3File::genrateAssetForWindow(windowPieceId)
+    asset *mp3File::genrateAsset()
     {
         return nullptr;
     }

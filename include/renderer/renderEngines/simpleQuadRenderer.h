@@ -19,8 +19,8 @@ namespace LTE
         private:
             shader *s;
             indexBuffer *indicesToRender;
-            VertexBuffer *vertexBuffer;
-            vertexArray *vertexArray;
+            VertexBuffer *vertexBufferData;
+            vertexArray *vertexArrayData;
 
             std::string textureName;
 

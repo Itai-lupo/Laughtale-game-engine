@@ -460,9 +460,7 @@ class board : public LTE::component
 
         virtual void init(LTE::gameObject *parent) override
         {
-            LTE::windowManger::getWindow(winId)->
-                activeScene->assetLibrary->
-                getAsset<LTE::texture>("res/checkmate/textures/piecesSpriteSheet.png")->
+            LTE::assetManager::getAsset<LTE::texture>("res/checkmate/textures/piecesSpriteSheet.png")->
                 setSprtieData({127, 144});
 
             LTE::eventManger::startBuildingEvent()->setEventRoute("Mouse button pressed/boardHandlePress")->setEntityID(parentId)->setWindowId(winId)->setEventCallback(handleMouseClick)->add();

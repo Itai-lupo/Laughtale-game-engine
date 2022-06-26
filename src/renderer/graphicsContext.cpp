@@ -6,19 +6,16 @@
 #include "ImGuiEvents.h"
 #include "batchRenderer.h"
 #include "simpleQuadRenderer.h"
+#include "assetManager.h"
 
 namespace LTE
 {
-    graphicsContext::graphicsContext(windowPieceId windowId, renderAPIType type):windowId(windowId)
+    graphicsContext::graphicsContext(windowPieceId windowId, renderAPIType type):windowId(windowId), type(type)
     {
-        meshFactory = app::getGraphicAPIFactory(type)->createMeshAbsrtactFactory();
-        api = app::getGraphicAPIFactory(type)->createRenderApi();
     }
     
     void graphicsContext::Init()
     {
-        app::getOsAPI()->makeContextCurrent(windowId);
-        api->init();
 
         contextThread = new std::thread(&graphicsContext::run, this);
     }
@@ -31,11 +28,18 @@ namespace LTE
 
     void graphicsContext::run()
     {
-
         std::string thradName = "con " + windowManger::getWindow(windowId)->Title;
         prctl(PR_SET_NAME, thradName.c_str(), 0, 0, 0);
 
         app::getOsAPI()->makeContextCurrent(windowId);
+        
+        
+        api = app::getGraphicAPIFactory(type)->createRenderApi();
+        api->init();
+        meshFactory = app::getGraphicAPIFactory(type)->createMeshAbsrtactFactory();
+		
+		
+
 
         uint64_t startTime = app::getTime();
         uint64_t now = app::getTime();
@@ -48,11 +52,14 @@ namespace LTE
 
         const std::string textureToRender = sendorData->win->Title + "/" + "screen texture"; 
         
-        // sendorData->win->activeScene->assetLibrary->saveAsset(meshFactory->createTexture(""), textureToRender);
+        assetManager::saveAsset(new texture(""), textureToRender);
         eventManger::addCoustemEventsRoute("window render/" + sendorData->win->Title + "/");
         
         contextRenderEngine = new simpleQuadRenderer(textureToRender, getRenderApi());
         
+        if(sendorData->win->useImGui)
+			initImGui(windowId);
+
         while (!app::isRuning){}
         
         while (app::keepRunning && windowRun)
@@ -61,7 +68,6 @@ namespace LTE
             sendorData->DeltaTime = now - sendorData->currentTime;
             sendorData->currentTime = now;
             
-            meshFactory->build();
 
             if(changeViewPort)
             {
@@ -69,6 +75,7 @@ namespace LTE
                 changeViewPort = false;
             }
             
+            eventManger:: trigerEvent(sendorData);
             contextRenderEngine->renderScene();
 
             if(sendorData->win->useImGui)
@@ -76,7 +83,6 @@ namespace LTE
             
             SwapBuffers();
 
-            eventManger::trigerEvent(sendorData);
 
 
     		// sendorData->win->activeScene->sceneCollider->checkCollision();

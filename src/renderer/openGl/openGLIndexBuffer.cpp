@@ -8,7 +8,7 @@ namespace LTE
     {
         GL_CALL(glGenBuffers(1, &RendererID));
         GL_CALL(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, RendererID));
-        GL_CALL(glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(unsigned int), ib, GL_STATIC_DRAW));
+        GL_CALL(glBufferData(GL_ELEMENT_ARRAY_BUFFER, parentContainer->getCount() * sizeof(unsigned int), parentContainer->geIndices(), GL_STATIC_DRAW));
     }
 
     openGLIndexBuffer::~openGLIndexBuffer()
@@ -18,6 +18,8 @@ namespace LTE
 
     void openGLIndexBuffer::bind()
     {
+        if(changeId != parentContainer->getChangeId())
+            setData();
         GL_CALL(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, RendererID));
     }
 
@@ -26,12 +28,11 @@ namespace LTE
         GL_CALL(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));    
     }
 
-    void openGLIndexBuffer::setData(unsigned int *ib, unsigned int count)
+    void openGLIndexBuffer::setData()
     {
-        this->ib = ib;
-        this->count = count;
+        changeId = parentContainer->getChangeId();
         GL_CALL(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, RendererID));
-        GL_CALL(glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(unsigned int), ib, GL_STATIC_DRAW));
+        GL_CALL(glBufferData(GL_ELEMENT_ARRAY_BUFFER, parentContainer->getCount() * sizeof(unsigned int), parentContainer->geIndices(), GL_STATIC_DRAW));
     }
 
 }

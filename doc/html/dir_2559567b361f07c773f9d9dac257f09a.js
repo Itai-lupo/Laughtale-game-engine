@@ -16,12 +16,10 @@ var dir_2559567b361f07c773f9d9dac257f09a =
     ] ],
     [ "ImGuiEvents.h", "dd/db2/_im_gui_events_8h.html", "dd/db2/_im_gui_events_8h" ],
     [ "indexBuffer.h", "df/de0/index_buffer_8h.html", [
+      [ "LTE::indexBufferRenderApi", "da/d48/class_l_t_e_1_1index_buffer_render_api.html", "da/d48/class_l_t_e_1_1index_buffer_render_api" ],
       [ "LTE::indexBuffer", "d6/d2f/class_l_t_e_1_1index_buffer.html", "d6/d2f/class_l_t_e_1_1index_buffer" ]
     ] ],
     [ "renderApi.h", "db/d96/render_api_8h.html", [
       [ "LTE::renderApi", "df/d3a/class_l_t_e_1_1render_api.html", "df/d3a/class_l_t_e_1_1render_api" ]
-    ] ],
-    [ "scene.h", "db/d83/scene_8h.html", [
-      [ "LTE::scene", "d6/d26/class_l_t_e_1_1scene.html", "d6/d26/class_l_t_e_1_1scene" ]
     ] ]
 ];

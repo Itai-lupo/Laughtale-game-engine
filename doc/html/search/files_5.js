@@ -6,5 +6,6 @@ var searchData=
   ['filesmanager_2ecpp_3',['filesManager.cpp',['../d1/ddb/files_manager_8cpp.html',1,'']]],
   ['filesmanager_2eh_4',['filesManager.h',['../d3/dfd/files_manager_8h.html',1,'']]],
   ['flappybird_2etest_2ecpp_5',['flappyBird.test.cpp',['../d9/dc9/flappy_bird_8test_8cpp.html',1,'']]],
-  ['framebuffer_2eh_6',['framebuffer.h',['../d4/dd2/framebuffer_8h.html',1,'']]]
+  ['framebuffer_2ecpp_6',['framebuffer.cpp',['../d3/dd6/framebuffer_8cpp.html',1,'']]],
+  ['framebuffer_2eh_7',['framebuffer.h',['../d4/dd2/framebuffer_8h.html',1,'']]]
 ];

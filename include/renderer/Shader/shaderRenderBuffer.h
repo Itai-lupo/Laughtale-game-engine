@@ -44,9 +44,8 @@ namespace LTE
             int renderBatchEnd = 0;
             int batchIndexCount = 0;
 
-            windowPieceId winId;
         public:
-            shaderRenderBuffer(shader *s, windowPieceId winId);
+            shaderRenderBuffer(shader *s);
             shader *getShader();
 
             void pushShape(mesh *shape, material *m);

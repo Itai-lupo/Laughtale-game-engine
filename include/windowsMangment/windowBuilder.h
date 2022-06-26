@@ -18,6 +18,5 @@ namespace LTE
             windowBuilder *setWidth(int width);
             windowBuilder *setHeight(int height);
             windowBuilder *useImGui();
-            windowBuilder *setActiveScene(scene *activeScene);
     };
 }

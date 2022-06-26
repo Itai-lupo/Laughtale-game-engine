@@ -8,6 +8,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "networkManager", "dir_c9e2bedcc67e90a2f51214c165ba5693.html", "dir_c9e2bedcc67e90a2f51214c165ba5693" ],
     [ "operatingSystemHandle", "dir_bea5a325f0270349ab417736ac38433e.html", "dir_bea5a325f0270349ab417736ac38433e" ],
     [ "renderer", "dir_2559567b361f07c773f9d9dac257f09a.html", "dir_2559567b361f07c773f9d9dac257f09a" ],
+    [ "sceneSystem", "dir_5956d7c934f3f2c11d9c6e759fe669ef.html", "dir_5956d7c934f3f2c11d9c6e759fe669ef" ],
     [ "soundEngine", "dir_fc6407a4da5d66df41fd53ad5982d7c0.html", "dir_fc6407a4da5d66df41fd53ad5982d7c0" ],
     [ "tileSystem", "dir_01e26658b08d879d1869efc8a912710e.html", "dir_01e26658b08d879d1869efc8a912710e" ],
     [ "utls", "dir_e84057639509a38c15a0c84010e00f1d.html", "dir_e84057639509a38c15a0c84010e00f1d" ],
@@ -17,11 +18,13 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     ] ],
     [ "LaughTaleEngine.h", "de/dd5/_laugh_tale_engine_8h.html", null ],
     [ "vertexArray.h", "d3/de4/vertex_array_8h.html", [
+      [ "LTE::vertexArrayRenderApi", "dc/d17/class_l_t_e_1_1vertex_array_render_api.html", "dc/d17/class_l_t_e_1_1vertex_array_render_api" ],
       [ "LTE::vertexArray", "df/db4/class_l_t_e_1_1vertex_array.html", "df/db4/class_l_t_e_1_1vertex_array" ]
     ] ],
     [ "VertexBuffer.h", "d4/d84/_vertex_buffer_8h.html", [
       [ "LTE::VertexBufferElement", "d6/d82/struct_l_t_e_1_1_vertex_buffer_element.html", "d6/d82/struct_l_t_e_1_1_vertex_buffer_element" ],
       [ "LTE::VertexBufferLayout", "d9/db3/class_l_t_e_1_1_vertex_buffer_layout.html", "d9/db3/class_l_t_e_1_1_vertex_buffer_layout" ],
+      [ "LTE::VertexBufferRenderApi", "d5/d09/class_l_t_e_1_1_vertex_buffer_render_api.html", "d5/d09/class_l_t_e_1_1_vertex_buffer_render_api" ],
       [ "LTE::VertexBuffer", "d2/dcd/class_l_t_e_1_1_vertex_buffer.html", "d2/dcd/class_l_t_e_1_1_vertex_buffer" ]
     ] ]
 ];

@@ -10,27 +10,19 @@
 
 namespace LTE
 {
-    class openGLFramebuffer: public framebuffer, public openGLBase
+    class openGLFramebuffer: public framebufferRenderApi, public openGLBase
     {
         private:
-            uint32_t width, hight;
+            framebufferId id;
 
             void rebuild();
-            std::map<colorAttachmentSlot, texture*> colorAttachmens;
-            texture* depthAttachmen = nullptr;
-
         public:
-            openGLFramebuffer(uint32_t width, uint32_t hight);
+            openGLFramebuffer(framebuffer *parentContainer): framebufferRenderApi(parentContainer){}
             ~openGLFramebuffer();
 
             virtual void init() override;
             virtual void bind() override;
             virtual void unbind() override;
-
-            virtual void attachColorRenderTarget(texture *attachmentData, colorAttachmentSlot attachmentSlot) override;
-            virtual void setDepthRenderTarget(texture *attachmentData) override;
-
-            virtual void resize(uint32_t width, uint32_t hight) override;
 
     };
 }

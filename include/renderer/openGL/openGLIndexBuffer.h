@@ -4,19 +4,20 @@
 
 namespace LTE
 {
-    class openGLIndexBuffer : public indexBuffer, public openGLBase
+    class openGLIndexBuffer : public indexBufferRenderApi, public openGLBase
     {
         private:
             uint32_t RendererID;
+            void setData();
+        
         public:
-            openGLIndexBuffer(unsigned int *ib, unsigned int count)
-                :indexBuffer(ib, count){}
+            openGLIndexBuffer(indexBuffer *parentContainer)
+                :indexBufferRenderApi(parentContainer){}
             ~openGLIndexBuffer();
             virtual  void init() override;
             virtual  void bind() override;
             virtual  void unbind() override;
 
-            virtual void setData(unsigned int *ib, unsigned int count) override;
 
     };
 }

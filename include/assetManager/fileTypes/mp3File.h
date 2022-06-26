@@ -9,7 +9,7 @@ namespace LTE
             mp3File(const std::string& filePath);
 
             virtual ~mp3File();
-            virtual asset *genrateAssetForWindow(windowPieceId);
+            virtual asset *genrateAsset();
 
             virtual void loadFileData();
 

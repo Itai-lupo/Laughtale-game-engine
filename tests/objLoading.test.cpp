@@ -68,7 +68,10 @@ TEST(moduleLoading, objLoad)
             setEventRoute("Window close/close app")->
             setEventCallback(WindowClose)->add();
 
-
+    LTE::sceneId sceneId =  LTE::sceneManger::addScene([=](LTE::sceneBuilder *build)
+    {
+        build->setBackgroundColor(new LTE::material(glm::vec4({0.2f, 0.2f, 0.2f, 1.0f})));
+    });
     
     LTE::entityTaleId cube1Id =  LTE::entityManger::addEntity([=, this](LTE::gameObject::gameObjectBuilder *builder){ 
         builder->
@@ -98,6 +101,9 @@ TEST(moduleLoading, objLoad)
                 }))->
             addComponent(new LTE::material(glm::vec4({1.0f, 1.0f, 0.0f, 1.0f})));
         });
+
+    LTE::sceneManger::getScene(sceneId)->objects->push_back(LTE::entityManger::getEntityById(cube1Id));
+    LTE::sceneManger::getScene(sceneId)->objects->push_back(LTE::entityManger::getEntityById(cube2Id));
 
     LTE::eventManger::startBuildingEvent()->
         setEventRoute("ImGui render/cube1 info")->

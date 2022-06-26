@@ -9,9 +9,9 @@ namespace LTE
     {
     }
 
-    asset *pngFile::genrateAssetForWindow(windowPieceId winId)
+    asset *pngFile::genrateAsset()
     {
-        return windowManger::getWindow(winId)->context->getMeshFactory()->createTexture(filePath);
+        return new texture(filePath);
     }
 
     void pngFile::loadFileData()

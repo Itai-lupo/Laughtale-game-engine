@@ -1,6 +1,7 @@
 var texture_8h =
 [
     [ "LTE::spriteDimensionsData", "d7/d91/struct_l_t_e_1_1sprite_dimensions_data.html", "d7/d91/struct_l_t_e_1_1sprite_dimensions_data" ],
+    [ "LTE::textureRenderApi", "dd/d4f/class_l_t_e_1_1texture_render_api.html", "dd/d4f/class_l_t_e_1_1texture_render_api" ],
     [ "LTE::texture", "d9/d46/class_l_t_e_1_1texture.html", "d9/d46/class_l_t_e_1_1texture" ],
     [ "textureFormat", "df/dba/texture_8h.html#affbe7fac9e66d0a69d29a96b1a9f8ea1", [
       [ "None", "df/dba/texture_8h.html#affbe7fac9e66d0a69d29a96b1a9f8ea1a6adf97f83acf6453d4a6a4b1070f3754", null ],

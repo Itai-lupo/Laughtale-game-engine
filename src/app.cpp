@@ -11,6 +11,7 @@
 #include "materialsManger.h"
 #include "connectionsManager.h"
 #include "filesManager.h"
+#include "sceneManger.h"
 
 #include <chrono>
 #include <string>
@@ -31,6 +32,7 @@ namespace LTE
         logger::init(pathToLogs, projectName);
         eventManger::init();
         entityManger::init();
+        sceneManger::init();
 
         osFactory = OSAbstractFactory::init();
         os = osFactory->createOsApi();
@@ -51,6 +53,7 @@ namespace LTE
         windowManger::close();
         materialsManger::close();
         GMNM::connectionsManager::close();
+        sceneManger::close();
         fileManager::close();
         logger::close();
 

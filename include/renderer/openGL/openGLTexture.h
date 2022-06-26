@@ -4,15 +4,19 @@
 
 namespace LTE
 {
-    class openGLTexture: public texture, public openGLBase
+    class openGLTexture: public textureRenderApi, public openGLBase
     {
         private:
             uint32_t textureFormatToOpenGlFormat(textureFormat format);
         	uint32_t textureFormatToOpenGlDataFormat(textureFormat formatToConvert);
 
             void uploadDataFromFile();
+
+            textureId id;
+
         public:
-            openGLTexture(const std::string& path);
+            openGLTexture(texture *parentContainer): textureRenderApi(parentContainer){}
+        
             openGLTexture();
 
             ~openGLTexture();
@@ -21,8 +25,9 @@ namespace LTE
 
             virtual void bind(int slot) override;
             virtual void unbind() override;
-        	virtual void setDimensions(const glm::vec2 dimensions) override;
+            virtual textureId getId(){ return id; };
 
+        	virtual void setDimensions() override;
 
 
     };

@@ -1,19 +1,21 @@
 <map id="include/renderer/camera/orthographicCamera.h" name="include/renderer/camera/orthographicCamera.h">
-<area shape="rect" id="node1" title=" " alt="" coords="901,5,1062,47"/>
-<area shape="rect" id="node2" href="$d3/d6e/orthographic_camera_controler_8h.html" title=" " alt="" coords="775,95,979,136"/>
-<area shape="rect" id="node17" href="$d6/d5c/orthographic_camera_8cpp.html" title=" " alt="" coords="1003,95,1170,136"/>
-<area shape="rect" id="node3" href="$de/dd5/_laugh_tale_engine_8h.html" title=" " alt="" coords="566,191,743,218"/>
-<area shape="rect" id="node15" href="$d1/d10/orthographic_camera_controler_8cpp.html" title=" " alt="" coords="768,184,987,225"/>
-<area shape="rect" id="node16" href="$d4/d0d/window_builder_8cpp.html" title=" " alt="" coords="1011,184,1167,225"/>
-<area shape="rect" id="node4" href="$d3/d02/board_8h.html" title=" " alt="" coords="39,452,204,479"/>
-<area shape="rect" id="node5" href="$d2/dde/checkmate_8cpp.html" title=" " alt="" coords="16,527,227,553"/>
-<area shape="rect" id="node6" href="$d9/d39/piece_8h.html" title=" " alt="" coords="125,273,286,315"/>
-<area shape="rect" id="node8" href="$d9/dc9/flappy_bird_8test_8cpp.html" title=" " alt="" coords="311,281,471,307"/>
-<area shape="rect" id="node9" href="$de/d7f/main_8test_8cpp.html" title=" " alt="" coords="495,281,627,307"/>
-<area shape="rect" id="node10" href="$d0/dd3/network_manger_8test_8cpp.html" title=" " alt="" coords="651,281,845,307"/>
-<area shape="rect" id="node11" href="$da/dd9/obj_loading_8test_8cpp.html" title=" " alt="" coords="869,281,1035,307"/>
-<area shape="rect" id="node12" href="$db/dd3/sound_8test_8cpp.html" title=" " alt="" coords="1060,281,1199,307"/>
-<area shape="rect" id="node13" href="$d2/d88/top_down_scene_8cpp.html" title=" " alt="" coords="1223,273,1419,315"/>
-<area shape="rect" id="node14" href="$d4/d08/router_8test_8cpp.html" title=" " alt="" coords="1444,281,1607,307"/>
-<area shape="rect" id="node7" href="$d9/d15/pawn_8h.html" title=" " alt="" coords="125,363,286,404"/>
+<area shape="rect" id="node1" title=" " alt="" coords="877,5,1038,47"/>
+<area shape="rect" id="node2" href="$d3/d6e/orthographic_camera_controler_8h.html" title=" " alt="" coords="752,95,956,136"/>
+<area shape="rect" id="node19" href="$d6/d5c/orthographic_camera_8cpp.html" title=" " alt="" coords="980,95,1146,136"/>
+<area shape="rect" id="node3" href="$de/dd5/_laugh_tale_engine_8h.html" title=" " alt="" coords="566,273,744,300"/>
+<area shape="rect" id="node15" href="$d7/db9/scene_manger_8h.html" title=" " alt="" coords="780,184,927,225"/>
+<area shape="rect" id="node18" href="$d1/d10/orthographic_camera_controler_8cpp.html" title=" " alt="" coords="951,184,1170,225"/>
+<area shape="rect" id="node4" href="$d3/d02/board_8h.html" title=" " alt="" coords="39,527,204,553"/>
+<area shape="rect" id="node5" href="$d2/dde/checkmate_8cpp.html" title=" " alt="" coords="16,601,227,628"/>
+<area shape="rect" id="node6" href="$d9/d39/piece_8h.html" title=" " alt="" coords="125,348,286,389"/>
+<area shape="rect" id="node8" href="$d9/dc9/flappy_bird_8test_8cpp.html" title=" " alt="" coords="311,355,471,382"/>
+<area shape="rect" id="node9" href="$de/d7f/main_8test_8cpp.html" title=" " alt="" coords="496,355,628,382"/>
+<area shape="rect" id="node10" href="$d0/dd3/network_manger_8test_8cpp.html" title=" " alt="" coords="652,355,845,382"/>
+<area shape="rect" id="node11" href="$da/dd9/obj_loading_8test_8cpp.html" title=" " alt="" coords="869,355,1036,382"/>
+<area shape="rect" id="node12" href="$db/dd3/sound_8test_8cpp.html" title=" " alt="" coords="1060,355,1199,382"/>
+<area shape="rect" id="node13" href="$d2/d88/top_down_scene_8cpp.html" title=" " alt="" coords="1224,348,1420,389"/>
+<area shape="rect" id="node14" href="$d4/d08/router_8test_8cpp.html" title=" " alt="" coords="1444,355,1607,382"/>
+<area shape="rect" id="node7" href="$d9/d15/pawn_8h.html" title=" " alt="" coords="125,437,286,479"/>
+<area shape="rect" id="node16" href="$d5/df2/app_8cpp.html" title=" " alt="" coords="1022,273,1112,300"/>
+<area shape="rect" id="node17" href="$d9/df5/scene_manger_8cpp.html" title=" " alt="" coords="768,273,998,300"/>
 </map>

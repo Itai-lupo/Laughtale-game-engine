@@ -11,9 +11,11 @@ namespace LTE
     class graphicsContext
 	{
         private:
-		    windowPieceId windowId;
-            renderApi *api;
-            meshAbsrtactFactory *meshFactory;
+            static inline thread_local meshAbsrtactFactory *meshFactory = NULL;
+            static inline thread_local renderApi *api;
+		    
+            renderAPIType type;
+            windowPieceId windowId;
             std::thread *contextThread;
             coreRenderer *contextRenderEngine;
 
@@ -29,11 +31,12 @@ namespace LTE
             void Init();
             void SwapBuffers();
 	
-            meshAbsrtactFactory *getMeshFactory(){ return meshFactory; }
             void setViewPort(int x, int y, int width, int height);
-            renderApi *getRenderApi();
+            static renderApi *getRenderApi();
             
             graphicsContext(windowPieceId windowId, renderAPIType type);
             ~graphicsContext();
+
+            static meshAbsrtactFactory* getMeshFactory(){ return meshFactory; }
     };
 }

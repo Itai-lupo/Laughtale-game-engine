@@ -1,10 +1,4 @@
 <map id="LTE::coreRenderer" name="LTE::coreRenderer">
-<area shape="rect" id="node1" title=" " alt="" coords="323,260,452,287"/>
-<area shape="rect" id="node2" href="$d6/d26/class_l_t_e_1_1scene.html" title=" " alt="" coords="283,171,369,197"/>
-<area shape="rect" id="node3" href="$df/d41/class_l_t_e_1_1collider_system2_d.html" title=" " alt="" coords="5,81,159,108"/>
-<area shape="rect" id="node4" href="$db/d3a/class_l_t_e_1_1asset_manager.html" title=" " alt="" coords="183,81,317,108"/>
-<area shape="rect" id="node5" href="$d2/d49/class_l_t_e_1_1game_object.html" title=" " alt="" coords="342,81,465,108"/>
-<area shape="rect" id="node6" href="$dc/dda/class_l_t_e_1_1material.html" title=" " alt="" coords="489,81,587,108"/>
-<area shape="rect" id="node7" href="$d9/d4b/class_l_t_e_1_1component.html" title=" " alt="" coords="480,5,596,32"/>
-<area shape="rect" id="node8" href="$df/d3a/class_l_t_e_1_1render_api.html" title=" " alt="" coords="394,171,501,197"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,135,121"/>
+<area shape="rect" id="node2" href="$df/d3a/class_l_t_e_1_1render_api.html" title=" " alt="" coords="17,5,123,32"/>
 </map>

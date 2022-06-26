@@ -13,7 +13,7 @@ namespace LTE
             virtual ~file() = default;
             file(const std::string& filePath): filePath(filePath){}
 
-            virtual asset *genrateAssetForWindow(windowPieceId  winId) = 0;
+            virtual asset *genrateAsset() = 0;
             virtual void loadFileData() = 0;
 
             std::string getFilePath(){ return filePath; }

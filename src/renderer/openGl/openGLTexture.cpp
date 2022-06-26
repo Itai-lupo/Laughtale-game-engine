@@ -8,12 +8,6 @@
 
 namespace LTE
 {
-    openGLTexture::openGLTexture(const std::string& path): texture(path)
-    {
-		format = textureFormat::RGBA8;
-        
-    }
-
     openGLTexture::~openGLTexture()
     {
         glDeleteTextures(1, &id);
@@ -24,13 +18,16 @@ namespace LTE
 
 		GL_CALL(glCreateTextures(GL_TEXTURE_2D, 1, &id));
 		
-		if(path != "")
+		if(parentContainer->getPath() != "")
 			uploadDataFromFile();
     }
 
 
     void openGLTexture::bind(int slot)
     {
+		if (changeId != parentContainer->getChangeId())
+			setDimensions();
+		
 		GL_CALL(glBindTextureUnit(slot, id));
     }
     
@@ -39,27 +36,21 @@ namespace LTE
         GL_CALL(glBindTexture(GL_TEXTURE_2D, 0));
     }
 
-	void openGLTexture::setDimensions(const glm::vec2 dimensions)
-	{
-		if(width == dimensions.x && height == dimensions.y)
-			return;
-		width = dimensions.x;
-		height = dimensions.y;
-		
+	void openGLTexture::setDimensions()
+	{		
+		changeId = parentContainer->getChangeId();
         glDeleteTextures(1, &id);
 		GL_CALL(glCreateTextures(GL_TEXTURE_2D, 1, &id));
 
-		GL_CALL(glTextureStorage2D(id, 1, textureFormatToOpenGlFormat(format), width, height));
+		GL_CALL(glTextureStorage2D(id, 1, textureFormatToOpenGlFormat(parentContainer->getFormat()), parentContainer->getWidth(), parentContainer->getHeight()));
 
-		GL_CALL(glTexImage2D(GL_TEXTURE_2D, 0, textureFormatToOpenGlFormat(format), width, height, 0, textureFormatToOpenGlDataFormat(format), GL_UNSIGNED_BYTE, NULL));
+		GL_CALL(glTexImage2D(GL_TEXTURE_2D, 0, textureFormatToOpenGlFormat(parentContainer->getFormat()), parentContainer->getWidth(), parentContainer->getHeight(), 0, textureFormatToOpenGlDataFormat(parentContainer->getFormat()), GL_UNSIGNED_BYTE, NULL));
 
 		GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR));
 		GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR));
 		GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE));
 		GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE));
 		GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE));
-		
-
 	}
 
 	void openGLTexture::uploadDataFromFile()
@@ -67,29 +58,29 @@ namespace LTE
 		stbi_set_flip_vertically_on_load(1);
 		stbi_uc* data = nullptr;
 		
-        data = stbi_load(path.c_str(), &width, &height, &channels, 0);
+        data = stbi_load(parentContainer->getPath().c_str(), parentContainer->getWidthPtr(), parentContainer->getHeightPtr(), parentContainer->getChannelsPtr(), 0);
 		
 			
 		if (data)
 		{
-			if (channels == 4)
-				format = textureFormat::RGBA8;
-			else if (channels == 3)
-				format = textureFormat::RGB8;
+			if (parentContainer->getChannels() == 4)
+				parentContainer->setFormat(textureFormat::RGBA8);
+			else if (parentContainer->getChannels() == 3)
+				parentContainer->setFormat(textureFormat::RGB8);
 		
-			else if (channels == 2)
-				format = textureFormat::RG8;
+			else if (parentContainer->getChannels() == 2)
+				parentContainer->setFormat(textureFormat::RG8);
 
 
-			else if (channels == 1)
-				format = textureFormat::R8;
+			else if (parentContainer->getChannels() == 1)
+				parentContainer->setFormat(textureFormat::R8);
 
-			if (channels == 2) {
+			if (parentContainer->getChannels() == 2) {
 				GLint swizzleMask[] = {GL_RED, GL_RED, GL_RED, GL_GREEN};
 				glTexParameteriv(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_RGBA, swizzleMask);
             }
 
-			glTextureStorage2D(id, 1, textureFormatToOpenGlFormat(format), width, height);
+			glTextureStorage2D(id, 1, textureFormatToOpenGlFormat(parentContainer->getFormat()), parentContainer->getWidth(), parentContainer->getHeight());
 
 			glTextureParameteri(id, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 			glTextureParameteri(id, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
@@ -98,13 +89,13 @@ namespace LTE
 			glTextureParameteri(id, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
 
-			glTextureSubImage2D(id, 0, 0, 0, width, height, textureFormatToOpenGlDataFormat(format), GL_UNSIGNED_BYTE, data);
+			glTextureSubImage2D(id, 0, 0, 0, parentContainer->getWidth(), parentContainer->getHeight(), textureFormatToOpenGlDataFormat(parentContainer->getFormat()), GL_UNSIGNED_BYTE, data);
 
 			stbi_image_free(data);
 		}
 		else
 		{
-			LAUGHTALE_ENGINR_LOG_ERROR("failed to load texture frome file:"  << path << "\t because: " << stbi_failure_reason() );
+			LAUGHTALE_ENGINR_LOG_ERROR("failed to load texture frome file:"  << parentContainer->getPath() << "\t because: " << stbi_failure_reason() );
 		}
 	}
 

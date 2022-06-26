@@ -30,8 +30,8 @@ namespace LTE
     void openGLShader::createShader()
     {
         GL_CALL(rendererID = glCreateProgram());
-        GL_CALL(unsigned int vs = compileShader(GL_VERTEX_SHADER, vertexSource);)
-        GL_CALL(unsigned int fs = compileShader(GL_FRAGMENT_SHADER, fragmentSource));
+        GL_CALL(unsigned int vs = compileShader(GL_VERTEX_SHADER, parentContainer->getVertexSource());)
+        GL_CALL(unsigned int fs = compileShader(GL_FRAGMENT_SHADER, parentContainer->getfragmentSource()));
 
         GL_CALL(glAttachShader(rendererID, vs));
         GL_CALL(glAttachShader(rendererID, fs));

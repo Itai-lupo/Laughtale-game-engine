@@ -116,9 +116,7 @@ class topDownGame : public ::testing::Test
             LTE::app::init();
             initWindows();
 
-            LTE::windowManger::getWindow(gameWindowId)->
-                activeScene->assetLibrary->
-                getAsset<LTE::texture>("res/topDownScene/textures/Meta data assets files/ENVIRONMENT/tilesets/dungeon-tileset.png")->
+            LTE::assetManager::getAsset<LTE::texture>("res/topDownScene/textures/Meta data assets files/ENVIRONMENT/tilesets/dungeon-tileset.png")->
                 setSprtieData(
                     {
                         {{1, 48}, {15, 15}},
@@ -126,9 +124,7 @@ class topDownGame : public ::testing::Test
                     
                     });
             
-            LTE::windowManger::getWindow(gameWindowId)->
-                activeScene->assetLibrary->
-                getAsset<LTE::texture>("res/topDownScene/textures/Package/atlas_16x.png")->
+            LTE::assetManager::getAsset<LTE::texture>("res/topDownScene/textures/Package/atlas_16x.png")->
                 setSprtieData(
                     {
                         {{16, 112}, {16, 16}},                    
@@ -136,9 +132,7 @@ class topDownGame : public ::testing::Test
                         {{16, 197}, {16, 32}},                    
                     });
 
-            LTE::windowManger::getWindow(gameWindowId)->
-                activeScene->assetLibrary->
-                getAsset<LTE::texture>("res/topDownScene/textures/PIPOYA FREE RPG Character Sprites NEKONIN/pipo-nekonin011.png")->
+            LTE::assetManager::getAsset<LTE::texture>("res/topDownScene/textures/PIPOYA FREE RPG Character Sprites NEKONIN/pipo-nekonin011.png")->
                 setSprtieData({32, 32});
             
 

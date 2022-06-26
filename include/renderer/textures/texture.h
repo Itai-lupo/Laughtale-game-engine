@@ -1,11 +1,14 @@
 #pragma once
 #include <string>
+#include <boost/thread.hpp>
+
 #include "core.h"
 #include "asset.h"
 #include "logger.h"
 
 #include <glm/glm.hpp>
 #include <glm/gtx/string_cast.hpp>
+
 
 namespace LTE
 {
@@ -37,12 +40,30 @@ namespace LTE
         {}
     };
 
-    class texture : public asset
+    class texture;
+    class textureRenderApi
     {
         protected:
+            texture *parentContainer;
+            
+            std::atomic<int> changeId = 0;
+
+        public:
+            textureRenderApi(texture *parentContainer): parentContainer(parentContainer){}
+            virtual ~textureRenderApi() = default;
+
+            virtual void bind(int slot) = 0;
+            virtual textureId getId() = 0;
+        	virtual void setDimensions() = 0;
+            
+
+    };
+
+    class texture: public asset
+    {
+        private:
             std::string path;
-            textureId id;
-            int channels;
+            int channels = 4;
 
             bool isSpriteSheet = false;
             bool isCustumSpriteSheet = false;
@@ -50,20 +71,57 @@ namespace LTE
             std::vector<spriteDimensionsData> custumSpriteDimensions;
             
             int width, height;
-            textureFormat format;
+            textureFormat format = textureFormat::RGBA8;
 
+            boost::thread_specific_ptr<textureRenderApi> data;
+            std::atomic<int> changeId = 0;
+
+            void checkIfExitesInThisContextAndInitIfNot();
         public:
-            texture(const std::string& path): path(path){}
-            virtual ~texture() = default;
+            texture(const std::string& path)
+            {
 
-            virtual void bind(int slot) = 0;
-            textureId getId(){ return id; }
-            textureFormat getFormat(){ return format; }
+            }
+            
+            void bind(int slot)
+            {
+                checkIfExitesInThisContextAndInitIfNot();
+                data->bind(slot);
+            }
 
-            int getWidth(){return width;}
-            int getHeight(){return height;}
+            virtual void setDimensions(const glm::vec2 dimensions)
+            {
+                if(width == dimensions.x && height == dimensions.y)
+                    return;
+                width = dimensions.x;
+                height = dimensions.y;
+                
+                changeId++;
+                if(data.get())
+                    data->setDimensions();
+            }
 
-            virtual void setDimensions(const glm::vec2 dimensions) = 0;
+            virtual textureId getId()
+            {
+                if(data.get() == NULL)
+                    return 0;
+                return data->getId();
+            }
+
+            textureFormat getFormat()
+            {
+                return format; 
+            }
+
+            int getWidth()
+            {
+                return width;
+            }
+
+            int getHeight()
+            {
+                return height;
+            }
 
             bool useSpriteSheet()
             {
@@ -117,6 +175,42 @@ namespace LTE
             float getSpriteXDelte()
             {
                 return spriteDimensions.x / (float)width;
+            }
+
+
+            std::string getPath()
+            {
+                return path;
+            }
+
+            int getChannels()
+            {
+                return channels;
+            }
+
+            int *getWidthPtr()
+            {
+                return &width;
+            }
+
+            int *getHeightPtr()
+            {
+                return &height;
+            }
+
+            int *getChannelsPtr()
+            {
+                return &channels;
+            }
+
+            unsigned int getChangeId()
+            {
+                return changeId;
+            }
+
+            void setFormat(textureFormat f)
+            {
+                format = f;
             }
     };
 }

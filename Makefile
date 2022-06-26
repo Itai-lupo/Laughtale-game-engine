@@ -36,9 +36,9 @@ CPPFLAGS ?=   -std=c++20
 TEST_CPP_FLAGE = -lgtest -lgtest_main -lgmock  
 # CFLAGS :=
 
-CXXFLAGS += $(INC_FLAGS)  -MMD -MP  -g  -Wc++17-extensions -g   -pthread  $(LIB_FLAGS) -lstdc++ -lgflags -lglog -lGL -lglfw   -lrt -lm -ldl -lasound -O0 -Wunused-parameter
+CXXFLAGS += $(INC_FLAGS)  -MMD -MP   -g   -pthread -O0
 
-LDFLAGS =  $(LIB_FLAGS)
+LDFLAGS =  $(LIB_FLAGS) -lboost_thread -lstdc++ -lgflags -lglog -lGL -lglfw   -lrt -lm -ldl -lasound
 
 
 $(OUTPUT_DIR)/$(TARGET_EXEC): $(OBJS)

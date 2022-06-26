@@ -1,11 +1,6 @@
 <map id="LTE::app::getOsAPI" name="LTE::app::getOsAPI">
-<area shape="rect" id="node1" title=" " alt="" coords="689,163,825,190"/>
-<area shape="rect" id="node2" href="$d7/d20/class_l_t_e_1_1graphics_context.html#ac4ded240dde4a332983804d800e582d7" title=" " alt="" coords="482,5,627,47"/>
-<area shape="rect" id="node3" href="$d4/d38/class_l_t_e_1_1window.html#ada64ce70730800b0efe780533eb4369c" title=" " alt="" coords="301,42,420,69"/>
-<area shape="rect" id="node6" href="$d0/d71/class_l_t_e_1_1open_g_l_render_api.html#ac4920b2bd8edb93ab5e0476ecee8c4b1" title=" " alt="" coords="475,123,634,164"/>
-<area shape="rect" id="node7" href="$d3/dcb/class_l_t_e_1_1simple_quad_renderer.html#a79d1d8aa1bfbb13d45ac037173039b73" title=" " alt="" coords="468,188,641,229"/>
-<area shape="rect" id="node8" href="$d7/d20/class_l_t_e_1_1graphics_context.html#a4445240a7b179f872cbbcdb80ff191b8" title=" " alt="" coords="482,253,627,295"/>
-<area shape="rect" id="node9" href="$d4/d38/class_l_t_e_1_1window.html#a4568b8ca13acdca177586c50315a5aa7" title=" " alt="" coords="478,319,631,346"/>
-<area shape="rect" id="node4" href="$de/de3/class_l_t_e_1_1window_manger.html#acc2b710e8936b1ba64fd0f2ef7f7b636" title=" " alt="" coords="108,35,253,76"/>
-<area shape="rect" id="node5" href="$da/dd9/obj_loading_8test_8cpp.html#ab7d3cf99cb7404dcda115544ab7a09c6" title=" " alt="" coords="5,42,60,69"/>
+<area shape="rect" id="node1" title=" " alt="" coords="212,78,348,105"/>
+<area shape="rect" id="node2" href="$d0/d71/class_l_t_e_1_1open_g_l_render_api.html#ac4920b2bd8edb93ab5e0476ecee8c4b1" title=" " alt="" coords="5,5,164,47"/>
+<area shape="rect" id="node3" href="$d7/d20/class_l_t_e_1_1graphics_context.html#a4445240a7b179f872cbbcdb80ff191b8" title=" " alt="" coords="12,71,157,112"/>
+<area shape="rect" id="node4" href="$d4/d38/class_l_t_e_1_1window.html#a4568b8ca13acdca177586c50315a5aa7" title=" " alt="" coords="8,137,161,163"/>
 </map>

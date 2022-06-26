@@ -11,13 +11,11 @@ namespace LTE
     class meshAbsrtactFactory
     {
         public:
-            virtual shader *createShader(const std::string& vertexSource, const std::string& fragmentSource) = 0;
-            virtual vertexArray *createVertexArray(VertexBuffer *vb) = 0;
-            virtual VertexBuffer *createVertexBuffer(float *vertexs, uint32_t size) = 0;
-            virtual indexBuffer *createIndexBuffer(uint32_t *indices, uint32_t count) = 0;
-            virtual texture *createTexture(const std::string& path) = 0;
-            virtual framebuffer *createFramebuffer(uint32_t width, uint32_t hight) = 0;
-
-            virtual void build() = 0;
+            virtual shaderRenderApi *createShader(shader *parentContainer) = 0;
+            virtual vertexArrayRenderApi *createVertexArray(vertexArray *parentContainer) = 0;
+            virtual VertexBufferRenderApi *createVertexBuffer(VertexBuffer *parentContainer) = 0;
+            virtual indexBufferRenderApi *createIndexBuffer(indexBuffer *parentContainer) = 0;
+            virtual textureRenderApi *createTexture(texture *parentContainer) = 0;
+            virtual framebufferRenderApi *createFramebuffer(framebuffer *parentContainer) = 0;
     };
 }

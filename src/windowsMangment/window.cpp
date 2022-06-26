@@ -15,11 +15,6 @@ namespace LTE
 				setWindowId(id)->add();
 
         context->Init();
-		if(useImGui)
-		{
-			app::getOsAPI()->makeContextCurrent(id);
-			initImGui(id);
-		}
 		
 	}
 
@@ -35,7 +30,6 @@ namespace LTE
 	window::~window()
 	{
 		delete context;
-		delete activeScene;
 
 		app::getOsAPI()->closeWindow(id);
 		

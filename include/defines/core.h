@@ -12,6 +12,7 @@ namespace LTE
     typedef uint32_t packetId;
     typedef uint32_t connectionId;
     typedef uint32_t framebufferId;
+    typedef uint32_t sceneId;
 
     enum renderAPIType
     {

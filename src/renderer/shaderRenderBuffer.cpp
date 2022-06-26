@@ -4,23 +4,24 @@
 #include <glm/gtx/string_cast.hpp>
 
 #include "shaderRenderBuffer.h"
-#include "windowManger.h"
 #include "shaderTypes.h"
+
+#include "meshAbsrtactFactory.h"
+#include "graphicsContext.h"
 
 namespace LTE
 {
-    shaderRenderBuffer::shaderRenderBuffer(shader *s, windowPieceId winId) : s(s), winId(winId)
+    shaderRenderBuffer::shaderRenderBuffer(shader *s) : s(s)
     {
-        meshAbsrtactFactory *meshFac = windowManger::getWindow(winId)->context->getMeshFactory();
-        BatchedVertexBuffer = meshFac->createVertexBuffer({}, 0);
-        BatchedIndexBuffer = meshFac->createIndexBuffer({}, 0); 
+        BatchedVertexBuffer = new VertexBuffer({}, 0);
+        BatchedIndexBuffer = new indexBuffer({}, 0); 
 
         BatchedVertexBuffer->pushElement({LT_FLOAT, 3, false, 4});
         BatchedVertexBuffer->pushElement({LT_FLOAT, 2, false, 4});
         BatchedVertexBuffer->pushElement({LT_FLOAT, 4, false, 4});
         BatchedVertexBuffer->pushElement({LT_FLOAT, 1, false, 4});
 
-        BatchedVertexArray = meshFac->createVertexArray(BatchedVertexBuffer);
+        BatchedVertexArray = new vertexArray(BatchedVertexBuffer);
     }
 
     shader *shaderRenderBuffer::getShader()

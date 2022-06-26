@@ -20,7 +20,7 @@ namespace LTE
             glslFile(const std::string& filePath);
 
             virtual ~glslFile();
-            virtual asset *genrateAssetForWindow(windowPieceId  winId);
+            virtual asset *genrateAsset();
 
             virtual void loadFileData();
 

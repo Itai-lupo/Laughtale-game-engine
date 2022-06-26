@@ -20,58 +20,51 @@ namespace LTE
             std::queue<openGLBase*> needToInit;
         public:
 
-            virtual shader *createShader(const std::string& vertexSource, const std::string& fragmentSource) override
+            virtual shaderRenderApi *createShader(shader *parentContainer)
             {
-                openGLShader *s = new openGLShader(vertexSource, fragmentSource);
-                needToInit.push(s);
+                openGLShader *s = new openGLShader(parentContainer);
+                s->init();
                 return s;
             }
 
-            virtual vertexArray *createVertexArray(VertexBuffer *vb) override
+            virtual vertexArrayRenderApi *createVertexArray(vertexArray *parentContainer)
             {
-                openGLVertexArray *va = new openGLVertexArray(vb);
-                needToInit.push(va);
+                openGLVertexArray *va = new openGLVertexArray(parentContainer);
+                va->init();
                 return va;
+
             }
 
-            virtual VertexBuffer *createVertexBuffer(float *vertexs, uint32_t size) override
+            virtual VertexBufferRenderApi *createVertexBuffer(VertexBuffer *parentContainer)
             {
-                OpenGLVertexBuffer *vb = new OpenGLVertexBuffer(vertexs, size);
-                needToInit.push(vb);
+
+                OpenGLVertexBuffer *vb = new OpenGLVertexBuffer(parentContainer);
+                vb->init();
                 return vb;
             }
 
-            virtual indexBuffer *createIndexBuffer(uint32_t *indices, uint32_t count) override
+            virtual indexBufferRenderApi *createIndexBuffer(indexBuffer *parentContainer)
             {
-                openGLIndexBuffer *ib = new openGLIndexBuffer(indices, count);
-                needToInit.push(ib);
+                openGLIndexBuffer *ib = new openGLIndexBuffer(parentContainer);
+                ib->init();
                 return ib;
+
             }
 
-            virtual texture *createTexture(const std::string& path) override
+            virtual textureRenderApi *createTexture(texture *parentContainer)
             {
-                openGLTexture *t = new openGLTexture(path);
-                needToInit.push(t);
+                openGLTexture *t = new openGLTexture(parentContainer);
+                t->init();
                 return t;
+
             }
 
-            virtual framebuffer *createFramebuffer(uint32_t width, uint32_t hight) override
+            virtual framebufferRenderApi *createFramebuffer(framebuffer *parentContainer)
             {
-                openGLFramebuffer *fbo = new openGLFramebuffer(width, hight);
-                needToInit.push(fbo);
+                openGLFramebuffer *fbo = new openGLFramebuffer(parentContainer);
+                fbo->init();
                 return fbo;
+
             }
-
-
-            virtual void build() override
-            {
-                while (!needToInit.empty())
-                {
-                    needToInit.front()->init();
-                    needToInit.pop();
-                }
-                
-            }
-
     };
 }

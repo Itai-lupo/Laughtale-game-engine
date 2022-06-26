@@ -16,10 +16,10 @@ namespace LTE
 
     glslFile::~glslFile(){}
 
-    asset *glslFile::genrateAssetForWindow(windowPieceId winId)
+    asset *glslFile::genrateAsset()
     {
-        shader *s = windowManger::getWindow(winId)->context->getMeshFactory()->createShader(source.VertexSource, source.FragmentSource);
-        return new shaderRenderBuffer(s, winId);
+        shader *s = new shader(source.VertexSource, source.FragmentSource);
+        return new shaderRenderBuffer(s);
     }
 
     void glslFile::loadFileData()

@@ -1,10 +1,14 @@
 #pragma once
-#include "core.h"
 #include <vector>
+#include <boost/thread.hpp>
+
+#include "core.h"
 #include "logger.h"
 
 namespace LTE
 {
+    class VertexBuffer;
+
     struct VertexBufferElement{
         unsigned int type;
         unsigned int count;
@@ -35,30 +39,89 @@ namespace LTE
             inline unsigned int GetStride() { return stride; };
     };
 
-    class VertexBuffer 
+    class VertexBufferRenderApi 
     {
         protected:
-            const void *data;
-            unsigned int size;
-            VertexBufferLayout *VBLayout;
+            VertexBuffer *parentContainer;
+            std::atomic<int> changeId = 0;
+
         public:
-            VertexBuffer(const void *data, unsigned int size)
-                :data(data), size(size)
-                {
-                    VBLayout = new VertexBufferLayout();
-                }
+            virtual ~VertexBufferRenderApi() = default;
+            VertexBufferRenderApi(VertexBuffer *parentContainer): parentContainer(parentContainer){}
 
             virtual void init() = 0;
-            virtual void setData(const void *data, uint32_t size) = 0;
             virtual void bind() = 0;
             virtual void unbind() = 0;
 
 
-            inline const std::vector<VertexBufferElement> getElements() { return VBLayout->getElements(); }
-            inline unsigned int GetStride() { return VBLayout->GetStride(); };
-            inline void pushElement(const VertexBufferElement& ElementToPush) 
+    };
+
+    class VertexBuffer
+    {
+        private:
+            const void *vertexs;
+            unsigned int size;
+            VertexBufferLayout *VBLayout;
+
+            boost::thread_specific_ptr<VertexBufferRenderApi> data;
+            std::atomic<unsigned int> changeId = 0;
+
+            void checkIfExitesInThisContextAndInitIfNot();
+
+        public:
+            VertexBuffer(float *vertexs, uint32_t size): vertexs(vertexs), size(size), VBLayout(new VertexBufferLayout())
+            {
+
+            }
+            
+            void setData(const void *data, uint32_t size)
+            {
+                vertexs = data;
+                this->size = size;
+                changeId++;
+            }
+
+            void bind()
+            {
+                checkIfExitesInThisContextAndInitIfNot();
+                data->bind();
+            }
+
+            void unbind()
+            {
+                checkIfExitesInThisContextAndInitIfNot();
+                data->unbind();
+            }
+
+            const std::vector<VertexBufferElement> getElements() 
+            { 
+                return VBLayout->getElements(); 
+            }
+            
+            unsigned int GetStride() 
+            { 
+                return VBLayout->GetStride(); 
+            }
+            
+            void pushElement(const VertexBufferElement& ElementToPush) 
             {  
                 VBLayout->push(ElementToPush); 
             }
+
+            unsigned int getSize()
+            {
+                return size;
+            }
+
+            const void *getData()
+            {
+                return vertexs;
+            }
+
+            unsigned int getChangeId()
+            {
+                return changeId;
+            }
+
     };
 }
