@@ -1,12 +1,9 @@
 <map id="LTE::windowManger::addWindow" name="LTE::windowManger::addWindow">
-<area shape="rect" id="node1" title=" " alt="" coords="5,213,151,255"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,123,151,164"/>
 <area shape="rect" id="node2" href="$d0/d26/class_l_t_e_1_1window_builder.html#ad1ca0242c2cde62734d35a098d5a7d84" title=" " alt="" coords="199,64,335,105"/>
-<area shape="rect" id="node5" href="$d4/d38/class_l_t_e_1_1window.html#ada64ce70730800b0efe780533eb4369c" title=" " alt="" coords="207,195,326,222"/>
-<area shape="rect" id="node9" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397" title=" " alt="" coords="384,253,589,295"/>
-<area shape="rect" id="node10" href="$d0/d26/class_l_t_e_1_1window_builder.html#ae4c402df966a6313a04f0778ce527fe7" title=" " alt="" coords="199,297,335,339"/>
+<area shape="rect" id="node5" href="$d4/d38/class_l_t_e_1_1window.html#ada64ce70730800b0efe780533eb4369c" title=" " alt="" coords="207,130,326,157"/>
+<area shape="rect" id="node7" href="$d0/d26/class_l_t_e_1_1window_builder.html#ae4c402df966a6313a04f0778ce527fe7" title=" " alt="" coords="199,181,335,223"/>
 <area shape="rect" id="node3" href="$db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a8374027cae5d825ab50e31d39ec2e779" title=" " alt="" coords="405,5,568,47"/>
 <area shape="rect" id="node4" href="$d0/d13/class_l_t_e_1_1app.html#a01ae35f37a9fb2f41dd19205e324ad90" title=" " alt="" coords="383,71,591,98"/>
-<area shape="rect" id="node6" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a54a3bf5bfe8f88d87174d0e9a33af63f" title=" " alt="" coords="383,123,590,164"/>
-<area shape="rect" id="node8" href="$d7/d20/class_l_t_e_1_1graphics_context.html#ac4ded240dde4a332983804d800e582d7" title=" " alt="" coords="414,188,559,229"/>
-<area shape="rect" id="node7" href="$d7/d22/class_l_t_e_1_1router.html#a854a190b199213a2b0bda12e9b2ae22f" title=" " alt="" coords="639,130,785,157"/>
+<area shape="rect" id="node6" href="$d7/d20/class_l_t_e_1_1graphics_context.html#ac4ded240dde4a332983804d800e582d7" title=" " alt="" coords="414,123,559,164"/>
 </map>

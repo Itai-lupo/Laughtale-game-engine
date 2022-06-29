@@ -1,7 +1,4 @@
 <map id="LTE::window::init" name="LTE::window::init">
-<area shape="rect" id="node1" title=" " alt="" coords="5,78,124,105"/>
-<area shape="rect" id="node2" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a54a3bf5bfe8f88d87174d0e9a33af63f" title=" " alt="" coords="172,5,379,47"/>
-<area shape="rect" id="node4" href="$d7/d20/class_l_t_e_1_1graphics_context.html#ac4ded240dde4a332983804d800e582d7" title=" " alt="" coords="203,71,348,112"/>
-<area shape="rect" id="node5" href="$d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397" title=" " alt="" coords="173,136,378,177"/>
-<area shape="rect" id="node3" href="$d7/d22/class_l_t_e_1_1router.html#a854a190b199213a2b0bda12e9b2ae22f" title=" " alt="" coords="427,13,573,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,124,39"/>
+<area shape="rect" id="node2" href="$d7/d20/class_l_t_e_1_1graphics_context.html#ac4ded240dde4a332983804d800e582d7" title=" " alt="" coords="172,5,317,47"/>
 </map>

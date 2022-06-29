@@ -70,7 +70,7 @@ namespace LTE
     void material::setTexture(const std::string& path)
     {
         texturePath = path;
-        assetManager::getAsset<texture>(path);
+        tex = assetManager::getAsset<texture>(path);
     }
 
     void material::setBaseColor(glm::vec4 baseColor)

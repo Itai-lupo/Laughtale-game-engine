@@ -4,7 +4,7 @@
 namespace LTE
 {
     typedef uint32_t eventLaughId;
-    typedef uint32_t entityTaleId;
+    typedef uint32_t gameObjectId;
     typedef uint64_t windowPieceId;
     typedef uint32_t apoEnvelopeId;
     typedef uint32_t materialId;

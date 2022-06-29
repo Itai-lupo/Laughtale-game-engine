@@ -8,15 +8,8 @@ namespace LTE
 {
     class coreRenderer
     {
-        protected:
-
-            renderApi *renderPipLine;
-
-        public:                
-            coreRenderer(renderApi *renderPipLine):  renderPipLine(renderPipLine)
-            {
-
-            }
+        public:      
+            virtual ~coreRenderer() = default;          
 
 
             virtual void renderScene() = 0;

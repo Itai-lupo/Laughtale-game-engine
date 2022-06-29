@@ -47,12 +47,12 @@ namespace LTE::GMNM
     {
         networkConnction = new asioNetworkInterface(ip, port);
         id = networkConnction->getPort();
-        connectionData *serverData = new connectionData(id, ip, port, [&, this](packet& data){ this->send(data); } );
+        // connectionData *serverData = new connectionData(id, ip, port, [&, this](packet& data){ this->send(data); } );
         canSend = true;
-        serverData->route = "server connection/";
-        if(networkConnction->isConnected())
-            eventManger::trigerEvent(serverData);
-        delete serverData;
+        
+        // if(networkConnction->isConnected())
+            // eventManger::trigerEvent(serverData);
+        // delete serverData;
     }
 
     void connection::listen()
@@ -74,12 +74,11 @@ namespace LTE::GMNM
             dataEncryption->decodeBody(buffer);
             messageFormat->formatRecivedBody(buffer, data);
 
-            connectionReadData *recivedData = new connectionReadData(data, id, ip, port,
-             [&, this](packet& data){ this->send(data); } 
-             );
-            recivedData->route = "message received/";
-            eventManger::trigerEvent(recivedData);
-            delete recivedData;
+            // connectionReadData *recivedData = new connectionReadData(data, id, ip, port,
+            //  [&, this](packet& data){ this->send(data); } 
+            //  );
+            // eventManger::trigerEvent(recivedData);
+            // delete recivedData;
         }
     }
 }

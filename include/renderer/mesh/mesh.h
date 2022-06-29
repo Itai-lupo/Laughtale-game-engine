@@ -1,5 +1,5 @@
 #pragma once
-#include "entity.h"
+#include "gameobject.h"
 #include "core.h"
 #include "shader.h"
 #include "VertexBuffer.h"
@@ -52,7 +52,7 @@ namespace LTE
                 };
                 
             private:
-                entityTaleId id;
+                gameObjectId id;
 
                 std::string shaderToUse;
 
@@ -89,7 +89,7 @@ namespace LTE
 
                 void setShaderName(const std::string& shaderName);
 
-                entityTaleId getId(){ return id; }
+                gameObjectId getId(){ return id; }
 
                 uint32_t getCount();
                 std::string getShaderName();
@@ -97,7 +97,6 @@ namespace LTE
                 float *getVB();
                 float *getVertices();
                 uint32_t* getIB();
-                windowPieceId getWindowId(){ return winId;}
 
                 virtual void init(gameObject *parent) override;
                 virtual void end() override;

@@ -139,116 +139,124 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  339</span>        { </div>
-<div class="line"><span class="lineno">  340</span>            <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968">LTE::app::init</a>();</div>
-<div class="line"><span class="lineno">  341</span>            initWindows();</div>
-<div class="line"><span class="lineno">  342</span> </div>
-<div class="line"><span class="lineno">  343</span>            <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#acf283b437dde2e9300639fa4ee0e55dc">LTE::entityManger::addEntity</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html">LTE::gameObject::gameObjectBuilder</a> *builder){ </div>
-<div class="line"><span class="lineno">  344</span>                builder-&gt;</div>
-<div class="line"><span class="lineno">  345</span>                    setObjectName(<span class="stringliteral">&quot;player&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  346</span>                    setObjectTransform({{ -0.9, 0.0f, 1.0f}, {0.0f, 0.0f, 0.0f}, { 0.2, 0.2f, 0.0f}})-&gt;</div>
-<div class="line"><span class="lineno">  347</span>                    setWindowId(gameWindowId)-&gt;</div>
-<div class="line"><span class="lineno">  348</span>                    addComponent(<a class="code hl_function" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a0a75e6d008a219e5a604a1d9e303a243">LTE::mesh::build</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html">LTE::mesh::meshBuilder</a> *builder)</div>
-<div class="line"><span class="lineno">  349</span>                        {</div>
-<div class="line"><span class="lineno">  350</span>                            builder-&gt;<a class="code hl_function" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#aaf34d2886359138366773a6cf33177c9">setIndexBuffer</a>(birdIndices, 12)-&gt;</div>
-<div class="line"><span class="lineno">  351</span>                            setVertices(birdPostions, 6 * 3)-&gt;</div>
-<div class="line"><span class="lineno">  352</span>                            setShaderName(<span class="stringliteral">&quot;res/flappyBird/bird.glsl&quot;</span>);</div>
-<div class="line"><span class="lineno">  353</span>                        }))-&gt;</div>
-<div class="line"><span class="lineno">  354</span>                    addComponent((<span class="keyword">new</span> <a class="code hl_class" href="../../d2/d04/class_l_t_e_1_1envelope.html">LTE::envelope</a>())</div>
-<div class="line"><span class="lineno">  355</span>                        -&gt;setFrequency(440.0f)-&gt;</div>
-<div class="line"><span class="lineno">  356</span>                        setSondWaveType(<a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#afdee5b51c7e400b6c32b22c2c909d2b0ab4ba2f5be7cbfd96059e6cb1cacde1dc">LTE::analogSqure</a>)-&gt;</div>
-<div class="line"><span class="lineno">  357</span>                        setAttackTime(0.001)-&gt;</div>
-<div class="line"><span class="lineno">  358</span>                        setDecayTime(0.5)-&gt;</div>
-<div class="line"><span class="lineno">  359</span>                        setReleaseTime(0.1)-&gt;</div>
-<div class="line"><span class="lineno">  360</span>                        setStartAmplitude(1.0)-&gt;</div>
-<div class="line"><span class="lineno">  361</span>                        setSustainAmplitude(0.0f))-&gt;</div>
-<div class="line"><span class="lineno">  362</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(<span class="stringliteral">&quot;res/textures/Logo.png&quot;</span>, glm::vec4({0.0f, 0.0f, 0.0f, 1.0f})))-&gt;</div>
-<div class="line"><span class="lineno">  363</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../dd/d78/class_l_t_e_1_1squre_collider.html">LTE::squreCollider</a>())-&gt;</div>
-<div class="line"><span class="lineno">  364</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../da/dee/classbird.html">bird</a>(debugInfoWindowId));</div>
-<div class="line"><span class="lineno">  365</span>                });</div>
-<div class="line"><span class="lineno">  366</span> </div>
+<div class="fragment"><div class="line"><span class="lineno">  300</span>        { </div>
+<div class="line"><span class="lineno">  301</span>            <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968">LTE::app::init</a>();</div>
+<div class="line"><span class="lineno">  302</span>            initWindows();</div>
+<div class="line"><span class="lineno">  303</span> </div>
+<div class="line"><span class="lineno">  304</span>            <a class="code hl_typedef" href="../../dc/d59/namespace_l_t_e.html#a19087a9b8ea8653191a7efdb616a92b4">sceneId</a> =  <a class="code hl_function" href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#a96129d4d00a2fb857a020471f9ec55fc">LTE::sceneManger::addScene</a>([=](<a class="code hl_class" href="../../d3/db0/class_l_t_e_1_1scene_builder.html">LTE::sceneBuilder</a> *build)</div>
+<div class="line"><span class="lineno">  305</span>            {</div>
+<div class="line"><span class="lineno">  306</span>                build-&gt;<a class="code hl_function" href="../../d3/db0/class_l_t_e_1_1scene_builder.html#a4c682dc23d6989698bf66b51cc150ef5">setBackgroundColor</a>(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(glm::vec4({0.2f, 0.2f, 0.2f, 1.0f})));</div>
+<div class="line"><span class="lineno">  307</span>            });</div>
+<div class="line"><span class="lineno">  308</span> </div>
+<div class="line"><span class="lineno">  309</span>            gameScene = <a class="code hl_function" href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#a3dc19de53c0c790c5855c864df93f418">LTE::sceneManger::getScene</a>(sceneId);</div>
+<div class="line"><span class="lineno">  310</span> </div>
+<div class="line"><span class="lineno">  311</span>            <a class="code hl_typedef" href="../../dc/d59/namespace_l_t_e.html#a7453a44af781c118bd678959bdd02674">LTE::gameObjectId</a> playerId =  gameScene-&gt;<a class="code hl_function" href="../../d6/d26/class_l_t_e_1_1scene.html#a6de4eec39efa1e4fdc91c376f3f5ec72">addGameObject</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../de/d82/class_l_t_e_1_1game_object_builder.html">LTE::gameObjectBuilder</a>*builder){ </div>
+<div class="line"><span class="lineno">  312</span>                builder-&gt;</div>
+<div class="line"><span class="lineno">  313</span>                    setObjectName(<span class="stringliteral">&quot;player&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  314</span>                    setObjectTransform({{ -0.9, 0.0f, 1.0f}, {0.0f, 0.0f, 0.0f}, { 0.2, 0.2f, 0.0f}})-&gt;</div>
+<div class="line"><span class="lineno">  315</span>                    addComponent(<a class="code hl_function" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a0a75e6d008a219e5a604a1d9e303a243">LTE::mesh::build</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html">LTE::mesh::meshBuilder</a> *builder)</div>
+<div class="line"><span class="lineno">  316</span>                        {</div>
+<div class="line"><span class="lineno">  317</span>                            builder-&gt;<a class="code hl_function" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#aaf34d2886359138366773a6cf33177c9">setIndexBuffer</a>(birdIndices, 12)-&gt;</div>
+<div class="line"><span class="lineno">  318</span>                            setVertices(birdPostions, 6 * 3)-&gt;</div>
+<div class="line"><span class="lineno">  319</span>                            setShaderName(<span class="stringliteral">&quot;res/flappyBird/bird.glsl&quot;</span>);</div>
+<div class="line"><span class="lineno">  320</span>                        }))-&gt;</div>
+<div class="line"><span class="lineno">  321</span>                    addComponent((<span class="keyword">new</span> <a class="code hl_class" href="../../d2/d04/class_l_t_e_1_1envelope.html">LTE::envelope</a>())</div>
+<div class="line"><span class="lineno">  322</span>                        -&gt;setFrequency(440.0f)-&gt;</div>
+<div class="line"><span class="lineno">  323</span>                        setSondWaveType(<a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#afdee5b51c7e400b6c32b22c2c909d2b0ab4ba2f5be7cbfd96059e6cb1cacde1dc">LTE::analogSqure</a>)-&gt;</div>
+<div class="line"><span class="lineno">  324</span>                        setAttackTime(0.001)-&gt;</div>
+<div class="line"><span class="lineno">  325</span>                        setDecayTime(0.5)-&gt;</div>
+<div class="line"><span class="lineno">  326</span>                        setReleaseTime(0.1)-&gt;</div>
+<div class="line"><span class="lineno">  327</span>                        setStartAmplitude(1.0)-&gt;</div>
+<div class="line"><span class="lineno">  328</span>                        setSustainAmplitude(0.0f))-&gt;</div>
+<div class="line"><span class="lineno">  329</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(<span class="stringliteral">&quot;res/textures/Logo.png&quot;</span>, glm::vec4({0.0f, 0.0f, 0.0f, 1.0f})))-&gt;</div>
+<div class="line"><span class="lineno">  330</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../dd/d78/class_l_t_e_1_1squre_collider.html">LTE::squreCollider</a>())-&gt;</div>
+<div class="line"><span class="lineno">  331</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../da/dee/classbird.html">bird</a>(debugInfoWindowId));</div>
+<div class="line"><span class="lineno">  332</span>                });</div>
+<div class="line"><span class="lineno">  333</span> </div>
+<div class="line"><span class="lineno">  334</span> </div>
+<div class="line"><span class="lineno">  335</span>            std::srand(std::time(<span class="keyword">nullptr</span>));</div>
+<div class="line"><span class="lineno">  336</span>            <span class="keywordtype">float</span> pilarHight = (rand() / (RAND_MAX + 1.0f) - 0.5f) * 0.7;</div>
+<div class="line"><span class="lineno">  337</span> </div>
+<div class="line"><span class="lineno">  338</span>            <a class="code hl_typedef" href="../../dc/d59/namespace_l_t_e.html#a7453a44af781c118bd678959bdd02674">LTE::gameObjectId</a> pilarTopId = gameScene-&gt;<a class="code hl_function" href="../../d6/d26/class_l_t_e_1_1scene.html#a6de4eec39efa1e4fdc91c376f3f5ec72">addGameObject</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../de/d82/class_l_t_e_1_1game_object_builder.html">LTE::gameObjectBuilder</a>*builder){ </div>
+<div class="line"><span class="lineno">  339</span>                builder-&gt;</div>
+<div class="line"><span class="lineno">  340</span>                    setObjectName(<span class="stringliteral">&quot;pilar top&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  341</span>                    setObjectTransform({{ 1.7f, pilarHight + 1.25f, 0.0f}, {0.0f, 0.0f, 0.0f}, { <a class="code hl_define" href="../../d9/dc9/flappy_bird_8test_8cpp.html#a63d8492c3bd7811780cc765e506c3789">PILAR_HOLE_WIDTH</a>, 2.0f, 1.0f}})-&gt;</div>
+<div class="line"><span class="lineno">  342</span>                    addComponent(<a class="code hl_function" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a0a75e6d008a219e5a604a1d9e303a243">LTE::mesh::build</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html">LTE::mesh::meshBuilder</a> *builder)</div>
+<div class="line"><span class="lineno">  343</span>                        {</div>
+<div class="line"><span class="lineno">  344</span>                            builder-&gt;<a class="code hl_function" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#aaf34d2886359138366773a6cf33177c9">setIndexBuffer</a>(pilarIndices, 6)-&gt;</div>
+<div class="line"><span class="lineno">  345</span>                            setVertices(pilarPostions, 12)-&gt;</div>
+<div class="line"><span class="lineno">  346</span>                            setShaderName(<span class="stringliteral">&quot;res/flappyBird/Basic.glsl&quot;</span>);</div>
+<div class="line"><span class="lineno">  347</span>                        }))-&gt;</div>
+<div class="line"><span class="lineno">  348</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(<span class="stringliteral">&quot;res/textures/5_star.png&quot;</span>, {1.0f, 1.0f, 0.0f, 1.0f}))-&gt;</div>
+<div class="line"><span class="lineno">  349</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../d1/d69/classpilar.html">pilar</a>())-&gt;</div>
+<div class="line"><span class="lineno">  350</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../dd/d78/class_l_t_e_1_1squre_collider.html">LTE::squreCollider</a>());</div>
+<div class="line"><span class="lineno">  351</span>                });</div>
+<div class="line"><span class="lineno">  352</span> </div>
+<div class="line"><span class="lineno">  353</span>            <a class="code hl_typedef" href="../../dc/d59/namespace_l_t_e.html#a7453a44af781c118bd678959bdd02674">LTE::gameObjectId</a> pilarBottomId = gameScene-&gt;<a class="code hl_function" href="../../d6/d26/class_l_t_e_1_1scene.html#a6de4eec39efa1e4fdc91c376f3f5ec72">addGameObject</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../de/d82/class_l_t_e_1_1game_object_builder.html">LTE::gameObjectBuilder</a>*builder){ </div>
+<div class="line"><span class="lineno">  354</span>                builder-&gt;</div>
+<div class="line"><span class="lineno">  355</span>                    setObjectName(<span class="stringliteral">&quot;pilar bottom&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  356</span>                    setObjectTransform({{ 1.7f, pilarHight - 1.25f, 0.0f}, {0.0f, 0.0f, 0.0f}, { <a class="code hl_define" href="../../d9/dc9/flappy_bird_8test_8cpp.html#a63d8492c3bd7811780cc765e506c3789">PILAR_HOLE_WIDTH</a>, 2.0f, 1.0f}})-&gt;</div>
+<div class="line"><span class="lineno">  357</span>                    addComponent(<a class="code hl_function" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a0a75e6d008a219e5a604a1d9e303a243">LTE::mesh::build</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html">LTE::mesh::meshBuilder</a> *builder)</div>
+<div class="line"><span class="lineno">  358</span>                        {</div>
+<div class="line"><span class="lineno">  359</span>                            builder-&gt;<a class="code hl_function" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#aaf34d2886359138366773a6cf33177c9">setIndexBuffer</a>(pilarIndices, 6)-&gt;</div>
+<div class="line"><span class="lineno">  360</span>                            setVertices(pilarPostions, 12)-&gt;</div>
+<div class="line"><span class="lineno">  361</span>                            setShaderName(<span class="stringliteral">&quot;res/flappyBird/Basic.glsl&quot;</span>);</div>
+<div class="line"><span class="lineno">  362</span>                        }))-&gt;</div>
+<div class="line"><span class="lineno">  363</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(<span class="stringliteral">&quot;res/textures/5_star.png&quot;</span>, {1.0f, 1.0f, 0.0f, 1.0f}))-&gt;</div>
+<div class="line"><span class="lineno">  364</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../d1/d69/classpilar.html">pilar</a>())-&gt;</div>
+<div class="line"><span class="lineno">  365</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../dd/d78/class_l_t_e_1_1squre_collider.html">LTE::squreCollider</a>());</div>
+<div class="line"><span class="lineno">  366</span>                });</div>
 <div class="line"><span class="lineno">  367</span> </div>
-<div class="line"><span class="lineno">  368</span>            std::srand(std::time(<span class="keyword">nullptr</span>));</div>
-<div class="line"><span class="lineno">  369</span>            <span class="keywordtype">float</span> pilarHight = (rand() / (RAND_MAX + 1.0f) - 0.5f) * 0.7;</div>
-<div class="line"><span class="lineno">  370</span> </div>
-<div class="line"><span class="lineno">  371</span>            <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#acf283b437dde2e9300639fa4ee0e55dc">LTE::entityManger::addEntity</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html">LTE::gameObject::gameObjectBuilder</a> *builder){ </div>
-<div class="line"><span class="lineno">  372</span>                builder-&gt;</div>
-<div class="line"><span class="lineno">  373</span>                    setObjectName(<span class="stringliteral">&quot;pilar top&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  374</span>                    setObjectTransform({{ 1.7f, pilarHight + 1.25f, 0.0f}, {0.0f, 0.0f, 0.0f}, { <a class="code hl_define" href="../../d9/dc9/flappy_bird_8test_8cpp.html#a63d8492c3bd7811780cc765e506c3789">PILAR_HOLE_WIDTH</a>, 2.0f, 1.0f}})-&gt;</div>
-<div class="line"><span class="lineno">  375</span>                    setWindowId(gameWindowId)-&gt;</div>
-<div class="line"><span class="lineno">  376</span>                    addComponent(<a class="code hl_function" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a0a75e6d008a219e5a604a1d9e303a243">LTE::mesh::build</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html">LTE::mesh::meshBuilder</a> *builder)</div>
-<div class="line"><span class="lineno">  377</span>                        {</div>
-<div class="line"><span class="lineno">  378</span>                            builder-&gt;<a class="code hl_function" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#aaf34d2886359138366773a6cf33177c9">setIndexBuffer</a>(pilarIndices, 6)-&gt;</div>
-<div class="line"><span class="lineno">  379</span>                            setVertices(pilarPostions, 12)-&gt;</div>
-<div class="line"><span class="lineno">  380</span>                            setShaderName(<span class="stringliteral">&quot;res/flappyBird/Basic.glsl&quot;</span>);</div>
-<div class="line"><span class="lineno">  381</span>                        }))-&gt;</div>
-<div class="line"><span class="lineno">  382</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(<span class="stringliteral">&quot;res/textures/5_star.png&quot;</span>, {1.0f, 1.0f, 0.0f, 1.0f}))-&gt;</div>
-<div class="line"><span class="lineno">  383</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../d1/d69/classpilar.html">pilar</a>())-&gt;</div>
-<div class="line"><span class="lineno">  384</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../dd/d78/class_l_t_e_1_1squre_collider.html">LTE::squreCollider</a>());</div>
-<div class="line"><span class="lineno">  385</span>                });</div>
-<div class="line"><span class="lineno">  386</span> </div>
-<div class="line"><span class="lineno">  387</span>            <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#acf283b437dde2e9300639fa4ee0e55dc">LTE::entityManger::addEntity</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html">LTE::gameObject::gameObjectBuilder</a> *builder){ </div>
-<div class="line"><span class="lineno">  388</span>                builder-&gt;</div>
-<div class="line"><span class="lineno">  389</span>                    setObjectName(<span class="stringliteral">&quot;pilar bottom&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  390</span>                    setObjectTransform({{ 1.7f, pilarHight - 1.25f, 0.0f}, {0.0f, 0.0f, 0.0f}, { <a class="code hl_define" href="../../d9/dc9/flappy_bird_8test_8cpp.html#a63d8492c3bd7811780cc765e506c3789">PILAR_HOLE_WIDTH</a>, 2.0f, 1.0f}})-&gt;</div>
-<div class="line"><span class="lineno">  391</span>                    setWindowId(gameWindowId)-&gt;</div>
-<div class="line"><span class="lineno">  392</span>                    addComponent(<a class="code hl_function" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a0a75e6d008a219e5a604a1d9e303a243">LTE::mesh::build</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html">LTE::mesh::meshBuilder</a> *builder)</div>
-<div class="line"><span class="lineno">  393</span>                        {</div>
-<div class="line"><span class="lineno">  394</span>                            builder-&gt;<a class="code hl_function" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#aaf34d2886359138366773a6cf33177c9">setIndexBuffer</a>(pilarIndices, 6)-&gt;</div>
-<div class="line"><span class="lineno">  395</span>                            setVertices(pilarPostions, 12)-&gt;</div>
-<div class="line"><span class="lineno">  396</span>                            setShaderName(<span class="stringliteral">&quot;res/flappyBird/Basic.glsl&quot;</span>);</div>
-<div class="line"><span class="lineno">  397</span>                        }))-&gt;</div>
-<div class="line"><span class="lineno">  398</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(<span class="stringliteral">&quot;res/textures/5_star.png&quot;</span>, {1.0f, 1.0f, 0.0f, 1.0f}))-&gt;</div>
-<div class="line"><span class="lineno">  399</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../d1/d69/classpilar.html">pilar</a>())-&gt;</div>
-<div class="line"><span class="lineno">  400</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../dd/d78/class_l_t_e_1_1squre_collider.html">LTE::squreCollider</a>());</div>
-<div class="line"><span class="lineno">  401</span>                });</div>
-<div class="line"><span class="lineno">  402</span> </div>
-<div class="line"><span class="lineno">  403</span>            <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#acf283b437dde2e9300639fa4ee0e55dc">LTE::entityManger::addEntity</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html">LTE::gameObject::gameObjectBuilder</a> *builder){ </div>
-<div class="line"><span class="lineno">  404</span>                builder-&gt;</div>
-<div class="line"><span class="lineno">  405</span>                    setObjectName(<span class="stringliteral">&quot;pilar summener&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  406</span>                    setObjectTransform({{ 0.8f, -1.0f, -1.0f}, {0.0f, 0.0f, 0.0f}, { 0.1f, 0.1f, 1.0f}})-&gt;</div>
-<div class="line"><span class="lineno">  407</span>                    setWindowId(gameWindowId)-&gt;</div>
-<div class="line"><span class="lineno">  408</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../dd/d78/class_l_t_e_1_1squre_collider.html">LTE::squreCollider</a>())-&gt;</div>
-<div class="line"><span class="lineno">  409</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../d3/ded/classpilar_summener.html">pilarSummener</a>());</div>
-<div class="line"><span class="lineno">  410</span>                });</div>
-<div class="line"><span class="lineno">  411</span> </div>
-<div class="line"><span class="lineno">  412</span>            <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#acf283b437dde2e9300639fa4ee0e55dc">LTE::entityManger::addEntity</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html">LTE::gameObject::gameObjectBuilder</a> *builder){ </div>
-<div class="line"><span class="lineno">  413</span>                builder-&gt;</div>
-<div class="line"><span class="lineno">  414</span>                    setObjectName(<span class="stringliteral">&quot;pilar destroyer&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  415</span>                    addComponent((<span class="keyword">new</span> <a class="code hl_class" href="../../d2/d04/class_l_t_e_1_1envelope.html">LTE::envelope</a>())</div>
-<div class="line"><span class="lineno">  416</span>                        -&gt;setFrequency(500.0f)-&gt;</div>
-<div class="line"><span class="lineno">  417</span>                        setSondWaveType(<a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#afdee5b51c7e400b6c32b22c2c909d2b0a2c9fe7eedbcc17d7eefa62d8a51d28b1">LTE::sin</a>)-&gt;</div>
-<div class="line"><span class="lineno">  418</span>                        setAttackTime(0.001)-&gt;</div>
-<div class="line"><span class="lineno">  419</span>                        setDecayTime(0.3)-&gt;</div>
-<div class="line"><span class="lineno">  420</span>                        setReleaseTime(0.1)-&gt;</div>
-<div class="line"><span class="lineno">  421</span>                        setStartAmplitude(1.0)-&gt;</div>
-<div class="line"><span class="lineno">  422</span>                        setSustainAmplitude(0.0f))-&gt;</div>
-<div class="line"><span class="lineno">  423</span>                    setObjectTransform({{ -1.7f, 0.0f, 1.0f}, {0.0f, 0.0f, 0.0f}, { 0.1f, 2.0f, 1.0f}})-&gt;</div>
-<div class="line"><span class="lineno">  424</span>                    setWindowId(gameWindowId)-&gt;</div>
-<div class="line"><span class="lineno">  425</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../dd/d78/class_l_t_e_1_1squre_collider.html">LTE::squreCollider</a>())-&gt;</div>
-<div class="line"><span class="lineno">  426</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../d8/d09/classpilar_destroyer.html">pilarDestroyer</a>());</div>
-<div class="line"><span class="lineno">  427</span>                });</div>
-<div class="line"><span class="lineno">  428</span> </div>
-<div class="line"><span class="lineno">  429</span> </div>
-<div class="line"><span class="lineno">  430</span>            <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397">LTE::eventManger::startBuildingEvent</a>()-&gt;</div>
-<div class="line"><span class="lineno">  431</span>                setEventRoute(<span class="stringliteral">&quot;Window close/close app&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  432</span>                setEventCallback(WindowClose)-&gt;add();</div>
-<div class="line"><span class="lineno">  433</span>        }</div>
-<div class="ttc" id="aclass_l_t_e_1_1app_html_ab62cbeaa31b7f861b6938d6b7ac82968"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968">LTE::app::init</a></div><div class="ttdeci">static void init()</div><div class="ttdef"><b>Definition:</b> app.cpp:27</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1entity_manger_html_acf283b437dde2e9300639fa4ee0e55dc"><div class="ttname"><a href="../../de/d44/class_l_t_e_1_1entity_manger.html#acf283b437dde2e9300639fa4ee0e55dc">LTE::entityManger::addEntity</a></div><div class="ttdeci">static entityTaleId addEntity(std::function&lt; void(gameObject::gameObjectBuilder *Builder)&gt; buildGameObject)</div><div class="ttdef"><b>Definition:</b> entity.cpp:24</div></div>
+<div class="line"><span class="lineno">  368</span>            <a class="code hl_typedef" href="../../dc/d59/namespace_l_t_e.html#a7453a44af781c118bd678959bdd02674">LTE::gameObjectId</a> pilarSummenerId =  gameScene-&gt;<a class="code hl_function" href="../../d6/d26/class_l_t_e_1_1scene.html#a6de4eec39efa1e4fdc91c376f3f5ec72">addGameObject</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../de/d82/class_l_t_e_1_1game_object_builder.html">LTE::gameObjectBuilder</a>*builder){ </div>
+<div class="line"><span class="lineno">  369</span>                builder-&gt;</div>
+<div class="line"><span class="lineno">  370</span>                    setObjectName(<span class="stringliteral">&quot;pilar summener&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  371</span>                    setObjectTransform({{ 0.8f, -1.0f, -1.0f}, {0.0f, 0.0f, 0.0f}, { 0.1f, 0.1f, 1.0f}})-&gt;</div>
+<div class="line"><span class="lineno">  372</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../dd/d78/class_l_t_e_1_1squre_collider.html">LTE::squreCollider</a>())-&gt;</div>
+<div class="line"><span class="lineno">  373</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../d3/ded/classpilar_summener.html">pilarSummener</a>(sceneId));</div>
+<div class="line"><span class="lineno">  374</span>                });</div>
+<div class="line"><span class="lineno">  375</span> </div>
+<div class="line"><span class="lineno">  376</span>            <a class="code hl_typedef" href="../../dc/d59/namespace_l_t_e.html#a7453a44af781c118bd678959bdd02674">LTE::gameObjectId</a> pilarDestroyerId =  gameScene-&gt;<a class="code hl_function" href="../../d6/d26/class_l_t_e_1_1scene.html#a6de4eec39efa1e4fdc91c376f3f5ec72">addGameObject</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../de/d82/class_l_t_e_1_1game_object_builder.html">LTE::gameObjectBuilder</a>*builder){ </div>
+<div class="line"><span class="lineno">  377</span>                builder-&gt;</div>
+<div class="line"><span class="lineno">  378</span>                    setObjectName(<span class="stringliteral">&quot;pilar destroyer&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  379</span>                    addComponent((<span class="keyword">new</span> <a class="code hl_class" href="../../d2/d04/class_l_t_e_1_1envelope.html">LTE::envelope</a>())</div>
+<div class="line"><span class="lineno">  380</span>                        -&gt;setFrequency(500.0f)-&gt;</div>
+<div class="line"><span class="lineno">  381</span>                        setSondWaveType(<a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#afdee5b51c7e400b6c32b22c2c909d2b0a2c9fe7eedbcc17d7eefa62d8a51d28b1">LTE::sin</a>)-&gt;</div>
+<div class="line"><span class="lineno">  382</span>                        setAttackTime(0.001)-&gt;</div>
+<div class="line"><span class="lineno">  383</span>                        setDecayTime(0.3)-&gt;</div>
+<div class="line"><span class="lineno">  384</span>                        setReleaseTime(0.1)-&gt;</div>
+<div class="line"><span class="lineno">  385</span>                        setStartAmplitude(1.0)-&gt;</div>
+<div class="line"><span class="lineno">  386</span>                        setSustainAmplitude(0.0f))-&gt;</div>
+<div class="line"><span class="lineno">  387</span>                    setObjectTransform({{ -1.7f, 0.0f, 1.0f}, {0.0f, 0.0f, 0.0f}, { 0.1f, 2.0f, 1.0f}})-&gt;</div>
+<div class="line"><span class="lineno">  388</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../dd/d78/class_l_t_e_1_1squre_collider.html">LTE::squreCollider</a>())-&gt;</div>
+<div class="line"><span class="lineno">  389</span>                    addComponent(<span class="keyword">new</span> <a class="code hl_class" href="../../d8/d09/classpilar_destroyer.html">pilarDestroyer</a>(sceneId));</div>
+<div class="line"><span class="lineno">  390</span>                });</div>
+<div class="line"><span class="lineno">  391</span> </div>
+<div class="line"><span class="lineno">  392</span> </div>
+<div class="line"><span class="lineno">  393</span>    </div>
+<div class="line"><span class="lineno">  394</span>            <a class="code hl_function" href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#a3dc19de53c0c790c5855c864df93f418">LTE::sceneManger::getScene</a>(sceneId)-&gt;<a class="code hl_function" href="../../d6/d26/class_l_t_e_1_1scene.html#a5f1092527c4525980fe1a2f85a1a5163">renderToTextureAtEvent</a>(<span class="stringliteral">&quot;flappyBird/screen texture&quot;</span>, <span class="stringliteral">&quot;window render/flappyBird/render scene&quot;</span>);</div>
+<div class="line"><span class="lineno">  395</span>  </div>
+<div class="line"><span class="lineno">  396</span>        }</div>
+<div class="ttc" id="aclass_l_t_e_1_1app_html_ab62cbeaa31b7f861b6938d6b7ac82968"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968">LTE::app::init</a></div><div class="ttdeci">static void init()</div><div class="ttdef"><b>Definition:</b> app.cpp:25</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1envelope_html"><div class="ttname"><a href="../../d2/d04/class_l_t_e_1_1envelope.html">LTE::envelope</a></div><div class="ttdef"><b>Definition:</b> envelope.h:52</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1event_manger_html_a205c8d664c9d7ce70155f1a125404397"><div class="ttname"><a href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397">LTE::eventManger::startBuildingEvent</a></div><div class="ttdeci">static eventBuilder * startBuildingEvent()</div><div class="ttdef"><b>Definition:</b> events.cpp:52</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1game_object_1_1game_object_builder_html"><div class="ttname"><a href="../../d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html">LTE::gameObject::gameObjectBuilder</a></div><div class="ttdef"><b>Definition:</b> entity.h:20</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1game_object_builder_html"><div class="ttname"><a href="../../de/d82/class_l_t_e_1_1game_object_builder.html">LTE::gameObjectBuilder</a></div><div class="ttdef"><b>Definition:</b> gameobject.h:108</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1material_html"><div class="ttname"><a href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a></div><div class="ttdef"><b>Definition:</b> material.h:13</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1mesh_1_1mesh_builder_html"><div class="ttname"><a href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html">LTE::mesh::meshBuilder</a></div><div class="ttdef"><b>Definition:</b> mesh.h:24</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1mesh_1_1mesh_builder_html_aaf34d2886359138366773a6cf33177c9"><div class="ttname"><a href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#aaf34d2886359138366773a6cf33177c9">LTE::mesh::meshBuilder::setIndexBuffer</a></div><div class="ttdeci">meshBuilder * setIndexBuffer(uint32_t *indices, uint32_t count)</div><div class="ttdef"><b>Definition:</b> mesh.h:32</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1mesh_html_a0a75e6d008a219e5a604a1d9e303a243"><div class="ttname"><a href="../../d0/d6c/class_l_t_e_1_1mesh.html#a0a75e6d008a219e5a604a1d9e303a243">LTE::mesh::build</a></div><div class="ttdeci">static mesh * build(std::function&lt; void(meshBuilder *)&gt; buildFunc)</div><div class="ttdef"><b>Definition:</b> mesh.h:74</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_builder_html"><div class="ttname"><a href="../../d3/db0/class_l_t_e_1_1scene_builder.html">LTE::sceneBuilder</a></div><div class="ttdef"><b>Definition:</b> sceneManger.h:15</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_builder_html_a4c682dc23d6989698bf66b51cc150ef5"><div class="ttname"><a href="../../d3/db0/class_l_t_e_1_1scene_builder.html#a4c682dc23d6989698bf66b51cc150ef5">LTE::sceneBuilder::setBackgroundColor</a></div><div class="ttdeci">void setBackgroundColor(material *color)</div><div class="ttdef"><b>Definition:</b> sceneManger.h:38</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a5f1092527c4525980fe1a2f85a1a5163"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a5f1092527c4525980fe1a2f85a1a5163">LTE::scene::renderToTextureAtEvent</a></div><div class="ttdeci">void renderToTextureAtEvent(const std::string &amp;texturePath, const std::string &amp;eventPath)</div><div class="ttdef"><b>Definition:</b> scene.cpp:25</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a6de4eec39efa1e4fdc91c376f3f5ec72"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a6de4eec39efa1e4fdc91c376f3f5ec72">LTE::scene::addGameObject</a></div><div class="ttdeci">gameObjectId addGameObject(std::function&lt; void(gameObjectBuilder *Builder)&gt; buildGameObject)</div><div class="ttdef"><b>Definition:</b> scene.cpp:63</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_manger_html_a3dc19de53c0c790c5855c864df93f418"><div class="ttname"><a href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#a3dc19de53c0c790c5855c864df93f418">LTE::sceneManger::getScene</a></div><div class="ttdeci">static scene * getScene(sceneId sceneID)</div><div class="ttdef"><b>Definition:</b> sceneManger.cpp:50</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_manger_html_a96129d4d00a2fb857a020471f9ec55fc"><div class="ttname"><a href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#a96129d4d00a2fb857a020471f9ec55fc">LTE::sceneManger::addScene</a></div><div class="ttdeci">static sceneId addScene(std::function&lt; void(sceneBuilder *Builder)&gt; buildScene)</div><div class="ttdef"><b>Definition:</b> sceneManger.cpp:22</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1squre_collider_html"><div class="ttname"><a href="../../dd/d78/class_l_t_e_1_1squre_collider.html">LTE::squreCollider</a></div><div class="ttdef"><b>Definition:</b> squreCollider.h:10</div></div>
-<div class="ttc" id="aclassbird_html"><div class="ttname"><a href="../../da/dee/classbird.html">bird</a></div><div class="ttdef"><b>Definition:</b> flappyBird.test.cpp:67</div></div>
-<div class="ttc" id="aclasspilar_destroyer_html"><div class="ttname"><a href="../../d8/d09/classpilar_destroyer.html">pilarDestroyer</a></div><div class="ttdef"><b>Definition:</b> flappyBird.test.cpp:244</div></div>
-<div class="ttc" id="aclasspilar_html"><div class="ttname"><a href="../../d1/d69/classpilar.html">pilar</a></div><div class="ttdef"><b>Definition:</b> flappyBird.test.cpp:29</div></div>
-<div class="ttc" id="aclasspilar_summener_html"><div class="ttname"><a href="../../d3/ded/classpilar_summener.html">pilarSummener</a></div><div class="ttdef"><b>Definition:</b> flappyBird.test.cpp:167</div></div>
+<div class="ttc" id="aclassbird_html"><div class="ttname"><a href="../../da/dee/classbird.html">bird</a></div><div class="ttdef"><b>Definition:</b> flappyBird.test.cpp:61</div></div>
+<div class="ttc" id="aclasspilar_destroyer_html"><div class="ttname"><a href="../../d8/d09/classpilar_destroyer.html">pilarDestroyer</a></div><div class="ttdef"><b>Definition:</b> flappyBird.test.cpp:209</div></div>
+<div class="ttc" id="aclasspilar_html"><div class="ttname"><a href="../../d1/d69/classpilar.html">pilar</a></div><div class="ttdef"><b>Definition:</b> flappyBird.test.cpp:31</div></div>
+<div class="ttc" id="aclasspilar_summener_html"><div class="ttname"><a href="../../d3/ded/classpilar_summener.html">pilarSummener</a></div><div class="ttdef"><b>Definition:</b> flappyBird.test.cpp:139</div></div>
 <div class="ttc" id="aflappy_bird_8test_8cpp_html_a63d8492c3bd7811780cc765e506c3789"><div class="ttname"><a href="../../d9/dc9/flappy_bird_8test_8cpp.html#a63d8492c3bd7811780cc765e506c3789">PILAR_HOLE_WIDTH</a></div><div class="ttdeci">#define PILAR_HOLE_WIDTH</div><div class="ttdef"><b>Definition:</b> flappyBird.test.cpp:20</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a19087a9b8ea8653191a7efdb616a92b4"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a19087a9b8ea8653191a7efdb616a92b4">LTE::sceneId</a></div><div class="ttdeci">uint32_t sceneId</div><div class="ttdef"><b>Definition:</b> core.h:15</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a7453a44af781c118bd678959bdd02674"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a7453a44af781c118bd678959bdd02674">LTE::gameObjectId</a></div><div class="ttdeci">uint32_t gameObjectId</div><div class="ttdef"><b>Definition:</b> core.h:7</div></div>
 <div class="ttc" id="anamespace_l_t_e_html_afdee5b51c7e400b6c32b22c2c909d2b0a2c9fe7eedbcc17d7eefa62d8a51d28b1"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#afdee5b51c7e400b6c32b22c2c909d2b0a2c9fe7eedbcc17d7eefa62d8a51d28b1">LTE::sin</a></div><div class="ttdeci">@ sin</div><div class="ttdef"><b>Definition:</b> core.h:31</div></div>
 <div class="ttc" id="anamespace_l_t_e_html_afdee5b51c7e400b6c32b22c2c909d2b0ab4ba2f5be7cbfd96059e6cb1cacde1dc"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#afdee5b51c7e400b6c32b22c2c909d2b0ab4ba2f5be7cbfd96059e6cb1cacde1dc">LTE::analogSqure</a></div><div class="ttdeci">@ analogSqure</div><div class="ttdef"><b>Definition:</b> core.h:35</div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -256,35 +264,23 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d71/classflappy_bird_aefe252403b2c6969e04a034c3d037d5d_cgraph.png" border="0" usemap="#ad5/d71/classflappy_bird_aefe252403b2c6969e04a034c3d037d5d_cgraph" alt=""/></div>
 <map name="ad5/d71/classflappy_bird_aefe252403b2c6969e04a034c3d037d5d_cgraph" id="ad5/d71/classflappy_bird_aefe252403b2c6969e04a034c3d037d5d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,465,127,492"/>
-<area shape="rect" href="../../de/d44/class_l_t_e_1_1entity_manger.html#acf283b437dde2e9300639fa4ee0e55dc" title=" " alt="" coords="211,111,343,153"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a0a75e6d008a219e5a604a1d9e303a243" title=" " alt="" coords="219,415,336,441"/>
-<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968" title=" " alt="" coords="229,465,325,492"/>
-<area shape="rect" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#aaf34d2886359138366773a6cf33177c9" title=" " alt="" coords="196,517,359,558"/>
-<area shape="rect" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397" title=" " alt="" coords="175,582,380,623"/>
-<area shape="rect" href="../../d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html#a7a75d15ddfeef6480a3bbc26096e1c19" title=" " alt="" coords="439,23,637,65"/>
-<area shape="rect" href="../../d2/d49/class_l_t_e_1_1game_object.html#a3748afdfe135228a0932ee7fd8e16fd0" title=" " alt="" coords="459,89,617,116"/>
-<area shape="rect" href="../../d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html#a7c16c05f965167c74463766639e2f93a" title=" " alt="" coords="439,141,637,182"/>
-<area shape="rect" href="../../d9/d4b/class_l_t_e_1_1component.html#a3e5d2369a819e87417e96290a73d2cd1" title=" " alt="" coords="731,5,869,32"/>
-<area shape="rect" href="../../d9/d4b/class_l_t_e_1_1component.html#ac8bd5fc33467522201550716a235e4df" title=" " alt="" coords="711,56,889,83"/>
-<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#ab919ce364eba9e5575e9bbd39bdec65a" title=" " alt="" coords="457,206,619,247"/>
-<area shape="rect" href="../../df/dfd/class_l_t_e_1_1file_manager.html#ab40d984a2e0e9a2852de6d1bd1ae6d01" title=" " alt="" coords="467,272,609,299"/>
-<area shape="rect" href="../../de/d44/class_l_t_e_1_1entity_manger.html#a22225c885988d58d0c7cbf399f0b117f" title=" " alt="" coords="463,323,613,349"/>
-<area shape="rect" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a9ecc1ecb9f354fc459738f61f7d3e6f2" title=" " alt="" coords="463,373,613,400"/>
-<area shape="rect" href="../../db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#aec513c0c085e0ada94be461af3d8463f" title=" " alt="" coords="428,425,648,466"/>
-<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a277b2812717cc421fa344980088af6ba" title=" " alt="" coords="457,490,619,531"/>
-<area shape="rect" href="../../df/d4f/class_l_t_e_1_1materials_manger.html#ac5990387a4ca87145dba87b8098dbcc4" title=" " alt="" coords="464,555,612,597"/>
-<area shape="rect" href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#ab82d6fc3da30b297b73b9e41ce4d9370" title=" " alt="" coords="461,621,615,648"/>
-<area shape="rect" href="../../de/d01/class_l_t_e_1_1sound_engine.html#a5d8a53854ed29724942f958999b2f595" title=" " alt="" coords="463,672,613,699"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#ad294dcc77093b36c11e405d8831f39e0" title=" " alt="" coords="457,723,619,749"/>
-<area shape="rect" href="../../d3/d08/class_l_t_e_1_1logger.html#a4a69e456b62e7e8488d991e722df1f56" title=" " alt="" coords="483,773,593,800"/>
-<area shape="rect" href="../../d5/d69/class_l_t_e_1_1files_factory.html#a5015959845c7b58acad47e6cb4f57a10" title=" " alt="" coords="738,235,862,277"/>
-<area shape="rect" href="../../df/d84/class_l_t_e_1_1file.html#abb756b8e1e8c6d607268971f307c4dba" title=" " alt="" coords="727,301,873,328"/>
-<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#aea84994d9c1e500db18be23213da9c97" title=" " alt="" coords="715,541,885,582"/>
-<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a1b75dcf8cb585636a03d088e0e571fc4" title=" " alt="" coords="710,606,890,647"/>
-<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#a01ae35f37a9fb2f41dd19205e324ad90" title=" " alt="" coords="696,672,904,699"/>
-<area shape="rect" href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a569c46f378859a3364d269a6b49ecfd9" title=" " alt="" coords="723,723,877,765"/>
-<area shape="rect" href="../../d7/dcb/class_l_t_e_1_1_l_t_e_exception.html#afb72941c22a01af0b4a5f057f62362ec" title=" " alt="" coords="717,789,883,816"/>
+<area shape="rect" title=" " alt="" coords="5,229,127,255"/>
+<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968" title=" " alt="" coords="175,229,271,255"/>
+<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#ab919ce364eba9e5575e9bbd39bdec65a" title=" " alt="" coords="347,5,510,47"/>
+<area shape="rect" href="../../df/dfd/class_l_t_e_1_1file_manager.html#ab40d984a2e0e9a2852de6d1bd1ae6d01" title=" " alt="" coords="358,71,499,98"/>
+<area shape="rect" href="../../db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#aec513c0c085e0ada94be461af3d8463f" title=" " alt="" coords="319,123,539,164"/>
+<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a277b2812717cc421fa344980088af6ba" title=" " alt="" coords="347,188,510,229"/>
+<area shape="rect" href="../../df/d4f/class_l_t_e_1_1materials_manger.html#ac5990387a4ca87145dba87b8098dbcc4" title=" " alt="" coords="355,253,503,295"/>
+<area shape="rect" href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#ab82d6fc3da30b297b73b9e41ce4d9370" title=" " alt="" coords="352,319,505,346"/>
+<area shape="rect" href="../../de/d01/class_l_t_e_1_1sound_engine.html#a5d8a53854ed29724942f958999b2f595" title=" " alt="" coords="354,370,503,397"/>
+<area shape="rect" href="../../d3/d08/class_l_t_e_1_1logger.html#a4a69e456b62e7e8488d991e722df1f56" title=" " alt="" coords="373,421,484,447"/>
+<area shape="rect" href="../../d5/d69/class_l_t_e_1_1files_factory.html#a5015959845c7b58acad47e6cb4f57a10" title=" " alt="" coords="629,35,753,76"/>
+<area shape="rect" href="../../df/d84/class_l_t_e_1_1file.html#abb756b8e1e8c6d607268971f307c4dba" title=" " alt="" coords="617,101,764,127"/>
+<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#aea84994d9c1e500db18be23213da9c97" title=" " alt="" coords="605,239,776,280"/>
+<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a1b75dcf8cb585636a03d088e0e571fc4" title=" " alt="" coords="601,304,781,345"/>
+<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#a01ae35f37a9fb2f41dd19205e324ad90" title=" " alt="" coords="587,370,795,397"/>
+<area shape="rect" href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a569c46f378859a3364d269a6b49ecfd9" title=" " alt="" coords="613,421,768,463"/>
+<area shape="rect" href="../../d7/dcb/class_l_t_e_1_1_l_t_e_exception.html#afb72941c22a01af0b4a5f057f62362ec" title=" " alt="" coords="607,487,774,514"/>
 </map>
 </div>
 
@@ -312,28 +308,24 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  436</span>        { </div>
-<div class="line"><span class="lineno">  437</span>            <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5">LTE::app::close</a>();</div>
-<div class="line"><span class="lineno">  438</span>        }</div>
-<div class="ttc" id="aclass_l_t_e_1_1app_html_ae0f06737b2f489eace03ada49ae7b4d5"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5">LTE::app::close</a></div><div class="ttdeci">static void close()</div><div class="ttdef"><b>Definition:</b> app.cpp:47</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  399</span>        { </div>
+<div class="line"><span class="lineno">  400</span>            <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5">LTE::app::close</a>();</div>
+<div class="line"><span class="lineno">  401</span>        }</div>
+<div class="ttc" id="aclass_l_t_e_1_1app_html_ae0f06737b2f489eace03ada49ae7b4d5"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5">LTE::app::close</a></div><div class="ttdeci">static void close()</div><div class="ttdef"><b>Definition:</b> app.cpp:44</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d71/classflappy_bird_a3353f8436200edb894fd5908515c8f74_cgraph.png" border="0" usemap="#ad5/d71/classflappy_bird_a3353f8436200edb894fd5908515c8f74_cgraph" alt=""/></div>
 <map name="ad5/d71/classflappy_bird_a3353f8436200edb894fd5908515c8f74_cgraph" id="ad5/d71/classflappy_bird_a3353f8436200edb894fd5908515c8f74_cgraph">
-<area shape="rect" title=" " alt="" coords="5,247,148,273"/>
-<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5" title=" " alt="" coords="196,247,307,273"/>
+<area shape="rect" title=" " alt="" coords="5,159,148,185"/>
+<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5" title=" " alt="" coords="196,159,307,185"/>
 <area shape="rect" href="../../df/dfd/class_l_t_e_1_1file_manager.html#a0550027aeb21cef2e23920c280d8a1bd" title=" " alt="" coords="387,5,542,32"/>
-<area shape="rect" href="../../de/d44/class_l_t_e_1_1entity_manger.html#a36e406876304ba1cff334e6f8849e4eb" title=" " alt="" coords="399,57,531,98"/>
-<area shape="rect" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a2bae0fc540e166323381f7a8196ab083" title=" " alt="" coords="383,123,547,149"/>
-<area shape="rect" href="../../db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#a7c5cb8c18c0087c64f0f390a8303381d" title=" " alt="" coords="355,174,575,215"/>
-<area shape="rect" href="../../df/d4f/class_l_t_e_1_1materials_manger.html#a8b8ed9bdc8b605a34e400ef063bbbaaa" title=" " alt="" coords="391,239,539,281"/>
-<area shape="rect" href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#a0283902fc92e532c624432bd2e9ecf71" title=" " alt="" coords="381,305,548,332"/>
-<area shape="rect" href="../../de/d01/class_l_t_e_1_1sound_engine.html#ac22cd141150c6a59ef28993c06936837" title=" " alt="" coords="383,356,546,383"/>
-<area shape="rect" href="../../d3/d08/class_l_t_e_1_1logger.html#ae651e5c9c40cb1a56ad4c0c7df3930fd" title=" " alt="" coords="403,407,527,433"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#a6ecf67fe5928e63ba34ea590f5f41cee" title=" " alt="" coords="392,458,537,499"/>
-<area shape="rect" href="../../d7/d22/class_l_t_e_1_1router.html#aca69970c0dca265325b046f9aef368f0" title=" " alt="" coords="623,123,801,149"/>
-<area shape="rect" href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a9cab8478ac0f4e5ff40c3b515016cd07" title=" " alt="" coords="635,349,789,390"/>
+<area shape="rect" href="../../db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#a7c5cb8c18c0087c64f0f390a8303381d" title=" " alt="" coords="355,57,575,98"/>
+<area shape="rect" href="../../df/d4f/class_l_t_e_1_1materials_manger.html#a8b8ed9bdc8b605a34e400ef063bbbaaa" title=" " alt="" coords="391,122,539,163"/>
+<area shape="rect" href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#a0283902fc92e532c624432bd2e9ecf71" title=" " alt="" coords="381,188,548,215"/>
+<area shape="rect" href="../../de/d01/class_l_t_e_1_1sound_engine.html#ac22cd141150c6a59ef28993c06936837" title=" " alt="" coords="383,239,546,265"/>
+<area shape="rect" href="../../d3/d08/class_l_t_e_1_1logger.html#ae651e5c9c40cb1a56ad4c0c7df3930fd" title=" " alt="" coords="403,289,527,316"/>
+<area shape="rect" href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a9cab8478ac0f4e5ff40c3b515016cd07" title=" " alt="" coords="623,231,777,273"/>
 </map>
 </div>
 

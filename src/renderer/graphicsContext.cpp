@@ -10,8 +10,11 @@
 
 namespace LTE
 {
-    graphicsContext::graphicsContext(windowPieceId windowId, renderAPIType type):windowId(windowId), type(type)
+    graphicsContext::graphicsContext(window *parentWin, renderAPIType type):windowId(parentWin->id), type(type)
     {
+        const std::string textureToRender = parentWin->Title + "/" + "screen texture"; 
+        texture *t = new texture("");
+        assetManager::saveAsset(t, textureToRender);
     }
     
     void graphicsContext::Init()
@@ -28,9 +31,10 @@ namespace LTE
 
     void graphicsContext::run()
     {
-        std::string thradName = "con " + windowManger::getWindow(windowId)->Title;
+        std::string thradName = "con " + app::getWindowManger()->getWindow(windowId)->Title;
         prctl(PR_SET_NAME, thradName.c_str(), 0, 0, 0);
 
+        while (!app::isRuning){}
         app::getOsAPI()->makeContextCurrent(windowId);
         
         
@@ -44,23 +48,18 @@ namespace LTE
         uint64_t startTime = app::getTime();
         uint64_t now = app::getTime();
 
-        onUpdateData *sendorData = new onUpdateData(startTime, startTime, 0);
+        windowRenderData *sendorData = new windowRenderData(startTime, startTime, 0);
 
-        sendorData->win = windowManger::getWindow(windowId);
         sendorData->windowId = windowId;
-        sendorData->route = "window render/" + sendorData->win->Title + "/";
 
-        const std::string textureToRender = sendorData->win->Title + "/" + "screen texture"; 
+        const std::string textureToRender = app::getWindowManger()->getWindow(windowId)->Title + "/" + "screen texture"; 
         
-        assetManager::saveAsset(new texture(""), textureToRender);
-        eventManger::addCoustemEventsRoute("window render/" + sendorData->win->Title + "/");
-        
-        contextRenderEngine = new simpleQuadRenderer(textureToRender, getRenderApi());
-        
-        if(sendorData->win->useImGui)
-			initImGui(windowId);
+        contextRenderEngine = new simpleQuadRenderer(textureToRender);
+        ImGuiEvents *ImGuiE;
 
-        while (!app::isRuning){}
+        if(app::getWindowManger()->getWindow(windowId)->useImGui)
+			ImGuiE = new ImGuiEvents(windowId);
+
         
         while (app::keepRunning && windowRun)
         {
@@ -75,19 +74,14 @@ namespace LTE
                 changeViewPort = false;
             }
             
-            eventManger:: trigerEvent(sendorData);
+            if(windowRun)
+                app::getEventManger()->trigerEvent(sendorData, osEventsType::windowRender);
             contextRenderEngine->renderScene();
 
-            if(sendorData->win->useImGui)
-                onImGuiUpdate(sendorData->win, sendorData);
+            if(windowRun && app::getWindowManger()->getWindow(windowId)->useImGui)
+                ImGuiE->onImGuiUpdate(app::getWindowManger()->getWindow(windowId), sendorData);
             
             SwapBuffers();
-
-
-
-    		// sendorData->win->activeScene->sceneCollider->checkCollision();
-
-
         }   
     }
 

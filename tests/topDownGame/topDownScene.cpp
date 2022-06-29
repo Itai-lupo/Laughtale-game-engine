@@ -19,18 +19,23 @@
 #include <cstdlib>
 #include <ctime>
 
-class player: public LTE::component
+static inline LTE::sceneId sceneId;
+static inline LTE::scene *gameScene;
+class player: public LTE::component, LTE::osEvent
 {
     private:
         static inline int updateCounter = 0;
         static inline int animationCounter = 0;
         static inline const float playerSpeed = 0.6f;
     public:
+    
+        player(): LTE::osEvent({LTE::osEventsType::windowRender, LTE::osEventsType::WindowClose}){
+
+        }
+
         virtual void init(LTE::gameObject *parent)
         {
-            LTE::eventManger::startBuildingEvent()->
-            setEntityID(parentId)->
-            setEventCallback(playerMove)->setEventRoute("window render/rpg/playerMove")->setWindowId(winId)->add();
+
         }
 
         virtual void end()
@@ -38,17 +43,21 @@ class player: public LTE::component
 
         }
 
-        static void playerMove(LTE::gameObject *eventEntity, LTE::coreEventData *sendor)
+        void onWindowClose(LTE::osEventData *sendor)
         {
-            LTE::onUpdateData *eventData = dynamic_cast<LTE::onUpdateData *>(sendor);
+            LTE::app::keepRunning = false;
+        }        
 
-            LTE::material *playerMatreial = eventEntity->getComponent<LTE::material>();
-            LTE::transform *playerPostion = eventEntity->getTransform();
+        void onWindowRender(LTE::windowRenderData *sendor)
+        {
+            LTE::material *playerMatreial = gameScene->getGameObjectById(getParentId())->getComponent<LTE::material>();
+            LTE::transform *playerPostion = gameScene->getGameObjectById(getParentId())->getTransform();
 
-            bool goLeft = eventData->win->inputManger->isKeyPressed(LT_KEY_LEFT);
-            bool goRight = eventData->win->inputManger->isKeyPressed(LT_KEY_RIGHT);
-            bool goUp = eventData->win->inputManger->isKeyPressed(LT_KEY_UP);
-            bool goDown = eventData->win->inputManger->isKeyPressed(LT_KEY_DOWN);
+            LTE::window *win = LTE::app::getWindowManger()->getWindow(sendor->windowId);
+            bool goLeft = win->inputManger->isKeyPressed(LT_KEY_LEFT);
+            bool goRight = win->inputManger->isKeyPressed(LT_KEY_RIGHT);
+            bool goUp = win->inputManger->isKeyPressed(LT_KEY_UP);
+            bool goDown = win->inputManger->isKeyPressed(LT_KEY_DOWN);
             
             playerMatreial->setTileIndex(1, 3);
 
@@ -61,7 +70,7 @@ class player: public LTE::component
                 return;
                 
 
-            delta = glm::normalize(delta) * (playerSpeed * eventData->DeltaTime / 1000.0f);
+            delta = glm::normalize(delta) * (playerSpeed * sendor->DeltaTime / 1000.0f);
 
             playerPostion->changeXPostion(delta.x);
             playerPostion->changeYPostion(delta.y);
@@ -82,9 +91,6 @@ class player: public LTE::component
             if(updateCounter++ % 8 == 0)
                 animationCounter += animationCounter++ % 4;
         }
-
-        player(){}
-        ~player(){}
 };
 
 
@@ -99,22 +105,25 @@ class topDownGame : public ::testing::Test
         void initWindows()
         {
 
-            gameWindowId =  LTE::windowManger::addWindow([=](LTE::windowBuilder *build)
+            gameWindowId =  LTE::app::getWindowManger()->addWindow([=](LTE::windowBuilder *build)
             {
                 build->setHeight(1000)->setWidth(1000)->setTitle("rpg");
             });
         }
-
-        static void WindowClose(__attribute__((unused)) LTE::gameObject *eventEntity, __attribute__((unused)) LTE::coreEventData *sendor)
-        {
-            LTE::app::keepRunning = false;
-        }        
 
     public:        
         void SetUp()
         { 
             LTE::app::init();
             initWindows();
+
+            sceneId =  LTE::sceneManger::addScene([=](LTE::sceneBuilder *build)
+            {
+                build->setBackgroundColor(new LTE::material(glm::vec4({0.2f, 0.2f, 0.2f, 1.0f})));
+            });
+
+            gameScene = LTE::sceneManger::getScene(sceneId);
+
 
             LTE::assetManager::getAsset<LTE::texture>("res/topDownScene/textures/Meta data assets files/ENVIRONMENT/tilesets/dungeon-tileset.png")->
                 setSprtieData(
@@ -136,7 +145,7 @@ class topDownGame : public ::testing::Test
                 setSprtieData({32, 32});
             
 
-            LTE::tilemap *map = new LTE::tilemap({1000, 1000}, {100, 100}, 6, gameWindowId);
+            LTE::tilemap *map = new LTE::tilemap({1000, 1000}, {100, 100}, 6, sceneId);
 
             for(int x = 1; x < 9; x++)
                 for(int y = 1; y < 9; y++)
@@ -205,11 +214,6 @@ class topDownGame : public ::testing::Test
                             AddCompponnetToTile(new player());
                     }
             );
-
-
-            LTE::eventManger::startBuildingEvent()->
-                setEventRoute("Window close/close app")->
-                setEventCallback(WindowClose)->add();
         }
 
         

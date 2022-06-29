@@ -24,20 +24,15 @@ namespace LTE
 
             scene *build(sceneId id)
             {
-                entityTaleId camId = entityManger::addEntity([=, this](gameObject::gameObjectBuilder *builder){
-                builder->setObjectName("default camera")->
-                    setWindowId(product->id)->
-                    setObjectTransform(glm::mat4(0.0f))->
-                    addComponent(new orthographicCameraControler(1280.0f/720.0f));
+                gameObjectId camId = product->addGameObject([=, this](gameObjectBuilder *builder){
+                    builder->setObjectName("default camera")->
+                        setObjectTransform(glm::mat4(0.0f))->
+                        addComponent(new orthographicCameraControler(1280.0f/720.0f));
                 });
 
-                product->camera = entityManger::getEntityById(camId);
+                product->camera = product->getGameObjectById(camId);
                 return product;
         
-            }
-            void bindToWindow(const std::string& windowTitle)
-            {
-
             }
 
             void setBackgroundColor(material *color)

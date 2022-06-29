@@ -15,6 +15,7 @@ namespace LTE
             delete s;
         }
         delete builder;
+        scenes.clear();
     }
 
 

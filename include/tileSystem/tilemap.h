@@ -1,8 +1,9 @@
 #pragma once
 #include "core.h"
 #include "material.h"
-#include "entity.h"
+#include "gameobject.h"
 #include "mesh.h"
+#include "sceneManger.h"
 
 #include <glm/glm.hpp>
 #include <map>
@@ -157,9 +158,9 @@ namespace LTE
                     }
 
 
-                    entityTaleId build()
+                    gameObjectId build()
                     {
-                        return entityManger::addEntity([&, this](gameObject::gameObjectBuilder *builder)
+                        return  sceneManger::getScene(parent->scene)->addGameObject([&, this](gameObjectBuilder *builder)
                             {
                                 builder->
                                     setObjectName(this->tileName == "" ? this->tileName: "tile " + std::to_string(tilePostion.x) + ", " + std::to_string(tilePostion.y) + ", " + std::to_string(layer))->
@@ -168,7 +169,6 @@ namespace LTE
                                         ((float) tilePostion.y) / parent->tilesCount.y * 2.0 - 1.0f +  (parent->tileDimensions.y *  (float)tileDimensions.y /(float)parent->tilemapDimensions.y), (float)layer / (float)parent->layerCount}, 
                                         {0, 0, 0}, 
                                         {parent->tileDimensions.x *  (float)tileDimensions.x /(float)parent->tilemapDimensions.x  * 2.0, parent->tileDimensions.y *  (float)tileDimensions.y / (float)parent->tilemapDimensions.y  * 2.0, layer / parent->layerCount}})->
-                                        setWindowId(parent->winId)->
                                         addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
                                             { 
                                                 builder->
@@ -200,13 +200,13 @@ namespace LTE
             glm::ivec2 tileDimensions;
             glm::ivec2 tilesCount;
             int layerCount;
-            windowPieceId winId;
+            sceneId scene;
             
-            vector3d<entityTaleId> tiles;
+            vector3d<gameObjectId> tiles;
             tileBuilder *builder;
         public:
-            tilemap(glm::ivec2 tilemapDimensions, glm::ivec2 tileDimensions, int layerCount, windowPieceId winId): 
-                tilemapDimensions(tilemapDimensions), tileDimensions(tileDimensions), tilesCount(tilemapDimensions / tileDimensions), winId(winId), layerCount(layerCount), tiles(layerCount, tilesCount.x, tilesCount.y)
+            tilemap(glm::ivec2 tilemapDimensions, glm::ivec2 tileDimensions, int layerCount, sceneId scene): 
+                tilemapDimensions(tilemapDimensions), tileDimensions(tileDimensions), tilesCount(tilemapDimensions / tileDimensions), scene(scene), layerCount(layerCount), tiles(layerCount, tilesCount.x, tilesCount.y)
             {
                 builder = new tileBuilder(this);
             }
@@ -218,8 +218,5 @@ namespace LTE
                 buildTile(builder);
                 tiles(builder->getLayer(), builder->getTilePostion().x, builder->getTilePostion().y) = builder->build();
             }
-
-            void moveTileTo(windowPieceId winId, const glm::ivec2& tileNewPostion, int layer = -1);
-
     };
 }

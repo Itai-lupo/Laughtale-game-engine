@@ -64,6 +64,7 @@ namespace LTE
         private:
             std::string path;
             int channels = 4;
+            int samples = 1;
 
             bool isSpriteSheet = false;
             bool isCustumSpriteSheet = false;
@@ -78,7 +79,7 @@ namespace LTE
 
             void checkIfExitesInThisContextAndInitIfNot();
         public:
-            texture(const std::string& path)
+            texture(const std::string& path): path(path)
             {
 
             }
@@ -91,20 +92,20 @@ namespace LTE
 
             virtual void setDimensions(const glm::vec2 dimensions)
             {
+                checkIfExitesInThisContextAndInitIfNot();
                 if(width == dimensions.x && height == dimensions.y)
                     return;
                 width = dimensions.x;
                 height = dimensions.y;
                 
                 changeId++;
-                if(data.get())
-                    data->setDimensions();
+                data->setDimensions();
             }
 
             virtual textureId getId()
             {
-                if(data.get() == NULL)
-                    return 0;
+                checkIfExitesInThisContextAndInitIfNot();
+
                 return data->getId();
             }
 
@@ -186,6 +187,17 @@ namespace LTE
             int getChannels()
             {
                 return channels;
+            }
+
+            int getSamples()
+            {
+                return samples;
+            }
+
+            void setSamples(int samples)
+            {
+                this->samples = samples;
+                changeId++;
             }
 
             int *getWidthPtr()

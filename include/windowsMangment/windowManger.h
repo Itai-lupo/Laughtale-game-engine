@@ -3,28 +3,28 @@
 #include <vector>
 #include <functional>
 
-#include "entity.h"
-#include "events.h"
+#include "osEvents.h"
 #include "core.h"
 #include "window.h"
 #include "windowBuilder.h"
 
 namespace LTE
 {
-    class windowManger
+    class windowManger: osEvent
     {
         private:
-            static std::vector<window*> windows;
-            static inline windowBuilder *buildWindow;
+            std::vector<window*> windows;
+            windowBuilder *buildWindow;
         
-            static void onWindowClose(gameObject *eventEntity, coreEventData *sendor);
         public:
-            static void init();
-            static void close();
+            windowManger();
+            ~windowManger();
             
-            static windowPieceId addWindow(std::function<void(windowBuilder *Builder)> buildWindow);
+            windowPieceId addWindow(std::function<void(windowBuilder *Builder)> buildWindow);
                     
-            static window *getWindow(windowPieceId windowId);
+            window *getWindow(windowPieceId windowId);
+            
+            void onWindowClose(osEventData *sendor);
     };
 }
     

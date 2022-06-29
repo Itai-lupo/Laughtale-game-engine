@@ -9,36 +9,42 @@
 
 #include "colliderSystem2D.h"
 #include "assetManager.h"
-
+#include "sceneEvents.h"
 #include "framebuffer.h"
-
+#include "osEvents.h"
+#include "gameobject.h"
 
 namespace LTE
 {
     class batchRenderer;
     class window;
 
-    class scene
+    class scene: osEvent
     {
         private:
             framebuffer *fbo;
             batchRenderer *render;
-    
+            sceneEventsManger *eventsManger;
+            gameObjectsManger *sceneHierarchy;
+
         public:
             scene();
-            ~scene(){}
+            ~scene(){
+                sceneCollider->close();
+
+            }
 
             sceneId id;
             colliderSystem2D *sceneCollider;
-
-			assetManager *assetLibrary;
 
             gameObject *camera;
             std::vector<gameObject*> *objects;
             
             material *backgroundColor;
 
-            void removeById(entityTaleId id);
+            void removeById(gameObjectId id);
+            
+            virtual void onWindowRender(windowRenderData *sendor) override;
             
             std::vector<gameObject*> getObjectsByName(const std::string& objectName)
             {
@@ -67,7 +73,26 @@ namespace LTE
                 return camera->getComponent<coreCameraControler>()->getAspectRatio();
             }
 
-            static void renderScene(LTE::gameObject *e, LTE::coreEventData *sendor);
+            void renderToTextureAtEvent(const std::string& texturePath, const std::string& eventPath);
+            
+            void pushObjectToRender(gameObject* obj);
+            void pushPhysicsObject(gameObject* obj);
+            
+            void removeObjectToRender(gameObjectId objId);
+            void removePhysicsObject(gameObjectId objId);
+
+            void renderScene();
+
+            sceneEventsManger *getEventsManger()
+            {
+                return eventsManger;
+            }
+
+
+            gameObjectId addGameObject(std::function<void(gameObjectBuilder *Builder)> buildGameObject);
+            gameObject *getGameObjectByName(const std::string& name);
+            gameObject *getGameObjectById(gameObjectId id);
+            void removeGameObjectById(gameObjectId id);
     };
 
 }

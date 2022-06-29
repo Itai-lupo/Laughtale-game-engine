@@ -2,12 +2,12 @@
 #include "core.h"
 #include "coreCameraControler.h"
 #include "orthographicCamera.h"
-#include "entity.h"
-#include "events.h"
+#include "gameobject.h"
+#include "osEvents.h"
 
 namespace LTE
 {
-    class orthographicCameraControler: public coreCameraControler
+    class orthographicCameraControler: public coreCameraControler, osEvent
     {
         private:
 
@@ -26,13 +26,11 @@ namespace LTE
             eventLaughId OnMouseScrolledId; 
             eventLaughId OnWindowResizedId; 
             eventLaughId OnUpdateId; 
-            entityTaleId CameraEntityId;
+            gameObjectId CameraEntityId;
 
-            static void OnMouseScrolled(gameObject *cameraInfo, coreEventData *sendor);
-            static void OnWindowResized(gameObject *cameraInfo, coreEventData *sendor);
-            static void OnUpdate(gameObject *cameraInfo, coreEventData *sendor);
-
-
+            void onMouseScroll(mouseScrollData *sendor);
+            void onWindowResize(WindowResizeData *sendor);
+            void onWindowRender(windowRenderData *sendor);
         public:
             orthographicCameraControler(float aspectRatio, bool useCameraRotation = false);
             ~orthographicCameraControler();

@@ -164,9 +164,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   16</span>                                                                             :</div>
-<div class="line"><span class="lineno">   17</span>                d1(d1), d2(d2), d3(d3), data(d1*d2*d3, t)</div>
-<div class="line"><span class="lineno">   18</span>            {}</div>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>                                                                             :</div>
+<div class="line"><span class="lineno">   18</span>                d1(d1), d2(d2), d3(d3), data(d1*d2*d3, t)</div>
+<div class="line"><span class="lineno">   19</span>            {}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -195,9 +195,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   50</span>            {</div>
-<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">return</span> data.capacity();</div>
-<div class="line"><span class="lineno">   52</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>            {</div>
+<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">return</span> data.capacity();</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -225,9 +225,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   45</span>            {</div>
-<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">return</span> data.size();</div>
-<div class="line"><span class="lineno">   47</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>            {</div>
+<div class="line"><span class="lineno">   47</span>                <span class="keywordflow">return</span> data.size();</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -272,10 +272,10 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   21</span>            {</div>
-<div class="line"><span class="lineno">   22</span>                    <span class="keywordflow">return</span> (i&lt;=d1 &amp;&amp; j&lt;=d2 &amp;&amp; k&lt;=d3) ? data[i*d2*d3 + j*d3 + k] </div>
-<div class="line"><span class="lineno">   23</span>                                                    : data.at(i*d2*d3 + j*d3 + k);</div>
-<div class="line"><span class="lineno">   24</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>            {</div>
+<div class="line"><span class="lineno">   23</span>                    <span class="keywordflow">return</span> (i&lt;=d1 &amp;&amp; j&lt;=d2 &amp;&amp; k&lt;=d3) ? data[i*d2*d3 + j*d3 + k] </div>
+<div class="line"><span class="lineno">   24</span>                                                    : data.at(i*d2*d3 + j*d3 + k);</div>
+<div class="line"><span class="lineno">   25</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -320,9 +320,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   27</span>            {</div>
-<div class="line"><span class="lineno">   28</span>                <span class="keywordflow">return</span> data[i*d2*d3 + j*d3 + k];</div>
-<div class="line"><span class="lineno">   29</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>            {</div>
+<div class="line"><span class="lineno">   29</span>                <span class="keywordflow">return</span> data[i*d2*d3 + j*d3 + k];</div>
+<div class="line"><span class="lineno">   30</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -367,12 +367,12 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   32</span>            {</div>
-<div class="line"><span class="lineno">   33</span>                data.resize(_d1*_d2*_d3);</div>
-<div class="line"><span class="lineno">   34</span>                d1=_d1;</div>
-<div class="line"><span class="lineno">   35</span>                d2=_d2;</div>
-<div class="line"><span class="lineno">   36</span>                d3=_d3;</div>
-<div class="line"><span class="lineno">   37</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>            {</div>
+<div class="line"><span class="lineno">   34</span>                data.resize(_d1*_d2*_d3);</div>
+<div class="line"><span class="lineno">   35</span>                d1=_d1;</div>
+<div class="line"><span class="lineno">   36</span>                d2=_d2;</div>
+<div class="line"><span class="lineno">   37</span>                d3=_d3;</div>
+<div class="line"><span class="lineno">   38</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -400,9 +400,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   40</span>            {</div>
-<div class="line"><span class="lineno">   41</span>                data.shrink_to_fit();</div>
-<div class="line"><span class="lineno">   42</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>            {</div>
+<div class="line"><span class="lineno">   42</span>                data.shrink_to_fit();</div>
+<div class="line"><span class="lineno">   43</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -430,9 +430,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   55</span>            {</div>
-<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">return</span> d1;</div>
-<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>            {</div>
+<div class="line"><span class="lineno">   57</span>                <span class="keywordflow">return</span> d1;</div>
+<div class="line"><span class="lineno">   58</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -460,9 +460,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   60</span>            {</div>
-<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">return</span> d2;</div>
-<div class="line"><span class="lineno">   62</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">return</span> d2;</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -490,9 +490,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   65</span>            {</div>
-<div class="line"><span class="lineno">   66</span>                <span class="keywordflow">return</span> d3;</div>
-<div class="line"><span class="lineno">   67</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">return</span> d3;</div>
+<div class="line"><span class="lineno">   68</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>

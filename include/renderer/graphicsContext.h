@@ -8,6 +8,7 @@
 
 namespace LTE
 {
+    class window;
     class graphicsContext
 	{
         private:
@@ -34,7 +35,7 @@ namespace LTE
             void setViewPort(int x, int y, int width, int height);
             static renderApi *getRenderApi();
             
-            graphicsContext(windowPieceId windowId, renderAPIType type);
+            graphicsContext(window *parentWin, renderAPIType type);
             ~graphicsContext();
 
             static meshAbsrtactFactory* getMeshFactory(){ return meshFactory; }

@@ -1,5 +1,4 @@
 #include "mesh.h"
-#include "entity.h"
 #include "core.h"
 #include "openGLShader.h"
 #include "openGLVertexBuffer.h"
@@ -10,7 +9,7 @@
 #include "app.h"
 #include "windowManger.h"
 #include "glm/glm.hpp"
-
+#include "sceneManger.h"
 
 
 namespace LTE
@@ -46,7 +45,7 @@ namespace LTE
 
     float *mesh::getVertices()
     {
-        transform* trans =  entityManger::getEntityById(parentId)->getTransform();
+        transform* trans =  sceneManger::getScene(parentScene)->getGameObjectById(parentId)->getTransform();
         float temp[size];
         for(int i = 0; i < size ; i += 3)
         {
@@ -83,12 +82,13 @@ namespace LTE
 
     void mesh::init(gameObject *parent)
     {
-        window *win = windowManger::getWindow(winId);
         assetManager::loadAssetFromFile(shaderToUse);
+        sceneManger::getScene(parentScene)->pushObjectToRender(parent);
     }
 
     void mesh::end()
     {
+        sceneManger::getScene(parentScene)->removeObjectToRender(parentId);
     }
 
 }

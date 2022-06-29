@@ -1,5 +1,4 @@
 <map id="LTE::batchRenderer" name="LTE::batchRenderer">
-<area shape="rect" id="node1" title=" " alt="" coords="5,171,141,197"/>
-<area shape="rect" id="node2" href="$d3/d3b/class_l_t_e_1_1core_renderer.html" title=" " alt="" coords="9,95,138,121"/>
-<area shape="rect" id="node3" href="$df/d3a/class_l_t_e_1_1render_api.html" title=" " alt="" coords="20,5,127,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,141,107"/>
+<area shape="rect" id="node2" href="$d3/d3b/class_l_t_e_1_1core_renderer.html" title=" " alt="" coords="9,5,138,32"/>
 </map>

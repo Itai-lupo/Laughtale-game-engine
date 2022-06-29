@@ -4,18 +4,16 @@
 #include <functional>
 #include <algorithm>
 #include "LTEError.h"
-
+#include "app.h"
 
 namespace LTE
 {
-    std::vector<window*> windowManger::windows = std::vector<window*>();
-
-    void windowManger::init()
+    windowManger::windowManger(): osEvent({osEventsType::WindowClose})
     {
         buildWindow = new windowBuilder();
     }
     
-    void windowManger::close()
+    windowManger::~windowManger()
     {
         for (window* win: windows)
         {
@@ -25,15 +23,16 @@ namespace LTE
         delete buildWindow;
     }    
 
-    void windowManger::onWindowClose(gameObject *eventEntity, coreEventData *sendor)
+    void windowManger::onWindowClose(osEventData *sendor)
     {        
+        window *toDelete = getWindow(sendor->windowId);
         windows.erase(std::remove_if(
             windows.begin(), 
             windows.end(), 
             [=](window *win)-> bool { return win->id == sendor->windowId; }
         ), windows.end());
 
-        delete sendor->win;
+        delete toDelete;
     }
 
 
@@ -45,13 +44,7 @@ namespace LTE
         window *newWindow = buildWindow->build();
 
         windows.push_back(newWindow);
-        newWindow->init();
-        eventManger::startBuildingEvent()->
-                setEventRoute("Window close/close window " + newWindow->Title + std::to_string(newWindow->id))->
-                setEventCallback(onWindowClose)->
-                setWindowId(newWindow->id)->add();
-
-        
+        newWindow->init();        
         return newWindow->id;
     }
 

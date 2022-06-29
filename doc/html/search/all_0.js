@@ -1,13 +1,13 @@
 var searchData=
 [
   ['a_0',['a',['../df/d1c/struct_l_t_e_1_1vertexs_data.html#aa9e1c421192ee7c0a5e66512f3d2d628',1,'LTE::vertexsData']]],
-  ['addcomponent_1',['addComponent',['../d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html#a7f96f1659d421b99e472012231817c53',1,'LTE::gameObject::gameObjectBuilder']]],
+  ['addcomponent_1',['addComponent',['../de/d82/class_l_t_e_1_1game_object_builder.html#afb6a79559c731fd933e74447c20ce760',1,'LTE::gameObjectBuilder']]],
   ['addcompponnettotile_2',['AddCompponnetToTile',['../d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html#ac50ddeefc5f4b2754894573507dd526b',1,'LTE::tilemap::tileBuilder']]],
   ['addconnection_3',['addConnection',['../db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#a48d25efd3f4c45ae79d3fed144495e2c',1,'LTE::GMNM::connectionsManager']]],
-  ['addcoustemeventsroute_4',['addCoustemEventsRoute',['../d5/d7c/class_l_t_e_1_1event_manger.html#a54a3bf5bfe8f88d87174d0e9a33af63f',1,'LTE::eventManger']]],
-  ['addentity_5',['addEntity',['../de/d44/class_l_t_e_1_1entity_manger.html#acf283b437dde2e9300639fa4ee0e55dc',1,'LTE::entityManger']]],
-  ['addenvelope_6',['addEnvelope',['../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a04255924d76b7babffe16e7b749830f6',1,'LTE::soundSynthesizer']]],
-  ['addfiletype_7',['addFileType',['../d5/d69/class_l_t_e_1_1files_factory.html#a5d363e3093b778c56d8f4c7bab28e2d2',1,'LTE::filesFactory']]],
+  ['addenvelope_4',['addEnvelope',['../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a04255924d76b7babffe16e7b749830f6',1,'LTE::soundSynthesizer']]],
+  ['addevent_5',['addEvent',['../df/dde/class_l_t_e_1_1scene_events_manger.html#a9c1e9f20663ffc7e60415c2755ff5956',1,'LTE::sceneEventsManger::addEvent()'],['../d3/d10/class_l_t_e_1_1os_events_manger.html#a746717af19661c955b2396c20bc4411e',1,'LTE::osEventsManger::addEvent()']]],
+  ['addfiletype_6',['addFileType',['../d5/d69/class_l_t_e_1_1files_factory.html#a5d363e3093b778c56d8f4c7bab28e2d2',1,'LTE::filesFactory']]],
+  ['addgameobject_7',['addGameObject',['../d6/d26/class_l_t_e_1_1scene.html#a6de4eec39efa1e4fdc91c376f3f5ec72',1,'LTE::scene::addGameObject()'],['../dc/d88/class_l_t_e_1_1game_objects_manger.html#a712c6c472ea7aea3b9aa09da2b591354',1,'LTE::gameObjectsManger::addGameObject()']]],
   ['addmatrial_8',['addMatrial',['../df/d4f/class_l_t_e_1_1materials_manger.html#a38bf625d15d8cbd3b0b8c3d746207154',1,'LTE::materialsManger']]],
   ['addnote_9',['addNote',['../db/d56/class_l_t_e_1_1sequencer.html#a2a4b5e1c5481948ddb88e8fbec563f91',1,'LTE::sequencer']]],
   ['addroute_10',['addRoute',['../d7/d22/class_l_t_e_1_1router.html#a854a190b199213a2b0bda12e9b2ae22f',1,'LTE::router']]],
@@ -30,10 +30,9 @@ var searchData=
   ['asionetworkinterface_2eh_27',['asioNetworkInterface.h',['../d8/d62/asio_network_interface_8h.html',1,'']]],
   ['asset_28',['asset',['../de/db4/class_l_t_e_1_1asset.html',1,'LTE']]],
   ['asset_2eh_29',['asset.h',['../d3/d3e/asset_8h.html',1,'']]],
-  ['assetlibrary_30',['assetLibrary',['../d6/d26/class_l_t_e_1_1scene.html#aa82b5f619926d077e98da48cc56807cb',1,'LTE::scene']]],
-  ['assetmanager_31',['assetManager',['../db/d3a/class_l_t_e_1_1asset_manager.html',1,'LTE']]],
-  ['assetmanager_2ecpp_32',['assetManager.cpp',['../d8/ddb/asset_manager_8cpp.html',1,'']]],
-  ['assetmanager_2eh_33',['assetManager.h',['../d0/d94/asset_manager_8h.html',1,'']]],
-  ['attachcolorrendertarget_34',['attachColorRenderTarget',['../da/da3/class_l_t_e_1_1framebuffer.html#a1bc560dbf7979b83551ddb6bf272fc0d',1,'LTE::framebuffer']]],
-  ['attacktime_35',['attackTime',['../d2/d04/class_l_t_e_1_1envelope.html#a0dd45f01a686bc05b3f9b097918dd04d',1,'LTE::envelope']]]
+  ['assetmanager_30',['assetManager',['../db/d3a/class_l_t_e_1_1asset_manager.html',1,'LTE']]],
+  ['assetmanager_2ecpp_31',['assetManager.cpp',['../d8/ddb/asset_manager_8cpp.html',1,'']]],
+  ['assetmanager_2eh_32',['assetManager.h',['../d0/d94/asset_manager_8h.html',1,'']]],
+  ['attachcolorrendertarget_33',['attachColorRenderTarget',['../da/da3/class_l_t_e_1_1framebuffer.html#a1bc560dbf7979b83551ddb6bf272fc0d',1,'LTE::framebuffer']]],
+  ['attacktime_34',['attackTime',['../d2/d04/class_l_t_e_1_1envelope.html#a0dd45f01a686bc05b3f9b097918dd04d',1,'LTE::envelope']]]
 ];

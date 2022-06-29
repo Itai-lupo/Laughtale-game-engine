@@ -1,8 +1,7 @@
 #include "squreCollider.h"
 #include "colliderSystem2D.h"
 #include "windowManger.h"
-#include "entity.h"
-#include "events.h"
+#include "sceneManger.h"
 
 #include <glm/glm.hpp>
 #include <glm/gtx/string_cast.hpp>
@@ -21,18 +20,18 @@ namespace LTE
 
     transform *squreCollider::getBonds() const
     {
-        return entityManger::getEntityById(parentId)->getTransform();
+        return sceneManger::getScene(parentScene)->getGameObjectById(parentId)->getTransform();
     }
 
 
     void squreCollider::init(gameObject *parent)
     {
-        eventManger::addCoustemEventsRoute("collider/" + parent->getName() + "/");
+        sceneManger::getScene(parentScene)->pushPhysicsObject(parent);
     }
 
     void squreCollider::end()
     {
-        
+        sceneManger::getScene(parentScene)->removePhysicsObject(parentId);
     }  
 
 
@@ -92,7 +91,7 @@ namespace LTE
         }
         catch(const std::exception& e)
         {
-            LAUGHTALE_ENGINR_LOG_WARNING("coul'd not calculate collsion betwin game object because: " << e.what());
+            LAUGHTALE_ENGINR_LOG_WARNING("could not calculate collision between game object because: " << e.what());
         }
         
         

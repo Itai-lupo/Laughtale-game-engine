@@ -4,5 +4,6 @@ var searchData=
   ['windowbuilder_1',['windowBuilder',['../d0/d26/class_l_t_e_1_1window_builder.html',1,'LTE']]],
   ['windowmanger_2',['windowManger',['../de/de3/class_l_t_e_1_1window_manger.html',1,'LTE']]],
   ['windownotfoundexception_3',['WindowNotFoundException',['../da/d5b/class_l_t_e_1_1_window_not_found_exception.html',1,'LTE']]],
-  ['windowresizedata_4',['WindowResizeData',['../d0/d31/struct_l_t_e_1_1_window_resize_data.html',1,'LTE']]]
+  ['windowrenderdata_4',['windowRenderData',['../d5/d22/struct_l_t_e_1_1window_render_data.html',1,'LTE']]],
+  ['windowresizedata_5',['WindowResizeData',['../d0/d31/struct_l_t_e_1_1_window_resize_data.html',1,'LTE']]]
 ];

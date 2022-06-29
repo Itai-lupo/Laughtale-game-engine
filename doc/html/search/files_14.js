@@ -6,5 +6,6 @@ var searchData=
   ['windowbuilder_2eh_3',['windowBuilder.h',['../d1/d27/window_builder_8h.html',1,'']]],
   ['windowmanger_2ecpp_4',['windowManger.cpp',['../df/d78/window_manger_8cpp.html',1,'']]],
   ['windowmanger_2eh_5',['windowManger.h',['../de/de3/window_manger_8h.html',1,'']]],
-  ['windowresizedata_2eh_6',['WindowResizeData.h',['../d5/da8/_window_resize_data_8h.html',1,'']]]
+  ['windowrenderdata_2eh_6',['windowRenderData.h',['../dc/d5c/window_render_data_8h.html',1,'']]],
+  ['windowresizedata_2eh_7',['WindowResizeData.h',['../d5/da8/_window_resize_data_8h.html',1,'']]]
 ];

@@ -1,6 +1,5 @@
 <map id="LTE::mesh::getCount" name="LTE::mesh::getCount">
-<area shape="rect" id="node1" title=" " alt="" coords="404,46,547,73"/>
+<area shape="rect" id="node1" title=" " alt="" coords="404,13,547,39"/>
 <area shape="rect" id="node2" href="$d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="189,5,356,47"/>
-<area shape="rect" id="node4" href="$d2/df6/class_l_t_e_1_1mesh_renderer.html#a9dd36eaefbaa68f5fc6737d6e21d6c64" title=" " alt="" coords="201,71,344,112"/>
 <area shape="rect" id="node3" href="$dc/ddb/class_l_t_e_1_1batch_renderer.html#a4ce0e8492103711b80fe7ecb673253d4" title=" " alt="" coords="5,5,141,47"/>
 </map>

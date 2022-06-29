@@ -4,33 +4,31 @@
 #include "networkInterface.h"
 #include <string>
 #include <thread>
-#include "events.h"
 #include "dataFormatter.h"
 #include "dataCryptographer.h"
 #include <functional>
-#include "coreEventData.h"
-#include "mouseMoveEventData.h"
+#include "mouseMoveData.h"
 
 namespace LTE::GMNM
 {
-    struct connectionData: public coreEventData
-    {
-        connectionId conId;
-        std::string ip;
-        uint32_t port;
-        std::function<void(packet& data)> send;
+    // struct connectionData: public coreEventData
+    // {
+    //     connectionId conId;
+    //     std::string ip;
+    //     uint32_t port;
+    //     std::function<void(packet& data)> send;
 
-       connectionData(connectionId conId, const std::string& ip, uint32_t port, std::function<void(packet& data)> send): 
-        conId(conId), ip(ip), port(port), send(send){}
-    };
+    //    connectionData(connectionId conId, const std::string& ip, uint32_t port, std::function<void(packet& data)> send): 
+    //     conId(conId), ip(ip), port(port), send(send){}
+    // };
 
-    struct connectionReadData: public connectionData
-    {
-        packet data;
+    // struct connectionReadData: public connectionData
+    // {
+    //     packet data;
 
-       connectionReadData(packet data, connectionId conId, const std::string& ip, uint32_t port, std::function<void(packet& data)> send): 
-        connectionData(conId, ip, port, send), data(data){}
-    };
+    //    connectionReadData(packet data, connectionId conId, const std::string& ip, uint32_t port, std::function<void(packet& data)> send): 
+    //     connectionData(conId, ip, port, send), data(data){}
+    // };
     
     class connection
     {

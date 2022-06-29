@@ -1,7 +1,6 @@
 #ifdef __linux__
 
 #include "logger.h"
-#include "events.h"
 #include <GLFW/glfw3.h>
 
 #include "OSAbstractFactory.h"
@@ -12,6 +11,7 @@
 #include "linuxInputSoundDevice.h"
 #include "linuxOutputSoundDevice.h"
 #include "linuxInput.h"
+#include "app.h"
 
 #include <string>
 
@@ -27,59 +27,56 @@ namespace LTE
 	void WindowSizeCallback(GLFWwindow* window, int width, int height)
 	{
 		WindowResizeData *eventData = new WindowResizeData(width, height, (windowPieceId)window);
-		
-		eventManger::trigerEvent(eventData);
-		LAUGHTALE_ENGINR_LOG_INFO(
-			"WindowSizeCallback " + 
-			std::to_string(width) + ", " + 
-			std::to_string(height) + ", " + std::to_string((windowPieceId)window));
+		app::getEventManger()->trigerEvent(eventData, osEventsType::WindowResize);
 	}
 
 	void WindowCloseCallback(GLFWwindow* window)
 	{
-		coreEventData *eventData = new coreEventData();
-		eventData->route = "Window close/";
+		osEventData *eventData = new osEventData();
 		eventData->windowId = (windowPieceId)window;
-		eventManger::trigerEvent(eventData);
+
+		app::getEventManger()->trigerEvent(eventData, osEventsType::WindowClose);
 	}
 
 	void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
 	{
 		KeyData *eventData = new KeyData(key, scancode, mods, (windowPieceId)window);
  
-		eventData->route = 
-			action == GLFW_PRESS? "Key pressed/": (action == GLFW_RELEASE? "Key released/":  "Key repeat/");
+		osEventsType type = 
+			(osEventsType)((action == GLFW_PRESS) * osEventsType::keyPressed + 
+			(action == GLFW_RELEASE) * osEventsType::keyReleased +  
+			(action == GLFW_REPEAT) * osEventsType::keyRepeat);
 
-		eventManger::trigerEvent(eventData);
+		app::getEventManger()->trigerEvent(eventData, type);
 	}
 
 	void MouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
 	{
 		mouseClickData *eventData = new mouseClickData(button, mods, (windowPieceId)window);
 
-		eventData->route = 
-			action == GLFW_PRESS? "Mouse button pressed/": "Mouse button released/";
+		osEventsType type = 
+			action == GLFW_PRESS? osEventsType::MousePressed : osEventsType::MouseReleased;
 
-		eventManger::trigerEvent(eventData);
+		app::getEventManger()->trigerEvent(eventData, type);
 	}
 
 	void ScrollCallback(GLFWwindow* window, double xOffset, double yOffset)
 	{
 		mouseScrollData *eventData = new mouseScrollData(xOffset, yOffset, (windowPieceId)window);
 
-		eventManger::trigerEvent(eventData);
+		app::getEventManger()->trigerEvent(eventData, osEventsType::MouseScroll);
 	}
 
 	void CursorPosCallback(GLFWwindow* window, double xPos, double yPos)
 	{
 		mouseMoveData *eventData = new mouseMoveData(xPos, yPos, (windowPieceId)window);
-		eventManger::trigerEvent(eventData);
+		app::getEventManger()->trigerEvent(eventData, osEventsType::MouseMove);
 	}
 
 	void SetCharCallback(GLFWwindow* window, unsigned int keycode)
 	{
 		keyTypedData *eventData = new keyTypedData(keycode, (windowPieceId)window);
-		eventManger::trigerEvent(eventData);
+		app::getEventManger()->trigerEvent(eventData, osEventsType::keyTyped);
 	}
 
 	linuxAbstractFactory::linuxAbstractFactory()

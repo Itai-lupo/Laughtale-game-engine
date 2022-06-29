@@ -99,43 +99,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa962728992bb6c6564f2948f2fcee02e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a977dbd56a3787f5e160847648eab75d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d26/class_l_t_e_1_1scene.html">scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db0/class_l_t_e_1_1scene_builder.html#a977dbd56a3787f5e160847648eab75d7">build</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a19087a9b8ea8653191a7efdb616a92b4">sceneId</a> id)</td></tr>
 <tr class="separator:a977dbd56a3787f5e160847648eab75d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9c514efea480940b4caef358a5aa5cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db0/class_l_t_e_1_1scene_builder.html#af9c514efea480940b4caef358a5aa5cb">bindToWindow</a> (const std::string &amp;windowTitle)</td></tr>
-<tr class="separator:af9c514efea480940b4caef358a5aa5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c682dc23d6989698bf66b51cc150ef5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db0/class_l_t_e_1_1scene_builder.html#a4c682dc23d6989698bf66b51cc150ef5">setBackgroundColor</a> (<a class="el" href="../../dc/dda/class_l_t_e_1_1material.html">material</a> *color)</td></tr>
 <tr class="separator:a4c682dc23d6989698bf66b51cc150ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a700a7ab4278316fef0677a89147714be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db0/class_l_t_e_1_1scene_builder.html#a700a7ab4278316fef0677a89147714be">setCamera</a> (<a class="el" href="../../d2/d49/class_l_t_e_1_1game_object.html">gameObject</a> *camera)</td></tr>
 <tr class="separator:a700a7ab4278316fef0677a89147714be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af9c514efea480940b4caef358a5aa5cb" name="af9c514efea480940b4caef358a5aa5cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9c514efea480940b4caef358a5aa5cb">&#9670;&nbsp;</a></span>bindToWindow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LTE::sceneBuilder::bindToWindow </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>windowTitle</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   39</span>            {</div>
-<div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>            }</div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="a977dbd56a3787f5e160847648eab75d7" name="a977dbd56a3787f5e160847648eab75d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a977dbd56a3787f5e160847648eab75d7">&#9670;&nbsp;</a></span>build()</h2>
 
@@ -160,36 +129,36 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">   26</span>            {</div>
-<div class="line"><span class="lineno">   27</span>                <a class="code hl_typedef" href="../../dc/d59/namespace_l_t_e.html#a9a053246fe6d76fb97a3d9e95c94dbda">entityTaleId</a> camId = <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#acf283b437dde2e9300639fa4ee0e55dc">entityManger::addEntity</a>([=, <span class="keyword">this</span>](gameObject::gameObjectBuilder *builder){</div>
-<div class="line"><span class="lineno">   28</span>                builder-&gt;setObjectName(<span class="stringliteral">&quot;default camera&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">   29</span>                    setWindowId(product-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a6ba5c57935c18dc4cc17b9b730642e36">id</a>)-&gt;</div>
-<div class="line"><span class="lineno">   30</span>                    setObjectTransform(glm::mat4(0.0f))-&gt;</div>
-<div class="line"><span class="lineno">   31</span>                    addComponent(<span class="keyword">new</span> orthographicCameraControler(1280.0f/720.0f));</div>
-<div class="line"><span class="lineno">   32</span>                });</div>
-<div class="line"><span class="lineno">   33</span> </div>
-<div class="line"><span class="lineno">   34</span>                product-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">camera</a> = <a class="code hl_function" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">entityManger::getEntityById</a>(camId);</div>
-<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">return</span> product;</div>
-<div class="line"><span class="lineno">   36</span>        </div>
-<div class="line"><span class="lineno">   37</span>            }</div>
-<div class="ttc" id="aclass_l_t_e_1_1entity_manger_html_acf283b437dde2e9300639fa4ee0e55dc"><div class="ttname"><a href="../../de/d44/class_l_t_e_1_1entity_manger.html#acf283b437dde2e9300639fa4ee0e55dc">LTE::entityManger::addEntity</a></div><div class="ttdeci">static entityTaleId addEntity(std::function&lt; void(gameObject::gameObjectBuilder *Builder)&gt; buildGameObject)</div><div class="ttdef"><b>Definition:</b> entity.cpp:24</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1entity_manger_html_ad019a4750f1350c7185cefe6072dcd6e"><div class="ttname"><a href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e">LTE::entityManger::getEntityById</a></div><div class="ttdeci">static gameObject * getEntityById(entityTaleId id)</div><div class="ttdef"><b>Definition:</b> entity.cpp:48</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_a6ba5c57935c18dc4cc17b9b730642e36"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a6ba5c57935c18dc4cc17b9b730642e36">LTE::scene::id</a></div><div class="ttdeci">sceneId id</div><div class="ttdef"><b>Definition:</b> scene.h:31</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_af176ece946088c87257039d35836c0d6"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">LTE::scene::camera</a></div><div class="ttdeci">gameObject * camera</div><div class="ttdef"><b>Definition:</b> scene.h:36</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a9a053246fe6d76fb97a3d9e95c94dbda"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a9a053246fe6d76fb97a3d9e95c94dbda">LTE::entityTaleId</a></div><div class="ttdeci">uint32_t entityTaleId</div><div class="ttdef"><b>Definition:</b> core.h:7</div></div>
+<div class="line"><span class="lineno">   27</span>                <a class="code hl_typedef" href="../../dc/d59/namespace_l_t_e.html#a7453a44af781c118bd678959bdd02674">gameObjectId</a> camId = product-&gt;<a class="code hl_function" href="../../d6/d26/class_l_t_e_1_1scene.html#a6de4eec39efa1e4fdc91c376f3f5ec72">addGameObject</a>([=, <span class="keyword">this</span>](gameObjectBuilder *builder){</div>
+<div class="line"><span class="lineno">   28</span>                    builder-&gt;setObjectName(<span class="stringliteral">&quot;default camera&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">   29</span>                        setObjectTransform(glm::mat4(0.0f))-&gt;</div>
+<div class="line"><span class="lineno">   30</span>                        addComponent(<span class="keyword">new</span> orthographicCameraControler(1280.0f/720.0f));</div>
+<div class="line"><span class="lineno">   31</span>                });</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>                product-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">camera</a> = product-&gt;<a class="code hl_function" href="../../d6/d26/class_l_t_e_1_1scene.html#ae9efb390b01198b99ab83fea6d7b0d9d">getGameObjectById</a>(camId);</div>
+<div class="line"><span class="lineno">   34</span>                <span class="keywordflow">return</span> product;</div>
+<div class="line"><span class="lineno">   35</span>        </div>
+<div class="line"><span class="lineno">   36</span>            }</div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a6de4eec39efa1e4fdc91c376f3f5ec72"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a6de4eec39efa1e4fdc91c376f3f5ec72">LTE::scene::addGameObject</a></div><div class="ttdeci">gameObjectId addGameObject(std::function&lt; void(gameObjectBuilder *Builder)&gt; buildGameObject)</div><div class="ttdef"><b>Definition:</b> scene.cpp:63</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_ae9efb390b01198b99ab83fea6d7b0d9d"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#ae9efb390b01198b99ab83fea6d7b0d9d">LTE::scene::getGameObjectById</a></div><div class="ttdeci">gameObject * getGameObjectById(gameObjectId id)</div><div class="ttdef"><b>Definition:</b> scene.cpp:74</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_af176ece946088c87257039d35836c0d6"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#af176ece946088c87257039d35836c0d6">LTE::scene::camera</a></div><div class="ttdeci">gameObject * camera</div><div class="ttdef"><b>Definition:</b> scene.h:40</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a7453a44af781c118bd678959bdd02674"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a7453a44af781c118bd678959bdd02674">LTE::gameObjectId</a></div><div class="ttdeci">uint32_t gameObjectId</div><div class="ttdef"><b>Definition:</b> core.h:7</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/db0/class_l_t_e_1_1scene_builder_a977dbd56a3787f5e160847648eab75d7_cgraph.png" border="0" usemap="#ad3/db0/class_l_t_e_1_1scene_builder_a977dbd56a3787f5e160847648eab75d7_cgraph" alt=""/></div>
 <map name="ad3/db0/class_l_t_e_1_1scene_builder_a977dbd56a3787f5e160847648eab75d7_cgraph" id="ad3/db0/class_l_t_e_1_1scene_builder_a977dbd56a3787f5e160847648eab75d7_cgraph">
-<area shape="rect" title=" " alt="" coords="5,147,139,189"/>
-<area shape="rect" href="../../de/d44/class_l_t_e_1_1entity_manger.html#acf283b437dde2e9300639fa4ee0e55dc" title=" " alt="" coords="220,82,352,123"/>
-<area shape="rect" href="../../de/d44/class_l_t_e_1_1entity_manger.html#ad019a4750f1350c7185cefe6072dcd6e" title=" " alt="" coords="220,147,352,189"/>
-<area shape="rect" href="../../d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html#a6bac412d8f374a70d2cc9fac517eaad2" title=" " alt="" coords="187,213,385,254"/>
-<area shape="rect" href="../../d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html#a7a75d15ddfeef6480a3bbc26096e1c19" title=" " alt="" coords="433,23,632,65"/>
-<area shape="rect" href="../../d2/d49/class_l_t_e_1_1game_object.html#a3748afdfe135228a0932ee7fd8e16fd0" title=" " alt="" coords="454,89,611,116"/>
-<area shape="rect" href="../../d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html#a7c16c05f965167c74463766639e2f93a" title=" " alt="" coords="433,141,632,182"/>
-<area shape="rect" href="../../d9/d4b/class_l_t_e_1_1component.html#a3e5d2369a819e87417e96290a73d2cd1" title=" " alt="" coords="700,5,839,32"/>
-<area shape="rect" href="../../d9/d4b/class_l_t_e_1_1component.html#ac8bd5fc33467522201550716a235e4df" title=" " alt="" coords="680,56,859,83"/>
+<area shape="rect" title=" " alt="" coords="5,143,139,185"/>
+<area shape="rect" href="../../d6/d26/class_l_t_e_1_1scene.html#a6de4eec39efa1e4fdc91c376f3f5ec72" title=" " alt="" coords="199,93,385,120"/>
+<area shape="rect" href="../../d6/d26/class_l_t_e_1_1scene.html#ae9efb390b01198b99ab83fea6d7b0d9d" title=" " alt="" coords="187,151,397,177"/>
+<area shape="rect" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a1b87bf4a57d25d3ff4b35f6f20afc96c" title=" " alt="" coords="211,202,373,243"/>
+<area shape="rect" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#a712c6c472ea7aea3b9aa09da2b591354" title=" " alt="" coords="445,82,617,123"/>
+<area shape="rect" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a38194c3791f14b3de2478ea749e5baf9" title=" " alt="" coords="665,23,828,65"/>
+<area shape="rect" href="../../d2/d49/class_l_t_e_1_1game_object.html#a2b51bfd8b5bbe7be71011b0bc9e47355" title=" " alt="" coords="668,89,825,116"/>
+<area shape="rect" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a410883a2a9922e958a780b2cd87c1770" title=" " alt="" coords="665,141,828,182"/>
+<area shape="rect" href="../../d9/d4b/class_l_t_e_1_1component.html#a3e5d2369a819e87417e96290a73d2cd1" title=" " alt="" coords="896,5,1035,32"/>
+<area shape="rect" href="../../d9/d4b/class_l_t_e_1_1component.html#a484a41ae15417c5d10ed6da34a2ba945" title=" " alt="" coords="876,56,1055,83"/>
+<area shape="rect" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#af68ed85525de10b895d0fafafdb18b5e" title=" " alt="" coords="445,147,617,189"/>
 </map>
 </div>
 <div class="dynheader">
@@ -266,10 +235,10 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   44</span>            {</div>
-<div class="line"><span class="lineno">   45</span>                product-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">backgroundColor</a> = color;</div>
-<div class="line"><span class="lineno">   46</span>            }</div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_a175550c54709e4c719913e94b906b148"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">LTE::scene::backgroundColor</a></div><div class="ttdeci">material * backgroundColor</div><div class="ttdef"><b>Definition:</b> scene.h:39</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                product-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">backgroundColor</a> = color;</div>
+<div class="line"><span class="lineno">   41</span>            }</div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a175550c54709e4c719913e94b906b148"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">LTE::scene::backgroundColor</a></div><div class="ttdeci">material * backgroundColor</div><div class="ttdef"><b>Definition:</b> scene.h:43</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -296,9 +265,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   49</span>            {</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>            {</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>

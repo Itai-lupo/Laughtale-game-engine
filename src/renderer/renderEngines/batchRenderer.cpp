@@ -12,7 +12,7 @@ namespace LTE
 
     shaderRenderBuffer *batchRenderer::submitShape(mesh *shape, material *shapeMatrial)
     {
-        shaderRenderBuffer *s  = Scene->assetLibrary->getAsset<shaderRenderBuffer>(shape->getShaderName());
+        shaderRenderBuffer *s  = assetManager::getAsset<shaderRenderBuffer>(shape->getShaderName());
         if(!s)
             return nullptr;
         s->pushShape(shape, shapeMatrial);
@@ -89,7 +89,7 @@ namespace LTE
                             textures[id]->bind(slot);
                     shaderBuffer->bind();
 
-                    renderPipLine->DrawIndexed(shaderBuffer->getIndecesCount());
+                    graphicsContext::getRenderApi()->DrawIndexed(shaderBuffer->getIndecesCount());
                 }
                 catch(const std::exception& e)
                 {
@@ -110,8 +110,8 @@ namespace LTE
     {
         ViewProjectionMatrix = Scene->camera->getComponent<coreCameraControler>()->getCamera()->getViewProjectionMatrix();
         
-        renderPipLine->SetClearColor(Scene->backgroundColor->getRGBA());
-        renderPipLine->Clear();
+        graphicsContext::getRenderApi()->SetClearColor(Scene->backgroundColor->getRGBA());
+        graphicsContext::getRenderApi()->Clear();
 
         sortSceneToRender();
         batchSceneData();

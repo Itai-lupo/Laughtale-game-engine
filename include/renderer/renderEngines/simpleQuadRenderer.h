@@ -41,7 +41,7 @@ namespace LTE
             
 
         public:                
-            simpleQuadRenderer(const std::string& textureName, renderApi *renderPipLine);
+            simpleQuadRenderer(const std::string& textureName);
 
             virtual void renderScene();
     };

@@ -18,9 +18,7 @@ namespace LTE
     {
         product->id = app::getOSAbstractFactory()->createWindow(product);
 
-        product->context = new graphicsContext(product->id, OpenGL);
-
-        
+        product->context = new graphicsContext(product, OpenGL);      
         
         return product;
     }

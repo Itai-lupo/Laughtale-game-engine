@@ -46,21 +46,16 @@ namespace LTE
         for( auto& [slot, colorAttachmenData]: parentContainer->getColorAttachmens())
         {
             colorAttachmenData->setDimensions({ parentContainer->getWidth(), parentContainer->getHight()});
-			GL_CALL(glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0 + slot, GL_TEXTURE_2D, colorAttachmenData->getId(), 0)); // todo: need to add GL_TEXTURE_2D_MULTISAMPLE
+			GL_CALL(glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0 + slot,  (colorAttachmenData->getSamples() > 1)? GL_TEXTURE_2D_MULTISAMPLE : GL_TEXTURE_2D, colorAttachmenData->getId(), 0)); // todo: need to add GL_TEXTURE_2D_MULTISAMPLE
         }
 
-        // if(parentContainer->getDepthAttachmen())
-        // {
-            // parentContainer->getDepthAttachmen()->setDimensions({ parentContainer->getWidth(), parentContainer->getHight()});
-			// GL_CALL(glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, parentContainer->getDepthAttachmen()->getId(), 0));
-            unsigned int rbo;
-            glGenRenderbuffers(1, &rbo);
-            glBindRenderbuffer(GL_RENDERBUFFER, rbo); 
-            glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, parentContainer->getWidth(), parentContainer->getHight());  
-            glBindRenderbuffer(GL_RENDERBUFFER, 0);
-            glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rbo);
-
-        // }
+        if(parentContainer->getDepthAttachmen())
+        {
+            parentContainer->getDepthAttachmen()->setDimensions({ parentContainer->getWidth(), parentContainer->getHight()});
+            unsigned int outID;
+			GL_CALL(glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, (parentContainer->getDepthAttachmen()->getSamples() > 1)? GL_TEXTURE_2D_MULTISAMPLE : GL_TEXTURE_2D, parentContainer->getDepthAttachmen()->getId(), 0));
+        }
+            
 
         LAUGHTALE_ENGINR_CONDTION_LOG_ERROR("Framebuffer is incomplete!", glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
     

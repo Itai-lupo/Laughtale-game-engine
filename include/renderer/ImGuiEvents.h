@@ -1,29 +1,27 @@
 #pragma once
+#include "osEvents.h"
 
 struct GLFWwindow;
 namespace LTE 
 {
-    struct gameObject;
-    struct coreEventData;
-    class window;
-    struct onUpdateData;
+    class ImGuiEvents: osEvent
+    {
+        public:
+            void onMousePressed(mouseClickData *sendor);
+            void onMouseReleased(mouseClickData *sendor);
+            void onMouseMove(mouseMoveData *sendor);
 
-    void ImGuiMouseButtonPressed(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor);
-    void ImGuiMouseButtonReleased(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor);
-    void ImGuiMouseMoved(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor);
+            void onMouseScroll(mouseScrollData *sendor);
 
-    void ImGuiMouseScrolled(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor);
+            void onWindowResize(WindowResizeData *sendor);
 
-    void ImGuiWindowResize(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor);
+            void onkeyPressed(KeyData *sendor);
+            void onkeyReleased(KeyData *sendor);
+            void onkeyTyped(keyTypedData *sendor);
 
-    void ImGuiKeyPressed(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor);
+            ImGuiEvents(windowPieceId windowId);
+            ~ImGuiEvents();
 
-    void ImGuiKeyReleased(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor);
-
-    void ImGuiKeyTyped(__attribute__((unused)) gameObject *eventEntity, coreEventData *sendor);
-
-    void initImGui(windowPieceId windowId);
-    void closeImGui();
-
-    void onImGuiUpdate(window *data, onUpdateData *eventData);
+            void onImGuiUpdate(window *data, windowRenderData *eventData);
+    };
 }

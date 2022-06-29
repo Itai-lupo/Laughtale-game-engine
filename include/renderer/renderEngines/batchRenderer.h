@@ -34,7 +34,7 @@ namespace LTE
 
 
         public:                
-            batchRenderer(scene *Scene, renderApi *renderPipLine): coreRenderer(renderPipLine), Scene(Scene){}
+            batchRenderer(scene *Scene): Scene(Scene){}
 
             shaderRenderBuffer *submitShape(mesh *shape, material *shapeMatrial);
 

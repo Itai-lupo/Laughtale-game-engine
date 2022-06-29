@@ -35,13 +35,14 @@ namespace LTE
             uint32_t width, hight;
 
             std::map<colorAttachmentSlot, texture*> colorAttachmens;
-            texture* depthAttachmen = nullptr;
+            texture* depthAttachmen = new texture("");
 
             std::atomic<unsigned int> changeId = 0;
 
         public:
             framebuffer(uint32_t width, uint32_t hight): width(width), hight(hight)
             {
+                depthAttachmen->setFormat(textureFormat::DEPTH24STENCIL8);
             }
             
             void bind()

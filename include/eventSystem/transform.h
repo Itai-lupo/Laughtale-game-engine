@@ -4,7 +4,6 @@
 #include "glm/glm.hpp"
 
 #include "core.h"
-#include "events.h"
 #include "component.h"
 
 namespace LTE

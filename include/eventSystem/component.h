@@ -9,20 +9,20 @@ namespace LTE
     class component
     {
         protected:
-            windowPieceId winId;
-            entityTaleId parentId;
+            sceneId parentScene;
+            gameObjectId parentId;
         public:
             virtual ~component() = default;
             virtual void init(gameObject *parent) = 0;
             virtual void end() = 0;
 
-            void setParent(entityTaleId parentId, windowPieceId winId)
+            void setParent(gameObjectId parentId, sceneId parentScene)
             {
+                this->parentScene = parentScene;
                 this->parentId = parentId;
-                this->winId = winId;
             }
 
-            entityTaleId getParentId(){return parentId; }
+            gameObjectId getParentId(){return parentId; }
     };
 
 }

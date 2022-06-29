@@ -139,138 +139,141 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  115</span>        { </div>
-<div class="line"><span class="lineno">  116</span>            <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968">LTE::app::init</a>();</div>
-<div class="line"><span class="lineno">  117</span>            initWindows();</div>
-<div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>            LTE::assetManager::getAsset&lt;LTE::texture&gt;(<span class="stringliteral">&quot;res/topDownScene/textures/Meta data assets files/ENVIRONMENT/tilesets/dungeon-tileset.png&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  120</span>                setSprtieData(</div>
-<div class="line"><span class="lineno">  121</span>                    {</div>
-<div class="line"><span class="lineno">  122</span>                        {{1, 48}, {15, 15}},</div>
-<div class="line"><span class="lineno">  123</span>                        {{1, 66}, {16, 14}},</div>
-<div class="line"><span class="lineno">  124</span>                    </div>
-<div class="line"><span class="lineno">  125</span>                    });</div>
-<div class="line"><span class="lineno">  126</span>            </div>
-<div class="line"><span class="lineno">  127</span>            LTE::assetManager::getAsset&lt;LTE::texture&gt;(<span class="stringliteral">&quot;res/topDownScene/textures/Package/atlas_16x.png&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  128</span>                setSprtieData(</div>
-<div class="line"><span class="lineno">  129</span>                    {</div>
-<div class="line"><span class="lineno">  130</span>                        {{16, 112}, {16, 16}},                    </div>
-<div class="line"><span class="lineno">  131</span>                        {{16, 197}, {16, 32}},                    </div>
-<div class="line"><span class="lineno">  132</span>                        {{16, 197}, {16, 32}},                    </div>
-<div class="line"><span class="lineno">  133</span>                    });</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>            LTE::assetManager::getAsset&lt;LTE::texture&gt;(<span class="stringliteral">&quot;res/topDownScene/textures/PIPOYA FREE RPG Character Sprites NEKONIN/pipo-nekonin011.png&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  136</span>                setSprtieData({32, 32});</div>
-<div class="line"><span class="lineno">  137</span>            </div>
-<div class="line"><span class="lineno">  138</span> </div>
-<div class="line"><span class="lineno">  139</span>            <a class="code hl_class" href="../../d5/d49/class_l_t_e_1_1tilemap.html">LTE::tilemap</a> *map = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/d49/class_l_t_e_1_1tilemap.html">LTE::tilemap</a>({1000, 1000}, {100, 100}, 6, gameWindowId);</div>
-<div class="line"><span class="lineno">  140</span> </div>
-<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = 1; x &lt; 9; x++)</div>
-<div class="line"><span class="lineno">  142</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = 1; y &lt; 9; y++)</div>
-<div class="line"><span class="lineno">  143</span>                        map-&gt;<a class="code hl_function" href="../../d5/d49/class_l_t_e_1_1tilemap.html#a0026f12dfb077d227ee52b6f260c18be">addTile</a>(</div>
-<div class="line"><span class="lineno">  144</span>                                [=](<a class="code hl_class" href="../../d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html">LTE::tilemap::tileBuilder</a> *tileBuild)</div>
-<div class="line"><span class="lineno">  145</span>                                {</div>
-<div class="line"><span class="lineno">  146</span>                                    tileBuild-&gt;</div>
-<div class="line"><span class="lineno">  147</span>                                        setTileMatrial(new LTE::material(<span class="stringliteral">&quot;res/topDownScene/textures/Package/atlas_16x.png&quot;</span>))-&gt;</div>
-<div class="line"><span class="lineno">  148</span>                                        setLayer(0)-&gt;</div>
-<div class="line"><span class="lineno">  149</span>                                        setTilePostion({x, y});</div>
-<div class="line"><span class="lineno">  150</span>                                }</div>
-<div class="line"><span class="lineno">  151</span>                        );</div>
-<div class="line"><span class="lineno">  152</span> </div>
-<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; 9; i++)</div>
-<div class="line"><span class="lineno">  154</span>            {</div>
-<div class="line"><span class="lineno">  155</span>                map-&gt;addTile(</div>
-<div class="line"><span class="lineno">  156</span>                        [=](<a class="code hl_class" href="../../d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html">LTE::tilemap::tileBuilder</a> *tileBuild)</div>
-<div class="line"><span class="lineno">  157</span>                        {</div>
-<div class="line"><span class="lineno">  158</span>                            tileBuild-&gt;</div>
-<div class="line"><span class="lineno">  159</span>                                setTileMatrial(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(<span class="stringliteral">&quot;res/topDownScene/textures/Package/atlas_16x.png&quot;</span>))-&gt;</div>
-<div class="line"><span class="lineno">  160</span>                                setLayer(0)-&gt;</div>
-<div class="line"><span class="lineno">  161</span>                                setTilePostion({0, i});</div>
-<div class="line"><span class="lineno">  162</span>                        }</div>
-<div class="line"><span class="lineno">  163</span>                );</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>                map-&gt;addTile(</div>
-<div class="line"><span class="lineno">  166</span>                        [=](<a class="code hl_class" href="../../d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html">LTE::tilemap::tileBuilder</a> *tileBuild)</div>
-<div class="line"><span class="lineno">  167</span>                        {</div>
-<div class="line"><span class="lineno">  168</span>                            tileBuild-&gt;</div>
-<div class="line"><span class="lineno">  169</span>                                setTileMatrial(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(<span class="stringliteral">&quot;res/topDownScene/textures/Package/atlas_16x.png&quot;</span>))-&gt;</div>
-<div class="line"><span class="lineno">  170</span>                                setLayer(0)-&gt;</div>
-<div class="line"><span class="lineno">  171</span>                                setTilePostion({9, i});</div>
-<div class="line"><span class="lineno">  172</span>                        }</div>
-<div class="line"><span class="lineno">  173</span>                );</div>
-<div class="line"><span class="lineno">  174</span> </div>
-<div class="line"><span class="lineno">  175</span> </div>
-<div class="line"><span class="lineno">  176</span>                map-&gt;addTile(</div>
-<div class="line"><span class="lineno">  177</span>                        [=](<a class="code hl_class" href="../../d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html">LTE::tilemap::tileBuilder</a> *tileBuild)</div>
-<div class="line"><span class="lineno">  178</span>                        {</div>
-<div class="line"><span class="lineno">  179</span>                            tileBuild-&gt;</div>
-<div class="line"><span class="lineno">  180</span>                                setTileMatrial(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(<span class="stringliteral">&quot;res/topDownScene/textures/Package/atlas_16x.png&quot;</span>, 2))-&gt;</div>
-<div class="line"><span class="lineno">  181</span>                                setLayer(0)-&gt;</div>
-<div class="line"><span class="lineno">  182</span>                                setTilePostion({i, 0});</div>
-<div class="line"><span class="lineno">  183</span>                        }</div>
-<div class="line"><span class="lineno">  184</span>                );</div>
-<div class="line"><span class="lineno">  185</span> </div>
-<div class="line"><span class="lineno">  186</span>                map-&gt;addTile(</div>
-<div class="line"><span class="lineno">  187</span>                        [=](<a class="code hl_class" href="../../d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html">LTE::tilemap::tileBuilder</a> *tileBuild)</div>
-<div class="line"><span class="lineno">  188</span>                        {</div>
-<div class="line"><span class="lineno">  189</span>                            tileBuild-&gt;</div>
-<div class="line"><span class="lineno">  190</span>                                setTileMatrial(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(<span class="stringliteral">&quot;res/topDownScene/textures/Package/atlas_16x.png&quot;</span>, 1))-&gt;</div>
-<div class="line"><span class="lineno">  191</span>                                setLayer(0)-&gt;</div>
-<div class="line"><span class="lineno">  192</span>                                setTilePostion({i, 9});</div>
-<div class="line"><span class="lineno">  193</span>                        }</div>
-<div class="line"><span class="lineno">  194</span>                );</div>
-<div class="line"><span class="lineno">  195</span>            }</div>
-<div class="line"><span class="lineno">  196</span> </div>
-<div class="line"><span class="lineno">  197</span> </div>
-<div class="line"><span class="lineno">  198</span>            map-&gt;addTile(</div>
-<div class="line"><span class="lineno">  199</span>                    [=](<a class="code hl_class" href="../../d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html">LTE::tilemap::tileBuilder</a> *tileBuild)</div>
-<div class="line"><span class="lineno">  200</span>                    {</div>
-<div class="line"><span class="lineno">  201</span>                        tileBuild-&gt;</div>
-<div class="line"><span class="lineno">  202</span>                            setTileMatrial(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(<span class="stringliteral">&quot;res/topDownScene/textures/PIPOYA FREE RPG Character Sprites NEKONIN/pipo-nekonin011.png&quot;</span>, 1, 3))-&gt;</div>
-<div class="line"><span class="lineno">  203</span>                            setLayer(1)-&gt;</div>
-<div class="line"><span class="lineno">  204</span>                            setTilePostion({5, 5})-&gt;</div>
-<div class="line"><span class="lineno">  205</span>                            AddCompponnetToTile(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/d2e/classplayer.html">player</a>());</div>
-<div class="line"><span class="lineno">  206</span>                    }</div>
-<div class="line"><span class="lineno">  207</span>            );</div>
-<div class="line"><span class="lineno">  208</span> </div>
-<div class="line"><span class="lineno">  209</span> </div>
-<div class="line"><span class="lineno">  210</span>            <a class="code hl_function" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397">LTE::eventManger::startBuildingEvent</a>()-&gt;</div>
-<div class="line"><span class="lineno">  211</span>                setEventRoute(<span class="stringliteral">&quot;Window close/close app&quot;</span>)-&gt;</div>
-<div class="line"><span class="lineno">  212</span>                setEventCallback(WindowClose)-&gt;add();</div>
-<div class="line"><span class="lineno">  213</span>        }</div>
-<div class="ttc" id="aclass_l_t_e_1_1app_html_ab62cbeaa31b7f861b6938d6b7ac82968"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968">LTE::app::init</a></div><div class="ttdeci">static void init()</div><div class="ttdef"><b>Definition:</b> app.cpp:27</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1event_manger_html_a205c8d664c9d7ce70155f1a125404397"><div class="ttname"><a href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a205c8d664c9d7ce70155f1a125404397">LTE::eventManger::startBuildingEvent</a></div><div class="ttdeci">static eventBuilder * startBuildingEvent()</div><div class="ttdef"><b>Definition:</b> events.cpp:52</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>        { </div>
+<div class="line"><span class="lineno">  117</span>            <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968">LTE::app::init</a>();</div>
+<div class="line"><span class="lineno">  118</span>            initWindows();</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>            <a class="code hl_typedef" href="../../dc/d59/namespace_l_t_e.html#a19087a9b8ea8653191a7efdb616a92b4">sceneId</a> =  <a class="code hl_function" href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#a96129d4d00a2fb857a020471f9ec55fc">LTE::sceneManger::addScene</a>([=](<a class="code hl_class" href="../../d3/db0/class_l_t_e_1_1scene_builder.html">LTE::sceneBuilder</a> *build)</div>
+<div class="line"><span class="lineno">  121</span>            {</div>
+<div class="line"><span class="lineno">  122</span>                build-&gt;<a class="code hl_function" href="../../d3/db0/class_l_t_e_1_1scene_builder.html#a4c682dc23d6989698bf66b51cc150ef5">setBackgroundColor</a>(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(glm::vec4({0.2f, 0.2f, 0.2f, 1.0f})));</div>
+<div class="line"><span class="lineno">  123</span>            });</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>            gameScene = <a class="code hl_function" href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#a3dc19de53c0c790c5855c864df93f418">LTE::sceneManger::getScene</a>(sceneId);</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>            LTE::assetManager::getAsset&lt;LTE::texture&gt;(<span class="stringliteral">&quot;res/topDownScene/textures/Meta data assets files/ENVIRONMENT/tilesets/dungeon-tileset.png&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  129</span>                setSprtieData(</div>
+<div class="line"><span class="lineno">  130</span>                    {</div>
+<div class="line"><span class="lineno">  131</span>                        {{1, 48}, {15, 15}},</div>
+<div class="line"><span class="lineno">  132</span>                        {{1, 66}, {16, 14}},</div>
+<div class="line"><span class="lineno">  133</span>                    </div>
+<div class="line"><span class="lineno">  134</span>                    });</div>
+<div class="line"><span class="lineno">  135</span>            </div>
+<div class="line"><span class="lineno">  136</span>            LTE::assetManager::getAsset&lt;LTE::texture&gt;(<span class="stringliteral">&quot;res/topDownScene/textures/Package/atlas_16x.png&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  137</span>                setSprtieData(</div>
+<div class="line"><span class="lineno">  138</span>                    {</div>
+<div class="line"><span class="lineno">  139</span>                        {{16, 112}, {16, 16}},                    </div>
+<div class="line"><span class="lineno">  140</span>                        {{16, 197}, {16, 32}},                    </div>
+<div class="line"><span class="lineno">  141</span>                        {{16, 197}, {16, 32}},                    </div>
+<div class="line"><span class="lineno">  142</span>                    });</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>            LTE::assetManager::getAsset&lt;LTE::texture&gt;(<span class="stringliteral">&quot;res/topDownScene/textures/PIPOYA FREE RPG Character Sprites NEKONIN/pipo-nekonin011.png&quot;</span>)-&gt;</div>
+<div class="line"><span class="lineno">  145</span>                setSprtieData({32, 32});</div>
+<div class="line"><span class="lineno">  146</span>            </div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>            <a class="code hl_class" href="../../d5/d49/class_l_t_e_1_1tilemap.html">LTE::tilemap</a> *map = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/d49/class_l_t_e_1_1tilemap.html">LTE::tilemap</a>({1000, 1000}, {100, 100}, 6, <a class="code hl_typedef" href="../../dc/d59/namespace_l_t_e.html#a19087a9b8ea8653191a7efdb616a92b4">sceneId</a>);</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = 1; x &lt; 9; x++)</div>
+<div class="line"><span class="lineno">  151</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = 1; y &lt; 9; y++)</div>
+<div class="line"><span class="lineno">  152</span>                        map-&gt;<a class="code hl_function" href="../../d5/d49/class_l_t_e_1_1tilemap.html#a0026f12dfb077d227ee52b6f260c18be">addTile</a>(</div>
+<div class="line"><span class="lineno">  153</span>                                [=](<a class="code hl_class" href="../../d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html">LTE::tilemap::tileBuilder</a> *tileBuild)</div>
+<div class="line"><span class="lineno">  154</span>                                {</div>
+<div class="line"><span class="lineno">  155</span>                                    tileBuild-&gt;</div>
+<div class="line"><span class="lineno">  156</span>                                        setTileMatrial(new LTE::material(<span class="stringliteral">&quot;res/topDownScene/textures/Package/atlas_16x.png&quot;</span>))-&gt;</div>
+<div class="line"><span class="lineno">  157</span>                                        setLayer(0)-&gt;</div>
+<div class="line"><span class="lineno">  158</span>                                        setTilePostion({x, y});</div>
+<div class="line"><span class="lineno">  159</span>                                }</div>
+<div class="line"><span class="lineno">  160</span>                        );</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; 9; i++)</div>
+<div class="line"><span class="lineno">  163</span>            {</div>
+<div class="line"><span class="lineno">  164</span>                map-&gt;addTile(</div>
+<div class="line"><span class="lineno">  165</span>                        [=](<a class="code hl_class" href="../../d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html">LTE::tilemap::tileBuilder</a> *tileBuild)</div>
+<div class="line"><span class="lineno">  166</span>                        {</div>
+<div class="line"><span class="lineno">  167</span>                            tileBuild-&gt;</div>
+<div class="line"><span class="lineno">  168</span>                                setTileMatrial(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(<span class="stringliteral">&quot;res/topDownScene/textures/Package/atlas_16x.png&quot;</span>))-&gt;</div>
+<div class="line"><span class="lineno">  169</span>                                setLayer(0)-&gt;</div>
+<div class="line"><span class="lineno">  170</span>                                setTilePostion({0, i});</div>
+<div class="line"><span class="lineno">  171</span>                        }</div>
+<div class="line"><span class="lineno">  172</span>                );</div>
+<div class="line"><span class="lineno">  173</span> </div>
+<div class="line"><span class="lineno">  174</span>                map-&gt;addTile(</div>
+<div class="line"><span class="lineno">  175</span>                        [=](<a class="code hl_class" href="../../d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html">LTE::tilemap::tileBuilder</a> *tileBuild)</div>
+<div class="line"><span class="lineno">  176</span>                        {</div>
+<div class="line"><span class="lineno">  177</span>                            tileBuild-&gt;</div>
+<div class="line"><span class="lineno">  178</span>                                setTileMatrial(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(<span class="stringliteral">&quot;res/topDownScene/textures/Package/atlas_16x.png&quot;</span>))-&gt;</div>
+<div class="line"><span class="lineno">  179</span>                                setLayer(0)-&gt;</div>
+<div class="line"><span class="lineno">  180</span>                                setTilePostion({9, i});</div>
+<div class="line"><span class="lineno">  181</span>                        }</div>
+<div class="line"><span class="lineno">  182</span>                );</div>
+<div class="line"><span class="lineno">  183</span> </div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>                map-&gt;addTile(</div>
+<div class="line"><span class="lineno">  186</span>                        [=](<a class="code hl_class" href="../../d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html">LTE::tilemap::tileBuilder</a> *tileBuild)</div>
+<div class="line"><span class="lineno">  187</span>                        {</div>
+<div class="line"><span class="lineno">  188</span>                            tileBuild-&gt;</div>
+<div class="line"><span class="lineno">  189</span>                                setTileMatrial(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(<span class="stringliteral">&quot;res/topDownScene/textures/Package/atlas_16x.png&quot;</span>, 2))-&gt;</div>
+<div class="line"><span class="lineno">  190</span>                                setLayer(0)-&gt;</div>
+<div class="line"><span class="lineno">  191</span>                                setTilePostion({i, 0});</div>
+<div class="line"><span class="lineno">  192</span>                        }</div>
+<div class="line"><span class="lineno">  193</span>                );</div>
+<div class="line"><span class="lineno">  194</span> </div>
+<div class="line"><span class="lineno">  195</span>                map-&gt;addTile(</div>
+<div class="line"><span class="lineno">  196</span>                        [=](<a class="code hl_class" href="../../d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html">LTE::tilemap::tileBuilder</a> *tileBuild)</div>
+<div class="line"><span class="lineno">  197</span>                        {</div>
+<div class="line"><span class="lineno">  198</span>                            tileBuild-&gt;</div>
+<div class="line"><span class="lineno">  199</span>                                setTileMatrial(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(<span class="stringliteral">&quot;res/topDownScene/textures/Package/atlas_16x.png&quot;</span>, 1))-&gt;</div>
+<div class="line"><span class="lineno">  200</span>                                setLayer(0)-&gt;</div>
+<div class="line"><span class="lineno">  201</span>                                setTilePostion({i, 9});</div>
+<div class="line"><span class="lineno">  202</span>                        }</div>
+<div class="line"><span class="lineno">  203</span>                );</div>
+<div class="line"><span class="lineno">  204</span>            }</div>
+<div class="line"><span class="lineno">  205</span> </div>
+<div class="line"><span class="lineno">  206</span> </div>
+<div class="line"><span class="lineno">  207</span>            map-&gt;addTile(</div>
+<div class="line"><span class="lineno">  208</span>                    [=](<a class="code hl_class" href="../../d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html">LTE::tilemap::tileBuilder</a> *tileBuild)</div>
+<div class="line"><span class="lineno">  209</span>                    {</div>
+<div class="line"><span class="lineno">  210</span>                        tileBuild-&gt;</div>
+<div class="line"><span class="lineno">  211</span>                            setTileMatrial(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>(<span class="stringliteral">&quot;res/topDownScene/textures/PIPOYA FREE RPG Character Sprites NEKONIN/pipo-nekonin011.png&quot;</span>, 1, 3))-&gt;</div>
+<div class="line"><span class="lineno">  212</span>                            setLayer(1)-&gt;</div>
+<div class="line"><span class="lineno">  213</span>                            setTilePostion({5, 5})-&gt;</div>
+<div class="line"><span class="lineno">  214</span>                            AddCompponnetToTile(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/d2e/classplayer.html">player</a>());</div>
+<div class="line"><span class="lineno">  215</span>                    }</div>
+<div class="line"><span class="lineno">  216</span>            );</div>
+<div class="line"><span class="lineno">  217</span>        }</div>
+<div class="ttc" id="aclass_l_t_e_1_1app_html_ab62cbeaa31b7f861b6938d6b7ac82968"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968">LTE::app::init</a></div><div class="ttdeci">static void init()</div><div class="ttdef"><b>Definition:</b> app.cpp:25</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1material_html"><div class="ttname"><a href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a></div><div class="ttdef"><b>Definition:</b> material.h:13</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1tilemap_1_1tile_builder_html"><div class="ttname"><a href="../../d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html">LTE::tilemap::tileBuilder</a></div><div class="ttdef"><b>Definition:</b> tilemap.h:79</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1tilemap_html"><div class="ttname"><a href="../../d5/d49/class_l_t_e_1_1tilemap.html">LTE::tilemap</a></div><div class="ttdef"><b>Definition:</b> tilemap.h:76</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_builder_html"><div class="ttname"><a href="../../d3/db0/class_l_t_e_1_1scene_builder.html">LTE::sceneBuilder</a></div><div class="ttdef"><b>Definition:</b> sceneManger.h:15</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_builder_html_a4c682dc23d6989698bf66b51cc150ef5"><div class="ttname"><a href="../../d3/db0/class_l_t_e_1_1scene_builder.html#a4c682dc23d6989698bf66b51cc150ef5">LTE::sceneBuilder::setBackgroundColor</a></div><div class="ttdeci">void setBackgroundColor(material *color)</div><div class="ttdef"><b>Definition:</b> sceneManger.h:38</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_manger_html_a3dc19de53c0c790c5855c864df93f418"><div class="ttname"><a href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#a3dc19de53c0c790c5855c864df93f418">LTE::sceneManger::getScene</a></div><div class="ttdeci">static scene * getScene(sceneId sceneID)</div><div class="ttdef"><b>Definition:</b> sceneManger.cpp:50</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_manger_html_a96129d4d00a2fb857a020471f9ec55fc"><div class="ttname"><a href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#a96129d4d00a2fb857a020471f9ec55fc">LTE::sceneManger::addScene</a></div><div class="ttdeci">static sceneId addScene(std::function&lt; void(sceneBuilder *Builder)&gt; buildScene)</div><div class="ttdef"><b>Definition:</b> sceneManger.cpp:22</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1tilemap_1_1tile_builder_html"><div class="ttname"><a href="../../d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html">LTE::tilemap::tileBuilder</a></div><div class="ttdef"><b>Definition:</b> tilemap.h:80</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1tilemap_html"><div class="ttname"><a href="../../d5/d49/class_l_t_e_1_1tilemap.html">LTE::tilemap</a></div><div class="ttdef"><b>Definition:</b> tilemap.h:77</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1tilemap_html_a0026f12dfb077d227ee52b6f260c18be"><div class="ttname"><a href="../../d5/d49/class_l_t_e_1_1tilemap.html#a0026f12dfb077d227ee52b6f260c18be">LTE::tilemap::addTile</a></div><div class="ttdeci">void addTile(const std::function&lt; void(tileBuilder *Builder)&gt; &amp;buildTile)</div><div class="ttdef"><b>Definition:</b> tilemap.h:215</div></div>
-<div class="ttc" id="aclassplayer_html"><div class="ttname"><a href="../../dc/d2e/classplayer.html">player</a></div><div class="ttdef"><b>Definition:</b> topDownScene.cpp:23</div></div>
+<div class="ttc" id="aclassplayer_html"><div class="ttname"><a href="../../dc/d2e/classplayer.html">player</a></div><div class="ttdef"><b>Definition:</b> topDownScene.cpp:25</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a19087a9b8ea8653191a7efdb616a92b4"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a19087a9b8ea8653191a7efdb616a92b4">LTE::sceneId</a></div><div class="ttdeci">uint32_t sceneId</div><div class="ttdef"><b>Definition:</b> core.h:15</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d2a/classtop_down_game_affddad18a1e078e9ff8ae68212a8d889_cgraph.png" border="0" usemap="#ad5/d2a/classtop_down_game_affddad18a1e078e9ff8ae68212a8d889_cgraph" alt=""/></div>
 <map name="ad5/d2a/classtop_down_game_affddad18a1e078e9ff8ae68212a8d889_cgraph" id="ad5/d2a/classtop_down_game_affddad18a1e078e9ff8ae68212a8d889_cgraph">
-<area shape="rect" title=" " alt="" coords="5,271,156,298"/>
-<area shape="rect" href="../../d5/d49/class_l_t_e_1_1tilemap.html#a0026f12dfb077d227ee52b6f260c18be" title=" " alt="" coords="204,246,347,273"/>
-<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968" title=" " alt="" coords="227,297,323,323"/>
-<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#ab919ce364eba9e5575e9bbd39bdec65a" title=" " alt="" coords="423,5,586,47"/>
-<area shape="rect" href="../../df/dfd/class_l_t_e_1_1file_manager.html#ab40d984a2e0e9a2852de6d1bd1ae6d01" title=" " alt="" coords="434,71,575,98"/>
-<area shape="rect" href="../../de/d44/class_l_t_e_1_1entity_manger.html#a22225c885988d58d0c7cbf399f0b117f" title=" " alt="" coords="430,122,579,149"/>
-<area shape="rect" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a9ecc1ecb9f354fc459738f61f7d3e6f2" title=" " alt="" coords="429,173,580,199"/>
-<area shape="rect" href="../../db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#aec513c0c085e0ada94be461af3d8463f" title=" " alt="" coords="395,224,615,265"/>
-<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a277b2812717cc421fa344980088af6ba" title=" " alt="" coords="423,289,586,331"/>
-<area shape="rect" href="../../df/d4f/class_l_t_e_1_1materials_manger.html#ac5990387a4ca87145dba87b8098dbcc4" title=" " alt="" coords="431,355,579,396"/>
-<area shape="rect" href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#ab82d6fc3da30b297b73b9e41ce4d9370" title=" " alt="" coords="428,421,581,447"/>
-<area shape="rect" href="../../de/d01/class_l_t_e_1_1sound_engine.html#a5d8a53854ed29724942f958999b2f595" title=" " alt="" coords="430,471,579,498"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#ad294dcc77093b36c11e405d8831f39e0" title=" " alt="" coords="423,522,586,549"/>
-<area shape="rect" href="../../d3/d08/class_l_t_e_1_1logger.html#a4a69e456b62e7e8488d991e722df1f56" title=" " alt="" coords="449,573,560,599"/>
-<area shape="rect" href="../../d5/d69/class_l_t_e_1_1files_factory.html#a5015959845c7b58acad47e6cb4f57a10" title=" " alt="" coords="705,35,829,76"/>
-<area shape="rect" href="../../df/d84/class_l_t_e_1_1file.html#abb756b8e1e8c6d607268971f307c4dba" title=" " alt="" coords="693,101,840,127"/>
-<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#aea84994d9c1e500db18be23213da9c97" title=" " alt="" coords="681,340,852,381"/>
-<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a1b75dcf8cb585636a03d088e0e571fc4" title=" " alt="" coords="677,405,857,447"/>
-<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#a01ae35f37a9fb2f41dd19205e324ad90" title=" " alt="" coords="663,471,871,498"/>
-<area shape="rect" href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a569c46f378859a3364d269a6b49ecfd9" title=" " alt="" coords="689,523,844,564"/>
-<area shape="rect" href="../../d7/dcb/class_l_t_e_1_1_l_t_e_exception.html#afb72941c22a01af0b4a5f057f62362ec" title=" " alt="" coords="683,589,850,615"/>
+<area shape="rect" title=" " alt="" coords="5,229,156,255"/>
+<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#ab62cbeaa31b7f861b6938d6b7ac82968" title=" " alt="" coords="204,229,300,255"/>
+<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#ab919ce364eba9e5575e9bbd39bdec65a" title=" " alt="" coords="377,5,539,47"/>
+<area shape="rect" href="../../df/dfd/class_l_t_e_1_1file_manager.html#ab40d984a2e0e9a2852de6d1bd1ae6d01" title=" " alt="" coords="387,71,529,98"/>
+<area shape="rect" href="../../db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#aec513c0c085e0ada94be461af3d8463f" title=" " alt="" coords="348,123,568,164"/>
+<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a277b2812717cc421fa344980088af6ba" title=" " alt="" coords="377,188,539,229"/>
+<area shape="rect" href="../../df/d4f/class_l_t_e_1_1materials_manger.html#ac5990387a4ca87145dba87b8098dbcc4" title=" " alt="" coords="384,253,532,295"/>
+<area shape="rect" href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#ab82d6fc3da30b297b73b9e41ce4d9370" title=" " alt="" coords="381,319,535,346"/>
+<area shape="rect" href="../../de/d01/class_l_t_e_1_1sound_engine.html#a5d8a53854ed29724942f958999b2f595" title=" " alt="" coords="383,370,533,397"/>
+<area shape="rect" href="../../d3/d08/class_l_t_e_1_1logger.html#a4a69e456b62e7e8488d991e722df1f56" title=" " alt="" coords="403,421,513,447"/>
+<area shape="rect" href="../../d5/d69/class_l_t_e_1_1files_factory.html#a5015959845c7b58acad47e6cb4f57a10" title=" " alt="" coords="658,35,782,76"/>
+<area shape="rect" href="../../df/d84/class_l_t_e_1_1file.html#abb756b8e1e8c6d607268971f307c4dba" title=" " alt="" coords="647,101,793,127"/>
+<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#aea84994d9c1e500db18be23213da9c97" title=" " alt="" coords="635,239,805,280"/>
+<area shape="rect" href="../../db/d1c/class_l_t_e_1_1_o_s_abstract_factory.html#a1b75dcf8cb585636a03d088e0e571fc4" title=" " alt="" coords="630,304,810,345"/>
+<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#a01ae35f37a9fb2f41dd19205e324ad90" title=" " alt="" coords="616,370,824,397"/>
+<area shape="rect" href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a569c46f378859a3364d269a6b49ecfd9" title=" " alt="" coords="643,421,797,463"/>
+<area shape="rect" href="../../d7/dcb/class_l_t_e_1_1_l_t_e_exception.html#afb72941c22a01af0b4a5f057f62362ec" title=" " alt="" coords="637,487,803,514"/>
 </map>
 </div>
 
@@ -298,28 +301,24 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  218</span>        { </div>
-<div class="line"><span class="lineno">  219</span>            <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5">LTE::app::close</a>();</div>
-<div class="line"><span class="lineno">  220</span>        }</div>
-<div class="ttc" id="aclass_l_t_e_1_1app_html_ae0f06737b2f489eace03ada49ae7b4d5"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5">LTE::app::close</a></div><div class="ttdeci">static void close()</div><div class="ttdef"><b>Definition:</b> app.cpp:47</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  222</span>        { </div>
+<div class="line"><span class="lineno">  223</span>            <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5">LTE::app::close</a>();</div>
+<div class="line"><span class="lineno">  224</span>        }</div>
+<div class="ttc" id="aclass_l_t_e_1_1app_html_ae0f06737b2f489eace03ada49ae7b4d5"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5">LTE::app::close</a></div><div class="ttdeci">static void close()</div><div class="ttdef"><b>Definition:</b> app.cpp:44</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d2a/classtop_down_game_a0ba304e20c2f352034c95a805b193036_cgraph.png" border="0" usemap="#ad5/d2a/classtop_down_game_a0ba304e20c2f352034c95a805b193036_cgraph" alt=""/></div>
 <map name="ad5/d2a/classtop_down_game_a0ba304e20c2f352034c95a805b193036_cgraph" id="ad5/d2a/classtop_down_game_a0ba304e20c2f352034c95a805b193036_cgraph">
-<area shape="rect" title=" " alt="" coords="5,247,179,273"/>
-<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5" title=" " alt="" coords="227,247,337,273"/>
+<area shape="rect" title=" " alt="" coords="5,159,179,185"/>
+<area shape="rect" href="../../d0/d13/class_l_t_e_1_1app.html#ae0f06737b2f489eace03ada49ae7b4d5" title=" " alt="" coords="227,159,337,185"/>
 <area shape="rect" href="../../df/dfd/class_l_t_e_1_1file_manager.html#a0550027aeb21cef2e23920c280d8a1bd" title=" " alt="" coords="418,5,573,32"/>
-<area shape="rect" href="../../de/d44/class_l_t_e_1_1entity_manger.html#a36e406876304ba1cff334e6f8849e4eb" title=" " alt="" coords="429,57,561,98"/>
-<area shape="rect" href="../../d5/d7c/class_l_t_e_1_1event_manger.html#a2bae0fc540e166323381f7a8196ab083" title=" " alt="" coords="413,123,577,149"/>
-<area shape="rect" href="../../db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#a7c5cb8c18c0087c64f0f390a8303381d" title=" " alt="" coords="385,174,605,215"/>
-<area shape="rect" href="../../df/d4f/class_l_t_e_1_1materials_manger.html#a8b8ed9bdc8b605a34e400ef063bbbaaa" title=" " alt="" coords="421,239,569,281"/>
-<area shape="rect" href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#a0283902fc92e532c624432bd2e9ecf71" title=" " alt="" coords="412,305,579,332"/>
-<area shape="rect" href="../../de/d01/class_l_t_e_1_1sound_engine.html#ac22cd141150c6a59ef28993c06936837" title=" " alt="" coords="414,356,577,383"/>
-<area shape="rect" href="../../d3/d08/class_l_t_e_1_1logger.html#ae651e5c9c40cb1a56ad4c0c7df3930fd" title=" " alt="" coords="433,407,557,433"/>
-<area shape="rect" href="../../de/de3/class_l_t_e_1_1window_manger.html#a6ecf67fe5928e63ba34ea590f5f41cee" title=" " alt="" coords="423,458,568,499"/>
-<area shape="rect" href="../../d7/d22/class_l_t_e_1_1router.html#aca69970c0dca265325b046f9aef368f0" title=" " alt="" coords="653,123,832,149"/>
-<area shape="rect" href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a9cab8478ac0f4e5ff40c3b515016cd07" title=" " alt="" coords="665,349,820,390"/>
+<area shape="rect" href="../../db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html#a7c5cb8c18c0087c64f0f390a8303381d" title=" " alt="" coords="385,57,605,98"/>
+<area shape="rect" href="../../df/d4f/class_l_t_e_1_1materials_manger.html#a8b8ed9bdc8b605a34e400ef063bbbaaa" title=" " alt="" coords="421,122,569,163"/>
+<area shape="rect" href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#a0283902fc92e532c624432bd2e9ecf71" title=" " alt="" coords="412,188,579,215"/>
+<area shape="rect" href="../../de/d01/class_l_t_e_1_1sound_engine.html#ac22cd141150c6a59ef28993c06936837" title=" " alt="" coords="414,239,577,265"/>
+<area shape="rect" href="../../d3/d08/class_l_t_e_1_1logger.html#ae651e5c9c40cb1a56ad4c0c7df3930fd" title=" " alt="" coords="433,289,557,316"/>
+<area shape="rect" href="../../d2/dff/class_l_t_e_1_1sound_synthesizer.html#a9cab8478ac0f4e5ff40c3b515016cd07" title=" " alt="" coords="653,231,808,273"/>
 </map>
 </div>
 

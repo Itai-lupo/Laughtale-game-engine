@@ -1,4 +1,3 @@
-#pragma once
 #include "glad/glad.h"
 
 #include "openGLTexture.h"
@@ -40,22 +39,28 @@ namespace LTE
 	{		
 		changeId = parentContainer->getChangeId();
         glDeleteTextures(1, &id);
-		GL_CALL(glCreateTextures(GL_TEXTURE_2D, 1, &id));
+		GL_CALL(glCreateTextures((parentContainer->getSamples() > 1)? GL_TEXTURE_2D_MULTISAMPLE : GL_TEXTURE_2D, 1, &id));
 
-		GL_CALL(glTextureStorage2D(id, 1, textureFormatToOpenGlFormat(parentContainer->getFormat()), parentContainer->getWidth(), parentContainer->getHeight()));
+		if (parentContainer->getSamples() > 1)
+		{
+			glTextureStorage2DMultisample(id, parentContainer->getSamples(), textureFormatToOpenGlFormat(parentContainer->getFormat()), parentContainer->getWidth(), parentContainer->getHeight(), GL_FALSE);
+		}
+		else
+		{
+			GL_CALL(glTextureStorage2D(id, 1, textureFormatToOpenGlFormat(parentContainer->getFormat()), parentContainer->getWidth(), parentContainer->getHeight()));
 
-		GL_CALL(glTexImage2D(GL_TEXTURE_2D, 0, textureFormatToOpenGlFormat(parentContainer->getFormat()), parentContainer->getWidth(), parentContainer->getHeight(), 0, textureFormatToOpenGlDataFormat(parentContainer->getFormat()), GL_UNSIGNED_BYTE, NULL));
 
-		GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR));
-		GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR));
-		GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE));
-		GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE));
-		GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE));
+			GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR));
+			GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR));
+			GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE));
+			GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE));
+			GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE));
+		}
 	}
 
 	void openGLTexture::uploadDataFromFile()
 	{
-		stbi_set_flip_vertically_on_load(1);
+ 		stbi_set_flip_vertically_on_load(1);
 		stbi_uc* data = nullptr;
 		
         data = stbi_load(parentContainer->getPath().c_str(), parentContainer->getWidthPtr(), parentContainer->getHeightPtr(), parentContainer->getChannelsPtr(), 0);

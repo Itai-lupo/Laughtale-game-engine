@@ -14,7 +14,9 @@ var dir_2559567b361f07c773f9d9dac257f09a =
     [ "graphicsContext.h", "d3/d9e/graphics_context_8h.html", [
       [ "LTE::graphicsContext", "d7/d20/class_l_t_e_1_1graphics_context.html", "d7/d20/class_l_t_e_1_1graphics_context" ]
     ] ],
-    [ "ImGuiEvents.h", "dd/db2/_im_gui_events_8h.html", "dd/db2/_im_gui_events_8h" ],
+    [ "ImGuiEvents.h", "dd/db2/_im_gui_events_8h.html", [
+      [ "LTE::ImGuiEvents", "d0/de3/class_l_t_e_1_1_im_gui_events.html", "d0/de3/class_l_t_e_1_1_im_gui_events" ]
+    ] ],
     [ "indexBuffer.h", "df/de0/index_buffer_8h.html", [
       [ "LTE::indexBufferRenderApi", "da/d48/class_l_t_e_1_1index_buffer_render_api.html", "da/d48/class_l_t_e_1_1index_buffer_render_api" ],
       [ "LTE::indexBuffer", "d6/d2f/class_l_t_e_1_1index_buffer.html", "d6/d2f/class_l_t_e_1_1index_buffer" ]

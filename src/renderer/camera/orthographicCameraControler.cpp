@@ -1,53 +1,47 @@
+#include "app.h"
 #include "orthographicCameraControler.h"
 #include "logger.h"
-#include "entity.h"
 #include "MouseButtonCodes.h"
 
 #include "window.h"
+#include "windowManger.h"
 
 namespace LTE
 {
-    void orthographicCameraControler::OnMouseScrolled(gameObject *cameraInfo, coreEventData *sendor)
+    void orthographicCameraControler::onMouseScroll(mouseScrollData *sendor)
     {
-        mouseScrollData *eventData = dynamic_cast<mouseScrollData *>(sendor);
-        orthographicCameraControler *thisCamera = cameraInfo->getComponent<orthographicCameraControler>();
+        zoomLevel -= sendor->yOffset * 0.25f;
+		zoomLevel = std::max(zoomLevel, 0.25f);
 
-        thisCamera->zoomLevel -= eventData->yOffset * 0.25f;
-		thisCamera->zoomLevel = std::max(thisCamera->zoomLevel, 0.25f);
-
-		thisCamera->camera.SetProjection(-thisCamera->aspectRatio * thisCamera->zoomLevel, thisCamera->aspectRatio * thisCamera->zoomLevel, -thisCamera->zoomLevel, thisCamera->zoomLevel);
+		camera.SetProjection(-aspectRatio * zoomLevel, aspectRatio * zoomLevel, -zoomLevel, zoomLevel);
     }
 
-    void orthographicCameraControler::OnWindowResized(gameObject *cameraInfo, coreEventData *sendor)
+    void orthographicCameraControler::onWindowResize(WindowResizeData *sendor)
     {
-        WindowResizeData *eventData = dynamic_cast<WindowResizeData *>(sendor);
-        orthographicCameraControler *thisCamera = cameraInfo->getComponent<orthographicCameraControler>();
-
-        thisCamera->aspectRatio = (float)eventData->windowWidth / (float)eventData->windowHeight;
-		thisCamera->camera.SetProjection(-thisCamera->aspectRatio * thisCamera->zoomLevel, thisCamera->aspectRatio * thisCamera->zoomLevel, -thisCamera->zoomLevel, thisCamera->zoomLevel);
+        aspectRatio = (float)sendor->windowWidth / (float)sendor->windowHeight;
+		camera.SetProjection(-aspectRatio * zoomLevel, aspectRatio * zoomLevel, -zoomLevel, zoomLevel);
     }
 
-    void orthographicCameraControler::OnUpdate(gameObject *cameraInfo, coreEventData *sendor)
+    void orthographicCameraControler::onWindowRender(windowRenderData *sendor)
     {
-        return;
-        onUpdateData *eventData = dynamic_cast<onUpdateData *>(sendor);   
-        orthographicCameraControler *thisCamera = cameraInfo->getComponent<orthographicCameraControler>();
+        window *win = app::getWindowManger()->getWindow(sendor->windowId);
 
-
-        if(eventData->win->inputManger->isMouseButtonPressed(LT_MOUSE_BUTTON_MIDDLE))
+        if(win->inputManger->isMouseButtonPressed(LT_MOUSE_BUTTON_MIDDLE))
         {
-            glm::vec3 cameraPostion = thisCamera->camera.getPosition();
-            cameraPostion.x += ((eventData->win->inputManger->GetMouseX() - thisCamera->mouseLastPostion.x) * (1 /  (float)eventData->win->Width)) * eventData->DeltaTime;
-            cameraPostion.y += ((eventData->win->inputManger->GetMouseY() - thisCamera->mouseLastPostion.y) * (1 / (float)eventData->win->Height)) * eventData->DeltaTime;
+            glm::vec3 cameraPostion = camera.getPosition();
+            cameraPostion.x += ((win->inputManger->GetMouseX() - mouseLastPostion.x) * (1 /  (float)win->Width)) * sendor->DeltaTime;
+            cameraPostion.y += ((win->inputManger->GetMouseY() - mouseLastPostion.y) * (1 / (float)win->Height)) * sendor->DeltaTime;
 
-            thisCamera->camera.SetPosition(cameraPostion);
-            LAUGHTALE_ENGINR_LOG_INFO(eventData->win->inputManger->GetMouseX()  << ", " << cameraPostion.y);
+            camera.SetPosition(cameraPostion);
+            LAUGHTALE_ENGINR_LOG_INFO(win->inputManger->GetMouseX()  << ", " << cameraPostion.y);
         }
-        thisCamera->mouseLastPostion = eventData->win->inputManger->GetMousePosition();
+        mouseLastPostion = win->inputManger->GetMousePosition();
     }
 
     orthographicCameraControler::orthographicCameraControler(float aspectRatio, bool useCameraRotation)
-        :aspectRatio(aspectRatio), camera(-aspectRatio * zoomLevel, aspectRatio * zoomLevel, -zoomLevel, zoomLevel), useCameraRotation(useCameraRotation)
+        :   osEvent({ osEventsType::windowRender, osEventsType::WindowResize, osEventsType::MouseScroll }), 
+            aspectRatio(aspectRatio), camera(-aspectRatio * zoomLevel, aspectRatio * zoomLevel, -zoomLevel, zoomLevel), 
+            useCameraRotation(useCameraRotation)
     {
 
     }
@@ -59,24 +53,6 @@ namespace LTE
 
     void orthographicCameraControler::init(gameObject *parent)
     {
-        OnUpdateId = eventManger::startBuildingEvent()->
-                setEventRoute("App update/move camera " + std::to_string(parentId))->
-                setEventCallback(OnUpdate)->
-                setEntityID(parentId)->
-                setWindowId(winId)->add();
-                
-        OnMouseScrolledId = eventManger::startBuildingEvent()->
-                setEventRoute("Window resize/handel view resize " + std::to_string(parentId))->
-                setEventCallback(OnWindowResized)->
-                setEntityID(parentId)->
-                setWindowId(winId)->add();
-                
-        OnWindowResizedId = eventManger::startBuildingEvent()->
-                setEventRoute("Mouse scrolled/change zoom level " + std::to_string(parentId))->
-                setEventCallback(OnMouseScrolled)->
-                setEntityID(parentId)->
-                setWindowId(winId)->add();
-         
     }
     
     void orthographicCameraControler::end()

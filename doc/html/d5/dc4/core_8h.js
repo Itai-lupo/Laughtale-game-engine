@@ -2,9 +2,9 @@ var core_8h =
 [
     [ "apoEnvelopeId", "d5/dc4/core_8h.html#ada3941c65906b75119841a18e7d3fff5", null ],
     [ "connectionId", "d5/dc4/core_8h.html#ac6d5832948f68fe70c846157ac9ad55d", null ],
-    [ "entityTaleId", "d5/dc4/core_8h.html#a9a053246fe6d76fb97a3d9e95c94dbda", null ],
     [ "eventLaughId", "d5/dc4/core_8h.html#a0e8bc231377ff780288f8eb847a80328", null ],
     [ "framebufferId", "d5/dc4/core_8h.html#a50a5c0c325cc38b40cb1e73dee26fc2c", null ],
+    [ "gameObjectId", "d5/dc4/core_8h.html#a7453a44af781c118bd678959bdd02674", null ],
     [ "materialId", "d5/dc4/core_8h.html#af716e48d1fb65bf5074895482525a959", null ],
     [ "packetId", "d5/dc4/core_8h.html#aa2840f977937eeb2d93840e06e78e7b8", null ],
     [ "sceneId", "d5/dc4/core_8h.html#a19087a9b8ea8653191a7efdb616a92b4", null ],

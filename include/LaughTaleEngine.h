@@ -5,8 +5,7 @@
 #include "app.h"
 #include "logger.h"
 
-#include "events.h"
-#include "entity.h"
+#include "gameobject.h"
 
 #include "windowManger.h"
 #include "MouseButtonCodes.h"
@@ -32,7 +31,7 @@
 
 #include "colliderSystem2D.h"
 #include "squreCollider.h"
-#include "colliderEventData.h"
+
 
 #include "tilemap.h"
 

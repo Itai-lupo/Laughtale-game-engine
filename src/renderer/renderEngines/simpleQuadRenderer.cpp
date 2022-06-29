@@ -1,4 +1,3 @@
-#pragma once
 #include "simpleQuadRenderer.h"
 #include "meshAbsrtactFactory.h"
 #include "shaderTypes.h"
@@ -9,7 +8,7 @@
 namespace LTE
 {
 
-    simpleQuadRenderer::simpleQuadRenderer(const std::string& textureName, renderApi *renderPipLine): coreRenderer(renderPipLine), textureName(textureName)
+    simpleQuadRenderer::simpleQuadRenderer(const std::string& textureName): textureName(textureName)
     {
         vertexBufferData = new VertexBuffer(squrePostions, 4 * 5* sizeof(float));
         indicesToRender = new indexBuffer(squreIndices, 6); 
@@ -26,8 +25,8 @@ namespace LTE
     void simpleQuadRenderer::renderScene()
     {
         
-        renderPipLine->SetClearColor({0, 0, 0, 1});
-        renderPipLine->Clear();
+        graphicsContext::getRenderApi()->SetClearColor({1, 0, 0, 1});
+        graphicsContext::getRenderApi()->Clear();
         s->bind();
         s->setUniform1i("textureData", 1);
         s->setUniform4f("MatColor", 0.0f, 0.0f, 0.0f, 0.0f);
@@ -40,7 +39,7 @@ namespace LTE
         if(textureData)
             textureData->bind(1);
 
-        renderPipLine->DrawIndexed(indicesToRender->getCount());    
+        graphicsContext::getRenderApi()->DrawIndexed(indicesToRender->getCount());    
 
     }
     

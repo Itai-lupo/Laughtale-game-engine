@@ -10,6 +10,6 @@ var dir_e95858a08b84860be6b6a2ab17c4a02d =
       [ "LTE::windowBuilder", "d0/d26/class_l_t_e_1_1window_builder.html", "d0/d26/class_l_t_e_1_1window_builder" ]
     ] ],
     [ "windowManger.h", "de/de3/window_manger_8h.html", [
-      [ "LTE::windowManger", "de/de3/class_l_t_e_1_1window_manger.html", null ]
+      [ "LTE::windowManger", "de/de3/class_l_t_e_1_1window_manger.html", "de/de3/class_l_t_e_1_1window_manger" ]
     ] ]
 ];

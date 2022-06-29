@@ -23,14 +23,9 @@ var hierarchy =
       ] ],
       [ "LTE::material", "dc/dda/class_l_t_e_1_1material.html", null ],
       [ "LTE::mesh", "d0/d6c/class_l_t_e_1_1mesh.html", null ],
-      [ "LTE::meshRenderer", "d2/df6/class_l_t_e_1_1mesh_renderer.html", null ],
       [ "LTE::squreCollider", "dd/d78/class_l_t_e_1_1squre_collider.html", null ],
       [ "LTE::transform", "d6/d08/class_l_t_e_1_1transform.html", null ],
       [ "bird", "da/dee/classbird.html", null ],
-      [ "board", "d2/d44/classboard.html", null ],
-      [ "piece", "d8/d3c/classpiece.html", [
-        [ "pawn", "dd/d8a/classpawn.html", null ]
-      ] ],
       [ "pilar", "d1/d69/classpilar.html", null ],
       [ "pilarDestroyer", "d8/d09/classpilar_destroyer.html", null ],
       [ "pilarSummener", "d3/ded/classpilar_summener.html", null ],
@@ -40,19 +35,6 @@ var hierarchy =
     [ "LTE::GMNM::connectionsManager", "db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html", null ],
     [ "LTE::coreCamera", "dd/d9e/class_l_t_e_1_1core_camera.html", [
       [ "LTE::orthographicCamera", "d9/dd5/class_l_t_e_1_1orthographic_camera.html", null ]
-    ] ],
-    [ "LTE::coreEventData", "d3/d94/struct_l_t_e_1_1core_event_data.html", [
-      [ "LTE::GMNM::connectionData", "d8/d0e/struct_l_t_e_1_1_g_m_n_m_1_1connection_data.html", [
-        [ "LTE::GMNM::connectionReadData", "d7/da3/struct_l_t_e_1_1_g_m_n_m_1_1connection_read_data.html", null ]
-      ] ],
-      [ "LTE::KeyData", "d2/df7/struct_l_t_e_1_1_key_data.html", null ],
-      [ "LTE::WindowResizeData", "d0/d31/struct_l_t_e_1_1_window_resize_data.html", null ],
-      [ "LTE::colliderEventData", "da/dce/struct_l_t_e_1_1collider_event_data.html", null ],
-      [ "LTE::keyTypedData", "df/d3b/struct_l_t_e_1_1key_typed_data.html", null ],
-      [ "LTE::mouseClickData", "d8/d50/struct_l_t_e_1_1mouse_click_data.html", null ],
-      [ "LTE::mouseMoveData", "d6/da3/struct_l_t_e_1_1mouse_move_data.html", null ],
-      [ "LTE::mouseScrollData", "d5/d4d/struct_l_t_e_1_1mouse_scroll_data.html", null ],
-      [ "LTE::onUpdateData", "dd/d5d/struct_l_t_e_1_1on_update_data.html", null ]
     ] ],
     [ "LTE::coreInput", "db/dd9/class_l_t_e_1_1core_input.html", [
       [ "LTE::linuxInput", "dc/d59/class_l_t_e_1_1linux_input.html", null ]
@@ -64,12 +46,7 @@ var hierarchy =
     [ "LTE::GMNM::dataCryptographer", "de/d78/class_l_t_e_1_1_g_m_n_m_1_1data_cryptographer.html", [
       [ "LTE::GMNM::noEncrption", "d9/dc0/class_l_t_e_1_1_g_m_n_m_1_1no_encrption.html", null ]
     ] ],
-    [ "LTE::GMNM::dataFormatter", "d7/dec/class_l_t_e_1_1_g_m_n_m_1_1data_formatter.html", [
-      [ "basicDataFormat", "d4/dc8/classbasic_data_format.html", null ]
-    ] ],
-    [ "LTE::entityManger", "de/d44/class_l_t_e_1_1entity_manger.html", null ],
-    [ "LTE::event", "da/df9/struct_l_t_e_1_1event.html", null ],
-    [ "LTE::eventManger", "d5/d7c/class_l_t_e_1_1event_manger.html", null ],
+    [ "LTE::GMNM::dataFormatter", "d7/dec/class_l_t_e_1_1_g_m_n_m_1_1data_formatter.html", null ],
     [ "std::exception", null, [
       [ "LTE::LTEException", "d7/dcb/class_l_t_e_1_1_l_t_e_exception.html", [
         [ "LTE::ComponentNotFoundException", "df/d65/class_l_t_e_1_1_component_not_found_exception.html", null ],
@@ -97,7 +74,8 @@ var hierarchy =
       [ "LTE::openGLFramebuffer", "d1/d9c/class_l_t_e_1_1open_g_l_framebuffer.html", null ]
     ] ],
     [ "LTE::gameObject", "d2/d49/class_l_t_e_1_1game_object.html", null ],
-    [ "LTE::gameObject::gameObjectBuilder", "d7/dd0/class_l_t_e_1_1game_object_1_1game_object_builder.html", null ],
+    [ "LTE::gameObjectBuilder", "de/d82/class_l_t_e_1_1game_object_builder.html", null ],
+    [ "LTE::gameObjectsManger", "dc/d88/class_l_t_e_1_1game_objects_manger.html", null ],
     [ "LTE::graphicsAPIAbstractFactory", "d0/d7f/class_l_t_e_1_1graphics_a_p_i_abstract_factory.html", [
       [ "LTE::openGLAPIAbstractFactory", "df/dcb/class_l_t_e_1_1open_g_l_a_p_i_abstract_factory.html", null ]
     ] ],
@@ -131,22 +109,45 @@ var hierarchy =
       [ "LTE::linuxAPI", "d1/db3/class_l_t_e_1_1linux_a_p_i.html", null ]
     ] ],
     [ "LTE::osc", "d6/dd7/class_l_t_e_1_1osc.html", null ],
+    [ "LTE::osEvent", "d3/df5/class_l_t_e_1_1os_event.html", [
+      [ "LTE::ImGuiEvents", "d0/de3/class_l_t_e_1_1_im_gui_events.html", null ],
+      [ "LTE::orthographicCameraControler", "da/def/class_l_t_e_1_1orthographic_camera_controler.html", null ],
+      [ "LTE::scene", "d6/d26/class_l_t_e_1_1scene.html", null ],
+      [ "LTE::window", "d4/d38/class_l_t_e_1_1window.html", null ],
+      [ "LTE::windowManger", "de/de3/class_l_t_e_1_1window_manger.html", null ],
+      [ "bird", "da/dee/classbird.html", null ],
+      [ "cube", "d3/d90/classcube.html", null ],
+      [ "pilar", "d1/d69/classpilar.html", null ],
+      [ "player", "dc/d2e/classplayer.html", null ]
+    ] ],
+    [ "LTE::osEventData", "d4/d87/struct_l_t_e_1_1os_event_data.html", [
+      [ "LTE::KeyData", "d2/df7/struct_l_t_e_1_1_key_data.html", null ],
+      [ "LTE::WindowResizeData", "d0/d31/struct_l_t_e_1_1_window_resize_data.html", null ],
+      [ "LTE::keyTypedData", "df/d3b/struct_l_t_e_1_1key_typed_data.html", null ],
+      [ "LTE::mouseClickData", "d8/d50/struct_l_t_e_1_1mouse_click_data.html", null ],
+      [ "LTE::mouseMoveData", "d6/da3/struct_l_t_e_1_1mouse_move_data.html", null ],
+      [ "LTE::mouseScrollData", "d5/d4d/struct_l_t_e_1_1mouse_scroll_data.html", null ],
+      [ "LTE::windowRenderData", "d5/d22/struct_l_t_e_1_1window_render_data.html", null ]
+    ] ],
+    [ "LTE::osEventsManger", "d3/d10/class_l_t_e_1_1os_events_manger.html", null ],
     [ "LTE::GMNM::packet", "dc/d74/struct_l_t_e_1_1_g_m_n_m_1_1packet.html", null ],
-    [ "LTE::GMNM::packetBody", "d3/d0e/struct_l_t_e_1_1_g_m_n_m_1_1packet_body.html", [
-      [ "basicBody", "de/d04/structbasic_body.html", null ]
-    ] ],
-    [ "LTE::GMNM::packetHeader", "d3/de6/struct_l_t_e_1_1_g_m_n_m_1_1packet_header.html", [
-      [ "basicHeader", "de/d39/structbasic_header.html", null ]
-    ] ],
+    [ "LTE::GMNM::packetBody", "d3/d0e/struct_l_t_e_1_1_g_m_n_m_1_1packet_body.html", null ],
+    [ "LTE::GMNM::packetHeader", "d3/de6/struct_l_t_e_1_1_g_m_n_m_1_1packet_header.html", null ],
     [ "LTE::renderApi", "df/d3a/class_l_t_e_1_1render_api.html", [
       [ "LTE::openGLRenderApi", "d0/d71/class_l_t_e_1_1open_g_l_render_api.html", null ]
     ] ],
     [ "LTE::router< T >", "d7/d22/class_l_t_e_1_1router.html", null ],
     [ "LTE::router< LTE::asset * >", "d7/d22/class_l_t_e_1_1router.html", null ],
-    [ "LTE::router< LTE::event * >", "d7/d22/class_l_t_e_1_1router.html", null ],
     [ "LTE::router< LTE::file * >", "d7/d22/class_l_t_e_1_1router.html", null ],
-    [ "LTE::scene", "d6/d26/class_l_t_e_1_1scene.html", null ],
     [ "LTE::sceneBuilder", "d3/db0/class_l_t_e_1_1scene_builder.html", null ],
+    [ "LTE::sceneEvent", "d6/daa/class_l_t_e_1_1scene_event.html", [
+      [ "pilarDestroyer", "d8/d09/classpilar_destroyer.html", null ],
+      [ "pilarSummener", "d3/ded/classpilar_summener.html", null ]
+    ] ],
+    [ "LTE::sceneEventData", "df/ddf/struct_l_t_e_1_1scene_event_data.html", [
+      [ "LTE::collisionData", "db/dc0/struct_l_t_e_1_1collision_data.html", null ]
+    ] ],
+    [ "LTE::sceneEventsManger", "df/dde/class_l_t_e_1_1scene_events_manger.html", null ],
     [ "LTE::sceneManger", "d7/d9a/class_l_t_e_1_1scene_manger.html", null ],
     [ "LTE::sequencer", "db/d56/class_l_t_e_1_1sequencer.html", [
       [ "LTE::bellRing", "d9/d60/class_l_t_e_1_1bell_ring.html", null ],
@@ -169,7 +170,6 @@ var hierarchy =
     [ "LTE::soundSynthesizer", "d2/dff/class_l_t_e_1_1sound_synthesizer.html", null ],
     [ "LTE::spriteDimensionsData", "d7/d91/struct_l_t_e_1_1sprite_dimensions_data.html", null ],
     [ "testing::Test", null, [
-      [ "checkmate", "da/d39/classcheckmate.html", null ],
       [ "flappyBird", "d5/d71/classflappy_bird.html", null ],
       [ "topDownGame", "d5/d2a/classtop_down_game.html", null ]
     ] ],
@@ -180,7 +180,7 @@ var hierarchy =
     [ "LTE::tilemap::tileBuilder", "d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html", null ],
     [ "LTE::tilemap", "d5/d49/class_l_t_e_1_1tilemap.html", null ],
     [ "LTE::vector3d< T >", "d2/da7/class_l_t_e_1_1vector3d.html", null ],
-    [ "LTE::vector3d< entityTaleId >", "d2/da7/class_l_t_e_1_1vector3d.html", null ],
+    [ "LTE::vector3d< gameObjectId >", "d2/da7/class_l_t_e_1_1vector3d.html", null ],
     [ "LTE::vertexArray", "df/db4/class_l_t_e_1_1vertex_array.html", null ],
     [ "LTE::vertexArrayRenderApi", "dc/d17/class_l_t_e_1_1vertex_array_render_api.html", [
       [ "LTE::openGLVertexArray", "d7/ddd/class_l_t_e_1_1open_g_l_vertex_array.html", null ]
@@ -192,7 +192,5 @@ var hierarchy =
       [ "LTE::OpenGLVertexBuffer", "d3/d42/class_l_t_e_1_1_open_g_l_vertex_buffer.html", null ]
     ] ],
     [ "LTE::vertexsData", "df/d1c/struct_l_t_e_1_1vertexs_data.html", null ],
-    [ "LTE::window", "d4/d38/class_l_t_e_1_1window.html", null ],
-    [ "LTE::windowBuilder", "d0/d26/class_l_t_e_1_1window_builder.html", null ],
-    [ "LTE::windowManger", "de/de3/class_l_t_e_1_1window_manger.html", null ]
+    [ "LTE::windowBuilder", "d0/d26/class_l_t_e_1_1window_builder.html", null ]
 ];

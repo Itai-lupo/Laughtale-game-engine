@@ -9,19 +9,17 @@
 #include "scene.h"
 #include "renderApi.h"
 
-#include "events.h"
-#include "entity.h"
+#include "osEvents.h"
 #include "coreInput.h"
 
 namespace LTE 
 {
-	class window
+	class window: osEvent
 	{
-		private:
-			static void onUpdate(gameObject *eventEntity, coreEventData *sendor);
-			static void onWindowResize(gameObject *eventEntity, coreEventData *sendor);
 
 		public:
+			window(): osEvent({ osEventsType::WindowResize }){}
+			
 			std::string Title = "laughtale new window";
 			unsigned int Width = 1280, Height = 720;
 			bool useImGui = false;
@@ -30,7 +28,7 @@ namespace LTE
 			graphicsContext *context; 
 			coreInput *inputManger;
 			
-
+			void onWindowResize(WindowResizeData *sendor);
 
 			void init();
 			~window();

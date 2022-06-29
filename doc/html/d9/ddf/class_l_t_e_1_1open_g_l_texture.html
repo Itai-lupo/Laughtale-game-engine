@@ -225,9 +225,9 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
-<div class="line"><span class="lineno">   13</span>        glDeleteTextures(1, &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   14</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        glDeleteTextures(1, &amp;<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -302,14 +302,14 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a0b1dd726740e966b9910ccc4629553da">LTE::textureRenderApi</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
-<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#acc2ad2c6c60bd61008d2082db14464d9">changeId</a> != <a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#ae01e69960e68fed7ecab3767939838fc">getChangeId</a>())</div>
-<div class="line"><span class="lineno">   29</span>            <a class="code hl_function" href="../../d9/ddf/class_l_t_e_1_1open_g_l_texture.html#a1c1ea96b6e9707c4f82efda802e38e35">setDimensions</a>();</div>
-<div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBindTextureUnit(slot, <span class="keywordtype">id</span>));</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1open_g_l_texture_html_a1c1ea96b6e9707c4f82efda802e38e35"><div class="ttname"><a href="../../d9/ddf/class_l_t_e_1_1open_g_l_texture.html#a1c1ea96b6e9707c4f82efda802e38e35">LTE::openGLTexture::setDimensions</a></div><div class="ttdeci">virtual void setDimensions() override</div><div class="ttdef"><b>Definition:</b> openGLTexture.cpp:39</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1texture_html_ae01e69960e68fed7ecab3767939838fc"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#ae01e69960e68fed7ecab3767939838fc">LTE::texture::getChangeId</a></div><div class="ttdeci">unsigned int getChangeId()</div><div class="ttdef"><b>Definition:</b> texture.h:206</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#acc2ad2c6c60bd61008d2082db14464d9">changeId</a> != <a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#ae01e69960e68fed7ecab3767939838fc">getChangeId</a>())</div>
+<div class="line"><span class="lineno">   28</span>            <a class="code hl_function" href="../../d9/ddf/class_l_t_e_1_1open_g_l_texture.html#a1c1ea96b6e9707c4f82efda802e38e35">setDimensions</a>();</div>
+<div class="line"><span class="lineno">   29</span>        </div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBindTextureUnit(slot, <span class="keywordtype">id</span>));</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+<div class="ttc" id="aclass_l_t_e_1_1open_g_l_texture_html_a1c1ea96b6e9707c4f82efda802e38e35"><div class="ttname"><a href="../../d9/ddf/class_l_t_e_1_1open_g_l_texture.html#a1c1ea96b6e9707c4f82efda802e38e35">LTE::openGLTexture::setDimensions</a></div><div class="ttdeci">virtual void setDimensions() override</div><div class="ttdef"><b>Definition:</b> openGLTexture.cpp:38</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1texture_html_ae01e69960e68fed7ecab3767939838fc"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#ae01e69960e68fed7ecab3767939838fc">LTE::texture::getChangeId</a></div><div class="ttdeci">unsigned int getChangeId()</div><div class="ttdef"><b>Definition:</b> texture.h:218</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1texture_render_api_html_acc2ad2c6c60bd61008d2082db14464d9"><div class="ttname"><a href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#acc2ad2c6c60bd61008d2082db14464d9">LTE::textureRenderApi::changeId</a></div><div class="ttdeci">std::atomic&lt; int &gt; changeId</div><div class="ttdef"><b>Definition:</b> texture.h:49</div></div>
 <div class="ttc" id="ahandle_open_gl_errors_8h_html_add165165c35549fda9fb0100e16e9739"><div class="ttname"><a href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a></div><div class="ttdeci">#define GL_CALL(x)</div><div class="ttdef"><b>Definition:</b> handleOpenGlErrors.h:4</div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -317,12 +317,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/ddf/class_l_t_e_1_1open_g_l_texture_a239e9ae034685d978a94bc280dc9e3a8_cgraph.png" border="0" usemap="#ad9/ddf/class_l_t_e_1_1open_g_l_texture_a239e9ae034685d978a94bc280dc9e3a8_cgraph" alt=""/></div>
 <map name="ad9/ddf/class_l_t_e_1_1open_g_l_texture_a239e9ae034685d978a94bc280dc9e3a8_cgraph" id="ad9/ddf/class_l_t_e_1_1open_g_l_texture_a239e9ae034685d978a94bc280dc9e3a8_cgraph">
-<area shape="rect" title=" " alt="" coords="5,27,147,69"/>
+<area shape="rect" title=" " alt="" coords="5,49,147,90"/>
 <area shape="rect" href="../../d9/d46/class_l_t_e_1_1texture.html#ae01e69960e68fed7ecab3767939838fc" title=" " alt="" coords="384,5,555,32"/>
-<area shape="rect" href="../../d9/ddf/class_l_t_e_1_1open_g_l_texture.html#a1c1ea96b6e9707c4f82efda802e38e35" title=" " alt="" coords="195,57,336,98"/>
+<area shape="rect" href="../../d9/ddf/class_l_t_e_1_1open_g_l_texture.html#a1c1ea96b6e9707c4f82efda802e38e35" title=" " alt="" coords="195,78,336,119"/>
 <area shape="rect" href="../../d9/d46/class_l_t_e_1_1texture.html#a4162bd9660c75a841fbae6dec00f2ea6" title=" " alt="" coords="391,56,547,83"/>
 <area shape="rect" href="../../d9/d46/class_l_t_e_1_1texture.html#a24cf9325098472ec1d7482bfe6381e40" title=" " alt="" coords="393,107,546,133"/>
-<area shape="rect" href="../../d9/d46/class_l_t_e_1_1texture.html#a1a6d472b5864a142b7caa13ec71b17fb" title=" " alt="" coords="395,157,543,184"/>
+<area shape="rect" href="../../d9/d46/class_l_t_e_1_1texture.html#a9d2ed0e98173e2b85a8188887d52b944" title=" " alt="" coords="386,157,553,184"/>
+<area shape="rect" href="../../d9/d46/class_l_t_e_1_1texture.html#a1a6d472b5864a142b7caa13ec71b17fb" title=" " alt="" coords="395,208,543,235"/>
 </map>
 </div>
 
@@ -380,14 +381,14 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../dd/d88/class_l_t_e_1_1open_g_l_base.html#a34c24dc1a8cdc313ea48288f9e414a43">LTE::openGLBase</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
-<div class="line"><span class="lineno">   18</span> </div>
-<div class="line"><span class="lineno">   19</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glCreateTextures(GL_TEXTURE_2D, 1, &amp;<span class="keywordtype">id</span>));</div>
-<div class="line"><span class="lineno">   20</span>        </div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a04256b52d803e22a830416da471d9f22">getPath</a>() != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><span class="lineno">   22</span>            uploadDataFromFile();</div>
-<div class="line"><span class="lineno">   23</span>    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1texture_html_a04256b52d803e22a830416da471d9f22"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a04256b52d803e22a830416da471d9f22">LTE::texture::getPath</a></div><div class="ttdeci">std::string getPath()</div><div class="ttdef"><b>Definition:</b> texture.h:181</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span> </div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glCreateTextures(GL_TEXTURE_2D, 1, &amp;<span class="keywordtype">id</span>));</div>
+<div class="line"><span class="lineno">   19</span>        </div>
+<div class="line"><span class="lineno">   20</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a04256b52d803e22a830416da471d9f22">getPath</a>() != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">   21</span>            uploadDataFromFile();</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="ttc" id="aclass_l_t_e_1_1texture_html_a04256b52d803e22a830416da471d9f22"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a04256b52d803e22a830416da471d9f22">LTE::texture::getPath</a></div><div class="ttdeci">std::string getPath()</div><div class="ttdef"><b>Definition:</b> texture.h:182</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -433,34 +434,42 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a38ecf94537e8d15b5b5b9dc5beac58e6">LTE::textureRenderApi</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>    {       </div>
-<div class="line"><span class="lineno">   41</span>        <a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#acc2ad2c6c60bd61008d2082db14464d9">changeId</a> = <a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#ae01e69960e68fed7ecab3767939838fc">getChangeId</a>();</div>
-<div class="line"><span class="lineno">   42</span>        glDeleteTextures(1, &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   43</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glCreateTextures(GL_TEXTURE_2D, 1, &amp;<span class="keywordtype">id</span>));</div>
-<div class="line"><span class="lineno">   44</span> </div>
-<div class="line"><span class="lineno">   45</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glTextureStorage2D(<span class="keywordtype">id</span>, 1, textureFormatToOpenGlFormat(<a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a4162bd9660c75a841fbae6dec00f2ea6">getFormat</a>()), <a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a1a6d472b5864a142b7caa13ec71b17fb">getWidth</a>(), <a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a24cf9325098472ec1d7482bfe6381e40">getHeight</a>()));</div>
-<div class="line"><span class="lineno">   46</span> </div>
-<div class="line"><span class="lineno">   47</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glTexImage2D(GL_TEXTURE_2D, 0, textureFormatToOpenGlFormat(<a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a4162bd9660c75a841fbae6dec00f2ea6">getFormat</a>()), <a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a1a6d472b5864a142b7caa13ec71b17fb">getWidth</a>(), <a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a24cf9325098472ec1d7482bfe6381e40">getHeight</a>(), 0, textureFormatToOpenGlDataFormat(<a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a4162bd9660c75a841fbae6dec00f2ea6">getFormat</a>()), GL_UNSIGNED_BYTE, NULL));</div>
-<div class="line"><span class="lineno">   48</span> </div>
-<div class="line"><span class="lineno">   49</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR));</div>
-<div class="line"><span class="lineno">   50</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR));</div>
-<div class="line"><span class="lineno">   51</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE));</div>
-<div class="line"><span class="lineno">   52</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE));</div>
-<div class="line"><span class="lineno">   53</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE));</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1texture_html_a1a6d472b5864a142b7caa13ec71b17fb"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a1a6d472b5864a142b7caa13ec71b17fb">LTE::texture::getWidth</a></div><div class="ttdeci">int getWidth()</div><div class="ttdef"><b>Definition:</b> texture.h:116</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1texture_html_a24cf9325098472ec1d7482bfe6381e40"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a24cf9325098472ec1d7482bfe6381e40">LTE::texture::getHeight</a></div><div class="ttdeci">int getHeight()</div><div class="ttdef"><b>Definition:</b> texture.h:121</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1texture_html_a4162bd9660c75a841fbae6dec00f2ea6"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a4162bd9660c75a841fbae6dec00f2ea6">LTE::texture::getFormat</a></div><div class="ttdeci">textureFormat getFormat()</div><div class="ttdef"><b>Definition:</b> texture.h:111</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {       </div>
+<div class="line"><span class="lineno">   40</span>        <a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#acc2ad2c6c60bd61008d2082db14464d9">changeId</a> = <a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#ae01e69960e68fed7ecab3767939838fc">getChangeId</a>();</div>
+<div class="line"><span class="lineno">   41</span>        glDeleteTextures(1, &amp;<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   42</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glCreateTextures((<a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a9d2ed0e98173e2b85a8188887d52b944">getSamples</a>() &gt; 1)? GL_TEXTURE_2D_MULTISAMPLE : GL_TEXTURE_2D, 1, &amp;<span class="keywordtype">id</span>));</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a9d2ed0e98173e2b85a8188887d52b944">getSamples</a>() &gt; 1)</div>
+<div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            glTextureStorage2DMultisample(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a9d2ed0e98173e2b85a8188887d52b944">getSamples</a>(), textureFormatToOpenGlFormat(<a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a4162bd9660c75a841fbae6dec00f2ea6">getFormat</a>()), <a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a1a6d472b5864a142b7caa13ec71b17fb">getWidth</a>(), <a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a24cf9325098472ec1d7482bfe6381e40">getHeight</a>(), GL_FALSE);</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glTextureStorage2D(<span class="keywordtype">id</span>, 1, textureFormatToOpenGlFormat(<a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a4162bd9660c75a841fbae6dec00f2ea6">getFormat</a>()), <a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a1a6d472b5864a142b7caa13ec71b17fb">getWidth</a>(), <a class="code hl_variable" href="../../dd/d4f/class_l_t_e_1_1texture_render_api.html#a29a050a7265e565c5444e994ee14dce2">parentContainer</a>-&gt;<a class="code hl_function" href="../../d9/d46/class_l_t_e_1_1texture.html#a24cf9325098472ec1d7482bfe6381e40">getHeight</a>()));</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>            <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR));</div>
+<div class="line"><span class="lineno">   54</span>            <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR));</div>
+<div class="line"><span class="lineno">   55</span>            <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE));</div>
+<div class="line"><span class="lineno">   56</span>            <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE));</div>
+<div class="line"><span class="lineno">   57</span>            <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE));</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+<div class="ttc" id="aclass_l_t_e_1_1texture_html_a1a6d472b5864a142b7caa13ec71b17fb"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a1a6d472b5864a142b7caa13ec71b17fb">LTE::texture::getWidth</a></div><div class="ttdeci">int getWidth()</div><div class="ttdef"><b>Definition:</b> texture.h:117</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1texture_html_a24cf9325098472ec1d7482bfe6381e40"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a24cf9325098472ec1d7482bfe6381e40">LTE::texture::getHeight</a></div><div class="ttdeci">int getHeight()</div><div class="ttdef"><b>Definition:</b> texture.h:122</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1texture_html_a4162bd9660c75a841fbae6dec00f2ea6"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a4162bd9660c75a841fbae6dec00f2ea6">LTE::texture::getFormat</a></div><div class="ttdeci">textureFormat getFormat()</div><div class="ttdef"><b>Definition:</b> texture.h:112</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1texture_html_a9d2ed0e98173e2b85a8188887d52b944"><div class="ttname"><a href="../../d9/d46/class_l_t_e_1_1texture.html#a9d2ed0e98173e2b85a8188887d52b944">LTE::texture::getSamples</a></div><div class="ttdeci">int getSamples()</div><div class="ttdef"><b>Definition:</b> texture.h:192</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/ddf/class_l_t_e_1_1open_g_l_texture_a1c1ea96b6e9707c4f82efda802e38e35_cgraph.png" border="0" usemap="#ad9/ddf/class_l_t_e_1_1open_g_l_texture_a1c1ea96b6e9707c4f82efda802e38e35_cgraph" alt=""/></div>
 <map name="ad9/ddf/class_l_t_e_1_1open_g_l_texture_a1c1ea96b6e9707c4f82efda802e38e35_cgraph" id="ad9/ddf/class_l_t_e_1_1open_g_l_texture_a1c1ea96b6e9707c4f82efda802e38e35_cgraph">
-<area shape="rect" title=" " alt="" coords="5,74,147,115"/>
+<area shape="rect" title=" " alt="" coords="5,99,147,141"/>
 <area shape="rect" href="../../d9/d46/class_l_t_e_1_1texture.html#ae01e69960e68fed7ecab3767939838fc" title=" " alt="" coords="195,5,365,32"/>
 <area shape="rect" href="../../d9/d46/class_l_t_e_1_1texture.html#a4162bd9660c75a841fbae6dec00f2ea6" title=" " alt="" coords="202,56,358,83"/>
 <area shape="rect" href="../../d9/d46/class_l_t_e_1_1texture.html#a24cf9325098472ec1d7482bfe6381e40" title=" " alt="" coords="203,107,357,133"/>
-<area shape="rect" href="../../d9/d46/class_l_t_e_1_1texture.html#a1a6d472b5864a142b7caa13ec71b17fb" title=" " alt="" coords="206,157,354,184"/>
+<area shape="rect" href="../../d9/d46/class_l_t_e_1_1texture.html#a9d2ed0e98173e2b85a8188887d52b944" title=" " alt="" coords="197,157,363,184"/>
+<area shape="rect" href="../../d9/d46/class_l_t_e_1_1texture.html#a1a6d472b5864a142b7caa13ec71b17fb" title=" " alt="" coords="206,208,354,235"/>
 </map>
 </div>
 <div class="dynheader">
@@ -499,9 +508,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../dd/d88/class_l_t_e_1_1open_g_l_base.html#a9293bf809aed85f8d7c36f7fb2a14c77">LTE::openGLBase</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
-<div class="line"><span class="lineno">   36</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBindTexture(GL_TEXTURE_2D, 0));</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBindTexture(GL_TEXTURE_2D, 0));</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

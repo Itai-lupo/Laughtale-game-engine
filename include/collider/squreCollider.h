@@ -1,7 +1,7 @@
 #pragma once
 #include "component.h"
 #include "core.h"
-#include "entity.h"
+#include "gameobject.h"
 #include <vector>
 
 namespace LTE

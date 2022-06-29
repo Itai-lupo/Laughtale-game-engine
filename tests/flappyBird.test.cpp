@@ -24,46 +24,40 @@
 #define PILAR_HOLE_HALF_HIGHT (PILAR_HOLE_HIGHT / 2.0f)
 
 #define PILAR_SPAWN_RATE 0.5f
+static inline LTE::sceneId sceneId;
+static inline LTE::scene *gameScene;
 
-class pilar: public LTE::component
+class pilar: public LTE::component, LTE::osEvent
 {
     private:
         bool endOfScreen = false;
     public:
 
 
-        pilar()
+        pilar(): LTE::osEvent({LTE::osEventsType::windowRender})
         {
         }
 
         virtual void init(LTE::gameObject *pilar) override
         {
-            LTE::eventManger::addCoustemEventsRoute("window render/flappyBird/move pilar/");
-
-            LTE::eventManger::startBuildingEvent()->
-                setEventRoute("window render/flappyBird/move pilar/" + pilar->getName() + " " + std::to_string(parentId))->
-                setEventCallback(onUpdate)->
-                setEntityID(parentId)->
-                setWindowId(winId)->add();
         }
 
         virtual void end() 
         {
         }
 
-        static void onUpdate(LTE::gameObject *pilarEntity, LTE::coreEventData *sendor)
+        void onWindowRender(LTE::windowRenderData *sendor)
         {
-            LTE::onUpdateData *eventData = static_cast<LTE::onUpdateData *>(sendor);
-            pilar *pilarControle = pilarEntity->getComponent<pilar>();
-            LTE::transform *pilarTransform = pilarEntity->getTransform();
+            LTE::transform *pilarTransform = gameScene->getGameObjectById(getParentId())->getTransform();
 
-            pilarTransform->changeXPostion(- 0.5f * ((float)eventData->DeltaTime) / 1000);
+
+            pilarTransform->changeXPostion(- 0.5f * ((float)sendor->DeltaTime) / 1000);
             if(pilarTransform->getPostion().x < -1.7f)
-                pilarControle->endOfScreen = true;
+                endOfScreen = true;
         }        
 };
 
-class bird: public LTE::component
+class bird: public LTE::component, LTE::osEvent
 {
     private:
         LTE::windowPieceId debugInfoWindowId;
@@ -76,32 +70,16 @@ class bird: public LTE::component
         bool star = false;
 
     public:
-        bird(LTE::windowPieceId debugInfoWindowId): debugInfoWindowId(debugInfoWindowId){}
+        bird(LTE::windowPieceId debugInfoWindowId): LTE::osEvent({
+            LTE::osEventsType::keyPressed,
+            LTE::osEventsType::windowRender,
+            LTE::osEventsType::WindowImGuiRender,
+            LTE::osEventsType::WindowClose
+        }), debugInfoWindowId(debugInfoWindowId){}
 
         virtual void init(LTE::gameObject *player) override
         {
-            LTE::eventManger::startBuildingEvent()->
-                setEventRoute("window render/flappyBird/move bird")->
-                setEventCallback(bird::onUpdate)->
-                setWindowId(winId)->
-                setEntityID(parentId)->add();
 
-            LTE::eventManger::startBuildingEvent()->
-                setEventRoute("collider/" + player->getName() + "/handle walls")->
-                setEventCallback(bird::onCollide)->
-                setWindowId(winId)->
-                setEntityID(parentId)->add();
-
-            LTE::eventManger::startBuildingEvent()->
-                setEventRoute("Key pressed/set bird speed")->
-                setEventCallback(bird::onKey)->
-                setEntityID(parentId)->add();
-
-            LTE::eventManger::startBuildingEvent()->
-                setEventRoute("ImGui render/print bird data")->
-                setEventCallback(onImGui)->
-                setEntityID(parentId)->
-                setWindowId(debugInfoWindowId)->add();
         }
 
         virtual void end() override
@@ -109,61 +87,55 @@ class bird: public LTE::component
 
         }
 
-        static void movePlayer(LTE::gameObject *player, short DeltaTime)
+        void onWindowRender(LTE::windowRenderData *sendor)
         {
-            bird *playerControl = player->getComponent<bird>();
-            playerControl->speed -= ((float)DeltaTime)/1000.0f * 2;
+            speed -= ((float)sendor->DeltaTime)/1000.0f * 2;
             
-            player->getTransform()->changeYPostion(((float)DeltaTime)/1000.0f * playerControl->speed * !playerControl->failed);
-            player->getTransform()->setZRotation(glm::radians((playerControl->speed - 1.5f) * 25.0f));
-        }
-        
-        static void onImGui(LTE::gameObject *player, LTE::coreEventData *sendor)
-        {
-            LTE::onUpdateData *eventData = static_cast<LTE::onUpdateData *>(sendor);
-            bird *playerControl = player->getComponent<bird>();
+            LTE::gameObject *player = gameScene->getGameObjectById(getParentId());
+            player->getTransform()->changeYPostion(((float)sendor->DeltaTime)/1000.0f * speed * !failed);
+            player->getTransform()->setZRotation(glm::radians((speed - 1.5f) * 25.0f));
 
-            ImGui::Text("player speed: %f", playerControl->speed);
-            ImGui::Text("player hight: %f", player->getTransform()->getPostion().y);
-            ImGui::Text("fps %.1f, %.1f", 1000.0f/(float)eventData->DeltaTime, double(ImGui::GetIO().Framerate));
-            if(playerControl->failed)
-                ImGui::Text("GAME OVER");
-        }
 
-        static void onUpdate(LTE::gameObject *player, LTE::coreEventData *sendor)
-        {
-            LTE::onUpdateData *eventData = static_cast<LTE::onUpdateData *>(sendor);
-              
-            movePlayer(player, eventData->DeltaTime);
-            checkForScreenBonds(player);
-        }
-
-        static void checkForScreenBonds(LTE::gameObject *player)
-        {
             if(player->getTransform()->getPostion().y < -1.0f)
-                player->getComponent<bird>()->failed = true;
+                failed = true;
             if(player->getTransform()->getPostion().y > 1.0f)
                 player->getTransform()->setYPostion(1.0f);  
         }
-
-        static void onCollide(LTE::gameObject *player, LTE::coreEventData *sendor)
+        
+        void onWindowImGuiRender(LTE::windowRenderData *sendor)
         {
-            player->getComponent<bird>()->failed = true;
+            ImGui::Text("player speed: %f", speed);
+            ImGui::Text("player hight: %f", gameScene->getGameObjectById(getParentId())->getTransform()->getPostion().y);
+            ImGui::Text("fps %.1f, %.1f", 1000.0f/(float)sendor->DeltaTime, double(ImGui::GetIO().Framerate));
+            if(failed)
+                ImGui::Text("GAME OVER");
         }
 
-        static void onKey(LTE::gameObject *player, LTE::coreEventData *sendor)
+
+
+        virtual void onWindowClose(LTE::osEventData *sendor) override
         {
-            LTE::KeyData *eventData = dynamic_cast<LTE::KeyData *>(sendor);
+            LTE::app::keepRunning = false;
+        }
+
+        virtual void onCollide(LTE::collisionData *sendor)
+        {
+            failed = true;
+        }
+
+        void onkeyPressed(LTE::KeyData *sendor)
+        {
+            LTE::gameObject *player = gameScene->getGameObjectById(getParentId());
             player->getComponent<LTE::envelope>()->noteOn();
-            player->getComponent<bird>()->speed = 1.25f;
+            speed = 1.25f;
             player->getComponent<LTE::mesh>()->setShaderName(( player->getComponent<bird>()->star ? "res/flappyBird/bird.glsl": "res/flappyBird/Basic.glsl"));
             player->getComponent<LTE::material>()->setTexture(( player->getComponent<bird>()->star ? "res/textures/Logo.png" : "res/textures/5_star.png"));
-            player->getComponent<bird>()->star = !player->getComponent<bird>()->star;
+            star = !player->getComponent<bird>()->star;
             player->getComponent<LTE::envelope>()->noteOff();
         }
 };
 
-class pilarSummener: public LTE::component
+class pilarSummener: public LTE::component, LTE::sceneEvent
 {
     private:
         float pilarPostions[20] = 
@@ -183,15 +155,11 @@ class pilarSummener: public LTE::component
         
 
     public:
-        pilarSummener(){}
+        pilarSummener(LTE::sceneId parentScene): LTE::sceneEvent(parentScene, {LTE::sceneEventsType::collision}){}
 
         virtual void init(LTE::gameObject *summener) override
         {
-            LTE::eventManger::startBuildingEvent()->
-                setEventRoute("collider/" + summener->getName() + "/summen pilars")->
-                setEventCallback(onCollide)->
-                setWindowId(winId)->
-                setEntityID(parentId)->add();
+            
         }
 
         virtual void end() override
@@ -199,22 +167,20 @@ class pilarSummener: public LTE::component
 
         }
 
-        static void onCollide(LTE::gameObject *summener, LTE::coreEventData *sendor)
+        virtual void onCollide(LTE::collisionData *sendor)
         {
             
             std::srand(std::time(nullptr));
             float pilarHight = (rand() / (RAND_MAX + 1.0f) - 0.5f) * 0.7;
 
-            pilarSummener *summenerData = summener->getComponent<pilarSummener>();
-            LTE::entityManger::addEntity([&](LTE::gameObject::gameObjectBuilder *builder){
+            LTE::gameObjectId pilarTopId = gameScene->addGameObject([&](LTE::gameObjectBuilder* builder){
                 builder->
                     setObjectName("pilar top")->
                     setObjectTransform({{ 1.7f, pilarHight + 1.25f, 0.0f}, {0.0f, 0.0f, 0.0f}, { PILAR_HOLE_WIDTH, 2.0f, 1.0f}})->
-                    setWindowId(sendor->windowId)->
                     addComponent(LTE::mesh::build([=](LTE::mesh::meshBuilder *builder)
                         {
-                            builder->setIndexBuffer(summenerData->pilarIndices, 6)->
-                            setVertices(summenerData->pilarPostions, 12)->
+                            builder->setIndexBuffer(pilarIndices, 6)->
+                            setVertices(pilarPostions, 12)->
                             setShaderName("res/flappyBird/Basic.glsl");
                         }))->
                     addComponent(new LTE::material("res/textures/5_star.png", {1.0f, 1.0f, 0.0f, 1.0f}))->
@@ -222,15 +188,14 @@ class pilarSummener: public LTE::component
                     addComponent(new LTE::squreCollider());
                 });
 
-            LTE::entityManger::addEntity([=](LTE::gameObject::gameObjectBuilder *builder){ 
+            LTE::gameObjectId pilarBottomId = gameScene->addGameObject([=](LTE::gameObjectBuilder* builder){ 
                 builder->
                     setObjectName("pilar bottom")->
                     setObjectTransform({{ 1.7f, pilarHight - 1.25f, 0.0f}, {0.0f, 0.0f, 0.0f}, { PILAR_HOLE_WIDTH, 2.0f, 1.0f}})->
-                    setWindowId(sendor->windowId)->
                     addComponent(LTE::mesh::build([=](LTE::mesh::meshBuilder *builder)
                         {
-                            builder->setIndexBuffer(summenerData->pilarIndices, 6)->
-                            setVertices(summenerData->pilarPostions, 12)->
+                            builder->setIndexBuffer(pilarIndices, 6)->
+                            setVertices(pilarPostions, 12)->
                             setShaderName("res/flappyBird/Basic.glsl");
                         }))->
                     addComponent(new LTE::material("res/textures/5_star.png", {1.0f, 1.0f, 0.0f, 1.0f}))->
@@ -240,33 +205,34 @@ class pilarSummener: public LTE::component
         }
 };
 
-class pilarDestroyer: public LTE::component
+class pilarDestroyer: public LTE::component, LTE::sceneEvent
 {
     private:
         
     public:
-        pilarDestroyer(){}
+        pilarDestroyer(LTE::sceneId parentScene): LTE::sceneEvent(parentScene, {LTE::sceneEventsType::collision}){}
 
         virtual void init(LTE::gameObject *destroyer) override
         {
-            LTE::eventManger::startBuildingEvent()->
-                setEventRoute("collider/" + destroyer->getName() + "/destroy pilars")->
-                setEventCallback(onCollide)->
-                setWindowId(winId)->
-                setEntityID(parentId)->add();
+            
         }
 
         virtual void end() override
         {
         }
 
-        static void onCollide(LTE::gameObject *summener, LTE::coreEventData *sendor)
+        virtual void onCollide(LTE::collisionData *sendor)
         {
-            summener->getComponent<LTE::envelope>()->noteOn();
-            summener->getComponent<LTE::envelope>()->noteOff();
+            try{
+                gameScene->getGameObjectById(sendor->id)->getComponent<LTE::envelope>()->noteOn();
+                gameScene->getGameObjectById(sendor->id)->getComponent<LTE::envelope>()->noteOff();
 
-            LTE::colliderEventData *sendorData = static_cast<LTE::colliderEventData*>(sendor);
-            LTE::entityManger::removeEntityById(sendorData->target->getId());
+                gameScene->removeGameObjectById(sendor->target->getId());
+            }
+            catch(LTE::GameObjectNotFoundException * e)
+            {
+
+            }
         }
 };
 
@@ -282,20 +248,15 @@ class flappyBird : public ::testing::Test
 
         void initWindows()
         {
-            gameWindowId =  LTE::windowManger::addWindow([=](LTE::windowBuilder *build)
+            gameWindowId =  LTE::app::getWindowManger()->addWindow([=](LTE::windowBuilder *build)
             {
                 build->setTitle("flappyBird");
             });
             
-            debugInfoWindowId = LTE::windowManger::addWindow([=](LTE::windowBuilder *build)
-            {
-                build->setHeight(600)->setWidth(600)->setTitle("debug Info Window")->useImGui();
-            });
-        }
-
-        static void WindowClose(__attribute__((unused)) LTE::gameObject *eventEntity, __attribute__((unused)) LTE::coreEventData *sendor)
-        {
-            LTE::app::keepRunning = false;
+            // debugInfoWindowId = LTE::app::getWindowManger()->addWindow([=](LTE::windowBuilder *build)
+            // {
+            //     build->setHeight(600)->setWidth(600)->setTitle("debug Info Window")->useImGui();
+            // });
         }
 
     private:
@@ -340,11 +301,17 @@ class flappyBird : public ::testing::Test
             LTE::app::init();
             initWindows();
 
-            LTE::entityManger::addEntity([=, this](LTE::gameObject::gameObjectBuilder *builder){ 
+            sceneId =  LTE::sceneManger::addScene([=](LTE::sceneBuilder *build)
+            {
+                build->setBackgroundColor(new LTE::material(glm::vec4({0.2f, 0.2f, 0.2f, 1.0f})));
+            });
+ 
+            gameScene = LTE::sceneManger::getScene(sceneId);
+
+            LTE::gameObjectId playerId =  gameScene->addGameObject([=, this](LTE::gameObjectBuilder*builder){ 
                 builder->
                     setObjectName("player")->
                     setObjectTransform({{ -0.9, 0.0f, 1.0f}, {0.0f, 0.0f, 0.0f}, { 0.2, 0.2f, 0.0f}})->
-                    setWindowId(gameWindowId)->
                     addComponent(LTE::mesh::build([=, this](LTE::mesh::meshBuilder *builder)
                         {
                             builder->setIndexBuffer(birdIndices, 12)->
@@ -368,11 +335,10 @@ class flappyBird : public ::testing::Test
             std::srand(std::time(nullptr));
             float pilarHight = (rand() / (RAND_MAX + 1.0f) - 0.5f) * 0.7;
 
-            LTE::entityManger::addEntity([=, this](LTE::gameObject::gameObjectBuilder *builder){ 
+            LTE::gameObjectId pilarTopId = gameScene->addGameObject([=, this](LTE::gameObjectBuilder*builder){ 
                 builder->
                     setObjectName("pilar top")->
                     setObjectTransform({{ 1.7f, pilarHight + 1.25f, 0.0f}, {0.0f, 0.0f, 0.0f}, { PILAR_HOLE_WIDTH, 2.0f, 1.0f}})->
-                    setWindowId(gameWindowId)->
                     addComponent(LTE::mesh::build([=, this](LTE::mesh::meshBuilder *builder)
                         {
                             builder->setIndexBuffer(pilarIndices, 6)->
@@ -384,11 +350,10 @@ class flappyBird : public ::testing::Test
                     addComponent(new LTE::squreCollider());
                 });
 
-            LTE::entityManger::addEntity([=, this](LTE::gameObject::gameObjectBuilder *builder){ 
+            LTE::gameObjectId pilarBottomId = gameScene->addGameObject([=, this](LTE::gameObjectBuilder*builder){ 
                 builder->
                     setObjectName("pilar bottom")->
                     setObjectTransform({{ 1.7f, pilarHight - 1.25f, 0.0f}, {0.0f, 0.0f, 0.0f}, { PILAR_HOLE_WIDTH, 2.0f, 1.0f}})->
-                    setWindowId(gameWindowId)->
                     addComponent(LTE::mesh::build([=, this](LTE::mesh::meshBuilder *builder)
                         {
                             builder->setIndexBuffer(pilarIndices, 6)->
@@ -400,16 +365,15 @@ class flappyBird : public ::testing::Test
                     addComponent(new LTE::squreCollider());
                 });
 
-            LTE::entityManger::addEntity([=, this](LTE::gameObject::gameObjectBuilder *builder){ 
+            LTE::gameObjectId pilarSummenerId =  gameScene->addGameObject([=, this](LTE::gameObjectBuilder*builder){ 
                 builder->
                     setObjectName("pilar summener")->
                     setObjectTransform({{ 0.8f, -1.0f, -1.0f}, {0.0f, 0.0f, 0.0f}, { 0.1f, 0.1f, 1.0f}})->
-                    setWindowId(gameWindowId)->
                     addComponent(new LTE::squreCollider())->
-                    addComponent(new pilarSummener());
+                    addComponent(new pilarSummener(sceneId));
                 });
 
-            LTE::entityManger::addEntity([=, this](LTE::gameObject::gameObjectBuilder *builder){ 
+            LTE::gameObjectId pilarDestroyerId =  gameScene->addGameObject([=, this](LTE::gameObjectBuilder*builder){ 
                 builder->
                     setObjectName("pilar destroyer")->
                     addComponent((new LTE::envelope())
@@ -421,15 +385,14 @@ class flappyBird : public ::testing::Test
                         setStartAmplitude(1.0)->
                         setSustainAmplitude(0.0f))->
                     setObjectTransform({{ -1.7f, 0.0f, 1.0f}, {0.0f, 0.0f, 0.0f}, { 0.1f, 2.0f, 1.0f}})->
-                    setWindowId(gameWindowId)->
                     addComponent(new LTE::squreCollider())->
-                    addComponent(new pilarDestroyer());
+                    addComponent(new pilarDestroyer(sceneId));
                 });
 
- 
-            LTE::eventManger::startBuildingEvent()->
-                setEventRoute("Window close/close app")->
-                setEventCallback(WindowClose)->add();
+
+    
+            LTE::sceneManger::getScene(sceneId)->renderToTextureAtEvent("flappyBird/screen texture", "window render/flappyBird/render scene");
+  
         }
 
         void TearDown() 
@@ -440,7 +403,7 @@ class flappyBird : public ::testing::Test
 
 
 
-TEST_F(flappyBird, DISABLED_testGames)
+TEST_F(flappyBird, testGames)
 {
     std::this_thread::sleep_for(std::chrono::milliseconds(500));
     LTE::app::run();
