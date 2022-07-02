@@ -40,7 +40,7 @@ namespace LTE
                 product->backgroundColor = color;
             }
 
-            void setCamera(gameObject *camera)
+            void setCamera(std::shared_ptr< LTE::gameObject>camera)
             {
 
             }

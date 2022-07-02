@@ -141,6 +141,7 @@ var hierarchy =
     [ "LTE::router< LTE::file * >", "d7/d22/class_l_t_e_1_1router.html", null ],
     [ "LTE::sceneBuilder", "d3/db0/class_l_t_e_1_1scene_builder.html", null ],
     [ "LTE::sceneEvent", "d6/daa/class_l_t_e_1_1scene_event.html", [
+      [ "bird", "da/dee/classbird.html", null ],
       [ "pilarDestroyer", "d8/d09/classpilar_destroyer.html", null ],
       [ "pilarSummener", "d3/ded/classpilar_summener.html", null ]
     ] ],

@@ -14,7 +14,7 @@ var class_l_t_e_1_1transform =
     [ "getPostion", "d6/d08/class_l_t_e_1_1transform.html#a160e68074988f3992b3cc6df921db306", null ],
     [ "getRotation", "d6/d08/class_l_t_e_1_1transform.html#a9e6017567ebcc3339edff1c774856abf", null ],
     [ "getScale", "d6/d08/class_l_t_e_1_1transform.html#ae99effe341f4e47e4d5e0d8e288de666", null ],
-    [ "init", "d6/d08/class_l_t_e_1_1transform.html#aebb8f37f7397dd85d518d35b544a8bbb", null ],
+    [ "init", "d6/d08/class_l_t_e_1_1transform.html#a201e08bb58b339ae2039ac814c5fa6dc", null ],
     [ "setPostion", "d6/d08/class_l_t_e_1_1transform.html#a60a944c3a4baab5a1886cc382d4318ba", null ],
     [ "setRotation", "d6/d08/class_l_t_e_1_1transform.html#ae66b2328e429a3d842e8c2299d368dc7", null ],
     [ "setScale", "d6/d08/class_l_t_e_1_1transform.html#a47f084187b7a09d9debe18a3961450d3", null ],

@@ -75,7 +75,7 @@ namespace LTE
 
 
         public:
-            virtual void init(gameObject *parent) override;
+            virtual void init(std::shared_ptr< LTE::gameObject> parent) override;
             virtual void end() override;
 
 

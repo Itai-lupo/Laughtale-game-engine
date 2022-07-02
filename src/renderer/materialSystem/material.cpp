@@ -35,7 +35,7 @@ namespace LTE
         this->baseColor = baseColor;
     }
 
-    void material::init(gameObject *parent)
+    void material::init(std::shared_ptr< LTE::gameObject>)
     {
         if(texturePath != ""){
             tex = assetManager::getAsset<texture>(texturePath);

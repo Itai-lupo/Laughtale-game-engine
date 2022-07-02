@@ -10,7 +10,7 @@ namespace LTE
     class colliderSystem2D
     {
         private:
-            std::vector<gameObject *> squreColliders;
+            std::vector<std::weak_ptr< LTE::gameObject>> squreColliders;
             std::thread *t;
             sceneId parentScene;
         public:
@@ -18,7 +18,7 @@ namespace LTE
             void init();
             void close();
 
-            void addSqureCollider(gameObject *collider){ squreColliders.push_back(collider); }
+            void addSqureCollider(std::weak_ptr< LTE::gameObject>collider){ squreColliders.push_back(collider); }
             void removeSqureCollider(gameObjectId);
 
             void checkCollision();

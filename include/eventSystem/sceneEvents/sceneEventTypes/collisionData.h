@@ -6,8 +6,8 @@ namespace LTE
 {
     struct collisionData: public sceneEventData
     {
-        collisionData(gameObjectId id, gameObject *target): sceneEventData(id), target(target){}
+        collisionData(gameObjectId id, std::shared_ptr< LTE::gameObject>target): sceneEventData(id), target(target){}
         virtual ~collisionData() = default;
-        gameObject *target;
+        std::shared_ptr< LTE::gameObject>target;
     };
 }

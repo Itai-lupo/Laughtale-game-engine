@@ -12,7 +12,7 @@ var searchData=
   ['addnote_9',['addNote',['../db/d56/class_l_t_e_1_1sequencer.html#a2a4b5e1c5481948ddb88e8fbec563f91',1,'LTE::sequencer']]],
   ['addroute_10',['addRoute',['../d7/d22/class_l_t_e_1_1router.html#a854a190b199213a2b0bda12e9b2ae22f',1,'LTE::router']]],
   ['addscene_11',['addScene',['../d7/d9a/class_l_t_e_1_1scene_manger.html#a96129d4d00a2fb857a020471f9ec55fc',1,'LTE::sceneManger']]],
-  ['addsqurecollider_12',['addSqureCollider',['../df/d41/class_l_t_e_1_1collider_system2_d.html#a03173e5cd2213410f147225814dc7274',1,'LTE::colliderSystem2D']]],
+  ['addsqurecollider_12',['addSqureCollider',['../df/d41/class_l_t_e_1_1collider_system2_d.html#a01a3870dcdd12b72c39f4bd05bd472f7',1,'LTE::colliderSystem2D']]],
   ['addtile_13',['addTile',['../d5/d49/class_l_t_e_1_1tilemap.html#a0026f12dfb077d227ee52b6f260c18be',1,'LTE::tilemap']]],
   ['addvalue_14',['addValue',['../d7/d22/class_l_t_e_1_1router.html#a0cdfb96ddc065e506a9ad87dffc7f944',1,'LTE::router']]],
   ['addwindow_15',['addWindow',['../de/de3/class_l_t_e_1_1window_manger.html#acc2b710e8936b1ba64fd0f2ef7f7b636',1,'LTE::windowManger']]],

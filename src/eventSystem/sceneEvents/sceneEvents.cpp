@@ -62,7 +62,7 @@ namespace LTE
         eventList[t].push_back(callback);
     }    
 
-
+#include "logger.h"
     template<>
     void sceneEventsManger::trigerEvent<collisionData>(collisionData *sendor, sceneEventsType t)
     {

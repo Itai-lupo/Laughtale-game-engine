@@ -37,8 +37,8 @@ namespace LTE
             sceneId id;
             colliderSystem2D *sceneCollider;
 
-            gameObject *camera;
-            std::vector<gameObject*> *objects;
+            std::shared_ptr<LTE::gameObject> camera;
+            std::vector<std::weak_ptr<gameObject>> *objects;
             
             material *backgroundColor;
 
@@ -46,27 +46,7 @@ namespace LTE
             
             virtual void onWindowRender(windowRenderData *sendor) override;
             
-            std::vector<gameObject*> getObjectsByName(const std::string& objectName)
-            {
-                std::vector<gameObject*> objectWithName;
-                for(gameObject *obj: *objects)
-                {
-                    if(obj->getName() == objectName)
-                        objectWithName.push_back((obj));
-                }
-                return objectWithName;
-            }
-
-            template<typename objectType> std::vector<objectType> getObjectsByName(const std::string& objectName)
-            {
-                std::vector<objectType> objectWithName;
-                for(gameObject *obj: *objects)
-                {
-                    if(obj->getName() == objectName && static_cast<objectType>(obj))
-                        objectWithName.push_back(static_cast<objectType>(obj));
-                }
-                return objectWithName;
-            }
+            
 
             float getAspectRation()
             {
@@ -75,8 +55,8 @@ namespace LTE
 
             void renderToTextureAtEvent(const std::string& texturePath, const std::string& eventPath);
             
-            void pushObjectToRender(gameObject* obj);
-            void pushPhysicsObject(gameObject* obj);
+            void pushObjectToRender(std::weak_ptr<gameObject> obj);
+            void pushPhysicsObject(std::weak_ptr<gameObject> obj);
             
             void removeObjectToRender(gameObjectId objId);
             void removePhysicsObject(gameObjectId objId);
@@ -90,8 +70,8 @@ namespace LTE
 
 
             gameObjectId addGameObject(std::function<void(gameObjectBuilder *Builder)> buildGameObject);
-            gameObject *getGameObjectByName(const std::string& name);
-            gameObject *getGameObjectById(gameObjectId id);
+            std::shared_ptr< LTE::gameObject>getGameObjectByName(const std::string& name);
+            std::shared_ptr< LTE::gameObject>getGameObjectById(gameObjectId id);
             void removeGameObjectById(gameObjectId id);
     };
 

@@ -1,6 +1,4 @@
 <map id="LTE::texture::getSpriteYDelte" name="LTE::texture::getSpriteYDelte">
-<area shape="rect" id="node1" title=" " alt="" coords="617,13,805,39"/>
-<area shape="rect" id="node2" href="$dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6" title=" " alt="" coords="404,5,569,47"/>
-<area shape="rect" id="node3" href="$d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ad5f4eefe2fd0ccb1eca97b1ea900f884" title=" " alt="" coords="189,5,356,47"/>
-<area shape="rect" id="node4" href="$dc/ddb/class_l_t_e_1_1batch_renderer.html#a4ce0e8492103711b80fe7ecb673253d4" title=" " alt="" coords="5,5,141,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="219,13,407,39"/>
+<area shape="rect" id="node2" href="$dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6" title=" " alt="" coords="5,5,171,47"/>
 </map>

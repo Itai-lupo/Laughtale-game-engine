@@ -1,6 +1,4 @@
 <map id="LTE::scene::removeGameObjectById" name="LTE::scene::removeGameObjectById">
 <area shape="rect" id="node1" title=" " alt="" coords="5,13,240,39"/>
 <area shape="rect" id="node2" href="$dc/d88/class_l_t_e_1_1game_objects_manger.html#aa172bca285a3a77c2fcade53d08c7a62" title=" " alt="" coords="288,5,460,47"/>
-<area shape="rect" id="node3" href="$d2/d49/class_l_t_e_1_1game_object.html#a0fc2297aee56df3c905935c65820bfe6" title=" " alt="" coords="508,13,657,39"/>
-<area shape="rect" id="node4" href="$d6/d08/class_l_t_e_1_1transform.html#a20dab658b9016ad5f44102556c618201" title=" " alt="" coords="705,13,840,39"/>
 </map>

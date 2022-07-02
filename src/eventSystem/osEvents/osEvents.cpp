@@ -1,4 +1,3 @@
-#pragma once
 #include "osEvents.h"
 #include "app.h"
 #include "logger.h"
@@ -61,15 +60,15 @@ namespace LTE
         if(t != osEventsType::windowRender && t != osEventsType::WindowImGuiRender)
             LAUGHTALE_ENGINR_LOG_FATAL("wrong os event type: " << t << " on event of type" << "windowRenderData")
 
-        for(osEvent *callback: eventList[t])
+        for(int i = 0; i < eventList[t].size(); i++)
         {
-            if(callback->onlyRunOnWindow != 0 && callback->onlyRunOnWindow != sendor->windowId )
+            if(eventList[t][i]->onlyRunOnWindow != 0 && eventList[t][i]->onlyRunOnWindow != sendor->windowId )
                 continue;
             
             if(t == osEventsType::windowRender)
-                callback->onWindowRender(sendor);
+                eventList[t][i]->onWindowRender(sendor);
             if(t == osEventsType::WindowImGuiRender)
-                callback->onWindowImGuiRender(sendor);
+                eventList[t][i]->onWindowImGuiRender(sendor);
         }
         
     }

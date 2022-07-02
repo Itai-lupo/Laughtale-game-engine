@@ -1,9 +1,6 @@
 <map id="LTE::scene::addGameObject" name="LTE::scene::addGameObject">
-<area shape="rect" id="node1" title=" " alt="" coords="5,89,192,116"/>
-<area shape="rect" id="node2" href="$dc/d88/class_l_t_e_1_1game_objects_manger.html#a712c6c472ea7aea3b9aa09da2b591354" title=" " alt="" coords="240,82,412,123"/>
-<area shape="rect" id="node3" href="$de/d82/class_l_t_e_1_1game_object_builder.html#a38194c3791f14b3de2478ea749e5baf9" title=" " alt="" coords="460,23,623,65"/>
-<area shape="rect" id="node6" href="$d2/d49/class_l_t_e_1_1game_object.html#a2b51bfd8b5bbe7be71011b0bc9e47355" title=" " alt="" coords="463,89,620,116"/>
-<area shape="rect" id="node7" href="$de/d82/class_l_t_e_1_1game_object_builder.html#a410883a2a9922e958a780b2cd87c1770" title=" " alt="" coords="460,141,623,182"/>
-<area shape="rect" id="node4" href="$d9/d4b/class_l_t_e_1_1component.html#a3e5d2369a819e87417e96290a73d2cd1" title=" " alt="" coords="691,5,829,32"/>
-<area shape="rect" id="node5" href="$d9/d4b/class_l_t_e_1_1component.html#a484a41ae15417c5d10ed6da34a2ba945" title=" " alt="" coords="671,56,849,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,46,192,73"/>
+<area shape="rect" id="node2" href="$dc/d88/class_l_t_e_1_1game_objects_manger.html#a712c6c472ea7aea3b9aa09da2b591354" title=" " alt="" coords="240,39,412,80"/>
+<area shape="rect" id="node3" href="$de/d82/class_l_t_e_1_1game_object_builder.html#a6af1611f6b974117e4634298487cae08" title=" " alt="" coords="460,5,623,47"/>
+<area shape="rect" id="node4" href="$de/d82/class_l_t_e_1_1game_object_builder.html#a410883a2a9922e958a780b2cd87c1770" title=" " alt="" coords="460,71,623,112"/>
 </map>

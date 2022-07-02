@@ -16,7 +16,6 @@ namespace LTE
             glm::vec3 rotation;
             glm::vec3 scale;
             
-            gameObject *parent;
         
         public:
             transform(glm::mat3 trans):
@@ -25,9 +24,8 @@ namespace LTE
                 
             }
 
-            virtual void init(gameObject *parent)
+            virtual void init(std::shared_ptr<LTE::gameObject> parent)
             {
-                this->parent = parent;
             }
 
             virtual void end()

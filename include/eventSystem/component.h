@@ -12,8 +12,9 @@ namespace LTE
             sceneId parentScene;
             gameObjectId parentId;
         public:
+            component(){}
             virtual ~component() = default;
-            virtual void init(gameObject *parent) = 0;
+            virtual void init(std::shared_ptr<LTE::gameObject>) = 0;
             virtual void end() = 0;
 
             void setParent(gameObjectId parentId, sceneId parentScene)

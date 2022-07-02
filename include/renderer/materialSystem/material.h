@@ -50,7 +50,7 @@ namespace LTE
             float getTexturePostionY(int curnerIndex);
 
 
-            virtual void init(gameObject *parent) override;
+            virtual void init(std::shared_ptr< LTE::gameObject>) override;
             virtual void end() override;
     };
 }

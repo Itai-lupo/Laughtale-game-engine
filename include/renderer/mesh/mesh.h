@@ -98,7 +98,7 @@ namespace LTE
                 float *getVertices();
                 uint32_t* getIB();
 
-                virtual void init(gameObject *parent) override;
+                virtual void init(std::shared_ptr< LTE::gameObject>) override;
                 virtual void end() override;
     };
 }

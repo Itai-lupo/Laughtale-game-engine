@@ -1,18 +1,19 @@
 <map id="include/eventSystem/sceneEvents/sceneEventTypes/collisionData.h" name="include/eventSystem/sceneEvents/sceneEventTypes/collisionData.h">
 <area shape="rect" id="node1" title=" " alt="" coords="70,5,278,61"/>
 <area shape="rect" id="node2" href="$d9/dc2/scene_event_data_8h.html" title=" " alt="" coords="42,109,169,136"/>
-<area shape="rect" id="node5" href="$db/d2d/gameobject_8h.html" title=" " alt="" coords="259,109,358,136"/>
+<area shape="rect" id="node6" href="$db/d2d/gameobject_8h.html" title=" " alt="" coords="259,109,358,136"/>
 <area shape="rect" id="node3" href="$d5/dc4/core_8h.html" title=" " alt="" coords="61,333,118,360"/>
-<area shape="rect" id="node4" title=" " alt="" coords="59,408,120,435"/>
-<area shape="rect" id="node6" title=" " alt="" coords="322,333,401,360"/>
-<area shape="rect" id="node7" title=" " alt="" coords="196,333,255,360"/>
-<area shape="rect" id="node8" title=" " alt="" coords="219,184,294,211"/>
-<area shape="rect" id="node9" title=" " alt="" coords="400,259,492,285"/>
-<area shape="rect" id="node10" href="$d1/d8c/logger_8h.html" title=" " alt="" coords="534,184,600,211"/>
-<area shape="rect" id="node13" href="$d6/dcf/component_8h.html" title=" " alt="" coords="178,259,274,285"/>
-<area shape="rect" id="node14" href="$d2/d80/transform_8h.html" title=" " alt="" coords="318,184,405,211"/>
-<area shape="rect" id="node15" href="$dc/d94/_l_t_e_error_8h.html" title=" " alt="" coords="628,184,711,211"/>
-<area shape="rect" id="node11" title=" " alt="" coords="516,259,618,285"/>
-<area shape="rect" id="node12" title=" " alt="" coords="642,259,697,285"/>
-<area shape="rect" id="node16" title=" " alt="" coords="721,259,800,285"/>
+<area shape="rect" id="node4" title=" " alt="" coords="15,408,76,435"/>
+<area shape="rect" id="node5" title=" " alt="" coords="101,408,169,435"/>
+<area shape="rect" id="node7" title=" " alt="" coords="322,333,401,360"/>
+<area shape="rect" id="node8" title=" " alt="" coords="196,333,255,360"/>
+<area shape="rect" id="node9" title=" " alt="" coords="219,184,294,211"/>
+<area shape="rect" id="node10" title=" " alt="" coords="400,259,492,285"/>
+<area shape="rect" id="node11" href="$d1/d8c/logger_8h.html" title=" " alt="" coords="534,184,600,211"/>
+<area shape="rect" id="node14" href="$d6/dcf/component_8h.html" title=" " alt="" coords="178,259,274,285"/>
+<area shape="rect" id="node15" href="$d2/d80/transform_8h.html" title=" " alt="" coords="318,184,405,211"/>
+<area shape="rect" id="node16" href="$dc/d94/_l_t_e_error_8h.html" title=" " alt="" coords="628,184,711,211"/>
+<area shape="rect" id="node12" title=" " alt="" coords="516,259,618,285"/>
+<area shape="rect" id="node13" title=" " alt="" coords="642,259,697,285"/>
+<area shape="rect" id="node17" title=" " alt="" coords="721,259,800,285"/>
 </map>

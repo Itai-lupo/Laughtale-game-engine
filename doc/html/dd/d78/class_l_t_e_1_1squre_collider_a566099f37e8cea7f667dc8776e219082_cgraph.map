@@ -1,7 +1,6 @@
 <map id="LTE::squreCollider::getBonds" name="LTE::squreCollider::getBonds">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,132,97"/>
-<area shape="rect" id="node2" href="$d6/d26/class_l_t_e_1_1scene.html#ae9efb390b01198b99ab83fea6d7b0d9d" title=" " alt="" coords="180,13,391,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,132,72"/>
+<area shape="rect" id="node2" href="$d6/d26/class_l_t_e_1_1scene.html#a4ba0154e84f4b99d699286aaf187335c" title=" " alt="" coords="180,13,391,39"/>
 <area shape="rect" id="node4" href="$d7/d9a/class_l_t_e_1_1scene_manger.html#a3dc19de53c0c790c5855c864df93f418" title=" " alt="" coords="190,63,381,90"/>
-<area shape="rect" id="node5" href="$d2/d49/class_l_t_e_1_1game_object.html#a568b30b81a33465e74c3c39663d1b5c0" title=" " alt="" coords="183,114,388,141"/>
-<area shape="rect" id="node3" href="$dc/d88/class_l_t_e_1_1game_objects_manger.html#af68ed85525de10b895d0fafafdb18b5e" title=" " alt="" coords="439,5,611,47"/>
+<area shape="rect" id="node3" href="$dc/d88/class_l_t_e_1_1game_objects_manger.html#ad59103a767170582efd148bec47c691c" title=" " alt="" coords="439,5,611,47"/>
 </map>

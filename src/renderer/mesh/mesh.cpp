@@ -80,7 +80,7 @@ namespace LTE
         return count;
     }
 
-    void mesh::init(gameObject *parent)
+    void mesh::init(std::shared_ptr< LTE::gameObject> parent)
     {
         assetManager::loadAssetFromFile(shaderToUse);
         sceneManger::getScene(parentScene)->pushObjectToRender(parent);

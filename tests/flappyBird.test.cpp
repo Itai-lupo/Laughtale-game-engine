@@ -38,7 +38,7 @@ class pilar: public LTE::component, LTE::osEvent
         {
         }
 
-        virtual void init(LTE::gameObject *pilar) override
+        virtual void init(std::shared_ptr<LTE::gameObject> pilar) override
         {
         }
 
@@ -57,7 +57,7 @@ class pilar: public LTE::component, LTE::osEvent
         }        
 };
 
-class bird: public LTE::component, LTE::osEvent
+class bird: public LTE::component, LTE::osEvent, LTE::sceneEvent
 {
     private:
         LTE::windowPieceId debugInfoWindowId;
@@ -75,11 +75,12 @@ class bird: public LTE::component, LTE::osEvent
             LTE::osEventsType::windowRender,
             LTE::osEventsType::WindowImGuiRender,
             LTE::osEventsType::WindowClose
-        }), debugInfoWindowId(debugInfoWindowId){}
+        }), LTE::sceneEvent(sceneId, {LTE::sceneEventsType::collision}), debugInfoWindowId(debugInfoWindowId){}
 
-        virtual void init(LTE::gameObject *player) override
+        virtual void init(std::shared_ptr< LTE::gameObject> player) override
         {
-
+            onlyRunOnGameObject = player->getId();
+            
         }
 
         virtual void end() override
@@ -91,7 +92,7 @@ class bird: public LTE::component, LTE::osEvent
         {
             speed -= ((float)sendor->DeltaTime)/1000.0f * 2;
             
-            LTE::gameObject *player = gameScene->getGameObjectById(getParentId());
+            std::shared_ptr< LTE::gameObject>player = gameScene->getGameObjectById(getParentId());
             player->getTransform()->changeYPostion(((float)sendor->DeltaTime)/1000.0f * speed * !failed);
             player->getTransform()->setZRotation(glm::radians((speed - 1.5f) * 25.0f));
 
@@ -125,7 +126,7 @@ class bird: public LTE::component, LTE::osEvent
 
         void onkeyPressed(LTE::KeyData *sendor)
         {
-            LTE::gameObject *player = gameScene->getGameObjectById(getParentId());
+            std::shared_ptr< LTE::gameObject>player = gameScene->getGameObjectById(getParentId());
             player->getComponent<LTE::envelope>()->noteOn();
             speed = 1.25f;
             player->getComponent<LTE::mesh>()->setShaderName(( player->getComponent<bird>()->star ? "res/flappyBird/bird.glsl": "res/flappyBird/Basic.glsl"));
@@ -157,8 +158,9 @@ class pilarSummener: public LTE::component, LTE::sceneEvent
     public:
         pilarSummener(LTE::sceneId parentScene): LTE::sceneEvent(parentScene, {LTE::sceneEventsType::collision}){}
 
-        virtual void init(LTE::gameObject *summener) override
+        virtual void init(std::shared_ptr< LTE::gameObject> summener) override
         {
+            onlyRunOnGameObject = summener->getId();
             
         }
 
@@ -212,9 +214,9 @@ class pilarDestroyer: public LTE::component, LTE::sceneEvent
     public:
         pilarDestroyer(LTE::sceneId parentScene): LTE::sceneEvent(parentScene, {LTE::sceneEventsType::collision}){}
 
-        virtual void init(LTE::gameObject *destroyer) override
+        virtual void init(std::shared_ptr< LTE::gameObject> destroyer) override
         {
-            
+            onlyRunOnGameObject = destroyer->getId();
         }
 
         virtual void end() override
@@ -403,7 +405,7 @@ class flappyBird : public ::testing::Test
 
 
 
-TEST_F(flappyBird, testGames)
+TEST_F(flappyBird,  DISABLED_testGames)
 {
     std::this_thread::sleep_for(std::chrono::milliseconds(500));
     LTE::app::run();

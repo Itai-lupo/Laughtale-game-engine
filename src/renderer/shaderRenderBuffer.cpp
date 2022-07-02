@@ -29,7 +29,7 @@ namespace LTE
         return s;
     }
 
-    void shaderRenderBuffer::pushShape(mesh *shape, material *m)
+    void shaderRenderBuffer::pushShape(std::shared_ptr<mesh> shape, std::shared_ptr<material> m)
     {
         vertexsData temp;
         unsigned int indicesOffset = verticesData.size();

@@ -12,8 +12,6 @@ namespace LTE
 
     gameObjectsManger::~gameObjectsManger()
     {
-        for(auto& t: gameObjects)
-            delete t;
         gameObjects.clear();
         nextGameObjectId = 1;
     }
@@ -22,15 +20,15 @@ namespace LTE
     {
         builder->reset(parentScene);
         buildGameObject(builder);
-        gameObject *res = builder->build(nextGameObjectId);
+        std::shared_ptr< LTE::gameObject>res = builder->build(nextGameObjectId);
         gameObjects.push_back(res);
         nextGameObjectId++;
         return res->getId();
     }
 
-    gameObject *gameObjectsManger::getGameObjectByName(const std::string& name)
+    std::shared_ptr< LTE::gameObject>gameObjectsManger::getGameObjectByName(const std::string& name)
     {
-        gameObject *e = nullptr;
+        std::shared_ptr< LTE::gameObject>e = nullptr;
         for (uint64_t i = 0; i < gameObjects.size(); i++)
         {
             if(gameObjects[i]->getName()  == name)
@@ -42,9 +40,9 @@ namespace LTE
         
     }
 
-    gameObject *gameObjectsManger::getGameObjectById(gameObjectId id)
+    std::shared_ptr< LTE::gameObject>gameObjectsManger::getGameObjectById(gameObjectId id)
     {
-        gameObject *e = nullptr;
+        std::shared_ptr< LTE::gameObject>e = nullptr;
         for (uint64_t i = 0; i < gameObjects.size(); i++)
         {
             if(gameObjects[i]->getId()  == id)
@@ -61,10 +59,9 @@ namespace LTE
         {
             if(gameObjects[i]->getId()  == id)
             {
-                gameObject *e = gameObjects[i]; 
+                std::shared_ptr< LTE::gameObject>e = gameObjects[i]; 
                 gameObjects.erase(gameObjects.begin() + i);
                 e->end();
-                delete e;
             }
         }
         

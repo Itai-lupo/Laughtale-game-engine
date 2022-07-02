@@ -22,39 +22,39 @@ namespace LTE
             transform *ObjectTransform;
             sceneId parentScene;
 
-            std::vector<component*> components;
-            gameObject(sceneId parentScene):parentScene(parentScene){}
+            std::vector<std::shared_ptr<component>> components;
 
         public:    
+            gameObject(sceneId parentScene):parentScene(parentScene){}
             friend class gameObjectBuilder;
 
             const std::string& getName(){ return name; }
             const gameObjectId getId(){ return id; }
             
             template<typename T> 
-            T *getComponent()
+            std::shared_ptr<T> getComponent()
             {
                 if(id == 0 || !ObjectTransform)
                     throw new ComponentNotFoundException("entitys with id 0 have no data ");
 
                 for (auto comp: components)
                 {
-                    if(comp && dynamic_cast<T*>(comp))
-                        return dynamic_cast<T*>(comp); 
+                    if(comp && dynamic_pointer_cast<T>(comp))
+                        return dynamic_pointer_cast<T>(comp); 
                 }
                 throw new ComponentNotFoundException("can't find Component of type: " + std::string(typeid(T).name()));
                 return NULL;
             }    
 
             template<typename T> 
-            void setComponent(component *componentToAdd)
+            void setComponent(std::shared_ptr<component> componentToAdd)
             {
                 if(id == 0 || !ObjectTransform)
                     throw new ComponentNotFoundException("entitys with id 0 have no data ");
 
                 for (auto comp: components)
                 {
-                    if(comp && dynamic_cast<T*>(comp))
+                    if(comp && dynamic_pointer_cast<T>(comp))
                     {
                         comp = componentToAdd; 
                         return;    
@@ -69,12 +69,12 @@ namespace LTE
             {
                 if(id == 0 || !ObjectTransform)
                     throw new ComponentNotFoundException("entitys with id 0 have no data ");
-                std::vector<component*>::iterator it = std::remove_if(
+                auto it = std::remove_if(
                         components.begin(), 
                         components.end(),
                         [](component *comp) -> bool
                         {
-                            return comp && dynamic_cast<T*>(comp);
+                            return comp && dynamic_pointer_cast<T>(comp);
                         });
 
                 if(it != components.end())
@@ -86,11 +86,11 @@ namespace LTE
                 for(auto c: components)
                 {
                     c->end();
-                    // delete c;
+                    c.reset();
                 }
-                // components.clear();
+                components.clear();
                 ObjectTransform->end();
-                // delete ObjectTransform;
+                delete ObjectTransform;
             }
 
             transform *getTransform()
@@ -107,7 +107,7 @@ namespace LTE
     class gameObjectBuilder
     {
         protected:
-            gameObject *prodect;
+            std::shared_ptr<gameObject> prodect;
         
         public:
             gameObjectBuilder()
@@ -127,26 +127,26 @@ namespace LTE
                 return this;
             }
 
-            gameObjectBuilder *addComponent(component* toAdd)
+            gameObjectBuilder *addComponent(component *toAdd)
             {
-                prodect->components.push_back(toAdd);
+                prodect->components.push_back(std::shared_ptr<component>(toAdd));
                 return this;
             }     
 
             gameObjectBuilder *reset(sceneId parentScene)
             {
-                prodect = new gameObject(parentScene);
+                prodect = std::make_shared<gameObject>(parentScene);
                 return this;
             }
 
 
-            gameObject *build(gameObjectId id)
+            std::shared_ptr<gameObject> build(gameObjectId id)
             {
-                for(component *c: prodect->components){
+                prodect->id = id;
+                for(std::shared_ptr<component> c: prodect->components){
                     c->setParent(id, prodect->parentScene);
                     c->init(prodect);
                 }
-                prodect->id = id;
                 return prodect;
             }
 
@@ -158,15 +158,15 @@ namespace LTE
     {
         private:
             gameObjectBuilder *builder;
-            std::vector<gameObject*> gameObjects;
+            std::vector<std::shared_ptr< LTE::gameObject>> gameObjects;
             gameObjectId nextGameObjectId = 1;
         public:
             gameObjectsManger();
             ~gameObjectsManger();
 
             gameObjectId addGameObject(std::function<void(gameObjectBuilder *Builder)> buildGameObject, sceneId parentScene);
-            gameObject *getGameObjectByName(const std::string& name);
-            gameObject *getGameObjectById(gameObjectId id);
+            std::shared_ptr< LTE::gameObject>getGameObjectByName(const std::string& name);
+            std::shared_ptr< LTE::gameObject>getGameObjectById(gameObjectId id);
             void removeGameObjectById(gameObjectId id);
 
     };

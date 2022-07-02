@@ -2,6 +2,6 @@ var classpilar =
 [
     [ "pilar", "d1/d69/classpilar.html#a5b48d09e8876d2d08341f8c793cc0f5d", null ],
     [ "end", "d1/d69/classpilar.html#a59b2e73b8db0e5c189ca1a1e7c5e1e8a", null ],
-    [ "init", "d1/d69/classpilar.html#a5766ecde88be62932b9d246eb7772553", null ],
+    [ "init", "d1/d69/classpilar.html#a94bdedbfed9e9f04a4e93f44acb62e63", null ],
     [ "onWindowRender", "d1/d69/classpilar.html#a290823de34d07b9bfd05c3b020e5db0c", null ]
 ];

@@ -30,9 +30,9 @@ var searchData=
   ['setbasecolor_27',['setBaseColor',['../dc/dda/class_l_t_e_1_1material.html#ada3f713ba657845e34fc3c98d3bd6aba',1,'LTE::material']]],
   ['setbasefilespath_28',['setBaseFIlesPath',['../df/dfd/class_l_t_e_1_1file_manager.html#ae9cfc6dc8b6e699415aa671bb99f1ad0',1,'LTE::fileManager']]],
   ['setbuffer_29',['setBuffer',['../df/db4/class_l_t_e_1_1vertex_array.html#a7f61409137979cf8ea548ec438f5e5af',1,'LTE::vertexArray']]],
-  ['setcamera_30',['setCamera',['../d3/db0/class_l_t_e_1_1scene_builder.html#a700a7ab4278316fef0677a89147714be',1,'LTE::sceneBuilder']]],
+  ['setcamera_30',['setCamera',['../d3/db0/class_l_t_e_1_1scene_builder.html#adbc73221d0b999887aff94c0a049600c',1,'LTE::sceneBuilder']]],
   ['setclearcolor_31',['SetClearColor',['../d0/d71/class_l_t_e_1_1open_g_l_render_api.html#a007137cc8e8d9c82488bd2667a8b4180',1,'LTE::openGLRenderApi::SetClearColor()'],['../df/d3a/class_l_t_e_1_1render_api.html#a559ae0985986d43e165a90019c3b07a0',1,'LTE::renderApi::SetClearColor()']]],
-  ['setcomponent_32',['setComponent',['../d2/d49/class_l_t_e_1_1game_object.html#a348edfda6e1062a934c71b76c93c80e6',1,'LTE::gameObject']]],
+  ['setcomponent_32',['setComponent',['../d2/d49/class_l_t_e_1_1game_object.html#a846382e3edb4d99c5bfa65de14375d2a',1,'LTE::gameObject']]],
   ['setdata_33',['setData',['../d6/d2f/class_l_t_e_1_1index_buffer.html#a8324d636e5ddbdada5eb24ea36d64596',1,'LTE::indexBuffer::setData()'],['../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#a6d53e4d307392c95e42937d3e7082f71',1,'LTE::VertexBuffer::setData()']]],
   ['setdecaytime_34',['setDecayTime',['../d2/d04/class_l_t_e_1_1envelope.html#adde53dc78ce21e87a4ca3aa09d0a231f',1,'LTE::envelope']]],
   ['setdepthrendertarget_35',['setDepthRenderTarget',['../da/da3/class_l_t_e_1_1framebuffer.html#aeb00d6adc5ab760abc00e02b855a306b',1,'LTE::framebuffer']]],
@@ -138,8 +138,8 @@ var searchData=
   ['strummingdown_135',['strummingDown',['../d4/d0d/class_l_t_e_1_1guitar.html#a160d1bb48c3e4bae3ac19e6c4039af27',1,'LTE::guitar']]],
   ['strummingup_136',['strummingUp',['../d4/d0d/class_l_t_e_1_1guitar.html#a6d5e9fe1decb82ac5bf00c8dce580986',1,'LTE::guitar']]],
   ['subbeats_137',['subBeats',['../db/d56/class_l_t_e_1_1sequencer.html#ae4becb0f01365c42a53435ebea978323',1,'LTE::sequencer']]],
-  ['submitshape_138',['submitShape',['../dc/ddb/class_l_t_e_1_1batch_renderer.html#a4ce0e8492103711b80fe7ecb673253d4',1,'LTE::batchRenderer']]],
+  ['submitshape_138',['submitShape',['../dc/ddb/class_l_t_e_1_1batch_renderer.html#a343cd6434c2d4eb850e4d30014f462e1',1,'LTE::batchRenderer']]],
   ['sustainamplitude_139',['sustainAmplitude',['../d2/d04/class_l_t_e_1_1envelope.html#afd1ef7c81388553ee9f5c2dc6f87e9d9',1,'LTE::envelope']]],
-  ['swapbuffers_140',['swapBuffers',['../d1/db3/class_l_t_e_1_1linux_a_p_i.html#a5f7bbc1ed7c161e6010ea0e0d009b3a9',1,'LTE::linuxAPI::swapBuffers()'],['../d8/da3/class_l_t_e_1_1os_a_p_i.html#a5797efa13ff7fb2f6fb37e1aa7a0940e',1,'LTE::osAPI::swapBuffers()']]],
-  ['swapbuffers_141',['SwapBuffers',['../d7/d20/class_l_t_e_1_1graphics_context.html#a4445240a7b179f872cbbcdb80ff191b8',1,'LTE::graphicsContext']]]
+  ['swapbuffers_140',['SwapBuffers',['../d7/d20/class_l_t_e_1_1graphics_context.html#a4445240a7b179f872cbbcdb80ff191b8',1,'LTE::graphicsContext']]],
+  ['swapbuffers_141',['swapBuffers',['../d1/db3/class_l_t_e_1_1linux_a_p_i.html#a5f7bbc1ed7c161e6010ea0e0d009b3a9',1,'LTE::linuxAPI::swapBuffers()'],['../d8/da3/class_l_t_e_1_1os_a_p_i.html#a5797efa13ff7fb2f6fb37e1aa7a0940e',1,'LTE::osAPI::swapBuffers()']]]
 ];

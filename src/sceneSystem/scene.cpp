@@ -13,7 +13,7 @@ namespace LTE
     {
         sceneCollider = new colliderSystem2D(id);
         backgroundColor = new material(glm::vec4({0.05f, 0.05f, 0.55f, 1.0f}));
-        objects = new std::vector<gameObject*>();    
+        objects = new  std::vector<std::weak_ptr<gameObject>>;    
         
         fbo = new framebuffer(1280, 720);
         render = new batchRenderer(this);
@@ -35,12 +35,12 @@ namespace LTE
         fbo->unbind();
     }
 
-    void scene::pushObjectToRender(gameObject* obj)
+    void scene::pushObjectToRender(std::weak_ptr<gameObject> obj)
     {
         objects->push_back(obj);
     }
 
-    void scene::pushPhysicsObject(gameObject* obj)
+    void scene::pushPhysicsObject(std::weak_ptr<gameObject> obj)
     {
         sceneCollider->addSqureCollider(obj);
     }
@@ -51,7 +51,7 @@ namespace LTE
         objects->erase(std::remove_if(
             objects->begin(),
             objects->end(),
-            [objId](gameObject* obj){ return obj->getId() == objId; }
+            [objId](std::weak_ptr<gameObject> obj){ return obj.lock() && obj.lock()->getId() == objId; }
         ));
     }
 
@@ -66,12 +66,12 @@ namespace LTE
         return sceneHierarchy->addGameObject(buildGameObject, id);
     }
 
-    gameObject *scene::getGameObjectByName(const std::string& name)
+    std::shared_ptr< LTE::gameObject>scene::getGameObjectByName(const std::string& name)
     {
         return sceneHierarchy->getGameObjectByName(name);
     }
 
-    gameObject *scene::getGameObjectById(gameObjectId id)
+    std::shared_ptr< LTE::gameObject>scene::getGameObjectById(gameObjectId id)
     {
         return sceneHierarchy->getGameObjectById(id);
 

@@ -1,0 +1,14 @@
+digraph "LTE::envelope::init"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="LTE::envelope::init",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="LTE::soundSynthesizer\l::addEnvelope",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dff/class_l_t_e_1_1sound_synthesizer.html#a04255924d76b7babffe16e7b749830f6",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="LTE::envelope::getId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d04/class_l_t_e_1_1envelope.html#a6c14f0fb15abc74ddfb8f9fce18f5815",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="LTE::envelope::setId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d04/class_l_t_e_1_1envelope.html#a13e89e5e47e6fcc8b3ebfd6d3c76c29e",tooltip=" "];
+}

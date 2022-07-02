@@ -82,7 +82,7 @@ class cube: LTE::osEvent
 
 };
 
-TEST(moduleLoading, objLoad)
+TEST(moduleLoading, DISABLED_objLoad)
 {
     LTE::app::init();
     

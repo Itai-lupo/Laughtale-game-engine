@@ -51,7 +51,7 @@ namespace LTE
 
     }
 
-    void orthographicCameraControler::init(gameObject *parent)
+    void orthographicCameraControler::init(std::shared_ptr< LTE::gameObject> p)
     {
     }
     

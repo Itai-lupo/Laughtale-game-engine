@@ -36,7 +36,7 @@ namespace LTE
         public:                
             batchRenderer(scene *Scene): Scene(Scene){}
 
-            shaderRenderBuffer *submitShape(mesh *shape, material *shapeMatrial);
+            shaderRenderBuffer *submitShape(std::shared_ptr<mesh> shape, std::shared_ptr<material> shapeMatrial);
 
             void renderScene();
     };

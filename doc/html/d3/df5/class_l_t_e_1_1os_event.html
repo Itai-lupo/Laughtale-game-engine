@@ -173,18 +173,18 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
-<div class="line"><span class="lineno">   13</span>        <span class="keywordtype">id</span> = <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a6484d4675cac615e22f961d3256d9fd1">app::getEventManger</a>()-&gt;<a class="code hl_function" href="../../d3/d10/class_l_t_e_1_1os_events_manger.html#ae0a457b6ec29a41c37be3c2d8836b17a">registerOsEventClass</a>(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">for</span> (<a class="code hl_enumeration" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2">osEventsType</a>&amp; eventType: <a class="code hl_variable" href="../../d3/df5/class_l_t_e_1_1os_event.html#abd6b16bc44725dd29a7293526d2b08ba">eventsToUse</a>)</div>
-<div class="line"><span class="lineno">   15</span>        {</div>
-<div class="line"><span class="lineno">   16</span>            <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a6484d4675cac615e22f961d3256d9fd1">app::getEventManger</a>()-&gt;<a class="code hl_function" href="../../d3/d10/class_l_t_e_1_1os_events_manger.html#a746717af19661c955b2396c20bc4411e">addEvent</a>(eventType, <span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   17</span>        }</div>
-<div class="line"><span class="lineno">   18</span>        </div>
-<div class="line"><span class="lineno">   19</span>    }  </div>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    {</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordtype">id</span> = <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a6484d4675cac615e22f961d3256d9fd1">app::getEventManger</a>()-&gt;<a class="code hl_function" href="../../d3/d10/class_l_t_e_1_1os_events_manger.html#ae0a457b6ec29a41c37be3c2d8836b17a">registerOsEventClass</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keywordflow">for</span> (<a class="code hl_enumeration" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2">osEventsType</a>&amp; eventType: <a class="code hl_variable" href="../../d3/df5/class_l_t_e_1_1os_event.html#abd6b16bc44725dd29a7293526d2b08ba">eventsToUse</a>)</div>
+<div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a6484d4675cac615e22f961d3256d9fd1">app::getEventManger</a>()-&gt;<a class="code hl_function" href="../../d3/d10/class_l_t_e_1_1os_events_manger.html#a746717af19661c955b2396c20bc4411e">addEvent</a>(eventType, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+<div class="line"><span class="lineno">   17</span>        </div>
+<div class="line"><span class="lineno">   18</span>    }  </div>
 <div class="ttc" id="aclass_l_t_e_1_1app_html_a6484d4675cac615e22f961d3256d9fd1"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#a6484d4675cac615e22f961d3256d9fd1">LTE::app::getEventManger</a></div><div class="ttdeci">static osEventsManger * getEventManger()</div><div class="ttdef"><b>Definition:</b> app.cpp:97</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1os_event_html_abd6b16bc44725dd29a7293526d2b08ba"><div class="ttname"><a href="../../d3/df5/class_l_t_e_1_1os_event.html#abd6b16bc44725dd29a7293526d2b08ba">LTE::osEvent::eventsToUse</a></div><div class="ttdeci">std::map&lt; osEventsType, bool &gt; eventsToUse</div><div class="ttdef"><b>Definition:</b> osEvents.h:69</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1os_events_manger_html_a746717af19661c955b2396c20bc4411e"><div class="ttname"><a href="../../d3/d10/class_l_t_e_1_1os_events_manger.html#a746717af19661c955b2396c20bc4411e">LTE::osEventsManger::addEvent</a></div><div class="ttdeci">void addEvent(osEventsType t, osEvent *callback)</div><div class="ttdef"><b>Definition:</b> osEvents.cpp:51</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1os_events_manger_html_ae0a457b6ec29a41c37be3c2d8836b17a"><div class="ttname"><a href="../../d3/d10/class_l_t_e_1_1os_events_manger.html#ae0a457b6ec29a41c37be3c2d8836b17a">LTE::osEventsManger::registerOsEventClass</a></div><div class="ttdeci">eventLaughId registerOsEventClass(osEvent *callback)</div><div class="ttdef"><b>Definition:</b> osEvents.cpp:26</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1os_events_manger_html_a746717af19661c955b2396c20bc4411e"><div class="ttname"><a href="../../d3/d10/class_l_t_e_1_1os_events_manger.html#a746717af19661c955b2396c20bc4411e">LTE::osEventsManger::addEvent</a></div><div class="ttdeci">void addEvent(osEventsType t, osEvent *callback)</div><div class="ttdef"><b>Definition:</b> osEvents.cpp:50</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1os_events_manger_html_ae0a457b6ec29a41c37be3c2d8836b17a"><div class="ttname"><a href="../../d3/d10/class_l_t_e_1_1os_events_manger.html#ae0a457b6ec29a41c37be3c2d8836b17a">LTE::osEventsManger::registerOsEventClass</a></div><div class="ttdeci">eventLaughId registerOsEventClass(osEvent *callback)</div><div class="ttdef"><b>Definition:</b> osEvents.cpp:25</div></div>
 <div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2">LTE::osEventsType</a></div><div class="ttdeci">osEventsType</div><div class="ttdef"><b>Definition:</b> osEvents.h:23</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -222,9 +222,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
-<div class="line"><span class="lineno">   23</span>        </div>
-<div class="line"><span class="lineno">   24</span>    }  </div>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
+<div class="line"><span class="lineno">   22</span>        </div>
+<div class="line"><span class="lineno">   23</span>    }  </div>
 </div><!-- fragment -->
 </div>
 </div>

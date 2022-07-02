@@ -24,7 +24,7 @@ namespace LTE
         squreColliders.erase(std::remove_if(
             squreColliders.begin(),
             squreColliders.end(),
-            [=](gameObject *g) -> bool { return g->getId() == id; }
+            [=](std::weak_ptr<LTE::gameObject> g) -> bool { return g.lock() && g.lock()->getId() == id; }
         ));
     }
 
@@ -40,12 +40,12 @@ namespace LTE
                 {
                     try
                     {
-                        if(*squreColliders[i]->getComponent<squreCollider>() == *squreColliders[j]->getComponent<squreCollider>())
+                        if(*squreColliders[i].lock()->getComponent<squreCollider>().get() == *squreColliders[j].lock()->getComponent<squreCollider>().get())
                         {
-                            collisionData *IToJ = new collisionData(squreColliders[i]->getId(), squreColliders[j]);
-                            collisionData *JToI = new collisionData(squreColliders[j]->getId(), squreColliders[i]);
+                            collisionData *IToJ = new collisionData(squreColliders[i].lock()->getId(), squreColliders[j].lock());
+                            collisionData *JToI = new collisionData(squreColliders[j].lock()->getId(), squreColliders[i].lock());
                             sceneManger::getScene(parentScene)->getEventsManger()->trigerEvent(IToJ, sceneEventsType::collision);
-                            // sceneManger::getScene(parentScene)->getEventsManger()->trigerEvent(JToI, sceneEventsType::collision);
+                            sceneManger::getScene(parentScene)->getEventsManger()->trigerEvent(JToI, sceneEventsType::collision);
                             delete IToJ;
                             delete JToI;
                         }

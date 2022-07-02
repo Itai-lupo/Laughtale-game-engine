@@ -10,7 +10,7 @@
 namespace LTE
 {
 
-    shaderRenderBuffer *batchRenderer::submitShape(mesh *shape, material *shapeMatrial)
+    shaderRenderBuffer *batchRenderer::submitShape(std::shared_ptr<mesh> shape, std::shared_ptr<material> shapeMatrial)
     {
         shaderRenderBuffer *s  = assetManager::getAsset<shaderRenderBuffer>(shape->getShaderName());
         if(!s)
@@ -24,11 +24,11 @@ namespace LTE
         std::sort(
             Scene->objects->begin(),
             Scene->objects->end(),
-            [=](gameObject *a, gameObject *b) -> bool
+            [=](std::weak_ptr< LTE::gameObject> a, std::weak_ptr< LTE::gameObject> b) -> bool
             {
                 try
                 {
-                    return a->getTransform()->getPostion().z < b->getTransform()->getPostion().z;
+                    return a.lock()->getTransform()->getPostion().z < b.lock()->getTransform()->getPostion().z;
                 }
                 catch(LTEException* e)
                 {
@@ -42,12 +42,16 @@ namespace LTE
     void batchRenderer::batchSceneData()
     {
 
-        for(gameObject *toRender: *Scene->objects)
+        for(std::weak_ptr<LTE::gameObject> toRenderWeak: *Scene->objects)
         {
+            std::shared_ptr<LTE::gameObject> toRender = toRenderWeak.lock();
+            if(!toRender)
+                continue;
+
             try
             {
-                mesh *obj = toRender->getComponent<mesh>();
-                material *objMat = toRender->getComponent<material>();
+                std::shared_ptr<mesh> obj = toRender->getComponent<mesh>();
+                std::shared_ptr<material> objMat = toRender->getComponent<material>();
                 if(!obj || !objMat)
                     continue;
                 shaderRenderBuffer *s  = submitShape(obj, objMat);

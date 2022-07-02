@@ -33,7 +33,7 @@ class player: public LTE::component, LTE::osEvent
 
         }
 
-        virtual void init(LTE::gameObject *parent)
+        virtual void init(std::shared_ptr< LTE::gameObject> p )
         {
 
         }
@@ -50,8 +50,8 @@ class player: public LTE::component, LTE::osEvent
 
         void onWindowRender(LTE::windowRenderData *sendor)
         {
-            LTE::material *playerMatreial = gameScene->getGameObjectById(getParentId())->getComponent<LTE::material>();
-            LTE::transform *playerPostion = gameScene->getGameObjectById(getParentId())->getTransform();
+            std::shared_ptr<LTE::material> playerMatreial = gameScene->getGameObjectById(getParentId())->getComponent<LTE::material>();
+            LTE::transform* playerPostion = gameScene->getGameObjectById(getParentId())->getTransform();
 
             LTE::window *win = LTE::app::getWindowManger()->getWindow(sendor->windowId);
             bool goLeft = win->inputManger->isKeyPressed(LT_KEY_LEFT);
@@ -123,6 +123,7 @@ class topDownGame : public ::testing::Test
             });
 
             gameScene = LTE::sceneManger::getScene(sceneId);
+            gameScene->renderToTextureAtEvent("rpg/screen texture", "window render/obj file load test/render scene");
 
 
             LTE::assetManager::getAsset<LTE::texture>("res/topDownScene/textures/Meta data assets files/ENVIRONMENT/tilesets/dungeon-tileset.png")->
@@ -226,7 +227,7 @@ class topDownGame : public ::testing::Test
 
 
 
-TEST_F(topDownGame, topDownScene)
+TEST_F(topDownGame, DISABLED_topDownScene)
 {
     try
     {    /* code */

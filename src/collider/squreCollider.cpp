@@ -24,7 +24,7 @@ namespace LTE
     }
 
 
-    void squreCollider::init(gameObject *parent)
+    void squreCollider::init(std::shared_ptr<LTE::gameObject> parent)
     {
         sceneManger::getScene(parentScene)->pushPhysicsObject(parent);
     }

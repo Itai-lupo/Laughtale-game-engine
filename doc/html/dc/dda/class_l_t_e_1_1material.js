@@ -14,7 +14,7 @@ var class_l_t_e_1_1material =
     [ "getTextureName", "dc/dda/class_l_t_e_1_1material.html#afea2d89bb24e6830e038bddddb7ced63", null ],
     [ "getTexturePostionX", "dc/dda/class_l_t_e_1_1material.html#a60c9114c31494e7310bfded8f3b7713b", null ],
     [ "getTexturePostionY", "dc/dda/class_l_t_e_1_1material.html#a90ab73f411394a7f9787ca8afd2bdfa6", null ],
-    [ "init", "dc/dda/class_l_t_e_1_1material.html#ac5da84448c29b2b2aeab11dc8f08caae", null ],
+    [ "init", "dc/dda/class_l_t_e_1_1material.html#a58f5704ca7923be1cc0be72c5afbd703", null ],
     [ "setBaseColor", "dc/dda/class_l_t_e_1_1material.html#ada3f713ba657845e34fc3c98d3bd6aba", null ],
     [ "setTexture", "dc/dda/class_l_t_e_1_1material.html#ac866b5d9a068d1330232f572ea971040", null ],
     [ "setTexture", "dc/dda/class_l_t_e_1_1material.html#ae4613811e43f092f3629622302d08e8f", null ],
