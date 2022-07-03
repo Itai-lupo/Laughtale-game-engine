@@ -5,7 +5,9 @@
 #include "texture.h"
 #include "component.h"
 #include <string>
-#include "glm/glm.hpp"
+#include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <imgui/imgui.h>
 
 namespace LTE
 {
@@ -52,5 +54,16 @@ namespace LTE
 
             virtual void init(std::shared_ptr< LTE::gameObject>) override;
             virtual void end() override;
+
+
+            virtual std::string getName() override
+            { 
+                return "material";
+            }
+
+            virtual void displayComponentProprties() override
+            {            
+    			ImGui::ColorEdit4("Color", glm::value_ptr(baseColor));
+            }
     };
 }

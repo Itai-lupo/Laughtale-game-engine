@@ -131,6 +131,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afd24be0a9adfdeb094e5c5fe003b7bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a484a41ae15417c5d10ed6da34a2ba945"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html#a484a41ae15417c5d10ed6da34a2ba945">setParent</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a7453a44af781c118bd678959bdd02674">gameObjectId</a> <a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html#afa3b23b8e254f2555c6642eb6a159815">parentId</a>, <a class="el" href="../../dc/d59/namespace_l_t_e.html#a19087a9b8ea8653191a7efdb616a92b4">sceneId</a> <a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html#a13aa80df970dcbe4493934784ba66e92">parentScene</a>)</td></tr>
 <tr class="separator:a484a41ae15417c5d10ed6da34a2ba945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc864bf3f7aa31b58f9ecd7ab2ff49a3"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html#afc864bf3f7aa31b58f9ecd7ab2ff49a3">getName</a> ()=0</td></tr>
+<tr class="separator:afc864bf3f7aa31b58f9ecd7ab2ff49a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae358197b234ae158cb1932ace965eaad"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html#ae358197b234ae158cb1932ace965eaad">displayComponentProprties</a> ()=0</td></tr>
+<tr class="separator:ae358197b234ae158cb1932ace965eaad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63dc7f7e90f98ead199f395192a4df25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d59/namespace_l_t_e.html#a7453a44af781c118bd678959bdd02674">gameObjectId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html#a63dc7f7e90f98ead199f395192a4df25">getParentId</a> ()</td></tr>
 <tr class="separator:a63dc7f7e90f98ead199f395192a4df25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -164,7 +168,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   15</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -194,6 +198,33 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae358197b234ae158cb1932ace965eaad" name="ae358197b234ae158cb1932ace965eaad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae358197b234ae158cb1932ace965eaad">&#9670;&nbsp;</a></span>displayComponentProprties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void LTE::component::displayComponentProprties </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../dd/d78/class_l_t_e_1_1squre_collider.html#a0c2b27f85d72fa4f914956ae09024c71">LTE::squreCollider</a>, <a class="el" href="../../d6/d08/class_l_t_e_1_1transform.html#ac975489bb125640efc4048848a794775">LTE::transform</a>, <a class="el" href="../../dc/d6e/class_l_t_e_1_1core_camera_controler.html#a732d0ec533ca6220a3cc49f9dc9c79e2">LTE::coreCameraControler</a>, <a class="el" href="../../dc/dda/class_l_t_e_1_1material.html#ad2ff04cdbbdd2bb8e2151a8ebce4fb86">LTE::material</a>, <a class="el" href="../../d0/d6c/class_l_t_e_1_1mesh.html#ac22e0b0ca2aed9d9d9ed8dd57c5111ba">LTE::mesh</a>, and <a class="el" href="../../d2/d04/class_l_t_e_1_1envelope.html#af3e1e6889df5cf6c4f8a4cdb8a8a6db0">LTE::envelope</a>.</p>
+
+</div>
+</div>
 <a id="afd24be0a9adfdeb094e5c5fe003b7bf0" name="afd24be0a9adfdeb094e5c5fe003b7bf0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afd24be0a9adfdeb094e5c5fe003b7bf0">&#9670;&nbsp;</a></span>end()</h2>
 
@@ -221,6 +252,33 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="afc864bf3f7aa31b58f9ecd7ab2ff49a3" name="afc864bf3f7aa31b58f9ecd7ab2ff49a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc864bf3f7aa31b58f9ecd7ab2ff49a3">&#9670;&nbsp;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string LTE::component::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../dd/d78/class_l_t_e_1_1squre_collider.html#ac4a22af95dd706158fdfd1370c549742">LTE::squreCollider</a>, <a class="el" href="../../d6/d08/class_l_t_e_1_1transform.html#aefa0e3a966c3a1edd7363032d25a78e0">LTE::transform</a>, <a class="el" href="../../dc/d6e/class_l_t_e_1_1core_camera_controler.html#a9da5b4804d68272e80c160f84696df85">LTE::coreCameraControler</a>, <a class="el" href="../../dc/dda/class_l_t_e_1_1material.html#a27a9342c4980e64762809d602d15faa2">LTE::material</a>, <a class="el" href="../../d0/d6c/class_l_t_e_1_1mesh.html#aae2ea5b96c18f5ed5c023099f0ca5e58">LTE::mesh</a>, and <a class="el" href="../../d2/d04/class_l_t_e_1_1envelope.html#ad0c2811a6bd9ede1a5b9d11cbcda6519">LTE::envelope</a>.</p>
+
+</div>
+</div>
 <a id="a63dc7f7e90f98ead199f395192a4df25" name="a63dc7f7e90f98ead199f395192a4df25"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63dc7f7e90f98ead199f395192a4df25">&#9670;&nbsp;</a></span>getParentId()</h2>
 
@@ -243,8 +301,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   26</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#afa3b23b8e254f2555c6642eb6a159815">parentId</a>; }</div>
-<div class="ttc" id="aclass_l_t_e_1_1component_html_afa3b23b8e254f2555c6642eb6a159815"><div class="ttname"><a href="../../d9/d4b/class_l_t_e_1_1component.html#afa3b23b8e254f2555c6642eb6a159815">LTE::component::parentId</a></div><div class="ttdeci">gameObjectId parentId</div><div class="ttdef"><b>Definition:</b> component.h:13</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#afa3b23b8e254f2555c6642eb6a159815">parentId</a>; }</div>
+<div class="ttc" id="aclass_l_t_e_1_1component_html_afa3b23b8e254f2555c6642eb6a159815"><div class="ttname"><a href="../../d9/d4b/class_l_t_e_1_1component.html#afa3b23b8e254f2555c6642eb6a159815">LTE::component::parentId</a></div><div class="ttdeci">gameObjectId parentId</div><div class="ttdef"><b>Definition:</b> component.h:14</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -309,11 +367,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   21</span>            {</div>
-<div class="line"><span class="lineno">   22</span>                this-&gt;<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a13aa80df970dcbe4493934784ba66e92">parentScene</a> = <a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a13aa80df970dcbe4493934784ba66e92">parentScene</a>;</div>
-<div class="line"><span class="lineno">   23</span>                this-&gt;<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#afa3b23b8e254f2555c6642eb6a159815">parentId</a> = <a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#afa3b23b8e254f2555c6642eb6a159815">parentId</a>;</div>
-<div class="line"><span class="lineno">   24</span>            }</div>
-<div class="ttc" id="aclass_l_t_e_1_1component_html_a13aa80df970dcbe4493934784ba66e92"><div class="ttname"><a href="../../d9/d4b/class_l_t_e_1_1component.html#a13aa80df970dcbe4493934784ba66e92">LTE::component::parentScene</a></div><div class="ttdeci">sceneId parentScene</div><div class="ttdef"><b>Definition:</b> component.h:12</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>            {</div>
+<div class="line"><span class="lineno">   23</span>                this-&gt;<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a13aa80df970dcbe4493934784ba66e92">parentScene</a> = <a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#a13aa80df970dcbe4493934784ba66e92">parentScene</a>;</div>
+<div class="line"><span class="lineno">   24</span>                this-&gt;<a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#afa3b23b8e254f2555c6642eb6a159815">parentId</a> = <a class="code hl_variable" href="../../d9/d4b/class_l_t_e_1_1component.html#afa3b23b8e254f2555c6642eb6a159815">parentId</a>;</div>
+<div class="line"><span class="lineno">   25</span>            }</div>
+<div class="ttc" id="aclass_l_t_e_1_1component_html_a13aa80df970dcbe4493934784ba66e92"><div class="ttname"><a href="../../d9/d4b/class_l_t_e_1_1component.html#a13aa80df970dcbe4493934784ba66e92">LTE::component::parentScene</a></div><div class="ttdeci">sceneId parentScene</div><div class="ttdef"><b>Definition:</b> component.h:13</div></div>
 </div><!-- fragment -->
 </div>
 </div>

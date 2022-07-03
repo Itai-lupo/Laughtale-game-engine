@@ -73,6 +73,7 @@ namespace LTE
             std::shared_ptr< LTE::gameObject>getGameObjectByName(const std::string& name);
             std::shared_ptr< LTE::gameObject>getGameObjectById(gameObjectId id);
             void removeGameObjectById(gameObjectId id);
+            void forEachObject(std::function<void(std::shared_ptr<gameObject>)> callback);
     };
 
 }

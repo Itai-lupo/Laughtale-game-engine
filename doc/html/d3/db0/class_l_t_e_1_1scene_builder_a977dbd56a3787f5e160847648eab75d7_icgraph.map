@@ -1,5 +1,6 @@
 <map id="LTE::sceneBuilder::build" name="LTE::sceneBuilder::build">
-<area shape="rect" id="node1" title=" " alt="" coords="351,5,484,47"/>
-<area shape="rect" id="node2" href="$d7/d9a/class_l_t_e_1_1scene_manger.html#a96129d4d00a2fb857a020471f9ec55fc" title=" " alt="" coords="108,13,303,39"/>
-<area shape="rect" id="node3" href="$da/dd9/obj_loading_8test_8cpp.html#ab53f44fda33e05f1d4889205baf74bb6" title=" " alt="" coords="5,13,60,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="351,23,484,65"/>
+<area shape="rect" id="node2" href="$d7/d9a/class_l_t_e_1_1scene_manger.html#a96129d4d00a2fb857a020471f9ec55fc" title=" " alt="" coords="108,31,303,57"/>
+<area shape="rect" id="node3" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="7,5,58,32"/>
+<area shape="rect" id="node4" href="$da/dd9/obj_loading_8test_8cpp.html#ab53f44fda33e05f1d4889205baf74bb6" title=" " alt="" coords="5,56,60,83"/>
 </map>

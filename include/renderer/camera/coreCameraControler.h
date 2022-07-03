@@ -13,5 +13,14 @@ namespace LTE
             virtual float getAspectRatio() = 0;
 
             
+            virtual std::string getName() override
+            { 
+                return "coreCameraControler";
+            }
+
+            virtual void displayComponentProprties() override
+            {
+                
+            }
     };
 }

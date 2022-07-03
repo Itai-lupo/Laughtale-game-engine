@@ -100,5 +100,15 @@ namespace LTE
 
                 virtual void init(std::shared_ptr< LTE::gameObject>) override;
                 virtual void end() override;
+
+                virtual std::string getName() override
+                { 
+                    return "mesh";
+                }
+
+                virtual void displayComponentProprties() override
+                {
+                    
+                }
     };
 }

@@ -168,15 +168,60 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   97</span>        ImGui::StyleColorsDark();</div>
 <div class="line"><span class="lineno">   98</span> </div>
 <div class="line"><span class="lineno">   99</span>        ImGuiIO&amp; io = ImGui::GetIO(); (void)io;</div>
-<div class="line"><span class="lineno">  100</span>        io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;</div>
-<div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>        ImGui_ImplGlfw_InitForOpenGL((GLFWwindow*)windowId, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  103</span>        ImGui_ImplOpenGL3_Init(<span class="stringliteral">&quot;#version 410&quot;</span>);</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>        <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(<span class="stringliteral">&quot;imgui init successfully&quot;</span>);</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
+<div class="line"><span class="lineno">  100</span>        io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;       <span class="comment">// Enable Keyboard Controls</span></div>
+<div class="line"><span class="lineno">  101</span>        <span class="comment">//io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls</span></div>
+<div class="line"><span class="lineno">  102</span>        io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;           <span class="comment">// Enable Docking</span></div>
+<div class="line"><span class="lineno">  103</span>        io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;         <span class="comment">// Enable Multi-Viewport / Platform Windows</span></div>
+<div class="line"><span class="lineno">  104</span>        <span class="comment">//io.ConfigFlags |= ImGuiConfigFlags_ViewportsNoTaskBarIcons;</span></div>
+<div class="line"><span class="lineno">  105</span>        <span class="comment">//io.ConfigFlags |= ImGuiConfigFlags_ViewportsNoMerge;</span></div>
+<div class="line"><span class="lineno">  106</span>        </div>
+<div class="line"><span class="lineno">  107</span>        ImGuiStyle&amp; style = ImGui::GetStyle();</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>        <span class="comment">// float fontSize = 18.0f;// *2.0f;</span></div>
+<div class="line"><span class="lineno">  110</span>        <span class="comment">// io.Fonts-&gt;AddFontFromFileTTF(&quot;assets/fonts/opensans/OpenSans-Bold.ttf&quot;, fontSize);</span></div>
+<div class="line"><span class="lineno">  111</span>        <span class="comment">// io.FontDefault = io.Fonts-&gt;AddFontFromFileTTF(&quot;assets/fonts/opensans/OpenSans-Regular.ttf&quot;, fontSize);</span></div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>        <span class="keyword">auto</span>&amp; colors = ImGui::GetStyle().Colors;</div>
+<div class="line"><span class="lineno">  115</span>        colors[ImGuiCol_WindowBg] = ImVec4{ 0.1f, 0.105f, 0.11f, 1.0f };</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">if</span> (io.ConfigFlags &amp; ImGuiConfigFlags_ViewportsEnable)</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            style.WindowRounding = 0.0f;</div>
+<div class="line"><span class="lineno">  119</span>            style.Colors[ImGuiCol_WindowBg].w = 1.0f;</div>
+<div class="line"><span class="lineno">  120</span>        }</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>        <span class="comment">// Headers</span></div>
+<div class="line"><span class="lineno">  123</span>        colors[ImGuiCol_Header] = ImVec4{ 0.2f, 0.205f, 0.21f, 1.0f };</div>
+<div class="line"><span class="lineno">  124</span>        colors[ImGuiCol_HeaderHovered] = ImVec4{ 0.3f, 0.305f, 0.31f, 1.0f };</div>
+<div class="line"><span class="lineno">  125</span>        colors[ImGuiCol_HeaderActive] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };</div>
+<div class="line"><span class="lineno">  126</span>        </div>
+<div class="line"><span class="lineno">  127</span>        <span class="comment">// Buttons</span></div>
+<div class="line"><span class="lineno">  128</span>        colors[ImGuiCol_Button] = ImVec4{ 0.2f, 0.205f, 0.21f, 1.0f };</div>
+<div class="line"><span class="lineno">  129</span>        colors[ImGuiCol_ButtonHovered] = ImVec4{ 0.3f, 0.305f, 0.31f, 1.0f };</div>
+<div class="line"><span class="lineno">  130</span>        colors[ImGuiCol_ButtonActive] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };</div>
+<div class="line"><span class="lineno">  131</span> </div>
+<div class="line"><span class="lineno">  132</span>        <span class="comment">// Frame BG</span></div>
+<div class="line"><span class="lineno">  133</span>        colors[ImGuiCol_FrameBg] = ImVec4{ 0.2f, 0.205f, 0.21f, 1.0f };</div>
+<div class="line"><span class="lineno">  134</span>        colors[ImGuiCol_FrameBgHovered] = ImVec4{ 0.3f, 0.305f, 0.31f, 1.0f };</div>
+<div class="line"><span class="lineno">  135</span>        colors[ImGuiCol_FrameBgActive] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>        <span class="comment">// Tabs</span></div>
+<div class="line"><span class="lineno">  138</span>        colors[ImGuiCol_Tab] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };</div>
+<div class="line"><span class="lineno">  139</span>        colors[ImGuiCol_TabHovered] = ImVec4{ 0.38f, 0.3805f, 0.381f, 1.0f };</div>
+<div class="line"><span class="lineno">  140</span>        colors[ImGuiCol_TabActive] = ImVec4{ 0.28f, 0.2805f, 0.281f, 1.0f };</div>
+<div class="line"><span class="lineno">  141</span>        colors[ImGuiCol_TabUnfocused] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };</div>
+<div class="line"><span class="lineno">  142</span>        colors[ImGuiCol_TabUnfocusedActive] = ImVec4{ 0.2f, 0.205f, 0.21f, 1.0f };</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>        <span class="comment">// Title</span></div>
+<div class="line"><span class="lineno">  145</span>        colors[ImGuiCol_TitleBg] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };</div>
+<div class="line"><span class="lineno">  146</span>        colors[ImGuiCol_TitleBgActive] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };</div>
+<div class="line"><span class="lineno">  147</span>        colors[ImGuiCol_TitleBgCollapsed] = ImVec4{ 0.15f, 0.1505f, 0.151f, 1.0f };</div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  149</span>        </div>
+<div class="line"><span class="lineno">  150</span>        ImGui_ImplGlfw_InitForOpenGL((GLFWwindow*)windowId, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  151</span>        ImGui_ImplOpenGL3_Init(<span class="stringliteral">&quot;#version 410&quot;</span>);</div>
+<div class="line"><span class="lineno">  152</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1os_event_html_ad813267cba5aa31492d79181d2bc0e7a"><div class="ttname"><a href="../../d3/df5/class_l_t_e_1_1os_event.html#ad813267cba5aa31492d79181d2bc0e7a">LTE::osEvent::osEvent</a></div><div class="ttdeci">osEvent(std::vector&lt; osEventsType &gt; eventsToUse)</div><div class="ttdef"><b>Definition:</b> osEvents.cpp:10</div></div>
-<div class="ttc" id="alogger_8h_html_a70645337545523faca46e49a3180d5f7"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_INFO(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:6</div></div>
 <div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a071fb491db57470e69ae0914fa399928"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a071fb491db57470e69ae0914fa399928">LTE::keyTyped</a></div><div class="ttdeci">@ keyTyped</div><div class="ttdef"><b>Definition:</b> osEvents.h:36</div></div>
 <div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a4b448ca415ffcfff39ad10e90f87745e"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a4b448ca415ffcfff39ad10e90f87745e">LTE::keyReleased</a></div><div class="ttdeci">@ keyReleased</div><div class="ttdef"><b>Definition:</b> osEvents.h:34</div></div>
 <div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a551ffdf39d7dbce22333cebe377a069b"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a551ffdf39d7dbce22333cebe377a069b">LTE::MouseReleased</a></div><div class="ttdeci">@ MouseReleased</div><div class="ttdef"><b>Definition:</b> osEvents.h:39</div></div>
@@ -202,11 +247,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  109</span>    {</div>
-<div class="line"><span class="lineno">  110</span>        ImGui_ImplOpenGL3_Shutdown();</div>
-<div class="line"><span class="lineno">  111</span>        ImGui_ImplGlfw_Shutdown();</div>
-<div class="line"><span class="lineno">  112</span>        ImGui::DestroyContext();</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  155</span>    {</div>
+<div class="line"><span class="lineno">  156</span>        ImGui_ImplOpenGL3_Shutdown();</div>
+<div class="line"><span class="lineno">  157</span>        ImGui_ImplGlfw_Shutdown();</div>
+<div class="line"><span class="lineno">  158</span>        ImGui::DestroyContext();</div>
+<div class="line"><span class="lineno">  159</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -236,17 +281,26 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  116</span>    {</div>
-<div class="line"><span class="lineno">  117</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
-<div class="line"><span class="lineno">  118</span>        ImGui_ImplOpenGL3_NewFrame();</div>
-<div class="line"><span class="lineno">  119</span>        ImGui_ImplGlfw_NewFrame();</div>
-<div class="line"><span class="lineno">  120</span>        ImGui::NewFrame();</div>
-<div class="line"><span class="lineno">  121</span> </div>
-<div class="line"><span class="lineno">  122</span>        <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a6484d4675cac615e22f961d3256d9fd1">app::getEventManger</a>()-&gt;<a class="code hl_function" href="../../d3/d10/class_l_t_e_1_1os_events_manger.html#a6db94d2bcdc3374878ea4c0a5370b927">trigerEvent</a>(sendor, <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a69d5d9f0f53080911e34f14db6ad53e3">osEventsType::WindowImGuiRender</a>);    </div>
-<div class="line"><span class="lineno">  123</span>        io.DisplaySize = ImVec2(data-&gt;Width, data-&gt;Height);</div>
-<div class="line"><span class="lineno">  124</span>        ImGui::Render();</div>
-<div class="line"><span class="lineno">  125</span>        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());</div>
-<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>    {</div>
+<div class="line"><span class="lineno">  163</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
+<div class="line"><span class="lineno">  164</span>        ImGui_ImplOpenGL3_NewFrame();</div>
+<div class="line"><span class="lineno">  165</span>        ImGui_ImplGlfw_NewFrame();</div>
+<div class="line"><span class="lineno">  166</span>        ImGui::NewFrame();</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>        <a class="code hl_function" href="../../d0/d13/class_l_t_e_1_1app.html#a6484d4675cac615e22f961d3256d9fd1">app::getEventManger</a>()-&gt;<a class="code hl_function" href="../../d3/d10/class_l_t_e_1_1os_events_manger.html#a6db94d2bcdc3374878ea4c0a5370b927">trigerEvent</a>(sendor, <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a69d5d9f0f53080911e34f14db6ad53e3">osEventsType::WindowImGuiRender</a>);    </div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>        io.DisplaySize = ImVec2(data-&gt;Width, data-&gt;Height);</div>
+<div class="line"><span class="lineno">  171</span>        ImGui::Render();</div>
+<div class="line"><span class="lineno">  172</span>        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());</div>
+<div class="line"><span class="lineno">  173</span> </div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">if</span> (io.ConfigFlags &amp; ImGuiConfigFlags_ViewportsEnable)</div>
+<div class="line"><span class="lineno">  175</span>        {</div>
+<div class="line"><span class="lineno">  176</span>            GLFWwindow* backup_current_context = glfwGetCurrentContext();</div>
+<div class="line"><span class="lineno">  177</span>            ImGui::UpdatePlatformWindows();</div>
+<div class="line"><span class="lineno">  178</span>            ImGui::RenderPlatformWindowsDefault();</div>
+<div class="line"><span class="lineno">  179</span>            glfwMakeContextCurrent(backup_current_context);</div>
+<div class="line"><span class="lineno">  180</span>        }</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1app_html_a6484d4675cac615e22f961d3256d9fd1"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#a6484d4675cac615e22f961d3256d9fd1">LTE::app::getEventManger</a></div><div class="ttdeci">static osEventsManger * getEventManger()</div><div class="ttdef"><b>Definition:</b> app.cpp:97</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1os_events_manger_html_a6db94d2bcdc3374878ea4c0a5370b927"><div class="ttname"><a href="../../d3/d10/class_l_t_e_1_1os_events_manger.html#a6db94d2bcdc3374878ea4c0a5370b927">LTE::osEventsManger::trigerEvent</a></div><div class="ttdeci">void trigerEvent(eventDataType *sendor, osEventsType t)</div></div>
 <div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a69d5d9f0f53080911e34f14db6ad53e3"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a69d5d9f0f53080911e34f14db6ad53e3">LTE::WindowImGuiRender</a></div><div class="ttdeci">@ WindowImGuiRender</div><div class="ttdef"><b>Definition:</b> osEvents.h:31</div></div>
@@ -288,15 +342,15 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d3/df5/class_l_t_e_1_1os_event.html#adb3aec6dd1b86f2920f57e527a834441">LTE::osEvent</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
-<div class="line"><span class="lineno">   59</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
-<div class="line"><span class="lineno">   60</span>        io.KeysDown[sendor-&gt;key] = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   61</span>        </div>
-<div class="line"><span class="lineno">   62</span>        io.KeyCtrl = io.KeysDown[GLFW_KEY_LEFT_CONTROL] || io.KeysDown[GLFW_KEY_RIGHT_CONTROL];</div>
-<div class="line"><span class="lineno">   63</span>        io.KeyShift = io.KeysDown[GLFW_KEY_LEFT_SHIFT] || io.KeysDown[GLFW_KEY_RIGHT_SHIFT];</div>
-<div class="line"><span class="lineno">   64</span>        io.KeyAlt = io.KeysDown[GLFW_KEY_LEFT_ALT] || io.KeysDown[GLFW_KEY_RIGHT_ALT];</div>
-<div class="line"><span class="lineno">   65</span>        io.KeySuper = io.KeysDown[GLFW_KEY_LEFT_SUPER] || io.KeysDown[GLFW_KEY_RIGHT_SUPER];</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
+<div class="line"><span class="lineno">   59</span>        io.KeysDown[sendor-&gt;key] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   60</span>        </div>
+<div class="line"><span class="lineno">   61</span>        io.KeyCtrl = io.KeysDown[GLFW_KEY_LEFT_CONTROL] || io.KeysDown[GLFW_KEY_RIGHT_CONTROL];</div>
+<div class="line"><span class="lineno">   62</span>        io.KeyShift = io.KeysDown[GLFW_KEY_LEFT_SHIFT] || io.KeysDown[GLFW_KEY_RIGHT_SHIFT];</div>
+<div class="line"><span class="lineno">   63</span>        io.KeyAlt = io.KeysDown[GLFW_KEY_LEFT_ALT] || io.KeysDown[GLFW_KEY_RIGHT_ALT];</div>
+<div class="line"><span class="lineno">   64</span>        io.KeySuper = io.KeysDown[GLFW_KEY_LEFT_SUPER] || io.KeysDown[GLFW_KEY_RIGHT_SUPER];</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -325,10 +379,10 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d3/df5/class_l_t_e_1_1os_event.html#ab13a27437728f07bd6628dea83e7cd3d">LTE::osEvent</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>    {</div>
-<div class="line"><span class="lineno">   70</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
-<div class="line"><span class="lineno">   71</span>        io.KeysDown[sendor-&gt;key] = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
+<div class="line"><span class="lineno">   70</span>        io.KeysDown[sendor-&gt;key] = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -357,11 +411,12 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d3/df5/class_l_t_e_1_1os_event.html#a601b694de95ed74389f846c179357704">LTE::osEvent</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>    {</div>
-<div class="line"><span class="lineno">   76</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keywordtype">int</span> keycode = sendor-&gt;keycode;</div>
-<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (keycode &gt; 0 &amp;&amp; keycode &lt; 0x10000)</div>
-<div class="line"><span class="lineno">   79</span>            io.AddInputCharacter((<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>)keycode);</div>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>    {</div>
+<div class="line"><span class="lineno">   75</span>        <span class="comment">// ImGuiIO&amp; io = ImGui::GetIO();</span></div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>        <span class="comment">// int keycode = sendor-&gt;keycode;</span></div>
+<div class="line"><span class="lineno">   78</span>        <span class="comment">// if (keycode &gt; 0 &amp;&amp; keycode &lt; 0x10000)</span></div>
+<div class="line"><span class="lineno">   79</span>        <span class="comment">//     io.AddInputCharacter((unsigned short)keycode);</span></div>
 <div class="line"><span class="lineno">   80</span>    }</div>
 </div><!-- fragment -->
 </div>
@@ -391,10 +446,10 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d3/df5/class_l_t_e_1_1os_event.html#af1795f04182e3935a6627b8add9d5149">LTE::osEvent</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
-<div class="line"><span class="lineno">   34</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
-<div class="line"><span class="lineno">   35</span>        io.MousePos = ImVec2(sendor-&gt;xPos, sendor-&gt;yPos);</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
+<div class="line"><span class="lineno">   34</span>        io.MousePos = ImVec2(sendor-&gt;xPos, sendor-&gt;yPos);</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -423,10 +478,10 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d3/df5/class_l_t_e_1_1os_event.html#aa0fa1d27e66385ed211036efa0e93673">LTE::osEvent</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>    {</div>
-<div class="line"><span class="lineno">   22</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
-<div class="line"><span class="lineno">   23</span>        io.MouseDown[sendor-&gt;button] = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
+<div class="line"><span class="lineno">   22</span>        io.MouseDown[sendor-&gt;button] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -455,10 +510,10 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d3/df5/class_l_t_e_1_1os_event.html#a1bf3b77afcf262ca1dc4f116d2d89f02">LTE::osEvent</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
-<div class="line"><span class="lineno">   28</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
-<div class="line"><span class="lineno">   29</span>        io.MouseDown[sendor-&gt;button] = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
+<div class="line"><span class="lineno">   28</span>        io.MouseDown[sendor-&gt;button] = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -487,11 +542,11 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d3/df5/class_l_t_e_1_1os_event.html#a7583bc2d01acf990c239db087a1f2bf6">LTE::osEvent</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
-<div class="line"><span class="lineno">   41</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
-<div class="line"><span class="lineno">   42</span>        io.MouseWheelH += sendor-&gt;xOffset;</div>
-<div class="line"><span class="lineno">   43</span>        io.MouseWheel += sendor-&gt;yOffset;</div>
-<div class="line"><span class="lineno">   44</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
+<div class="line"><span class="lineno">   40</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
+<div class="line"><span class="lineno">   41</span>        io.MouseWheelH += sendor-&gt;xOffset;</div>
+<div class="line"><span class="lineno">   42</span>        io.MouseWheel += sendor-&gt;yOffset;</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -520,13 +575,13 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d3/df5/class_l_t_e_1_1os_event.html#a7c3ae94845cfe3d1e65f935e4a268c8d">LTE::osEvent</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
-<div class="line"><span class="lineno">   49</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
-<div class="line"><span class="lineno">   50</span>        io.DisplaySize = ImVec2( sendor-&gt;windowWidth, sendor-&gt;windowHeight);</div>
-<div class="line"><span class="lineno">   51</span>        io.DisplayFramebufferScale = ImVec2(1.0f, 1.0f);</div>
-<div class="line"><span class="lineno">   52</span>        glViewport(0, 0, sendor-&gt;windowWidth, sendor-&gt;windowHeight);</div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        ImGuiIO&amp; io = ImGui::GetIO();</div>
+<div class="line"><span class="lineno">   49</span>        io.DisplaySize = ImVec2( sendor-&gt;windowWidth, sendor-&gt;windowHeight);</div>
+<div class="line"><span class="lineno">   50</span>        io.DisplayFramebufferScale = ImVec2(1.0f, 1.0f);</div>
+<div class="line"><span class="lineno">   51</span>        glViewport(0, 0, sendor-&gt;windowWidth, sendor-&gt;windowHeight);</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

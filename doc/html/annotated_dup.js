@@ -137,6 +137,7 @@ var annotated_dup =
     ] ],
     [ "bird", "da/dee/classbird.html", "da/dee/classbird" ],
     [ "cube", "d3/d90/classcube.html", "d3/d90/classcube" ],
+    [ "editor", "dd/dba/classeditor.html", "dd/dba/classeditor" ],
     [ "flappyBird", "d5/d71/classflappy_bird.html", "d5/d71/classflappy_bird" ],
     [ "pilar", "d1/d69/classpilar.html", "d1/d69/classpilar" ],
     [ "pilarDestroyer", "d8/d09/classpilar_destroyer.html", "d8/d09/classpilar_destroyer" ],

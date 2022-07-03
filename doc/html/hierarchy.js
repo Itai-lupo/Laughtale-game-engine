@@ -117,6 +117,8 @@ var hierarchy =
       [ "LTE::windowManger", "de/de3/class_l_t_e_1_1window_manger.html", null ],
       [ "bird", "da/dee/classbird.html", null ],
       [ "cube", "d3/d90/classcube.html", null ],
+      [ "cube", "d3/d90/classcube.html", null ],
+      [ "editor", "dd/dba/classeditor.html", null ],
       [ "pilar", "d1/d69/classpilar.html", null ],
       [ "player", "dc/d2e/classplayer.html", null ]
     ] ],

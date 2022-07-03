@@ -101,6 +101,17 @@ namespace LTE
                     isNoteOn ||  
                     (!isNoteOn && ( time - trigerOffTime  < releaseTime || time - trigerOnTime < attackTime + decayTime + releaseTime )); 
             }
+
+            
+            virtual std::string getName() override
+            { 
+                return "envelope";
+            }
+
+            virtual void displayComponentProprties() override
+            {
+                
+            }
     };
 
 }

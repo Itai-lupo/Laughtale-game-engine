@@ -19,7 +19,7 @@ namespace LTE
         private:
             gameObjectId id;
             std::string name = "";
-            transform *ObjectTransform;
+            std::shared_ptr<transform> ObjectTransform;
             sceneId parentScene;
 
             std::vector<std::shared_ptr<component>> components;
@@ -29,12 +29,13 @@ namespace LTE
             friend class gameObjectBuilder;
 
             const std::string& getName(){ return name; }
+            void setName(const std::string& name){ this->name = name; }
             const gameObjectId getId(){ return id; }
             
             template<typename T> 
             std::shared_ptr<T> getComponent()
             {
-                if(id == 0 || !ObjectTransform)
+                if(id == 0)
                     throw new ComponentNotFoundException("entitys with id 0 have no data ");
 
                 for (auto comp: components)
@@ -49,7 +50,7 @@ namespace LTE
             template<typename T> 
             void setComponent(std::shared_ptr<component> componentToAdd)
             {
-                if(id == 0 || !ObjectTransform)
+                if(id == 0)
                     throw new ComponentNotFoundException("entitys with id 0 have no data ");
 
                 for (auto comp: components)
@@ -67,7 +68,7 @@ namespace LTE
             template<typename T> 
             void removeComponent()
             {
-                if(id == 0 || !ObjectTransform)
+                if(id == 0)
                     throw new ComponentNotFoundException("entitys with id 0 have no data ");
                 auto it = std::remove_if(
                         components.begin(), 
@@ -90,12 +91,26 @@ namespace LTE
                 }
                 components.clear();
                 ObjectTransform->end();
-                delete ObjectTransform;
+                ObjectTransform.reset();
             }
 
             transform *getTransform()
             {
+                return ObjectTransform.get();
+            }
+
+            std::shared_ptr<transform> getTransformPtr()
+            {
                 return ObjectTransform;
+            }
+
+            void forEachComponent(std::function<void(std::shared_ptr<component>)> callback)
+            {
+                callback(ObjectTransform);
+                for (uint64_t i = 0; i < components.size(); i++)
+                {
+                    callback(components[i]);
+                }
             }
 
             virtual ~gameObject()
@@ -123,7 +138,7 @@ namespace LTE
 
             gameObjectBuilder *setObjectTransform(glm::mat3 trans)
             {
-                prodect->ObjectTransform = new transform(trans);
+                prodect->ObjectTransform = std::make_shared<transform>(trans);
                 return this;
             }
 
@@ -160,6 +175,7 @@ namespace LTE
             gameObjectBuilder *builder;
             std::vector<std::shared_ptr< LTE::gameObject>> gameObjects;
             gameObjectId nextGameObjectId = 1;
+
         public:
             gameObjectsManger();
             ~gameObjectsManger();
@@ -168,6 +184,7 @@ namespace LTE
             std::shared_ptr< LTE::gameObject>getGameObjectByName(const std::string& name);
             std::shared_ptr< LTE::gameObject>getGameObjectById(gameObjectId id);
             void removeGameObjectById(gameObjectId id);
+            void forEachObject(std::function<void(std::shared_ptr<gameObject>)> callback);
 
     };
 

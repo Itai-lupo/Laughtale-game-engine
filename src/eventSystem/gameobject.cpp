@@ -66,4 +66,13 @@ namespace LTE
         }
         
     }
+
+    void gameObjectsManger::forEachObject(std::function<void(std::shared_ptr<gameObject>)> callback)
+    {
+        for (uint64_t i = 0; i < gameObjects.size(); i++)
+        {
+            callback(gameObjects[i]);
+        }
+    }
+
 }

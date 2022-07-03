@@ -1,8 +1,10 @@
 var class_l_t_e_1_1envelope =
 [
+    [ "displayComponentProprties", "d2/d04/class_l_t_e_1_1envelope.html#af3e1e6889df5cf6c4f8a4cdb8a8a6db0", null ],
     [ "end", "d2/d04/class_l_t_e_1_1envelope.html#ae8ec82c24b5c99bfbecf818516e78ed8", null ],
     [ "getEnvelopeAmpMultiplayer", "d2/d04/class_l_t_e_1_1envelope.html#a47a4c7d33f00a3a01507c82037e75326", null ],
     [ "getId", "d2/d04/class_l_t_e_1_1envelope.html#a6c14f0fb15abc74ddfb8f9fce18f5815", null ],
+    [ "getName", "d2/d04/class_l_t_e_1_1envelope.html#ad0c2811a6bd9ede1a5b9d11cbcda6519", null ],
     [ "getSampelAmp", "d2/d04/class_l_t_e_1_1envelope.html#a1656e76a88e737f2f203006354289fb7", null ],
     [ "init", "d2/d04/class_l_t_e_1_1envelope.html#ae9ddde135f3eb7f3f6b4ed545a65fda6", null ],
     [ "isActive", "d2/d04/class_l_t_e_1_1envelope.html#ae45d2f5d0340248f85ef04d272cb84a2", null ],

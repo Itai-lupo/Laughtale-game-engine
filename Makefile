@@ -7,7 +7,7 @@ rwildcard=$(wildcard $1$2) $(foreach d,$(wildcard $1*),$(call rwildcard,$d/,$2))
 rwildcardDir=$(wildcard $1*/) $(foreach d,$(wildcard $1*),$(call rwildcardDir,$d/))
 
 
-TARGET_EXEC ?= theMaze.out
+TARGET_EXEC ?= LTE_Editor.out
 
 BUILD_DIR ?= ./build
 OUTPUT_DIR ?= ./output
@@ -43,7 +43,7 @@ LDFLAGS =  $(LIB_FLAGS) -lboost_thread -lstdc++ -lgflags -lglog -lGL -lglfw   -l
 
 $(OUTPUT_DIR)/$(TARGET_EXEC): $(OBJS)
 	mkdir -p output
-	$(CC) $(CPPFLAGS   $(CXXFLAGS) $(OBJS)  -o $@ $(LDFLAGS)
+	$(CC) $(CPPFLAGS)   $(CXXFLAGS) $(OBJS)  -o $@ $(LDFLAGS)
 
 print:
 	@echo ./include/ $(wildcard ./include/*/) $(wildcard ./include/*/*/) $(wildcard ./include/*/*/*/) $(wildcard ./include/*/*/*/*/)

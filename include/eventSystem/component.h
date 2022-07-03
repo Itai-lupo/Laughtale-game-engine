@@ -2,6 +2,7 @@
 #include <functional>
 #include <vector>
 #include "core.h"
+#include <string>
 
 namespace LTE
 {
@@ -22,6 +23,9 @@ namespace LTE
                 this->parentScene = parentScene;
                 this->parentId = parentId;
             }
+
+            virtual std::string getName() = 0;
+            virtual void displayComponentProprties() = 0;
 
             gameObjectId getParentId(){return parentId; }
     };

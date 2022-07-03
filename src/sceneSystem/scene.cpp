@@ -82,5 +82,10 @@ namespace LTE
         sceneHierarchy->removeGameObjectById(id);
     }
 
+    void scene::forEachObject(std::function<void(std::shared_ptr<gameObject>)> callback)
+    {
+        sceneHierarchy->forEachObject(callback);
+
+    }
 
 }

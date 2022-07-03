@@ -21,5 +21,14 @@ namespace LTE
 
             bool operator == (squreCollider& s);
 
+            virtual std::string getName() override
+            { 
+                return "squreCollider";
+            }
+
+            virtual void displayComponentProprties() override
+            {
+
+            }
     };
 }  

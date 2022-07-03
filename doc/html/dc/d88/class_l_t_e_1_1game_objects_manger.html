@@ -107,6 +107,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad59103a767170582efd148bec47c691c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa172bca285a3a77c2fcade53d08c7a62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#aa172bca285a3a77c2fcade53d08c7a62">removeGameObjectById</a> (<a class="el" href="../../dc/d59/namespace_l_t_e.html#a7453a44af781c118bd678959bdd02674">gameObjectId</a> id)</td></tr>
 <tr class="separator:aa172bca285a3a77c2fcade53d08c7a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad54a3a9684fbbd23a66b317d93fde338"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#ad54a3a9684fbbd23a66b317d93fde338">forEachObject</a> (std::function&lt; void(std::shared_ptr&lt; <a class="el" href="../../d2/d49/class_l_t_e_1_1game_object.html">gameObject</a> &gt;)&gt; callback)</td></tr>
+<tr class="separator:ad54a3a9684fbbd23a66b317d93fde338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae860d268ec56a17a0aa09a8cb432df3b" name="ae860d268ec56a17a0aa09a8cb432df3b"></a>
@@ -184,8 +186,8 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   25</span>        nextGameObjectId++;</div>
 <div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> res-&gt;getId();</div>
 <div class="line"><span class="lineno">   27</span>    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1game_object_builder_html_a410883a2a9922e958a780b2cd87c1770"><div class="ttname"><a href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a410883a2a9922e958a780b2cd87c1770">LTE::gameObjectBuilder::reset</a></div><div class="ttdeci">gameObjectBuilder * reset(sceneId parentScene)</div><div class="ttdef"><b>Definition:</b> gameobject.h:136</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1game_object_builder_html_a6af1611f6b974117e4634298487cae08"><div class="ttname"><a href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a6af1611f6b974117e4634298487cae08">LTE::gameObjectBuilder::build</a></div><div class="ttdeci">std::shared_ptr&lt; gameObject &gt; build(gameObjectId id)</div><div class="ttdef"><b>Definition:</b> gameobject.h:143</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1game_object_builder_html_a410883a2a9922e958a780b2cd87c1770"><div class="ttname"><a href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a410883a2a9922e958a780b2cd87c1770">LTE::gameObjectBuilder::reset</a></div><div class="ttdeci">gameObjectBuilder * reset(sceneId parentScene)</div><div class="ttdef"><b>Definition:</b> gameobject.h:151</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1game_object_builder_html_a6af1611f6b974117e4634298487cae08"><div class="ttname"><a href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a6af1611f6b974117e4634298487cae08">LTE::gameObjectBuilder::build</a></div><div class="ttdeci">std::shared_ptr&lt; gameObject &gt; build(gameObjectId id)</div><div class="ttdef"><b>Definition:</b> gameobject.h:158</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -206,7 +208,41 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="../../d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html#a0df8d46fd01f08ccf5764576c74b6acc" title=" " alt="" coords="351,5,508,47"/>
 <area shape="rect" href="../../d3/db0/class_l_t_e_1_1scene_builder.html#a977dbd56a3787f5e160847648eab75d7" title=" " alt="" coords="363,71,496,112"/>
 <area shape="rect" href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#a96129d4d00a2fb857a020471f9ec55fc" title=" " alt="" coords="108,78,303,105"/>
-<area shape="rect" href="../../da/dd9/obj_loading_8test_8cpp.html#ab53f44fda33e05f1d4889205baf74bb6" title=" " alt="" coords="5,78,60,105"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="7,53,58,79"/>
+<area shape="rect" href="../../da/dd9/obj_loading_8test_8cpp.html#ab53f44fda33e05f1d4889205baf74bb6" title=" " alt="" coords="5,103,60,130"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad54a3a9684fbbd23a66b317d93fde338" name="ad54a3a9684fbbd23a66b317d93fde338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54a3a9684fbbd23a66b317d93fde338">&#9670;&nbsp;</a></span>forEachObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LTE::gameObjectsManger::forEachObject </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(std::shared_ptr&lt; <a class="el" href="../../d2/d49/class_l_t_e_1_1game_object.html">gameObject</a> &gt;)&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   71</span>    {</div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">for</span> (uint64_t i = 0; i &lt; gameObjects.size(); i++)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            callback(gameObjects[i]);</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d88/class_l_t_e_1_1game_objects_manger_ad54a3a9684fbbd23a66b317d93fde338_icgraph.png" border="0" usemap="#adc/d88/class_l_t_e_1_1game_objects_manger_ad54a3a9684fbbd23a66b317d93fde338_icgraph" alt=""/></div>
+<map name="adc/d88/class_l_t_e_1_1game_objects_manger_ad54a3a9684fbbd23a66b317d93fde338_icgraph" id="adc/d88/class_l_t_e_1_1game_objects_manger_ad54a3a9684fbbd23a66b317d93fde338_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,400,47"/>
+<area shape="rect" href="../../d6/d26/class_l_t_e_1_1scene.html#aa3cd16b5cadb68db455e563113027667" title=" " alt="" coords="5,13,180,39"/>
 </map>
 </div>
 
@@ -243,14 +279,15 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/d88/class_l_t_e_1_1game_objects_manger_ad59103a767170582efd148bec47c691c_icgraph.png" border="0" usemap="#adc/d88/class_l_t_e_1_1game_objects_manger_ad59103a767170582efd148bec47c691c_icgraph" alt=""/></div>
 <map name="adc/d88/class_l_t_e_1_1game_objects_manger_ad59103a767170582efd148bec47c691c_icgraph" id="adc/d88/class_l_t_e_1_1game_objects_manger_ad59103a767170582efd148bec47c691c_icgraph">
-<area shape="rect" title=" " alt="" coords="813,71,985,112"/>
-<area shape="rect" href="../../d6/d26/class_l_t_e_1_1scene.html#a4ba0154e84f4b99d699286aaf187335c" title=" " alt="" coords="555,78,765,105"/>
-<area shape="rect" href="../../d3/db0/class_l_t_e_1_1scene_builder.html#a977dbd56a3787f5e160847648eab75d7" title=" " alt="" coords="362,5,495,47"/>
-<area shape="rect" href="../../dd/d78/class_l_t_e_1_1squre_collider.html#a566099f37e8cea7f667dc8776e219082" title=" " alt="" coords="365,71,492,112"/>
-<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#ae67ee55d1725702719b2de2a87f8bd3f" title=" " alt="" coords="351,137,507,163"/>
-<area shape="rect" href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#a96129d4d00a2fb857a020471f9ec55fc" title=" " alt="" coords="108,13,303,39"/>
-<area shape="rect" href="../../da/dd9/obj_loading_8test_8cpp.html#ab53f44fda33e05f1d4889205baf74bb6" title=" " alt="" coords="5,13,60,39"/>
-<area shape="rect" href="../../dd/d78/class_l_t_e_1_1squre_collider.html#a65574d20c0b063c9e31e8f111c05efbe" title=" " alt="" coords="142,71,269,112"/>
+<area shape="rect" title=" " alt="" coords="813,89,985,130"/>
+<area shape="rect" href="../../d6/d26/class_l_t_e_1_1scene.html#a4ba0154e84f4b99d699286aaf187335c" title=" " alt="" coords="555,96,765,123"/>
+<area shape="rect" href="../../d3/db0/class_l_t_e_1_1scene_builder.html#a977dbd56a3787f5e160847648eab75d7" title=" " alt="" coords="362,23,495,65"/>
+<area shape="rect" href="../../dd/d78/class_l_t_e_1_1squre_collider.html#a566099f37e8cea7f667dc8776e219082" title=" " alt="" coords="365,89,492,130"/>
+<area shape="rect" href="../../d0/d6c/class_l_t_e_1_1mesh.html#ae67ee55d1725702719b2de2a87f8bd3f" title=" " alt="" coords="351,155,507,181"/>
+<area shape="rect" href="../../d7/d9a/class_l_t_e_1_1scene_manger.html#a96129d4d00a2fb857a020471f9ec55fc" title=" " alt="" coords="108,31,303,57"/>
+<area shape="rect" href="../../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="7,5,58,32"/>
+<area shape="rect" href="../../da/dd9/obj_loading_8test_8cpp.html#ab53f44fda33e05f1d4889205baf74bb6" title=" " alt="" coords="5,56,60,83"/>
+<area shape="rect" href="../../dd/d78/class_l_t_e_1_1squre_collider.html#a65574d20c0b063c9e31e8f111c05efbe" title=" " alt="" coords="142,89,269,130"/>
 </map>
 </div>
 
@@ -336,7 +373,7 @@ Here is the caller graph for this function:</div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/eventSystem/<a class="el" href="../../db/d2d/gameobject_8h_source.html">gameobject.h</a></li>
-<li>src/eventSystem/<a class="el" href="../../d7/df7/game_object_8cpp.html">gameObject.cpp</a></li>
+<li>src/eventSystem/<a class="el" href="../../d6/da5/gameobject_8cpp.html">gameobject.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
