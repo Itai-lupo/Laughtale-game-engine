@@ -33,6 +33,11 @@ namespace LTE
             material(const std::string& textureFilePath);
             material(glm::vec4 baseColor);
 
+
+            ~material(){
+                LAUGHTALE_ENGINR_LOG_INFO("A")
+            }
+
             void bind();
             void bind(std::vector<uint32_t> textureSlots);
 

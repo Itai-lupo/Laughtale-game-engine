@@ -10,7 +10,6 @@
 #include "component.h"
 #include "transform.h"
 #include "LTEError.h"
-
 namespace LTE
 {
     class gameObjectBuilder;
@@ -21,10 +20,10 @@ namespace LTE
             std::string name = "";
             std::shared_ptr<transform> ObjectTransform;
             sceneId parentScene;
-
             std::vector<std::shared_ptr<component>> components;
 
         public:    
+            std::weak_ptr<gameObject> self;
             gameObject(sceneId parentScene):parentScene(parentScene){}
             friend class gameObjectBuilder;
 
@@ -48,20 +47,28 @@ namespace LTE
             }    
 
             template<typename T> 
+            bool hasComponent()
+            {
+                if(id == 0)
+                    throw new ComponentNotFoundException("entitys with id 0 have no data ");
+                
+                for (auto comp: components)
+                {
+                    if(comp && dynamic_pointer_cast<T>(comp))
+                        return true; 
+                }
+
+                return false;
+            }   
+
+            template<typename T> 
             void setComponent(std::shared_ptr<component> componentToAdd)
             {
                 if(id == 0)
                     throw new ComponentNotFoundException("entitys with id 0 have no data ");
 
-                for (auto comp: components)
-                {
-                    if(comp && dynamic_pointer_cast<T>(comp))
-                    {
-                        comp = componentToAdd; 
-                        return;    
-                    }
-                }
-
+                componentToAdd->setParent(id, parentScene);
+                componentToAdd->init(self.lock());
                 components.push_back(componentToAdd);
             }    
 
@@ -142,6 +149,7 @@ namespace LTE
                 return this;
             }
 
+            
             gameObjectBuilder *addComponent(component *toAdd)
             {
                 prodect->components.push_back(std::shared_ptr<component>(toAdd));
@@ -157,6 +165,10 @@ namespace LTE
 
             std::shared_ptr<gameObject> build(gameObjectId id)
             {
+                prodect->self = prodect;
+                if(!prodect->ObjectTransform)
+                    prodect->ObjectTransform = std::make_shared<transform>(glm::mat3());
+
                 prodect->id = id;
                 for(std::shared_ptr<component> c: prodect->components){
                     c->setParent(id, prodect->parentScene);

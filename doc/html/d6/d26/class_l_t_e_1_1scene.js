@@ -18,7 +18,7 @@ var class_l_t_e_1_1scene =
     [ "renderScene", "d6/d26/class_l_t_e_1_1scene.html#a94ab9e4c3371a4b3802ce289e6d4b2e7", null ],
     [ "renderToTextureAtEvent", "d6/d26/class_l_t_e_1_1scene.html#a5f1092527c4525980fe1a2f85a1a5163", null ],
     [ "backgroundColor", "d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148", null ],
-    [ "camera", "d6/d26/class_l_t_e_1_1scene.html#ae28d2335d36cb81bc9da5d9ca1173143", null ],
+    [ "camera", "d6/d26/class_l_t_e_1_1scene.html#a0456c344be902b83958375424f515935", null ],
     [ "id", "d6/d26/class_l_t_e_1_1scene.html#a6ba5c57935c18dc4cc17b9b730642e36", null ],
     [ "objects", "d6/d26/class_l_t_e_1_1scene.html#a7cc81e5d3de10ddf2fa45149225d5e47", null ],
     [ "sceneCollider", "d6/d26/class_l_t_e_1_1scene.html#ab41b39ac613dff901107e78419ec8cad", null ]

@@ -137,9 +137,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  129</span>            {</div>
-<div class="line"><span class="lineno">  130</span>                </div>
-<div class="line"><span class="lineno">  131</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">  136</span>            {</div>
+<div class="line"><span class="lineno">  137</span>                </div>
+<div class="line"><span class="lineno">  138</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -167,11 +167,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  146</span>            {</div>
-<div class="line"><span class="lineno">  147</span>                <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>-&gt;components.push_back(std::shared_ptr&lt;component&gt;(toAdd));</div>
-<div class="line"><span class="lineno">  148</span>                <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  149</span>            }     </div>
-<div class="ttc" id="aclass_l_t_e_1_1game_object_builder_html_a103bca93a19336d244411ff69dafb908"><div class="ttname"><a href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">LTE::gameObjectBuilder::prodect</a></div><div class="ttdeci">std::shared_ptr&lt; gameObject &gt; prodect</div><div class="ttdef"><b>Definition:</b> gameobject.h:125</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  154</span>            {</div>
+<div class="line"><span class="lineno">  155</span>                <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>-&gt;components.push_back(std::shared_ptr&lt;component&gt;(toAdd));</div>
+<div class="line"><span class="lineno">  156</span>                <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  157</span>            }     </div>
+<div class="ttc" id="aclass_l_t_e_1_1game_object_builder_html_a103bca93a19336d244411ff69dafb908"><div class="ttname"><a href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">LTE::gameObjectBuilder::prodect</a></div><div class="ttdeci">std::shared_ptr&lt; gameObject &gt; prodect</div><div class="ttdef"><b>Definition:</b> gameobject.h:132</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -198,14 +198,18 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  159</span>            {</div>
-<div class="line"><span class="lineno">  160</span>                <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>-&gt;id = id;</div>
-<div class="line"><span class="lineno">  161</span>                <span class="keywordflow">for</span>(std::shared_ptr&lt;component&gt; c: <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>-&gt;components){</div>
-<div class="line"><span class="lineno">  162</span>                    c-&gt;setParent(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>-&gt;parentScene);</div>
-<div class="line"><span class="lineno">  163</span>                    c-&gt;init(<a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>);</div>
-<div class="line"><span class="lineno">  164</span>                }</div>
-<div class="line"><span class="lineno">  165</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>;</div>
-<div class="line"><span class="lineno">  166</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">  167</span>            {</div>
+<div class="line"><span class="lineno">  168</span>                <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>-&gt;self = <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>;</div>
+<div class="line"><span class="lineno">  169</span>                <span class="keywordflow">if</span>(!<a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>-&gt;ObjectTransform)</div>
+<div class="line"><span class="lineno">  170</span>                    <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>-&gt;ObjectTransform = std::make_shared&lt;transform&gt;(glm::mat3());</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>                <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>-&gt;id = id;</div>
+<div class="line"><span class="lineno">  173</span>                <span class="keywordflow">for</span>(std::shared_ptr&lt;component&gt; c: <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>-&gt;components){</div>
+<div class="line"><span class="lineno">  174</span>                    c-&gt;setParent(<span class="keywordtype">id</span>, <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>-&gt;parentScene);</div>
+<div class="line"><span class="lineno">  175</span>                    c-&gt;init(<a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>);</div>
+<div class="line"><span class="lineno">  176</span>                }</div>
+<div class="line"><span class="lineno">  177</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>;</div>
+<div class="line"><span class="lineno">  178</span>            }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -247,10 +251,10 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  152</span>            {</div>
-<div class="line"><span class="lineno">  153</span>                <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a> = std::make_shared&lt;gameObject&gt;(parentScene);</div>
-<div class="line"><span class="lineno">  154</span>                <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  155</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>            {</div>
+<div class="line"><span class="lineno">  161</span>                <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a> = std::make_shared&lt;gameObject&gt;(parentScene);</div>
+<div class="line"><span class="lineno">  162</span>                <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  163</span>            }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -292,10 +296,10 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  134</span>            {</div>
-<div class="line"><span class="lineno">  135</span>                <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>-&gt;name = name;</div>
-<div class="line"><span class="lineno">  136</span>                <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  137</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>            {</div>
+<div class="line"><span class="lineno">  142</span>                <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>-&gt;name = name;</div>
+<div class="line"><span class="lineno">  143</span>                <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  144</span>            }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -334,10 +338,10 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  140</span>            {</div>
-<div class="line"><span class="lineno">  141</span>                <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>-&gt;ObjectTransform = std::make_shared&lt;transform&gt;(trans);</div>
-<div class="line"><span class="lineno">  142</span>                <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  143</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>            {</div>
+<div class="line"><span class="lineno">  148</span>                <a class="code hl_variable" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a103bca93a19336d244411ff69dafb908">prodect</a>-&gt;ObjectTransform = std::make_shared&lt;transform&gt;(trans);</div>
+<div class="line"><span class="lineno">  149</span>                <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  150</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>

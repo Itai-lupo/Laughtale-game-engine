@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('d2/d49/class_l_t_e_1_1game_object.html
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="../../d6/d1f/class_l_t_e_1_1game_object-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LTE::gameObject Class Reference</div></div>
@@ -107,6 +108,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a10cbd497eb9114f8c7c03fb07ed4c575"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a10cbd497eb9114f8c7c03fb07ed4c575"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d49/class_l_t_e_1_1game_object.html#a10cbd497eb9114f8c7c03fb07ed4c575">getComponent</a> ()</td></tr>
 <tr class="separator:a10cbd497eb9114f8c7c03fb07ed4c575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a047b50ae44ca8c032244ff3bf572af12"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a047b50ae44ca8c032244ff3bf572af12"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d49/class_l_t_e_1_1game_object.html#a047b50ae44ca8c032244ff3bf572af12">hasComponent</a> ()</td></tr>
+<tr class="separator:a047b50ae44ca8c032244ff3bf572af12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a846382e3edb4d99c5bfa65de14375d2a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a846382e3edb4d99c5bfa65de14375d2a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d49/class_l_t_e_1_1game_object.html#a846382e3edb4d99c5bfa65de14375d2a">setComponent</a> (std::shared_ptr&lt; <a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html">component</a> &gt; componentToAdd)</td></tr>
 <tr class="separator:a846382e3edb4d99c5bfa65de14375d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,6 +127,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af1ed2ae9c51e102b4f5a17a56e9f9ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e8797b1ef058917752244088feddf01"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d49/class_l_t_e_1_1game_object.html#a4e8797b1ef058917752244088feddf01">~gameObject</a> ()</td></tr>
 <tr class="separator:a4e8797b1ef058917752244088feddf01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a8778d55e7c82d2f57465a82482375fd8"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="../../d2/d49/class_l_t_e_1_1game_object.html">gameObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d49/class_l_t_e_1_1game_object.html#a8778d55e7c82d2f57465a82482375fd8">self</a></td></tr>
+<tr class="separator:a8778d55e7c82d2f57465a82482375fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -153,7 +162,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   28</span>:parentScene(parentScene){}</div>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>:parentScene(parentScene){}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -179,9 +188,9 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  117</span>            {</div>
-<div class="line"><span class="lineno">  118</span>                <span class="keywordtype">id</span> = 0;</div>
-<div class="line"><span class="lineno">  119</span>            }            </div>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>            {</div>
+<div class="line"><span class="lineno">  125</span>                <span class="keywordtype">id</span> = 0;</div>
+<div class="line"><span class="lineno">  126</span>            }            </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -208,16 +217,16 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   86</span>            {</div>
-<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> c: components)</div>
-<div class="line"><span class="lineno">   88</span>                {</div>
-<div class="line"><span class="lineno">   89</span>                    c-&gt;end();</div>
-<div class="line"><span class="lineno">   90</span>                    c.reset();</div>
-<div class="line"><span class="lineno">   91</span>                }</div>
-<div class="line"><span class="lineno">   92</span>                components.clear();</div>
-<div class="line"><span class="lineno">   93</span>                ObjectTransform-&gt;end();</div>
-<div class="line"><span class="lineno">   94</span>                ObjectTransform.reset();</div>
-<div class="line"><span class="lineno">   95</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>            {</div>
+<div class="line"><span class="lineno">   94</span>                <span class="keywordflow">for</span>(<span class="keyword">auto</span> c: components)</div>
+<div class="line"><span class="lineno">   95</span>                {</div>
+<div class="line"><span class="lineno">   96</span>                    c-&gt;end();</div>
+<div class="line"><span class="lineno">   97</span>                    c.reset();</div>
+<div class="line"><span class="lineno">   98</span>                }</div>
+<div class="line"><span class="lineno">   99</span>                components.clear();</div>
+<div class="line"><span class="lineno">  100</span>                ObjectTransform-&gt;end();</div>
+<div class="line"><span class="lineno">  101</span>                ObjectTransform.reset();</div>
+<div class="line"><span class="lineno">  102</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -244,13 +253,13 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  108</span>            {</div>
-<div class="line"><span class="lineno">  109</span>                callback(ObjectTransform);</div>
-<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">for</span> (uint64_t i = 0; i &lt; components.size(); i++)</div>
-<div class="line"><span class="lineno">  111</span>                {</div>
-<div class="line"><span class="lineno">  112</span>                    callback(components[i]);</div>
-<div class="line"><span class="lineno">  113</span>                }</div>
-<div class="line"><span class="lineno">  114</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>            {</div>
+<div class="line"><span class="lineno">  116</span>                callback(ObjectTransform);</div>
+<div class="line"><span class="lineno">  117</span>                <span class="keywordflow">for</span> (uint64_t i = 0; i &lt; components.size(); i++)</div>
+<div class="line"><span class="lineno">  118</span>                {</div>
+<div class="line"><span class="lineno">  119</span>                    callback(components[i]);</div>
+<div class="line"><span class="lineno">  120</span>                }</div>
+<div class="line"><span class="lineno">  121</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -278,18 +287,18 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   37</span>            {</div>
-<div class="line"><span class="lineno">   38</span>                <span class="keywordflow">if</span>(<span class="keywordtype">id</span> == 0)</div>
-<div class="line"><span class="lineno">   39</span>                    <span class="keywordflow">throw</span> <span class="keyword">new</span> ComponentNotFoundException(<span class="stringliteral">&quot;entitys with id 0 have no data &quot;</span>);</div>
-<div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> comp: components)</div>
-<div class="line"><span class="lineno">   42</span>                {</div>
-<div class="line"><span class="lineno">   43</span>                    <span class="keywordflow">if</span>(comp &amp;&amp; dynamic_pointer_cast&lt;T&gt;(comp))</div>
-<div class="line"><span class="lineno">   44</span>                        <span class="keywordflow">return</span> dynamic_pointer_cast&lt;T&gt;(comp); </div>
-<div class="line"><span class="lineno">   45</span>                }</div>
-<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> ComponentNotFoundException(<span class="stringliteral">&quot;can&#39;t find Component of type: &quot;</span> + std::string(<span class="keyword">typeid</span>(T).name()));</div>
-<div class="line"><span class="lineno">   47</span>                <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">   48</span>            }    </div>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>            {</div>
+<div class="line"><span class="lineno">   37</span>                <span class="keywordflow">if</span>(<span class="keywordtype">id</span> == 0)</div>
+<div class="line"><span class="lineno">   38</span>                    <span class="keywordflow">throw</span> <span class="keyword">new</span> ComponentNotFoundException(<span class="stringliteral">&quot;entitys with id 0 have no data &quot;</span>);</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> comp: components)</div>
+<div class="line"><span class="lineno">   41</span>                {</div>
+<div class="line"><span class="lineno">   42</span>                    <span class="keywordflow">if</span>(comp &amp;&amp; dynamic_pointer_cast&lt;T&gt;(comp))</div>
+<div class="line"><span class="lineno">   43</span>                        <span class="keywordflow">return</span> dynamic_pointer_cast&lt;T&gt;(comp); </div>
+<div class="line"><span class="lineno">   44</span>                }</div>
+<div class="line"><span class="lineno">   45</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> ComponentNotFoundException(<span class="stringliteral">&quot;can&#39;t find Component of type: &quot;</span> + std::string(<span class="keyword">typeid</span>(T).name()));</div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   47</span>            }    </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -315,7 +324,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   33</span>{ <span class="keywordflow">return</span> id; }</div>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>{ <span class="keywordflow">return</span> id; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -341,7 +350,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   31</span>{ <span class="keywordflow">return</span> name; }</div>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>{ <span class="keywordflow">return</span> name; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -367,9 +376,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   98</span>            {</div>
-<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">return</span> ObjectTransform.get();</div>
-<div class="line"><span class="lineno">  100</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>            {</div>
+<div class="line"><span class="lineno">  106</span>                <span class="keywordflow">return</span> ObjectTransform.get();</div>
+<div class="line"><span class="lineno">  107</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -395,9 +404,48 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  103</span>            {</div>
-<div class="line"><span class="lineno">  104</span>                <span class="keywordflow">return</span> ObjectTransform;</div>
-<div class="line"><span class="lineno">  105</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>            {</div>
+<div class="line"><span class="lineno">  111</span>                <span class="keywordflow">return</span> ObjectTransform;</div>
+<div class="line"><span class="lineno">  112</span>            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a047b50ae44ca8c032244ff3bf572af12" name="a047b50ae44ca8c032244ff3bf572af12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a047b50ae44ca8c032244ff3bf572af12">&#9670;&nbsp;</a></span>hasComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LTE::gameObject::hasComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   51</span>            {</div>
+<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">if</span>(<span class="keywordtype">id</span> == 0)</div>
+<div class="line"><span class="lineno">   53</span>                    <span class="keywordflow">throw</span> <span class="keyword">new</span> ComponentNotFoundException(<span class="stringliteral">&quot;entitys with id 0 have no data &quot;</span>);</div>
+<div class="line"><span class="lineno">   54</span>                </div>
+<div class="line"><span class="lineno">   55</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> comp: components)</div>
+<div class="line"><span class="lineno">   56</span>                {</div>
+<div class="line"><span class="lineno">   57</span>                    <span class="keywordflow">if</span>(comp &amp;&amp; dynamic_pointer_cast&lt;T&gt;(comp))</div>
+<div class="line"><span class="lineno">   58</span>                        <span class="keywordflow">return</span> <span class="keyword">true</span>; </div>
+<div class="line"><span class="lineno">   59</span>                }</div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   62</span>            }   </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -425,20 +473,20 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   70</span>            {</div>
-<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">if</span>(<span class="keywordtype">id</span> == 0)</div>
-<div class="line"><span class="lineno">   72</span>                    <span class="keywordflow">throw</span> <span class="keyword">new</span> ComponentNotFoundException(<span class="stringliteral">&quot;entitys with id 0 have no data &quot;</span>);</div>
-<div class="line"><span class="lineno">   73</span>                <span class="keyword">auto</span> it = std::remove_if(</div>
-<div class="line"><span class="lineno">   74</span>                        components.begin(), </div>
-<div class="line"><span class="lineno">   75</span>                        components.end(),</div>
-<div class="line"><span class="lineno">   76</span>                        [](component *comp) -&gt; <span class="keywordtype">bool</span></div>
-<div class="line"><span class="lineno">   77</span>                        {</div>
-<div class="line"><span class="lineno">   78</span>                            return comp &amp;&amp; dynamic_pointer_cast&lt;T&gt;(comp);</div>
-<div class="line"><span class="lineno">   79</span>                        });</div>
-<div class="line"><span class="lineno">   80</span> </div>
-<div class="line"><span class="lineno">   81</span>                <span class="keywordflow">if</span>(it != components.end())</div>
-<div class="line"><span class="lineno">   82</span>                    components.erase(it);</div>
-<div class="line"><span class="lineno">   83</span>            }    </div>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">if</span>(<span class="keywordtype">id</span> == 0)</div>
+<div class="line"><span class="lineno">   79</span>                    <span class="keywordflow">throw</span> <span class="keyword">new</span> ComponentNotFoundException(<span class="stringliteral">&quot;entitys with id 0 have no data &quot;</span>);</div>
+<div class="line"><span class="lineno">   80</span>                <span class="keyword">auto</span> it = std::remove_if(</div>
+<div class="line"><span class="lineno">   81</span>                        components.begin(), </div>
+<div class="line"><span class="lineno">   82</span>                        components.end(),</div>
+<div class="line"><span class="lineno">   83</span>                        [](component *comp) -&gt; <span class="keywordtype">bool</span></div>
+<div class="line"><span class="lineno">   84</span>                        {</div>
+<div class="line"><span class="lineno">   85</span>                            return comp &amp;&amp; dynamic_pointer_cast&lt;T&gt;(comp);</div>
+<div class="line"><span class="lineno">   86</span>                        });</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">if</span>(it != components.end())</div>
+<div class="line"><span class="lineno">   89</span>                    components.erase(it);</div>
+<div class="line"><span class="lineno">   90</span>            }    </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -467,21 +515,15 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   52</span>            {</div>
-<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">if</span>(<span class="keywordtype">id</span> == 0)</div>
-<div class="line"><span class="lineno">   54</span>                    <span class="keywordflow">throw</span> <span class="keyword">new</span> ComponentNotFoundException(<span class="stringliteral">&quot;entitys with id 0 have no data &quot;</span>);</div>
-<div class="line"><span class="lineno">   55</span> </div>
-<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> comp: components)</div>
-<div class="line"><span class="lineno">   57</span>                {</div>
-<div class="line"><span class="lineno">   58</span>                    <span class="keywordflow">if</span>(comp &amp;&amp; dynamic_pointer_cast&lt;T&gt;(comp))</div>
-<div class="line"><span class="lineno">   59</span>                    {</div>
-<div class="line"><span class="lineno">   60</span>                        comp = componentToAdd; </div>
-<div class="line"><span class="lineno">   61</span>                        <span class="keywordflow">return</span>;    </div>
-<div class="line"><span class="lineno">   62</span>                    }</div>
-<div class="line"><span class="lineno">   63</span>                }</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>                components.push_back(componentToAdd);</div>
-<div class="line"><span class="lineno">   66</span>            }    </div>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">if</span>(<span class="keywordtype">id</span> == 0)</div>
+<div class="line"><span class="lineno">   68</span>                    <span class="keywordflow">throw</span> <span class="keyword">new</span> ComponentNotFoundException(<span class="stringliteral">&quot;entitys with id 0 have no data &quot;</span>);</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>                componentToAdd-&gt;setParent(<span class="keywordtype">id</span>, parentScene);</div>
+<div class="line"><span class="lineno">   71</span>                componentToAdd-&gt;init(<a class="code hl_variable" href="../../d2/d49/class_l_t_e_1_1game_object.html#a8778d55e7c82d2f57465a82482375fd8">self</a>.lock());</div>
+<div class="line"><span class="lineno">   72</span>                components.push_back(componentToAdd);</div>
+<div class="line"><span class="lineno">   73</span>            }    </div>
+<div class="ttc" id="aclass_l_t_e_1_1game_object_html_a8778d55e7c82d2f57465a82482375fd8"><div class="ttname"><a href="../../d2/d49/class_l_t_e_1_1game_object.html#a8778d55e7c82d2f57465a82482375fd8">LTE::gameObject::self</a></div><div class="ttdeci">std::weak_ptr&lt; gameObject &gt; self</div><div class="ttdef"><b>Definition:</b> gameobject.h:26</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -508,7 +550,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   32</span>{ this-&gt;name = name; }</div>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>{ this-&gt;name = name; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -531,6 +573,21 @@ template&lt;typename T &gt; </div>
 <span class="mlabels"><span class="mlabel">friend</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8778d55e7c82d2f57465a82482375fd8" name="a8778d55e7c82d2f57465a82482375fd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8778d55e7c82d2f57465a82482375fd8">&#9670;&nbsp;</a></span>self</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::weak_ptr&lt;<a class="el" href="../../d2/d49/class_l_t_e_1_1game_object.html">gameObject</a>&gt; LTE::gameObject::self</td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>

@@ -123,6 +123,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a195e20f044bab21a557b98ee1ccb0419"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8746b5af70b3b19958ccd5b156cc5143"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dda/class_l_t_e_1_1material.html#a8746b5af70b3b19958ccd5b156cc5143">material</a> (glm::vec4 baseColor)</td></tr>
 <tr class="separator:a8746b5af70b3b19958ccd5b156cc5143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb99197083e1082d23f0703566288242"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dda/class_l_t_e_1_1material.html#abb99197083e1082d23f0703566288242">~material</a> ()</td></tr>
+<tr class="separator:abb99197083e1082d23f0703566288242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9db4a989cf5d4c9f3763b092368204cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dda/class_l_t_e_1_1material.html#a9db4a989cf5d4c9f3763b092368204cf">bind</a> ()</td></tr>
 <tr class="separator:a9db4a989cf5d4c9f3763b092368204cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5bfe858eb0ccf8fd89b594642954aa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dda/class_l_t_e_1_1material.html#aa5bfe858eb0ccf8fd89b594642954aa6">bind</a> (std::vector&lt; uint32_t &gt; textureSlots)</td></tr>
@@ -335,6 +337,35 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="abb99197083e1082d23f0703566288242" name="abb99197083e1082d23f0703566288242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb99197083e1082d23f0703566288242">&#9670;&nbsp;</a></span>~material()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LTE::material::~material </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   37</span>                       {</div>
+<div class="line"><span class="lineno">   38</span>                <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a>(<span class="stringliteral">&quot;A&quot;</span>)</div>
+<div class="line"><span class="lineno">   39</span>            }</div>
+<div class="ttc" id="alogger_8h_html_a70645337545523faca46e49a3180d5f7"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#a70645337545523faca46e49a3180d5f7">LAUGHTALE_ENGINR_LOG_INFO</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_INFO(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:6</div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9db4a989cf5d4c9f3763b092368204cf" name="a9db4a989cf5d4c9f3763b092368204cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9db4a989cf5d4c9f3763b092368204cf">&#9670;&nbsp;</a></span>bind() <span class="overload">[1/2]</span></h2>
@@ -432,9 +463,9 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html#ae358197b234ae158cb1932ace965eaad">LTE::component</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>            {            </div>
-<div class="line"><span class="lineno">   66</span>                ImGui::ColorEdit4(<span class="stringliteral">&quot;Color&quot;</span>, glm::value_ptr(baseColor));</div>
-<div class="line"><span class="lineno">   67</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>            {            </div>
+<div class="line"><span class="lineno">   71</span>                ImGui::ColorEdit4(<span class="stringliteral">&quot;Color&quot;</span>, glm::value_ptr(baseColor));</div>
+<div class="line"><span class="lineno">   72</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -492,9 +523,9 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html#afc864bf3f7aa31b58f9ecd7ab2ff49a3">LTE::component</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>            { </div>
-<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;material&quot;</span>;</div>
-<div class="line"><span class="lineno">   62</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>            { </div>
+<div class="line"><span class="lineno">   66</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;material&quot;</span>;</div>
+<div class="line"><span class="lineno">   67</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>

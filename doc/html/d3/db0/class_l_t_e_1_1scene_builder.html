@@ -135,13 +135,13 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   30</span>                        addComponent(<span class="keyword">new</span> orthographicCameraControler(1280.0f/720.0f));</div>
 <div class="line"><span class="lineno">   31</span>                });</div>
 <div class="line"><span class="lineno">   32</span> </div>
-<div class="line"><span class="lineno">   33</span>                product-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#ae28d2335d36cb81bc9da5d9ca1173143">camera</a> = product-&gt;<a class="code hl_function" href="../../d6/d26/class_l_t_e_1_1scene.html#a4ba0154e84f4b99d699286aaf187335c">getGameObjectById</a>(camId);</div>
+<div class="line"><span class="lineno">   33</span>                product-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a0456c344be902b83958375424f515935">camera</a> = product-&gt;<a class="code hl_function" href="../../d6/d26/class_l_t_e_1_1scene.html#a4ba0154e84f4b99d699286aaf187335c">getGameObjectById</a>(camId);</div>
 <div class="line"><span class="lineno">   34</span>                <span class="keywordflow">return</span> product;</div>
 <div class="line"><span class="lineno">   35</span>        </div>
 <div class="line"><span class="lineno">   36</span>            }</div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_a4ba0154e84f4b99d699286aaf187335c"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a4ba0154e84f4b99d699286aaf187335c">LTE::scene::getGameObjectById</a></div><div class="ttdeci">std::shared_ptr&lt; LTE::gameObject &gt; getGameObjectById(gameObjectId id)</div><div class="ttdef"><b>Definition:</b> scene.cpp:74</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_a6de4eec39efa1e4fdc91c376f3f5ec72"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a6de4eec39efa1e4fdc91c376f3f5ec72">LTE::scene::addGameObject</a></div><div class="ttdeci">gameObjectId addGameObject(std::function&lt; void(gameObjectBuilder *Builder)&gt; buildGameObject)</div><div class="ttdef"><b>Definition:</b> scene.cpp:63</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_ae28d2335d36cb81bc9da5d9ca1173143"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#ae28d2335d36cb81bc9da5d9ca1173143">LTE::scene::camera</a></div><div class="ttdeci">std::shared_ptr&lt; LTE::gameObject &gt; camera</div><div class="ttdef"><b>Definition:</b> scene.h:40</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a0456c344be902b83958375424f515935"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a0456c344be902b83958375424f515935">LTE::scene::camera</a></div><div class="ttdeci">std::shared_ptr&lt; gameObject &gt; camera</div><div class="ttdef"><b>Definition:</b> scene.h:42</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a4ba0154e84f4b99d699286aaf187335c"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a4ba0154e84f4b99d699286aaf187335c">LTE::scene::getGameObjectById</a></div><div class="ttdeci">std::shared_ptr&lt; gameObject &gt; getGameObjectById(gameObjectId id)</div><div class="ttdef"><b>Definition:</b> scene.cpp:75</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a6de4eec39efa1e4fdc91c376f3f5ec72"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a6de4eec39efa1e4fdc91c376f3f5ec72">LTE::scene::addGameObject</a></div><div class="ttdeci">gameObjectId addGameObject(std::function&lt; void(gameObjectBuilder *Builder)&gt; buildGameObject)</div><div class="ttdef"><b>Definition:</b> scene.cpp:64</div></div>
 <div class="ttc" id="anamespace_l_t_e_html_a7453a44af781c118bd678959bdd02674"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a7453a44af781c118bd678959bdd02674">LTE::gameObjectId</a></div><div class="ttdeci">uint32_t gameObjectId</div><div class="ttdef"><b>Definition:</b> core.h:9</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -237,7 +237,7 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   39</span>            {</div>
 <div class="line"><span class="lineno">   40</span>                product-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">backgroundColor</a> = color;</div>
 <div class="line"><span class="lineno">   41</span>            }</div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_a175550c54709e4c719913e94b906b148"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">LTE::scene::backgroundColor</a></div><div class="ttdeci">material * backgroundColor</div><div class="ttdef"><b>Definition:</b> scene.h:43</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a175550c54709e4c719913e94b906b148"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">LTE::scene::backgroundColor</a></div><div class="ttdeci">material * backgroundColor</div><div class="ttdef"><b>Definition:</b> scene.h:45</div></div>
 </div><!-- fragment -->
 </div>
 </div>

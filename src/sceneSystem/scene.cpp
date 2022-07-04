@@ -6,6 +6,7 @@
 #include "graphicsContext.h"
 #include "batchRenderer.h"
 #include "window.h"
+#include "gameobject.h"
 
 namespace LTE
 {

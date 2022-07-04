@@ -1,6 +1,7 @@
 #include "LaughTaleEngine.h"
 #include <imgui/imgui.h>
 #include <imgui/imgui_internal.h>
+#include <glm/gtc/type_ptr.hpp>
 
 static inline LTE::scene *gameScene;
 
@@ -52,29 +53,7 @@ class cube: LTE::osEvent
         {
             id =  gameScene->addGameObject([this](LTE::gameObjectBuilder *builder){init(builder); });
         }
-
-        virtual void onWindowImGuiRender(LTE::windowRenderData *sendor)
-        {
-            ImGui::Begin(name.c_str());
-            
-            LTE::transform *cubeTrans =  gameScene->getGameObjectById(id)->getTransform();
-
-            glm::vec3 p = cubeTrans->getPostion();
-            glm::vec3 r = cubeTrans->getRotation();
-            glm::vec3 s = cubeTrans->getScale();
-
-            ImGui::SliderFloat3("cube cords", (float*)&p, -2, 2);
-            ImGui::SliderFloat3("cube rotation", (float*)&r, -2, 2);
-            ImGui::SliderFloat3("cube scale", (float*)&s, 0, 10);
-
-            cubeTrans->setPostion(p);
-            cubeTrans->setRotation(r);
-            cubeTrans->setScale(s);
-
-            ImGui::End();
-
-        }
-
+        
         virtual void onWindowClose(LTE::osEventData *sendor)
         {
             LTE::app::keepRunning = false;
@@ -176,6 +155,27 @@ class editor: LTE::osEvent
                     }
                 });
             
+                const char* str_id = "add";
+                if (ImGui::IsWindowHovered() && ImGui::IsMouseClicked(1)){
+                    ImGui::OpenPopup(str_id);
+                }
+            
+                if(ImGui::BeginPopup(str_id))
+                {
+                    char buffer[256] = "default";
+                    if (ImGui::InputText("##newName", buffer, sizeof(buffer)))
+                    {
+                        selectionContext->setName(std::string(buffer));
+                    }
+                    if(ImGui::Button("+"))
+                    {
+                        gameScene->addGameObject([&](LTE::gameObjectBuilder *b){
+                            b->setObjectName(buffer);
+                        });
+                    }
+                    ImGui::EndPopup();
+                }
+            
             ImGui::End();
     
 
@@ -199,15 +199,22 @@ class editor: LTE::osEvent
 
                 if (ImGui::BeginPopup("AddComponent"))
                 {
-                        if (ImGui::MenuItem("Camera"))
+                        if (ImGui::MenuItem("material"))
                         {
-
+                            if(!selectionContext->hasComponent<LTE::material>())
+                                selectionContext->setComponent<LTE::material>(std::make_shared<LTE::material>(glm::vec4{0, 0, 0, 0}));
                             ImGui::CloseCurrentPopup();
                         }
 
-                        if (ImGui::MenuItem("Sprite Renderer"))
+                        if (ImGui::MenuItem("mesh"))
                         {
-                            
+                            if(!selectionContext->hasComponent<LTE::mesh>())
+                                selectionContext->setComponent<LTE::mesh>(std::shared_ptr<LTE::mesh>(LTE::mesh::build([=, this](LTE::mesh::meshBuilder *builder)
+                                                {
+                                                    builder->setIndexBuffer(pilarIndices, 6 * 6)->
+                                                    setVertices(pilarPostions, 8*3)->
+                                                    setShaderName("res/moduleLoading/shaders/Basic.glsl");
+                                                })));
                             ImGui::CloseCurrentPopup();
                         }
 
@@ -254,6 +261,8 @@ class editor: LTE::osEvent
     
             ImGui::Begin("Settings");
 
+            ImGui::Text("background color");
+            gameScene->backgroundColor->displayComponentProprties();
             
 
             ImGui::End();

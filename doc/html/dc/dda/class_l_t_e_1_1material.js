@@ -5,6 +5,7 @@ var class_l_t_e_1_1material =
     [ "material", "dc/dda/class_l_t_e_1_1material.html#afa035278f6dcaa1ae9180c58597ca19e", null ],
     [ "material", "dc/dda/class_l_t_e_1_1material.html#a195e20f044bab21a557b98ee1ccb0419", null ],
     [ "material", "dc/dda/class_l_t_e_1_1material.html#a8746b5af70b3b19958ccd5b156cc5143", null ],
+    [ "~material", "dc/dda/class_l_t_e_1_1material.html#abb99197083e1082d23f0703566288242", null ],
     [ "bind", "dc/dda/class_l_t_e_1_1material.html#a9db4a989cf5d4c9f3763b092368204cf", null ],
     [ "bind", "dc/dda/class_l_t_e_1_1material.html#aa5bfe858eb0ccf8fd89b594642954aa6", null ],
     [ "displayComponentProprties", "dc/dda/class_l_t_e_1_1material.html#ad2ff04cdbbdd2bb8e2151a8ebce4fb86", null ],

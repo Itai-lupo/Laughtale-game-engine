@@ -18,6 +18,8 @@ namespace LTE
 {
     class batchRenderer;
     class window;
+    class gameObjectsManger;
+    class gameObject;
 
     class scene: osEvent
     {
@@ -37,7 +39,7 @@ namespace LTE
             sceneId id;
             colliderSystem2D *sceneCollider;
 
-            std::shared_ptr<LTE::gameObject> camera;
+            std::shared_ptr<gameObject> camera;
             std::vector<std::weak_ptr<gameObject>> *objects;
             
             material *backgroundColor;
@@ -70,8 +72,8 @@ namespace LTE
 
 
             gameObjectId addGameObject(std::function<void(gameObjectBuilder *Builder)> buildGameObject);
-            std::shared_ptr< LTE::gameObject>getGameObjectByName(const std::string& name);
-            std::shared_ptr< LTE::gameObject>getGameObjectById(gameObjectId id);
+            std::shared_ptr<gameObject>getGameObjectByName(const std::string& name);
+            std::shared_ptr<gameObject>getGameObjectById(gameObjectId id);
             void removeGameObjectById(gameObjectId id);
             void forEachObject(std::function<void(std::shared_ptr<gameObject>)> callback);
     };
