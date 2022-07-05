@@ -1,31 +1,93 @@
 #include "colliderSystem2D.h"
 #include "collisionData.h"
 #include "app.h"
-#include "sceneManger.h"
+#include "scene.h"
 
 #include <algorithm>
 
 namespace LTE
 {
     
-    void colliderSystem2D::init()
+    colliderSystem2D::colliderSystem2D(scene *parentScene): parentScene(parentScene)
     {
         t = new std::thread(&colliderSystem2D::checkCollision, this);
 
     }
     
-    void colliderSystem2D::close()
+    colliderSystem2D::~colliderSystem2D()
     {
         t->join();
     }
 
-    void colliderSystem2D::removeSqureCollider(gameObjectId id)
+
+    bool colliderSystem2D::checkXBonds(float selfRight, float selfLeft, float otherRight, float otherLeft)
     {
-        squreColliders.erase(std::remove_if(
-            squreColliders.begin(),
-            squreColliders.end(),
-            [=](std::weak_ptr<LTE::gameObject> g) -> bool { return g.lock() && g.lock()->getId() == id; }
-        ));
+        return (
+            (selfRight <= otherRight && selfRight >= otherLeft) ||
+            (selfLeft <= otherRight && selfLeft >= otherLeft) ||
+            (otherRight <= selfRight && otherRight >= selfLeft) ||
+            (otherLeft <= selfRight && otherLeft >= selfLeft)
+            );
+    }  
+
+    bool colliderSystem2D::checkYBonds(float selfTop, float selfBottom, float otherTop, float otherBottom)
+    {
+        return (
+            (selfTop <= otherTop && selfTop >= otherBottom) ||
+            (selfBottom <= otherTop && selfBottom >= otherBottom) ||
+            (otherTop <= selfTop && otherTop >= selfBottom) ||
+            (otherBottom <= selfTop && otherBottom >= selfBottom)
+            );
+    }
+
+    bool colliderSystem2D::isEqual(std::shared_ptr<gameObject> a, std::shared_ptr<gameObject> b)
+    {
+        std::shared_ptr<transform> aBonds = a->getTransform();
+        std::shared_ptr<transform> bBonds = b->getTransform();
+
+        glm::vec3 aDownRightBonds = aBonds->getPostion() - aBonds->getScale()/2.0f;
+        glm::vec3 aUpLeftBonds = aBonds->getPostion() + aBonds->getScale()/2.0f;
+
+        glm::vec3 bDownRightBonds = bBonds->getPostion() - bBonds->getScale()/2.0f;
+        glm::vec3 bUpLeftBonds = bBonds->getPostion() + bBonds->getScale()/2.0f;
+
+        bool isWithInBonds =  
+            checkYBonds(aUpLeftBonds.y, aDownRightBonds.y, bUpLeftBonds.y, bDownRightBonds.y) &&
+            checkXBonds(aUpLeftBonds.x, aDownRightBonds.x, bUpLeftBonds.x, bDownRightBonds.x);
+        
+        std::vector<std::weak_ptr<gameObject>>::iterator isBInACollisionsList = std::find_if(
+            activeCollisions[a->getId()].begin(), 
+            activeCollisions[a->getId()].end(),
+            [=, this](std::weak_ptr<gameObject> check) -> bool { 
+                return a->getId() == check.lock()->getId(); 
+            });
+
+        std::vector<std::weak_ptr<gameObject>>::iterator isAInBCollisionsList = std::find_if(
+            activeCollisions[b->getId()].begin(), 
+            activeCollisions[b->getId()].end(),
+            [=, this](std::weak_ptr<gameObject> check) -> bool { 
+                return b->getId() == check.lock()->getId(); 
+            });
+            
+            
+        bool AlradyInCollisionWith = 
+            (isBInACollisionsList != activeCollisions[a->getId()].end()) ||
+            (isAInBCollisionsList != activeCollisions[a->getId()].end());
+        
+            
+        if (isWithInBonds && !AlradyInCollisionWith)
+        {
+            activeCollisions[a->getId()].push_back(b);
+            activeCollisions[b->getId()].push_back(a);
+            return true;
+        }
+
+        if(!isWithInBonds && AlradyInCollisionWith){
+            activeCollisions[a->getId()].erase(isBInACollisionsList);
+            activeCollisions[b->getId()].erase(isAInBCollisionsList);
+        }
+
+        return false;
     }
 
     void colliderSystem2D::checkCollision()
@@ -34,30 +96,22 @@ namespace LTE
         
         while (app::keepRunning)
         {
-            for (uint32_t i = 0; i < squreColliders.size(); i++)
+            std::vector<std::shared_ptr<gameObject>> gameObjectsCash = parentScene->getGameObjectCacheByComponentType<squreCollider>();
+            for (uint32_t i = 0; i < gameObjectsCash.size(); i++)
             {
-                for (uint32_t j = i + 1; j < squreColliders.size(); j++)
+                for (uint32_t j = i + 1; j < gameObjectsCash.size(); j++)
                 {
-                    try
-                    {
-                        if(*squreColliders[i].lock()->getComponent<squreCollider>().get() == *squreColliders[j].lock()->getComponent<squreCollider>().get())
-                        {
-                            collisionData *IToJ = new collisionData(squreColliders[i].lock()->getId(), squreColliders[j].lock());
-                            collisionData *JToI = new collisionData(squreColliders[j].lock()->getId(), squreColliders[i].lock());
-                            sceneManger::getScene(parentScene)->getEventsManger()->trigerEvent(IToJ, sceneEventsType::collision);
-                            sceneManger::getScene(parentScene)->getEventsManger()->trigerEvent(JToI, sceneEventsType::collision);
-                            delete IToJ;
-                            delete JToI;
-                        }
-                        /* code */
-                    }
-                    catch(ComponentNotFoundException* e)
-                    {
-                        
-                    }
                     
-                }
-                
+                    if(isEqual(gameObjectsCash[i], gameObjectsCash[j]))
+                    {
+                        collisionData *IToJ = new collisionData(gameObjectsCash[i]->getId(), gameObjectsCash[j]);
+                        collisionData *JToI = new collisionData(gameObjectsCash[j]->getId(), gameObjectsCash[i]);
+                        parentScene->getEventsManger()->trigerEvent(IToJ, sceneEventsType::collision);
+                        parentScene->getEventsManger()->trigerEvent(JToI, sceneEventsType::collision);
+                        delete IToJ;
+                        delete JToI;
+                    }                    
+                }                
             }
             std::this_thread::sleep_for(std::chrono::milliseconds(16));
         }

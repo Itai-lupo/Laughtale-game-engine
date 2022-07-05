@@ -43,28 +43,6 @@ namespace LTE
         return  size;
     }
 
-    float *mesh::getVertices()
-    {
-        transform* trans =  sceneManger::getScene(parentScene)->getGameObjectById(parentId)->getTransform();
-        float temp[size];
-        for(int i = 0; i < size ; i += 3)
-        {
-            glm::vec4 t = glm::vec4(vertexs[i], vertexs[i + 1], vertexs[i + 2], 1.0f);
-            t = glm::translate(glm::mat4(1.0f), trans->getPostion()) * 
-            glm::rotate(glm::mat4(1.0f), trans->getRotation().x, { 1.0f, 0.0f, 0.0f}) *
-            glm::rotate(glm::mat4(1.0f), trans->getRotation().y, { 0.0f, 1.0f, 0.0f}) *
-            glm::rotate(glm::mat4(1.0f), trans->getRotation().z, { 0.0f, 0.0f, 1.0f}) *
-            glm::scale(glm::mat4(1.0f), trans->getScale()) * t;
-            
-            temp[i] = t.x;
-            temp[i + 1] = t.y;
-            temp[i + 2] = t.z;
-        }
-
-        return  temp;
-
-    }
-
     float *mesh::getVB()
     {
         return vertexs;
@@ -79,16 +57,4 @@ namespace LTE
     {
         return count;
     }
-
-    void mesh::init(std::shared_ptr< LTE::gameObject> parent)
-    {
-        assetManager::loadAssetFromFile(shaderToUse);
-        sceneManger::getScene(parentScene)->pushObjectToRender(parent);
-    }
-
-    void mesh::end()
-    {
-        sceneManger::getScene(parentScene)->removeObjectToRender(parentId);
-    }
-
 }

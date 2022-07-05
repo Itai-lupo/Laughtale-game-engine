@@ -32,10 +32,9 @@ namespace LTE
             material(const std::string& textureFilePath, int tileIndex);
             material(const std::string& textureFilePath);
             material(glm::vec4 baseColor);
-
+            material(material *temp);
 
             ~material(){
-                LAUGHTALE_ENGINR_LOG_INFO("A")
             }
 
             void bind();
@@ -55,10 +54,6 @@ namespace LTE
 
             float getTexturePostionX(int curnerIndex);
             float getTexturePostionY(int curnerIndex);
-
-
-            virtual void init(std::shared_ptr< LTE::gameObject>) override;
-            virtual void end() override;
 
 
             virtual std::string getName() override

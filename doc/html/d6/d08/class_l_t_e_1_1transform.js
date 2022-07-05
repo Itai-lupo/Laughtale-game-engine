@@ -1,6 +1,6 @@
 var class_l_t_e_1_1transform =
 [
-    [ "transform", "d6/d08/class_l_t_e_1_1transform.html#ac47ef5d546e193b97e4c729d2558e4fe", null ],
+    [ "transform", "d6/d08/class_l_t_e_1_1transform.html#ae53620315ffb694ee402c92259eadde7", null ],
     [ "changeXPostion", "d6/d08/class_l_t_e_1_1transform.html#acd9515b19f480c60cd3b255f74be1727", null ],
     [ "changeXRotation", "d6/d08/class_l_t_e_1_1transform.html#a7ab6e4c7af8031a359a53ce6cdf37763", null ],
     [ "changeXScale", "d6/d08/class_l_t_e_1_1transform.html#a033421aef628b373a9aad5861cfdb14d", null ],
@@ -11,12 +11,10 @@ var class_l_t_e_1_1transform =
     [ "changeZRotation", "d6/d08/class_l_t_e_1_1transform.html#a8f1f9ef0eb8a9ff8051552fa26c48f66", null ],
     [ "changeZScale", "d6/d08/class_l_t_e_1_1transform.html#a1b438b977bc0a30971d4cb0cfda3370b", null ],
     [ "displayComponentProprties", "d6/d08/class_l_t_e_1_1transform.html#ac975489bb125640efc4048848a794775", null ],
-    [ "end", "d6/d08/class_l_t_e_1_1transform.html#a20dab658b9016ad5f44102556c618201", null ],
     [ "getName", "d6/d08/class_l_t_e_1_1transform.html#aefa0e3a966c3a1edd7363032d25a78e0", null ],
     [ "getPostion", "d6/d08/class_l_t_e_1_1transform.html#a160e68074988f3992b3cc6df921db306", null ],
     [ "getRotation", "d6/d08/class_l_t_e_1_1transform.html#a9e6017567ebcc3339edff1c774856abf", null ],
     [ "getScale", "d6/d08/class_l_t_e_1_1transform.html#ae99effe341f4e47e4d5e0d8e288de666", null ],
-    [ "init", "d6/d08/class_l_t_e_1_1transform.html#a201e08bb58b339ae2039ac814c5fa6dc", null ],
     [ "setPostion", "d6/d08/class_l_t_e_1_1transform.html#a60a944c3a4baab5a1886cc382d4318ba", null ],
     [ "setRotation", "d6/d08/class_l_t_e_1_1transform.html#ae66b2328e429a3d842e8c2299d368dc7", null ],
     [ "setScale", "d6/d08/class_l_t_e_1_1transform.html#a47f084187b7a09d9debe18a3961450d3", null ],

@@ -7,7 +7,6 @@ var dir_e159b80bac48d2842d520eb8c4d59674 =
     ] ],
     [ "gameobject.h", "db/d2d/gameobject_8h.html", [
       [ "LTE::gameObject", "d2/d49/class_l_t_e_1_1game_object.html", "d2/d49/class_l_t_e_1_1game_object" ],
-      [ "LTE::gameObjectBuilder", "de/d82/class_l_t_e_1_1game_object_builder.html", "de/d82/class_l_t_e_1_1game_object_builder" ],
       [ "LTE::gameObjectsManger", "dc/d88/class_l_t_e_1_1game_objects_manger.html", "dc/d88/class_l_t_e_1_1game_objects_manger" ]
     ] ],
     [ "transform.h", "d2/d80/transform_8h.html", [

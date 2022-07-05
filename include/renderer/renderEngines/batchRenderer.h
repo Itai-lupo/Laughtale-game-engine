@@ -27,16 +27,17 @@ namespace LTE
             std::vector<std::pair<textureId, int>> textureSlots;
             std::map<textureId, texture *> textures;
             glm::mat4 ViewProjectionMatrix;
+            std::vector<std::shared_ptr<gameObject>> gameObjectsCash;
 
             void sortSceneToRender();
             void batchSceneData();
             void batchRenderScene();
 
+            shaderRenderBuffer *submitShape(std::shared_ptr<gameObject> shapeObject);
 
         public:                
             batchRenderer(scene *Scene): Scene(Scene){}
 
-            shaderRenderBuffer *submitShape(std::shared_ptr<mesh> shape, std::shared_ptr<material> shapeMatrial);
 
             void renderScene();
     };

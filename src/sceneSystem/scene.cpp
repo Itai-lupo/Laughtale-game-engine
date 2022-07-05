@@ -10,15 +10,13 @@
 
 namespace LTE
 {
-    scene::scene(): osEvent({osEventsType::windowRender})
+    scene::scene(sceneId id): osEvent({osEventsType::windowRender}), id(id)
     {
-        sceneCollider = new colliderSystem2D(id);
+        sceneCollider = new colliderSystem2D(this);
         backgroundColor = new material(glm::vec4({0.05f, 0.05f, 0.55f, 1.0f}));
-        objects = new  std::vector<std::weak_ptr<gameObject>>;    
         
         fbo = new framebuffer(1280, 720);
         render = new batchRenderer(this);
-        sceneCollider->init();
         eventsManger = new sceneEventsManger();
         sceneHierarchy = new gameObjectsManger();
     }
@@ -36,35 +34,9 @@ namespace LTE
         fbo->unbind();
     }
 
-    void scene::pushObjectToRender(std::weak_ptr<gameObject> obj)
+    std::shared_ptr<gameObject> scene::addGameObject(const std::string& name)
     {
-        objects->push_back(obj);
-    }
-
-    void scene::pushPhysicsObject(std::weak_ptr<gameObject> obj)
-    {
-        sceneCollider->addSqureCollider(obj);
-    }
-
-    
-    void scene::removeObjectToRender(gameObjectId objId)
-    {
-        objects->erase(std::remove_if(
-            objects->begin(),
-            objects->end(),
-            [objId](std::weak_ptr<gameObject> obj){ return obj.lock() && obj.lock()->getId() == objId; }
-        ));
-    }
-
-    void scene::removePhysicsObject(gameObjectId objId)
-    {
-        sceneCollider->removeSqureCollider(objId);
-    }
-
-    gameObjectId scene::addGameObject(std::function<void(gameObjectBuilder *Builder)> buildGameObject)
-    {
-        
-        return sceneHierarchy->addGameObject(buildGameObject, id);
+        return sceneHierarchy->addGameObject(name);
     }
 
     std::shared_ptr< LTE::gameObject>scene::getGameObjectByName(const std::string& name)
@@ -75,7 +47,6 @@ namespace LTE
     std::shared_ptr< LTE::gameObject>scene::getGameObjectById(gameObjectId id)
     {
         return sceneHierarchy->getGameObjectById(id);
-
     }
 
     void scene::removeGameObjectById(gameObjectId id)
@@ -86,7 +57,5 @@ namespace LTE
     void scene::forEachObject(std::function<void(std::shared_ptr<gameObject>)> callback)
     {
         sceneHierarchy->forEachObject(callback);
-
     }
-
 }

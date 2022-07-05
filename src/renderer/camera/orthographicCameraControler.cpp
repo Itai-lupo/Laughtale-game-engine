@@ -50,16 +50,7 @@ namespace LTE
     {
 
     }
-
-    void orthographicCameraControler::init(std::shared_ptr< LTE::gameObject> p)
-    {
-    }
     
-    void orthographicCameraControler::end()
-    {     
-    }
-
-
     coreCamera *orthographicCameraControler::getCamera()
     {
         return &camera;

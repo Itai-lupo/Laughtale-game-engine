@@ -72,12 +72,12 @@ namespace LTE
     }
 
 
-    void envelope::init(std::shared_ptr< LTE::gameObject> parent) 
+    envelope::envelope() 
     {
         id = soundSynthesizer::addEnvelope(this);
     }
     
-    void envelope::end() 
+    envelope::~envelope() 
     {
         soundSynthesizer::removeEnvelope(id);
     }

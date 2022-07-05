@@ -48,7 +48,7 @@ namespace LTE
             shaderRenderBuffer(shader *s);
             shader *getShader();
 
-            void pushShape(std::shared_ptr<mesh> shape, std::shared_ptr<material> shapeMatrial);
+            void pushShape(std::shared_ptr<gameObject> shapeObject);
             void setTextureIndex(std:: map<textureId, int>& textures);
             void print();
 

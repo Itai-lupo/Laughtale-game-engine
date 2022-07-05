@@ -158,30 +158,31 @@ namespace LTE
                     }
 
 
-                    gameObjectId build()
+                    std::shared_ptr<gameObject> build()
                     {
-                        return  sceneManger::getScene(parent->scene)->addGameObject([&, this](gameObjectBuilder *builder)
-                            {
-                                builder->
-                                    setObjectName(this->tileName == "" ? this->tileName: "tile " + std::to_string(tilePostion.x) + ", " + std::to_string(tilePostion.y) + ", " + std::to_string(layer))->
-                                    setObjectTransform(
-                                        {{((float) tilePostion.x) / parent->tilesCount.x * 2.0  - 1.0f + (parent->tileDimensions.x *  (float)tileDimensions.x /(float)parent->tilemapDimensions.x),
-                                        ((float) tilePostion.y) / parent->tilesCount.y * 2.0 - 1.0f +  (parent->tileDimensions.y *  (float)tileDimensions.y /(float)parent->tilemapDimensions.y), (float)layer / (float)parent->layerCount}, 
-                                        {0, 0, 0}, 
-                                        {parent->tileDimensions.x *  (float)tileDimensions.x /(float)parent->tilemapDimensions.x  * 2.0, parent->tileDimensions.y *  (float)tileDimensions.y / (float)parent->tilemapDimensions.y  * 2.0, layer / parent->layerCount}})->
-                                        addComponent(LTE::mesh::build([&](LTE::mesh::meshBuilder *builder)
-                                            { 
-                                                builder->
-                                                    setIndexBuffer(tileIndices, 6)->
-                                                    setShaderName("res/topDownScene/shaders/tile.glsl")->
-                                                    setVertices(tilePostions, 12); 
-                                            }))->            
-                                        addComponent(tileMat);
-                                        
-                                for(auto& comp: tileComponents)
-                                    builder->addComponent(comp);
+                        std::shared_ptr<gameObject> temp = sceneManger::getScene(parent->scene)->addGameObject(this->tileName == "" ? this->tileName: "tile " + std::to_string(tilePostion.x) + ", " + std::to_string(tilePostion.y) + ", " + std::to_string(layer));
+                            
+                        temp->getTransform()->setPostion({
+                                ((float) tilePostion.x) / parent->tilesCount.x * 2.0  - 1.0f + (parent->tileDimensions.x *  (float)tileDimensions.x /(float)parent->tilemapDimensions.x),
+                                ((float) tilePostion.y) / parent->tilesCount.y * 2.0 - 1.0f +  (parent->tileDimensions.y *  (float)tileDimensions.y /(float)parent->tilemapDimensions.y), 
+                                (float)layer / (float)parent->layerCount});
 
-                            });
+                        temp->getTransform()->setScale({
+                            parent->tileDimensions.x *  (float)tileDimensions.x /(float)parent->tilemapDimensions.x  * 2.0,
+                            parent->tileDimensions.y *  (float)tileDimensions.y / (float)parent->tilemapDimensions.y  * 2.0, 
+                            layer / parent->layerCount});
+
+
+                        temp->addComponent<mesh>(mesh::build([&](LTE::mesh::meshBuilder *builder)
+                                { 
+                                    builder->
+                                        setIndexBuffer(tileIndices, 6)->
+                                        setShaderName("res/topDownScene/shaders/tile.glsl")->
+                                        setVertices(tilePostions, 12); 
+                                }));
+                                        
+                        temp->addComponent<material>(tileMat);
+                                                                   
                     }
 
                     int getLayer()
@@ -216,7 +217,7 @@ namespace LTE
             {
                 builder->reset();
                 buildTile(builder);
-                tiles(builder->getLayer(), builder->getTilePostion().x, builder->getTilePostion().y) = builder->build();
+                tiles(builder->getLayer(), builder->getTilePostion().x, builder->getTilePostion().y) = builder->build()->getId();
             }
     };
 }

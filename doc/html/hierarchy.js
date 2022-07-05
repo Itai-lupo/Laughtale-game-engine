@@ -74,7 +74,6 @@ var hierarchy =
       [ "LTE::openGLFramebuffer", "d1/d9c/class_l_t_e_1_1open_g_l_framebuffer.html", null ]
     ] ],
     [ "LTE::gameObject", "d2/d49/class_l_t_e_1_1game_object.html", null ],
-    [ "LTE::gameObjectBuilder", "de/d82/class_l_t_e_1_1game_object_builder.html", null ],
     [ "LTE::gameObjectsManger", "dc/d88/class_l_t_e_1_1game_objects_manger.html", null ],
     [ "LTE::graphicsAPIAbstractFactory", "d0/d7f/class_l_t_e_1_1graphics_a_p_i_abstract_factory.html", [
       [ "LTE::openGLAPIAbstractFactory", "df/dcb/class_l_t_e_1_1open_g_l_a_p_i_abstract_factory.html", null ]
@@ -141,7 +140,6 @@ var hierarchy =
     [ "LTE::router< T >", "d7/d22/class_l_t_e_1_1router.html", null ],
     [ "LTE::router< LTE::asset * >", "d7/d22/class_l_t_e_1_1router.html", null ],
     [ "LTE::router< LTE::file * >", "d7/d22/class_l_t_e_1_1router.html", null ],
-    [ "LTE::sceneBuilder", "d3/db0/class_l_t_e_1_1scene_builder.html", null ],
     [ "LTE::sceneEvent", "d6/daa/class_l_t_e_1_1scene_event.html", [
       [ "bird", "da/dee/classbird.html", null ],
       [ "pilarDestroyer", "d8/d09/classpilar_destroyer.html", null ],

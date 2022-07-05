@@ -29,8 +29,12 @@ namespace LTE
         return s;
     }
 
-    void shaderRenderBuffer::pushShape(std::shared_ptr<mesh> shape, std::shared_ptr<material> m)
+    void shaderRenderBuffer::pushShape(std::shared_ptr<gameObject> shapeObject)
     {
+        std::shared_ptr<mesh> shape = shapeObject->getComponent<mesh>(); 
+        std::shared_ptr<material> m = shapeObject->getComponent<material>();
+        std::shared_ptr<transform> trans = shapeObject->getTransform();
+
         vertexsData temp;
         unsigned int indicesOffset = verticesData.size();
 
@@ -71,7 +75,22 @@ namespace LTE
         glm::vec2 textureDimensions = glm::abs(textureTextureEnd - textureTextureZero);
         glm::vec2 rangeZero = ((shapeTextureZero) / shapeDimensions) * textureDimensions - textureTextureZero;
 
-        for (float *i = shape->getVertices(), *j = shape->getVB(); i < shape->getVertices() + shape->getSize(); i += 3, j += 3)
+        float shapeVertices[shape->getSize()];
+        for(int i = 0; i < shape->getSize() ; i += 3)
+        {
+            glm::vec4 t = glm::vec4(shape->getVB()[i], shape->getVB()[i + 1], shape->getVB()[i + 2], 1.0f);
+            t = glm::translate(glm::mat4(1.0f), trans->getPostion()) * 
+            glm::rotate(glm::mat4(1.0f), trans->getRotation().x, { 1.0f, 0.0f, 0.0f}) *
+            glm::rotate(glm::mat4(1.0f), trans->getRotation().y, { 0.0f, 1.0f, 0.0f}) *
+            glm::rotate(glm::mat4(1.0f), trans->getRotation().z, { 0.0f, 0.0f, 1.0f}) *
+            glm::scale(glm::mat4(1.0f), trans->getScale()) * t;
+            
+            shapeVertices[i] = t.x;
+            shapeVertices[i + 1] = t.y;
+            shapeVertices[i + 2] = t.z;
+        }
+
+        for (float *i = shapeVertices, *j = shape->getVB(); i < shapeVertices + shape->getSize(); i += 3, j += 3)
         {
             temp.x = i[0];
             temp.y = i[1];

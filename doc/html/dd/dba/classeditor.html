@@ -142,9 +142,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   76</span>                                      : <a class="code hl_class" href="../../d3/df5/class_l_t_e_1_1os_event.html">LTE::osEvent</a>({<a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a69d5d9f0f53080911e34f14db6ad53e3">LTE::osEventsType::WindowImGuiRender</a>, <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a53581230f22e3b2a485cee249aff6a32">LTE::osEventsType::WindowClose</a>}), winId(winId)</div>
-<div class="line"><span class="lineno">   77</span>        {</div>
-<div class="line"><span class="lineno">   78</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                                      : <a class="code hl_class" href="../../d3/df5/class_l_t_e_1_1os_event.html">LTE::osEvent</a>({<a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a69d5d9f0f53080911e34f14db6ad53e3">LTE::osEventsType::WindowImGuiRender</a>, <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a53581230f22e3b2a485cee249aff6a32">LTE::osEventsType::WindowClose</a>}), winId(winId)</div>
+<div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
 <div class="ttc" id="aclass_l_t_e_1_1os_event_html"><div class="ttname"><a href="../../d3/df5/class_l_t_e_1_1os_event.html">LTE::osEvent</a></div><div class="ttdef"><b>Definition:</b> osEvents.h:64</div></div>
 <div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a53581230f22e3b2a485cee249aff6a32"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a53581230f22e3b2a485cee249aff6a32">LTE::WindowClose</a></div><div class="ttdeci">@ WindowClose</div><div class="ttdef"><b>Definition:</b> osEvents.h:25</div></div>
 <div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a69d5d9f0f53080911e34f14db6ad53e3"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a69d5d9f0f53080911e34f14db6ad53e3">LTE::WindowImGuiRender</a></div><div class="ttdeci">@ WindowImGuiRender</div><div class="ttdef"><b>Definition:</b> osEvents.h:31</div></div>
@@ -177,9 +177,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d3/df5/class_l_t_e_1_1os_event.html#a0fa013fc78167fcf7f3c6f94ef5addb5">LTE::osEvent</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  287</span>        {</div>
-<div class="line"><span class="lineno">  288</span>            <a class="code hl_variable" href="../../d0/d13/class_l_t_e_1_1app.html#a5adef4179f126155e3d437262ee1c315">LTE::app::keepRunning</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  289</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  281</span>        {</div>
+<div class="line"><span class="lineno">  282</span>            <a class="code hl_variable" href="../../d0/d13/class_l_t_e_1_1app.html#a5adef4179f126155e3d437262ee1c315">LTE::app::keepRunning</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  283</span>        }</div>
 <div class="ttc" id="aclass_l_t_e_1_1app_html_a5adef4179f126155e3d437262ee1c315"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#a5adef4179f126155e3d437262ee1c315">LTE::app::keepRunning</a></div><div class="ttdeci">static bool keepRunning</div><div class="ttdef"><b>Definition:</b> app.h:26</div></div>
 </div><!-- fragment -->
 </div>
@@ -209,221 +209,217 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d3/df5/class_l_t_e_1_1os_event.html#ab06f0d7ded9526a6571d03b44d76aaa9">LTE::osEvent</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>        {</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordtype">bool</span> opt_fullscreen = opt_fullscreen_persistant;</div>
-<div class="line"><span class="lineno">   83</span>            <span class="keyword">static</span> ImGuiDockNodeFlags dockspace_flags = ImGuiDockNodeFlags_None;</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>            <span class="comment">// We are using the ImGuiWindowFlags_NoDocking flag to make the parent window not dockable into,</span></div>
-<div class="line"><span class="lineno">   86</span>            <span class="comment">// because it would be confusing to have two docking targets within each others.</span></div>
-<div class="line"><span class="lineno">   87</span>            ImGuiWindowFlags window_flags = ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoDocking;</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">if</span> (opt_fullscreen)</div>
-<div class="line"><span class="lineno">   89</span>            {</div>
-<div class="line"><span class="lineno">   90</span>                ImGuiViewport* viewport = ImGui::GetMainViewport();</div>
-<div class="line"><span class="lineno">   91</span>                ImGui::SetNextWindowPos(viewport-&gt;Pos);</div>
-<div class="line"><span class="lineno">   92</span>                ImGui::SetNextWindowSize(viewport-&gt;Size);</div>
-<div class="line"><span class="lineno">   93</span>                ImGui::SetNextWindowViewport(viewport-&gt;ID);</div>
-<div class="line"><span class="lineno">   94</span>                ImGui::PushStyleVar(ImGuiStyleVar_WindowRounding, 0.0f);</div>
-<div class="line"><span class="lineno">   95</span>                ImGui::PushStyleVar(ImGuiStyleVar_WindowBorderSize, 0.0f);</div>
-<div class="line"><span class="lineno">   96</span>                window_flags |= ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove;</div>
-<div class="line"><span class="lineno">   97</span>                window_flags |= ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoNavFocus;</div>
-<div class="line"><span class="lineno">   98</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordtype">bool</span> opt_fullscreen = opt_fullscreen_persistant;</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keyword">static</span> ImGuiDockNodeFlags dockspace_flags = ImGuiDockNodeFlags_None;</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>            <span class="comment">// We are using the ImGuiWindowFlags_NoDocking flag to make the parent window not dockable into,</span></div>
+<div class="line"><span class="lineno">   82</span>            <span class="comment">// because it would be confusing to have two docking targets within each others.</span></div>
+<div class="line"><span class="lineno">   83</span>            ImGuiWindowFlags window_flags = ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoDocking;</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">if</span> (opt_fullscreen)</div>
+<div class="line"><span class="lineno">   85</span>            {</div>
+<div class="line"><span class="lineno">   86</span>                ImGuiViewport* viewport = ImGui::GetMainViewport();</div>
+<div class="line"><span class="lineno">   87</span>                ImGui::SetNextWindowPos(viewport-&gt;Pos);</div>
+<div class="line"><span class="lineno">   88</span>                ImGui::SetNextWindowSize(viewport-&gt;Size);</div>
+<div class="line"><span class="lineno">   89</span>                ImGui::SetNextWindowViewport(viewport-&gt;ID);</div>
+<div class="line"><span class="lineno">   90</span>                ImGui::PushStyleVar(ImGuiStyleVar_WindowRounding, 0.0f);</div>
+<div class="line"><span class="lineno">   91</span>                ImGui::PushStyleVar(ImGuiStyleVar_WindowBorderSize, 0.0f);</div>
+<div class="line"><span class="lineno">   92</span>                window_flags |= ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove;</div>
+<div class="line"><span class="lineno">   93</span>                window_flags |= ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoNavFocus;</div>
+<div class="line"><span class="lineno">   94</span>            }</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>            <span class="comment">// When using ImGuiDockNodeFlags_PassthruCentralNode, DockSpace() will render our background and handle the pass-thru hole, so we ask Begin() to not render a background.</span></div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">if</span> (dockspace_flags &amp; ImGuiDockNodeFlags_PassthruCentralNode)</div>
+<div class="line"><span class="lineno">   98</span>                window_flags |= ImGuiWindowFlags_NoBackground;</div>
 <div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>            <span class="comment">// When using ImGuiDockNodeFlags_PassthruCentralNode, DockSpace() will render our background and handle the pass-thru hole, so we ask Begin() to not render a background.</span></div>
-<div class="line"><span class="lineno">  101</span>            <span class="keywordflow">if</span> (dockspace_flags &amp; ImGuiDockNodeFlags_PassthruCentralNode)</div>
-<div class="line"><span class="lineno">  102</span>                window_flags |= ImGuiWindowFlags_NoBackground;</div>
-<div class="line"><span class="lineno">  103</span> </div>
-<div class="line"><span class="lineno">  104</span>            <span class="comment">// Important: note that we proceed even if Begin() returns false (aka window is collapsed).</span></div>
-<div class="line"><span class="lineno">  105</span>            <span class="comment">// This is because we want to keep our DockSpace() active. If a DockSpace() is inactive, </span></div>
-<div class="line"><span class="lineno">  106</span>            <span class="comment">// all active windows docked into it will lose their parent and become undocked.</span></div>
-<div class="line"><span class="lineno">  107</span>            <span class="comment">// We cannot preserve the docking relationship between an active window and an inactive docking, otherwise </span></div>
-<div class="line"><span class="lineno">  108</span>            <span class="comment">// any change of dockspace/settings would lead to windows being stuck in limbo and never being visible.</span></div>
-<div class="line"><span class="lineno">  109</span>            ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0.0f, 0.0f));</div>
-<div class="line"><span class="lineno">  110</span>            ImGui::Begin(<span class="stringliteral">&quot;DockSpace Demo&quot;</span>, &amp;dockspaceOpen, window_flags);</div>
-<div class="line"><span class="lineno">  111</span>            ImGui::PopStyleVar();</div>
-<div class="line"><span class="lineno">  112</span> </div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">if</span> (opt_fullscreen)</div>
-<div class="line"><span class="lineno">  114</span>                ImGui::PopStyleVar(2);</div>
-<div class="line"><span class="lineno">  115</span> </div>
-<div class="line"><span class="lineno">  116</span>            <span class="comment">// DockSpace</span></div>
-<div class="line"><span class="lineno">  117</span>            ImGuiIO&amp; io = ImGui::GetIO();</div>
-<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">if</span> (io.ConfigFlags &amp; ImGuiConfigFlags_DockingEnable)</div>
-<div class="line"><span class="lineno">  119</span>            {</div>
-<div class="line"><span class="lineno">  120</span>                ImGuiID dockspace_id = ImGui::GetID(<span class="stringliteral">&quot;MyDockSpace&quot;</span>);</div>
-<div class="line"><span class="lineno">  121</span>                ImGui::DockSpace(dockspace_id, ImVec2(0.0f, 0.0f), dockspace_flags);</div>
-<div class="line"><span class="lineno">  122</span>            }</div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (ImGui::BeginMenuBar())</div>
-<div class="line"><span class="lineno">  125</span>            {</div>
-<div class="line"><span class="lineno">  126</span>                <span class="keywordflow">if</span> (ImGui::BeginMenu(<span class="stringliteral">&quot;File&quot;</span>))</div>
-<div class="line"><span class="lineno">  127</span>                {</div>
-<div class="line"><span class="lineno">  128</span>                    <span class="comment">// Disabling fullscreen would allow the window to be moved to the front of other windows, </span></div>
-<div class="line"><span class="lineno">  129</span>                    <span class="comment">// which we can&#39;t undo at the moment without finer window depth/z control.</span></div>
-<div class="line"><span class="lineno">  130</span>                    <span class="comment">//ImGui::MenuItem(&quot;Fullscreen&quot;, NULL, &amp;opt_fullscreen_persistant);</span></div>
+<div class="line"><span class="lineno">  100</span>            <span class="comment">// Important: note that we proceed even if Begin() returns false (aka window is collapsed).</span></div>
+<div class="line"><span class="lineno">  101</span>            <span class="comment">// This is because we want to keep our DockSpace() active. If a DockSpace() is inactive, </span></div>
+<div class="line"><span class="lineno">  102</span>            <span class="comment">// all active windows docked into it will lose their parent and become undocked.</span></div>
+<div class="line"><span class="lineno">  103</span>            <span class="comment">// We cannot preserve the docking relationship between an active window and an inactive docking, otherwise </span></div>
+<div class="line"><span class="lineno">  104</span>            <span class="comment">// any change of dockspace/settings would lead to windows being stuck in limbo and never being visible.</span></div>
+<div class="line"><span class="lineno">  105</span>            ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0.0f, 0.0f));</div>
+<div class="line"><span class="lineno">  106</span>            ImGui::Begin(<span class="stringliteral">&quot;DockSpace Demo&quot;</span>, &amp;dockspaceOpen, window_flags);</div>
+<div class="line"><span class="lineno">  107</span>            ImGui::PopStyleVar();</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">if</span> (opt_fullscreen)</div>
+<div class="line"><span class="lineno">  110</span>                ImGui::PopStyleVar(2);</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>            <span class="comment">// DockSpace</span></div>
+<div class="line"><span class="lineno">  113</span>            ImGuiIO&amp; io = ImGui::GetIO();</div>
+<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">if</span> (io.ConfigFlags &amp; ImGuiConfigFlags_DockingEnable)</div>
+<div class="line"><span class="lineno">  115</span>            {</div>
+<div class="line"><span class="lineno">  116</span>                ImGuiID dockspace_id = ImGui::GetID(<span class="stringliteral">&quot;MyDockSpace&quot;</span>);</div>
+<div class="line"><span class="lineno">  117</span>                ImGui::DockSpace(dockspace_id, ImVec2(0.0f, 0.0f), dockspace_flags);</div>
+<div class="line"><span class="lineno">  118</span>            }</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">if</span> (ImGui::BeginMenuBar())</div>
+<div class="line"><span class="lineno">  121</span>            {</div>
+<div class="line"><span class="lineno">  122</span>                <span class="keywordflow">if</span> (ImGui::BeginMenu(<span class="stringliteral">&quot;File&quot;</span>))</div>
+<div class="line"><span class="lineno">  123</span>                {</div>
+<div class="line"><span class="lineno">  124</span>                    <span class="comment">// Disabling fullscreen would allow the window to be moved to the front of other windows, </span></div>
+<div class="line"><span class="lineno">  125</span>                    <span class="comment">// which we can&#39;t undo at the moment without finer window depth/z control.</span></div>
+<div class="line"><span class="lineno">  126</span>                    <span class="comment">//ImGui::MenuItem(&quot;Fullscreen&quot;, NULL, &amp;opt_fullscreen_persistant);</span></div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>                    <span class="keywordflow">if</span> (ImGui::MenuItem(<span class="stringliteral">&quot;Exit&quot;</span>)) <a class="code hl_variable" href="../../d0/d13/class_l_t_e_1_1app.html#a5adef4179f126155e3d437262ee1c315">LTE::app::keepRunning</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  129</span>                    ImGui::EndMenu();</div>
+<div class="line"><span class="lineno">  130</span>                }</div>
 <div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>                    <span class="keywordflow">if</span> (ImGui::MenuItem(<span class="stringliteral">&quot;Exit&quot;</span>)) <a class="code hl_variable" href="../../d0/d13/class_l_t_e_1_1app.html#a5adef4179f126155e3d437262ee1c315">LTE::app::keepRunning</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  133</span>                    ImGui::EndMenu();</div>
-<div class="line"><span class="lineno">  134</span>                }</div>
-<div class="line"><span class="lineno">  135</span> </div>
-<div class="line"><span class="lineno">  136</span>                ImGui::EndMenuBar();</div>
-<div class="line"><span class="lineno">  137</span>            }</div>
-<div class="line"><span class="lineno">  138</span> </div>
-<div class="line"><span class="lineno">  139</span>            ImGui::Begin(<span class="stringliteral">&quot;Scene Hierarchy&quot;</span>);</div>
-<div class="line"><span class="lineno">  140</span>            gameScene-&gt;<a class="code hl_function" href="../../d6/d26/class_l_t_e_1_1scene.html#aa3cd16b5cadb68db455e563113027667">forEachObject</a>(</div>
-<div class="line"><span class="lineno">  141</span>                [&amp;, <span class="keyword">this</span>]( std::shared_ptr&lt;LTE::gameObject&gt; obj)</div>
-<div class="line"><span class="lineno">  142</span>                {</div>
-<div class="line"><span class="lineno">  143</span>                    <span class="comment">// auto&amp; tag = obj-&gt;GetComponent&lt;TagComponent&gt;().Tag;</span></div>
-<div class="line"><span class="lineno">  144</span>        </div>
-<div class="line"><span class="lineno">  145</span>                    ImGuiTreeNodeFlags flags = ((selectionContext == obj) ? ImGuiTreeNodeFlags_Selected : 0) | ImGuiTreeNodeFlags_OpenOnArrow;</div>
-<div class="line"><span class="lineno">  146</span>                    <span class="keywordtype">bool</span> opened = ImGui::TreeNodeEx((<span class="keywordtype">void</span>*)obj-&gt;getId(), flags, obj-&gt;getName().c_str());</div>
-<div class="line"><span class="lineno">  147</span>                    <span class="keywordflow">if</span> (ImGui::IsItemClicked())</div>
-<div class="line"><span class="lineno">  148</span>                    {</div>
-<div class="line"><span class="lineno">  149</span>                        selectionContext = obj;</div>
-<div class="line"><span class="lineno">  150</span>                    }</div>
-<div class="line"><span class="lineno">  151</span> </div>
-<div class="line"><span class="lineno">  152</span>                    <span class="keywordflow">if</span> (opened)</div>
-<div class="line"><span class="lineno">  153</span>                    {</div>
-<div class="line"><span class="lineno">  154</span>                        ImGui::TreePop();</div>
-<div class="line"><span class="lineno">  155</span>                    }</div>
-<div class="line"><span class="lineno">  156</span>                });</div>
-<div class="line"><span class="lineno">  157</span>            </div>
-<div class="line"><span class="lineno">  158</span>                <span class="keyword">const</span> <span class="keywordtype">char</span>* str_id = <span class="stringliteral">&quot;add&quot;</span>;</div>
-<div class="line"><span class="lineno">  159</span>                <span class="keywordflow">if</span> (ImGui::IsWindowHovered() &amp;&amp; ImGui::IsMouseClicked(1)){</div>
-<div class="line"><span class="lineno">  160</span>                    ImGui::OpenPopup(str_id);</div>
-<div class="line"><span class="lineno">  161</span>                }</div>
-<div class="line"><span class="lineno">  162</span>            </div>
-<div class="line"><span class="lineno">  163</span>                <span class="keywordflow">if</span>(ImGui::BeginPopup(str_id))</div>
-<div class="line"><span class="lineno">  164</span>                {</div>
-<div class="line"><span class="lineno">  165</span>                    <span class="keywordtype">char</span> buffer[256] = <span class="stringliteral">&quot;default&quot;</span>;</div>
-<div class="line"><span class="lineno">  166</span>                    <span class="keywordflow">if</span> (ImGui::InputText(<span class="stringliteral">&quot;##newName&quot;</span>, buffer, <span class="keyword">sizeof</span>(buffer)))</div>
+<div class="line"><span class="lineno">  132</span>                ImGui::EndMenuBar();</div>
+<div class="line"><span class="lineno">  133</span>            }</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>            ImGui::Begin(<span class="stringliteral">&quot;Scene Hierarchy&quot;</span>);</div>
+<div class="line"><span class="lineno">  136</span>            gameScene-&gt;<a class="code hl_function" href="../../d6/d26/class_l_t_e_1_1scene.html#aa3cd16b5cadb68db455e563113027667">forEachObject</a>(</div>
+<div class="line"><span class="lineno">  137</span>                [&amp;, <span class="keyword">this</span>]( std::shared_ptr&lt;LTE::gameObject&gt; obj)</div>
+<div class="line"><span class="lineno">  138</span>                {</div>
+<div class="line"><span class="lineno">  139</span>                    <span class="comment">// auto&amp; tag = obj-&gt;GetComponent&lt;TagComponent&gt;().Tag;</span></div>
+<div class="line"><span class="lineno">  140</span>        </div>
+<div class="line"><span class="lineno">  141</span>                    ImGuiTreeNodeFlags flags = ((selectionContext == obj) ? ImGuiTreeNodeFlags_Selected : 0) | ImGuiTreeNodeFlags_OpenOnArrow;</div>
+<div class="line"><span class="lineno">  142</span>                    <span class="keywordtype">bool</span> opened = ImGui::TreeNodeEx((<span class="keywordtype">void</span>*)obj-&gt;getId(), flags, obj-&gt;getName().c_str());</div>
+<div class="line"><span class="lineno">  143</span>                    <span class="keywordflow">if</span> (ImGui::IsItemClicked())</div>
+<div class="line"><span class="lineno">  144</span>                    {</div>
+<div class="line"><span class="lineno">  145</span>                        selectionContext = obj;</div>
+<div class="line"><span class="lineno">  146</span>                    }</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>                    <span class="keywordflow">if</span> (opened)</div>
+<div class="line"><span class="lineno">  149</span>                    {</div>
+<div class="line"><span class="lineno">  150</span>                        ImGui::TreePop();</div>
+<div class="line"><span class="lineno">  151</span>                    }</div>
+<div class="line"><span class="lineno">  152</span>                });</div>
+<div class="line"><span class="lineno">  153</span>            </div>
+<div class="line"><span class="lineno">  154</span>                <span class="keyword">const</span> <span class="keywordtype">char</span>* str_id = <span class="stringliteral">&quot;add&quot;</span>;</div>
+<div class="line"><span class="lineno">  155</span>                <span class="keywordflow">if</span> (ImGui::IsWindowHovered() &amp;&amp; ImGui::IsMouseClicked(1)){</div>
+<div class="line"><span class="lineno">  156</span>                    ImGui::OpenPopup(str_id);</div>
+<div class="line"><span class="lineno">  157</span>                }</div>
+<div class="line"><span class="lineno">  158</span>            </div>
+<div class="line"><span class="lineno">  159</span>                <span class="keywordflow">if</span>(ImGui::BeginPopup(str_id))</div>
+<div class="line"><span class="lineno">  160</span>                {</div>
+<div class="line"><span class="lineno">  161</span>                    <span class="keywordtype">char</span> buffer[256] = <span class="stringliteral">&quot;default&quot;</span>;</div>
+<div class="line"><span class="lineno">  162</span>                    <span class="keywordflow">if</span> (ImGui::InputText(<span class="stringliteral">&quot;##newName&quot;</span>, buffer, <span class="keyword">sizeof</span>(buffer)))</div>
+<div class="line"><span class="lineno">  163</span>                    {</div>
+<div class="line"><span class="lineno">  164</span>                        selectionContext-&gt;setName(std::string(buffer));</div>
+<div class="line"><span class="lineno">  165</span>                    }</div>
+<div class="line"><span class="lineno">  166</span>                    <span class="keywordflow">if</span>(ImGui::Button(<span class="stringliteral">&quot;+&quot;</span>))</div>
 <div class="line"><span class="lineno">  167</span>                    {</div>
-<div class="line"><span class="lineno">  168</span>                        selectionContext-&gt;setName(std::string(buffer));</div>
+<div class="line"><span class="lineno">  168</span>                        gameScene-&gt;<a class="code hl_function" href="../../d6/d26/class_l_t_e_1_1scene.html#a22390168010d11dadd0250827580578d">addGameObject</a>(buffer);</div>
 <div class="line"><span class="lineno">  169</span>                    }</div>
-<div class="line"><span class="lineno">  170</span>                    <span class="keywordflow">if</span>(ImGui::Button(<span class="stringliteral">&quot;+&quot;</span>))</div>
-<div class="line"><span class="lineno">  171</span>                    {</div>
-<div class="line"><span class="lineno">  172</span>                        gameScene-&gt;<a class="code hl_function" href="../../d6/d26/class_l_t_e_1_1scene.html#a6de4eec39efa1e4fdc91c376f3f5ec72">addGameObject</a>([&amp;](<a class="code hl_class" href="../../de/d82/class_l_t_e_1_1game_object_builder.html">LTE::gameObjectBuilder</a> *b){</div>
-<div class="line"><span class="lineno">  173</span>                            b-&gt;<a class="code hl_function" href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a1b87bf4a57d25d3ff4b35f6f20afc96c">setObjectName</a>(buffer);</div>
-<div class="line"><span class="lineno">  174</span>                        });</div>
-<div class="line"><span class="lineno">  175</span>                    }</div>
-<div class="line"><span class="lineno">  176</span>                    ImGui::EndPopup();</div>
-<div class="line"><span class="lineno">  177</span>                }</div>
-<div class="line"><span class="lineno">  178</span>            </div>
-<div class="line"><span class="lineno">  179</span>            ImGui::End();</div>
-<div class="line"><span class="lineno">  180</span>    </div>
-<div class="line"><span class="lineno">  181</span> </div>
-<div class="line"><span class="lineno">  182</span>            ImGui::Begin(<span class="stringliteral">&quot;Properties&quot;</span>);</div>
-<div class="line"><span class="lineno">  183</span>            <span class="keywordflow">if</span>(selectionContext)</div>
-<div class="line"><span class="lineno">  184</span>            {</div>
-<div class="line"><span class="lineno">  185</span>                <span class="keywordtype">char</span> buffer[256];</div>
-<div class="line"><span class="lineno">  186</span>                memset(buffer, 0, <span class="keyword">sizeof</span>(buffer));</div>
-<div class="line"><span class="lineno">  187</span>                std::strncpy(buffer, selectionContext-&gt;getName().c_str(), <span class="keyword">sizeof</span>(buffer));</div>
-<div class="line"><span class="lineno">  188</span>                <span class="keywordflow">if</span> (ImGui::InputText(<span class="stringliteral">&quot;##Tag&quot;</span>, buffer, <span class="keyword">sizeof</span>(buffer)))</div>
-<div class="line"><span class="lineno">  189</span>                {</div>
-<div class="line"><span class="lineno">  190</span>                    selectionContext-&gt;setName(std::string(buffer));</div>
-<div class="line"><span class="lineno">  191</span>                }</div>
-<div class="line"><span class="lineno">  192</span>            </div>
-<div class="line"><span class="lineno">  193</span>            </div>
-<div class="line"><span class="lineno">  194</span>                ImGui::SameLine();</div>
-<div class="line"><span class="lineno">  195</span>                ImGui::PushItemWidth(-1);</div>
-<div class="line"><span class="lineno">  196</span> </div>
-<div class="line"><span class="lineno">  197</span>                <span class="keywordflow">if</span> (ImGui::Button(<span class="stringliteral">&quot;Add Component&quot;</span>))</div>
-<div class="line"><span class="lineno">  198</span>                    ImGui::OpenPopup(<span class="stringliteral">&quot;AddComponent&quot;</span>);</div>
-<div class="line"><span class="lineno">  199</span> </div>
-<div class="line"><span class="lineno">  200</span>                <span class="keywordflow">if</span> (ImGui::BeginPopup(<span class="stringliteral">&quot;AddComponent&quot;</span>))</div>
-<div class="line"><span class="lineno">  201</span>                {</div>
-<div class="line"><span class="lineno">  202</span>                        <span class="keywordflow">if</span> (ImGui::MenuItem(<span class="stringliteral">&quot;material&quot;</span>))</div>
-<div class="line"><span class="lineno">  203</span>                        {</div>
-<div class="line"><span class="lineno">  204</span>                            <span class="keywordflow">if</span>(!selectionContext-&gt;hasComponent&lt;<a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>&gt;())</div>
-<div class="line"><span class="lineno">  205</span>                                selectionContext-&gt;setComponent&lt;<a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>&gt;(std::make_shared&lt;LTE::material&gt;(glm::vec4{0, 0, 0, 0}));</div>
-<div class="line"><span class="lineno">  206</span>                            ImGui::CloseCurrentPopup();</div>
-<div class="line"><span class="lineno">  207</span>                        }</div>
-<div class="line"><span class="lineno">  208</span> </div>
-<div class="line"><span class="lineno">  209</span>                        <span class="keywordflow">if</span> (ImGui::MenuItem(<span class="stringliteral">&quot;mesh&quot;</span>))</div>
-<div class="line"><span class="lineno">  210</span>                        {</div>
-<div class="line"><span class="lineno">  211</span>                            <span class="keywordflow">if</span>(!selectionContext-&gt;hasComponent&lt;<a class="code hl_class" href="../../d0/d6c/class_l_t_e_1_1mesh.html">LTE::mesh</a>&gt;())</div>
-<div class="line"><span class="lineno">  212</span>                                selectionContext-&gt;setComponent&lt;<a class="code hl_class" href="../../d0/d6c/class_l_t_e_1_1mesh.html">LTE::mesh</a>&gt;(std::shared_ptr&lt;LTE::mesh&gt;(<a class="code hl_function" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a0a75e6d008a219e5a604a1d9e303a243">LTE::mesh::build</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html">LTE::mesh::meshBuilder</a> *builder)</div>
-<div class="line"><span class="lineno">  213</span>                                                {</div>
-<div class="line"><span class="lineno">  214</span>                                                    builder-&gt;<a class="code hl_function" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#aaf34d2886359138366773a6cf33177c9">setIndexBuffer</a>(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#addc1c84bbfb8140ed4c41045bd8a8031">pilarIndices</a>, 6 * 6)-&gt;</div>
-<div class="line"><span class="lineno">  215</span>                                                    setVertices(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a458d5030425f11c9e380d39632fb000f">pilarPostions</a>, 8*3)-&gt;</div>
-<div class="line"><span class="lineno">  216</span>                                                    setShaderName(<span class="stringliteral">&quot;res/moduleLoading/shaders/Basic.glsl&quot;</span>);</div>
-<div class="line"><span class="lineno">  217</span>                                                })));</div>
-<div class="line"><span class="lineno">  218</span>                            ImGui::CloseCurrentPopup();</div>
-<div class="line"><span class="lineno">  219</span>                        }</div>
-<div class="line"><span class="lineno">  220</span> </div>
-<div class="line"><span class="lineno">  221</span>                    ImGui::EndPopup();</div>
-<div class="line"><span class="lineno">  222</span>                }</div>
-<div class="line"><span class="lineno">  223</span> </div>
-<div class="line"><span class="lineno">  224</span>                ImGui::PopItemWidth();</div>
-<div class="line"><span class="lineno">  225</span> </div>
-<div class="line"><span class="lineno">  226</span>                selectionContext-&gt;forEachComponent([](std::shared_ptr&lt;LTE::component&gt; c){</div>
-<div class="line"><span class="lineno">  227</span>                    <span class="keyword">const</span> ImGuiTreeNodeFlags treeNodeFlags = ImGuiTreeNodeFlags_DefaultOpen | ImGuiTreeNodeFlags_Framed | ImGuiTreeNodeFlags_SpanAvailWidth | ImGuiTreeNodeFlags_AllowItemOverlap | ImGuiTreeNodeFlags_FramePadding;</div>
-<div class="line"><span class="lineno">  228</span>    </div>
-<div class="line"><span class="lineno">  229</span>                    ImVec2 contentRegionAvailable = ImGui::GetContentRegionAvail();</div>
-<div class="line"><span class="lineno">  230</span> </div>
-<div class="line"><span class="lineno">  231</span>                    ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2{ 4, 4 });</div>
-<div class="line"><span class="lineno">  232</span>                    <span class="keywordtype">float</span> lineHeight = GImGui-&gt;Font-&gt;FontSize + GImGui-&gt;Style.FramePadding.y * 2.0f;</div>
-<div class="line"><span class="lineno">  233</span>                    ImGui::Separator();</div>
-<div class="line"><span class="lineno">  234</span>                    <span class="keywordtype">bool</span> open = ImGui::TreeNodeEx((<span class="keywordtype">void</span>*)c.get(), treeNodeFlags, c-&gt;getName().c_str());</div>
-<div class="line"><span class="lineno">  235</span>                    ImGui::PopStyleVar();</div>
-<div class="line"><span class="lineno">  236</span>                    ImGui::SameLine(contentRegionAvailable.x - lineHeight * 0.5f);</div>
-<div class="line"><span class="lineno">  237</span>                    <span class="keywordflow">if</span> (ImGui::Button(<span class="stringliteral">&quot;+&quot;</span>, ImVec2{ lineHeight, lineHeight }))</div>
+<div class="line"><span class="lineno">  170</span>                    ImGui::EndPopup();</div>
+<div class="line"><span class="lineno">  171</span>                }</div>
+<div class="line"><span class="lineno">  172</span>            </div>
+<div class="line"><span class="lineno">  173</span>            ImGui::End();</div>
+<div class="line"><span class="lineno">  174</span>    </div>
+<div class="line"><span class="lineno">  175</span> </div>
+<div class="line"><span class="lineno">  176</span>            ImGui::Begin(<span class="stringliteral">&quot;Properties&quot;</span>);</div>
+<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">if</span>(selectionContext)</div>
+<div class="line"><span class="lineno">  178</span>            {</div>
+<div class="line"><span class="lineno">  179</span>                <span class="keywordtype">char</span> buffer[256];</div>
+<div class="line"><span class="lineno">  180</span>                memset(buffer, 0, <span class="keyword">sizeof</span>(buffer));</div>
+<div class="line"><span class="lineno">  181</span>                std::strncpy(buffer, selectionContext-&gt;getName().c_str(), <span class="keyword">sizeof</span>(buffer));</div>
+<div class="line"><span class="lineno">  182</span>                <span class="keywordflow">if</span> (ImGui::InputText(<span class="stringliteral">&quot;##Tag&quot;</span>, buffer, <span class="keyword">sizeof</span>(buffer)))</div>
+<div class="line"><span class="lineno">  183</span>                {</div>
+<div class="line"><span class="lineno">  184</span>                    selectionContext-&gt;setName(std::string(buffer));</div>
+<div class="line"><span class="lineno">  185</span>                }</div>
+<div class="line"><span class="lineno">  186</span>            </div>
+<div class="line"><span class="lineno">  187</span>            </div>
+<div class="line"><span class="lineno">  188</span>                ImGui::SameLine();</div>
+<div class="line"><span class="lineno">  189</span>                ImGui::PushItemWidth(-1);</div>
+<div class="line"><span class="lineno">  190</span> </div>
+<div class="line"><span class="lineno">  191</span>                <span class="keywordflow">if</span> (ImGui::Button(<span class="stringliteral">&quot;Add Component&quot;</span>))</div>
+<div class="line"><span class="lineno">  192</span>                    ImGui::OpenPopup(<span class="stringliteral">&quot;AddComponent&quot;</span>);</div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span>                <span class="keywordflow">if</span> (ImGui::BeginPopup(<span class="stringliteral">&quot;AddComponent&quot;</span>))</div>
+<div class="line"><span class="lineno">  195</span>                {</div>
+<div class="line"><span class="lineno">  196</span>                        <span class="keywordflow">if</span> (ImGui::MenuItem(<span class="stringliteral">&quot;material&quot;</span>))</div>
+<div class="line"><span class="lineno">  197</span>                        {</div>
+<div class="line"><span class="lineno">  198</span>                            <span class="keywordflow">if</span>(!selectionContext-&gt;hasComponent&lt;<a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>&gt;())</div>
+<div class="line"><span class="lineno">  199</span>                                selectionContext-&gt;addComponent&lt;<a class="code hl_class" href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a>&gt;(glm::vec4{0, 0, 0, 0});</div>
+<div class="line"><span class="lineno">  200</span>                            ImGui::CloseCurrentPopup();</div>
+<div class="line"><span class="lineno">  201</span>                        }</div>
+<div class="line"><span class="lineno">  202</span> </div>
+<div class="line"><span class="lineno">  203</span>                        <span class="keywordflow">if</span> (ImGui::MenuItem(<span class="stringliteral">&quot;mesh&quot;</span>))</div>
+<div class="line"><span class="lineno">  204</span>                        {</div>
+<div class="line"><span class="lineno">  205</span>                            <span class="keywordflow">if</span>(!selectionContext-&gt;hasComponent&lt;<a class="code hl_class" href="../../d0/d6c/class_l_t_e_1_1mesh.html">LTE::mesh</a>&gt;())</div>
+<div class="line"><span class="lineno">  206</span>                                selectionContext-&gt;addComponent&lt;<a class="code hl_class" href="../../d0/d6c/class_l_t_e_1_1mesh.html">LTE::mesh</a>&gt;(<a class="code hl_function" href="../../d0/d6c/class_l_t_e_1_1mesh.html#a0a75e6d008a219e5a604a1d9e303a243">LTE::mesh::build</a>([=, <span class="keyword">this</span>](<a class="code hl_class" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html">LTE::mesh::meshBuilder</a> *builder)</div>
+<div class="line"><span class="lineno">  207</span>                                                {</div>
+<div class="line"><span class="lineno">  208</span>                                                    builder-&gt;<a class="code hl_function" href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#aaf34d2886359138366773a6cf33177c9">setIndexBuffer</a>(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#addc1c84bbfb8140ed4c41045bd8a8031">pilarIndices</a>, 6 * 6)-&gt;</div>
+<div class="line"><span class="lineno">  209</span>                                                    setVertices(<a class="code hl_variable" href="../../df/d0a/main_8cpp.html#a458d5030425f11c9e380d39632fb000f">pilarPostions</a>, 8*3)-&gt;</div>
+<div class="line"><span class="lineno">  210</span>                                                    setShaderName(<span class="stringliteral">&quot;res/moduleLoading/shaders/Basic.glsl&quot;</span>);</div>
+<div class="line"><span class="lineno">  211</span>                                                }));</div>
+<div class="line"><span class="lineno">  212</span>                            ImGui::CloseCurrentPopup();</div>
+<div class="line"><span class="lineno">  213</span>                        }</div>
+<div class="line"><span class="lineno">  214</span> </div>
+<div class="line"><span class="lineno">  215</span>                    ImGui::EndPopup();</div>
+<div class="line"><span class="lineno">  216</span>                }</div>
+<div class="line"><span class="lineno">  217</span> </div>
+<div class="line"><span class="lineno">  218</span>                ImGui::PopItemWidth();</div>
+<div class="line"><span class="lineno">  219</span> </div>
+<div class="line"><span class="lineno">  220</span>                selectionContext-&gt;forEachComponent([](std::shared_ptr&lt;LTE::component&gt; c){</div>
+<div class="line"><span class="lineno">  221</span>                    <span class="keyword">const</span> ImGuiTreeNodeFlags treeNodeFlags = ImGuiTreeNodeFlags_DefaultOpen | ImGuiTreeNodeFlags_Framed | ImGuiTreeNodeFlags_SpanAvailWidth | ImGuiTreeNodeFlags_AllowItemOverlap | ImGuiTreeNodeFlags_FramePadding;</div>
+<div class="line"><span class="lineno">  222</span>    </div>
+<div class="line"><span class="lineno">  223</span>                    ImVec2 contentRegionAvailable = ImGui::GetContentRegionAvail();</div>
+<div class="line"><span class="lineno">  224</span> </div>
+<div class="line"><span class="lineno">  225</span>                    ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2{ 4, 4 });</div>
+<div class="line"><span class="lineno">  226</span>                    <span class="keywordtype">float</span> lineHeight = GImGui-&gt;Font-&gt;FontSize + GImGui-&gt;Style.FramePadding.y * 2.0f;</div>
+<div class="line"><span class="lineno">  227</span>                    ImGui::Separator();</div>
+<div class="line"><span class="lineno">  228</span>                    <span class="keywordtype">bool</span> open = ImGui::TreeNodeEx((<span class="keywordtype">void</span>*)c.get(), treeNodeFlags, c-&gt;getName().c_str());</div>
+<div class="line"><span class="lineno">  229</span>                    ImGui::PopStyleVar();</div>
+<div class="line"><span class="lineno">  230</span>                    ImGui::SameLine(contentRegionAvailable.x - lineHeight * 0.5f);</div>
+<div class="line"><span class="lineno">  231</span>                    <span class="keywordflow">if</span> (ImGui::Button(<span class="stringliteral">&quot;+&quot;</span>, ImVec2{ lineHeight, lineHeight }))</div>
+<div class="line"><span class="lineno">  232</span>                    {</div>
+<div class="line"><span class="lineno">  233</span>                        ImGui::OpenPopup(<span class="stringliteral">&quot;ComponentSettings&quot;</span>);</div>
+<div class="line"><span class="lineno">  234</span>                    }</div>
+<div class="line"><span class="lineno">  235</span> </div>
+<div class="line"><span class="lineno">  236</span>                    <span class="keywordtype">bool</span> removeComponent = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  237</span>                    <span class="keywordflow">if</span> (ImGui::BeginPopup(<span class="stringliteral">&quot;ComponentSettings&quot;</span>))</div>
 <div class="line"><span class="lineno">  238</span>                    {</div>
-<div class="line"><span class="lineno">  239</span>                        ImGui::OpenPopup(<span class="stringliteral">&quot;ComponentSettings&quot;</span>);</div>
-<div class="line"><span class="lineno">  240</span>                    }</div>
+<div class="line"><span class="lineno">  239</span>                        <span class="keywordflow">if</span> (ImGui::MenuItem(<span class="stringliteral">&quot;Remove component&quot;</span>))</div>
+<div class="line"><span class="lineno">  240</span>                            removeComponent = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  241</span> </div>
-<div class="line"><span class="lineno">  242</span>                    <span class="keywordtype">bool</span> removeComponent = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  243</span>                    <span class="keywordflow">if</span> (ImGui::BeginPopup(<span class="stringliteral">&quot;ComponentSettings&quot;</span>))</div>
-<div class="line"><span class="lineno">  244</span>                    {</div>
-<div class="line"><span class="lineno">  245</span>                        <span class="keywordflow">if</span> (ImGui::MenuItem(<span class="stringliteral">&quot;Remove component&quot;</span>))</div>
-<div class="line"><span class="lineno">  246</span>                            removeComponent = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  247</span> </div>
-<div class="line"><span class="lineno">  248</span>                        ImGui::EndPopup();</div>
+<div class="line"><span class="lineno">  242</span>                        ImGui::EndPopup();</div>
+<div class="line"><span class="lineno">  243</span>                    }</div>
+<div class="line"><span class="lineno">  244</span> </div>
+<div class="line"><span class="lineno">  245</span>                    <span class="keywordflow">if</span> (open)</div>
+<div class="line"><span class="lineno">  246</span>                    {</div>
+<div class="line"><span class="lineno">  247</span>                        c-&gt;displayComponentProprties();</div>
+<div class="line"><span class="lineno">  248</span>                        ImGui::TreePop();</div>
 <div class="line"><span class="lineno">  249</span>                    }</div>
 <div class="line"><span class="lineno">  250</span> </div>
-<div class="line"><span class="lineno">  251</span>                    <span class="keywordflow">if</span> (open)</div>
-<div class="line"><span class="lineno">  252</span>                    {</div>
-<div class="line"><span class="lineno">  253</span>                        c-&gt;displayComponentProprties();</div>
-<div class="line"><span class="lineno">  254</span>                        ImGui::TreePop();</div>
-<div class="line"><span class="lineno">  255</span>                    }</div>
-<div class="line"><span class="lineno">  256</span> </div>
-<div class="line"><span class="lineno">  257</span>                });</div>
-<div class="line"><span class="lineno">  258</span> </div>
-<div class="line"><span class="lineno">  259</span>            }</div>
-<div class="line"><span class="lineno">  260</span>            ImGui::End();</div>
-<div class="line"><span class="lineno">  261</span>    </div>
-<div class="line"><span class="lineno">  262</span>            ImGui::Begin(<span class="stringliteral">&quot;Settings&quot;</span>);</div>
+<div class="line"><span class="lineno">  251</span>                });</div>
+<div class="line"><span class="lineno">  252</span> </div>
+<div class="line"><span class="lineno">  253</span>            }</div>
+<div class="line"><span class="lineno">  254</span>            ImGui::End();</div>
+<div class="line"><span class="lineno">  255</span>    </div>
+<div class="line"><span class="lineno">  256</span>            ImGui::Begin(<span class="stringliteral">&quot;Settings&quot;</span>);</div>
+<div class="line"><span class="lineno">  257</span> </div>
+<div class="line"><span class="lineno">  258</span>            ImGui::Text(<span class="stringliteral">&quot;background color&quot;</span>);</div>
+<div class="line"><span class="lineno">  259</span>            gameScene-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">backgroundColor</a>-&gt;<a class="code hl_function" href="../../dc/dda/class_l_t_e_1_1material.html#ad2ff04cdbbdd2bb8e2151a8ebce4fb86">displayComponentProprties</a>();</div>
+<div class="line"><span class="lineno">  260</span>            </div>
+<div class="line"><span class="lineno">  261</span> </div>
+<div class="line"><span class="lineno">  262</span>            ImGui::End();</div>
 <div class="line"><span class="lineno">  263</span> </div>
-<div class="line"><span class="lineno">  264</span>            ImGui::Text(<span class="stringliteral">&quot;background color&quot;</span>);</div>
-<div class="line"><span class="lineno">  265</span>            gameScene-&gt;<a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">backgroundColor</a>-&gt;<a class="code hl_function" href="../../dc/dda/class_l_t_e_1_1material.html#ad2ff04cdbbdd2bb8e2151a8ebce4fb86">displayComponentProprties</a>();</div>
-<div class="line"><span class="lineno">  266</span>            </div>
-<div class="line"><span class="lineno">  267</span> </div>
-<div class="line"><span class="lineno">  268</span>            ImGui::End();</div>
-<div class="line"><span class="lineno">  269</span> </div>
-<div class="line"><span class="lineno">  270</span>            ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2{ 0, 0 });</div>
-<div class="line"><span class="lineno">  271</span>            ImGui::Begin(<span class="stringliteral">&quot;Viewport&quot;</span>);</div>
-<div class="line"><span class="lineno">  272</span> </div>
-<div class="line"><span class="lineno">  273</span>            <span class="comment">// Application::Get().GetImGuiLayer()-&gt;BlockEvents(!ImGui::IsWindowFocused() || !ImGui::IsWindowHovered());</span></div>
-<div class="line"><span class="lineno">  274</span> </div>
-<div class="line"><span class="lineno">  275</span>            ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();</div>
-<div class="line"><span class="lineno">  276</span> </div>
-<div class="line"><span class="lineno">  277</span>            <span class="comment">// uint64_t textureID = m_Framebuffer-&gt;GetColorAttachmentRendererID();</span></div>
-<div class="line"><span class="lineno">  278</span>            ImGui::Image(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(LTE::assetManager::getAsset&lt;LTE::texture&gt;(<span class="stringliteral">&quot;LTE editor/screen texture&quot;</span>)-&gt;getId() ), ImVec2{ viewportPanelSize.x, viewportPanelSize.y  }, ImVec2{ 0, 1 }, ImVec2{ 1, 0 });</div>
-<div class="line"><span class="lineno">  279</span>            ImGui::End();</div>
-<div class="line"><span class="lineno">  280</span>            ImGui::PopStyleVar();</div>
-<div class="line"><span class="lineno">  281</span> </div>
-<div class="line"><span class="lineno">  282</span>            ImGui::End();</div>
-<div class="line"><span class="lineno">  283</span> </div>
-<div class="line"><span class="lineno">  284</span>        }</div>
-<div class="ttc" id="aclass_l_t_e_1_1game_object_builder_html"><div class="ttname"><a href="../../de/d82/class_l_t_e_1_1game_object_builder.html">LTE::gameObjectBuilder</a></div><div class="ttdef"><b>Definition:</b> gameobject.h:130</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1game_object_builder_html_a1b87bf4a57d25d3ff4b35f6f20afc96c"><div class="ttname"><a href="../../de/d82/class_l_t_e_1_1game_object_builder.html#a1b87bf4a57d25d3ff4b35f6f20afc96c">LTE::gameObjectBuilder::setObjectName</a></div><div class="ttdeci">gameObjectBuilder * setObjectName(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> gameobject.h:140</div></div>
+<div class="line"><span class="lineno">  264</span>            ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2{ 0, 0 });</div>
+<div class="line"><span class="lineno">  265</span>            ImGui::Begin(<span class="stringliteral">&quot;Viewport&quot;</span>);</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span>            <span class="comment">// Application::Get().GetImGuiLayer()-&gt;BlockEvents(!ImGui::IsWindowFocused() || !ImGui::IsWindowHovered());</span></div>
+<div class="line"><span class="lineno">  268</span> </div>
+<div class="line"><span class="lineno">  269</span>            ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();</div>
+<div class="line"><span class="lineno">  270</span> </div>
+<div class="line"><span class="lineno">  271</span>            <span class="comment">// uint64_t textureID = m_Framebuffer-&gt;GetColorAttachmentRendererID();</span></div>
+<div class="line"><span class="lineno">  272</span>            ImGui::Image(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(LTE::assetManager::getAsset&lt;LTE::texture&gt;(<span class="stringliteral">&quot;LTE editor/screen texture&quot;</span>)-&gt;getId() ), ImVec2{ viewportPanelSize.x, viewportPanelSize.y  }, ImVec2{ 0, 1 }, ImVec2{ 1, 0 });</div>
+<div class="line"><span class="lineno">  273</span>            ImGui::End();</div>
+<div class="line"><span class="lineno">  274</span>            ImGui::PopStyleVar();</div>
+<div class="line"><span class="lineno">  275</span> </div>
+<div class="line"><span class="lineno">  276</span>            ImGui::End();</div>
+<div class="line"><span class="lineno">  277</span> </div>
+<div class="line"><span class="lineno">  278</span>        }</div>
 <div class="ttc" id="aclass_l_t_e_1_1material_html"><div class="ttname"><a href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a></div><div class="ttdef"><b>Definition:</b> material.h:15</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1material_html_ad2ff04cdbbdd2bb8e2151a8ebce4fb86"><div class="ttname"><a href="../../dc/dda/class_l_t_e_1_1material.html#ad2ff04cdbbdd2bb8e2151a8ebce4fb86">LTE::material::displayComponentProprties</a></div><div class="ttdeci">virtual void displayComponentProprties() override</div><div class="ttdef"><b>Definition:</b> material.h:69</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1material_html_ad2ff04cdbbdd2bb8e2151a8ebce4fb86"><div class="ttname"><a href="../../dc/dda/class_l_t_e_1_1material.html#ad2ff04cdbbdd2bb8e2151a8ebce4fb86">LTE::material::displayComponentProprties</a></div><div class="ttdeci">virtual void displayComponentProprties() override</div><div class="ttdef"><b>Definition:</b> material.h:64</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1mesh_1_1mesh_builder_html"><div class="ttname"><a href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html">LTE::mesh::meshBuilder</a></div><div class="ttdef"><b>Definition:</b> mesh.h:24</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1mesh_1_1mesh_builder_html_aaf34d2886359138366773a6cf33177c9"><div class="ttname"><a href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#aaf34d2886359138366773a6cf33177c9">LTE::mesh::meshBuilder::setIndexBuffer</a></div><div class="ttdeci">meshBuilder * setIndexBuffer(uint32_t *indices, uint32_t count)</div><div class="ttdef"><b>Definition:</b> mesh.h:32</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1mesh_html"><div class="ttname"><a href="../../d0/d6c/class_l_t_e_1_1mesh.html">LTE::mesh</a></div><div class="ttdef"><b>Definition:</b> mesh.h:21</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1mesh_html_a0a75e6d008a219e5a604a1d9e303a243"><div class="ttname"><a href="../../d0/d6c/class_l_t_e_1_1mesh.html#a0a75e6d008a219e5a604a1d9e303a243">LTE::mesh::build</a></div><div class="ttdeci">static mesh * build(std::function&lt; void(meshBuilder *)&gt; buildFunc)</div><div class="ttdef"><b>Definition:</b> mesh.h:74</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_a175550c54709e4c719913e94b906b148"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">LTE::scene::backgroundColor</a></div><div class="ttdeci">material * backgroundColor</div><div class="ttdef"><b>Definition:</b> scene.h:45</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_a6de4eec39efa1e4fdc91c376f3f5ec72"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a6de4eec39efa1e4fdc91c376f3f5ec72">LTE::scene::addGameObject</a></div><div class="ttdeci">gameObjectId addGameObject(std::function&lt; void(gameObjectBuilder *Builder)&gt; buildGameObject)</div><div class="ttdef"><b>Definition:</b> scene.cpp:64</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_aa3cd16b5cadb68db455e563113027667"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#aa3cd16b5cadb68db455e563113027667">LTE::scene::forEachObject</a></div><div class="ttdeci">void forEachObject(std::function&lt; void(std::shared_ptr&lt; gameObject &gt;)&gt; callback)</div><div class="ttdef"><b>Definition:</b> scene.cpp:86</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a175550c54709e4c719913e94b906b148"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">LTE::scene::backgroundColor</a></div><div class="ttdeci">material * backgroundColor</div><div class="ttdef"><b>Definition:</b> scene.h:48</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a22390168010d11dadd0250827580578d"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a22390168010d11dadd0250827580578d">LTE::scene::addGameObject</a></div><div class="ttdeci">std::shared_ptr&lt; gameObject &gt; addGameObject(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> scene.cpp:37</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_aa3cd16b5cadb68db455e563113027667"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#aa3cd16b5cadb68db455e563113027667">LTE::scene::forEachObject</a></div><div class="ttdeci">void forEachObject(std::function&lt; void(std::shared_ptr&lt; gameObject &gt;)&gt; callback)</div><div class="ttdef"><b>Definition:</b> scene.cpp:57</div></div>
 <div class="ttc" id="amain_8cpp_html_a458d5030425f11c9e380d39632fb000f"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a458d5030425f11c9e380d39632fb000f">pilarPostions</a></div><div class="ttdeci">float pilarPostions[8 *3]</div><div class="ttdef"><b>Definition:</b> main.cpp:9</div></div>
 <div class="ttc" id="amain_8cpp_html_addc1c84bbfb8140ed4c41045bd8a8031"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#addc1c84bbfb8140ed4c41045bd8a8031">pilarIndices</a></div><div class="ttdeci">unsigned int pilarIndices[6 *6]</div><div class="ttdef"><b>Definition:</b> main.cpp:22</div></div>
 </div><!-- fragment -->

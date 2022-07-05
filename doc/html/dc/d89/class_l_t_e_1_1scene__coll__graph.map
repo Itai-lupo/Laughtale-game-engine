@@ -1,7 +1,6 @@
 <map id="LTE::scene" name="LTE::scene">
-<area shape="rect" id="node1" title=" " alt="" coords="162,171,249,197"/>
+<area shape="rect" id="node1" title=" " alt="" coords="53,171,139,197"/>
 <area shape="rect" id="node2" href="$d3/df5/class_l_t_e_1_1os_event.html" title=" " alt="" coords="5,81,104,108"/>
-<area shape="rect" id="node3" href="$df/d41/class_l_t_e_1_1collider_system2_d.html" title=" " alt="" coords="129,81,282,108"/>
-<area shape="rect" id="node4" href="$dc/dda/class_l_t_e_1_1material.html" title=" " alt="" coords="307,81,405,108"/>
-<area shape="rect" id="node5" href="$d9/d4b/class_l_t_e_1_1component.html" title=" " alt="" coords="298,5,414,32"/>
+<area shape="rect" id="node3" href="$dc/dda/class_l_t_e_1_1material.html" title=" " alt="" coords="128,81,227,108"/>
+<area shape="rect" id="node4" href="$d9/d4b/class_l_t_e_1_1component.html" title=" " alt="" coords="119,5,235,32"/>
 </map>

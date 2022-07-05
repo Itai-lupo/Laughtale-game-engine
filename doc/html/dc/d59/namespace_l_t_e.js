@@ -25,7 +25,6 @@ var namespace_l_t_e =
     [ "framebuffer", "da/da3/class_l_t_e_1_1framebuffer.html", "da/da3/class_l_t_e_1_1framebuffer" ],
     [ "framebufferRenderApi", "d3/d28/class_l_t_e_1_1framebuffer_render_api.html", "d3/d28/class_l_t_e_1_1framebuffer_render_api" ],
     [ "gameObject", "d2/d49/class_l_t_e_1_1game_object.html", "d2/d49/class_l_t_e_1_1game_object" ],
-    [ "gameObjectBuilder", "de/d82/class_l_t_e_1_1game_object_builder.html", "de/d82/class_l_t_e_1_1game_object_builder" ],
     [ "GameObjectNotFoundException", "d9/d22/class_l_t_e_1_1_game_object_not_found_exception.html", "d9/d22/class_l_t_e_1_1_game_object_not_found_exception" ],
     [ "gameObjectsManger", "dc/d88/class_l_t_e_1_1game_objects_manger.html", "dc/d88/class_l_t_e_1_1game_objects_manger" ],
     [ "glslFile", "d4/d18/class_l_t_e_1_1glsl_file.html", "d4/d18/class_l_t_e_1_1glsl_file" ],
@@ -84,7 +83,6 @@ var namespace_l_t_e =
     [ "renderApi", "df/d3a/class_l_t_e_1_1render_api.html", "df/d3a/class_l_t_e_1_1render_api" ],
     [ "router", "d7/d22/class_l_t_e_1_1router.html", "d7/d22/class_l_t_e_1_1router" ],
     [ "scene", "d6/d26/class_l_t_e_1_1scene.html", "d6/d26/class_l_t_e_1_1scene" ],
-    [ "sceneBuilder", "d3/db0/class_l_t_e_1_1scene_builder.html", "d3/db0/class_l_t_e_1_1scene_builder" ],
     [ "sceneEvent", "d6/daa/class_l_t_e_1_1scene_event.html", "d6/daa/class_l_t_e_1_1scene_event" ],
     [ "sceneEventData", "df/ddf/struct_l_t_e_1_1scene_event_data.html", "df/ddf/struct_l_t_e_1_1scene_event_data" ],
     [ "sceneEventsManger", "df/dde/class_l_t_e_1_1scene_events_manger.html", "df/dde/class_l_t_e_1_1scene_events_manger" ],
@@ -183,8 +181,6 @@ var namespace_l_t_e =
       [ "DEPTH24STENCIL8", "dc/d59/namespace_l_t_e.html#affbe7fac9e66d0a69d29a96b1a9f8ea1a7ca3e26e4e5c35e4408bd49c1e32e9a3", null ],
       [ "Depth", "dc/d59/namespace_l_t_e.html#affbe7fac9e66d0a69d29a96b1a9f8ea1a675056ad1441b6375b2c5abd48c27ef1", null ]
     ] ],
-    [ "checkXBonds", "dc/d59/namespace_l_t_e.html#a67e41dbd86eae710c75e1ba04590b766", null ],
-    [ "checkYBonds", "dc/d59/namespace_l_t_e.html#ae5a25649ff95c04e16830f550227549e", null ],
     [ "clap", "dc/d59/namespace_l_t_e.html#ad863355b6c8b17627459d7b2da68ab97", null ],
     [ "createFile", "dc/d59/namespace_l_t_e.html#ac37d5c7f5ba6bcccd7a30f0427eb5332", null ]
 ];

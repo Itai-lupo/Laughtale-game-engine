@@ -5,7 +5,7 @@ namespace LTE
 {
     void sceneManger::init()
     {
-        builder = new sceneBuilder();
+
     }
 
     void sceneManger::close()
@@ -14,38 +14,35 @@ namespace LTE
         {
             delete s;
         }
-        delete builder;
         scenes.clear();
     }
 
 
-    sceneId sceneManger::addScene(std::function<void(sceneBuilder *Builder)> buildScene)
-    {
-        builder->reset();
-        buildScene(builder);
-
-        scene *newScene = builder->build(nextId);
+    scene *sceneManger::addScene(const std::string& title)
+    {        
+        scene *newScene = new scene(nextId);
+        newScene->camera = newScene->addGameObject("default camera");
+        newScene->camera->addComponent<orthographicCameraControler>(1280.0f/720.0f);
 
         scenes.push_back(newScene);
         
         nextId++;
-        return newScene->id;
+        return newScene;
     }
 
-    sceneId sceneManger::removeScene(sceneId sceneID)
+    void sceneManger::removeScene(sceneId sceneID)
     {
         scene *s = getScene(sceneID);
 
         scenes.erase(std::remove_if(
             scenes.begin(), 
             scenes.end(), 
-            [=](scene* s)-> bool { return s->id == sceneID; }
+            [=](scene* s)-> bool { return s->getId() == sceneID; }
         ), scenes.end());
 
         if(s)
             delete s;
     }
-
             
     scene *sceneManger::getScene(sceneId sceneID)
     {
@@ -53,7 +50,7 @@ namespace LTE
         auto temp = std::find_if(  
             scenes.begin(), 
             scenes.end(), 
-            [=](scene* s)-> bool { return s->id == sceneID; }
+            [=](scene* s)-> bool { return s->getId() == sceneID; }
         );
 
         if(temp != scenes.end())

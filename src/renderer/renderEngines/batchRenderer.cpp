@@ -10,25 +10,25 @@
 namespace LTE
 {
 
-    shaderRenderBuffer *batchRenderer::submitShape(std::shared_ptr<mesh> shape, std::shared_ptr<material> shapeMatrial)
+    shaderRenderBuffer *batchRenderer::submitShape(std::shared_ptr<gameObject> shapeObject)
     {
-        shaderRenderBuffer *s  = assetManager::getAsset<shaderRenderBuffer>(shape->getShaderName());
+        shaderRenderBuffer *s  = assetManager::getAsset<shaderRenderBuffer>(shapeObject->getComponent<mesh>()->getShaderName());
         if(!s)
             return nullptr;
-        s->pushShape(shape, shapeMatrial);
+        s->pushShape(shapeObject);
         return s;
     }
 
     void batchRenderer::sortSceneToRender()
     {
         std::sort(
-            Scene->objects->begin(),
-            Scene->objects->end(),
-            [=](std::weak_ptr< LTE::gameObject> a, std::weak_ptr< LTE::gameObject> b) -> bool
+            gameObjectsCash.begin(),
+            gameObjectsCash.end(),
+            [=](std::shared_ptr< LTE::gameObject> a, std::shared_ptr< LTE::gameObject> b) -> bool
             {
                 try
                 {
-                    return a.lock()->getTransform()->getPostion().z < b.lock()->getTransform()->getPostion().z;
+                    return a->getTransform()->getPostion().z < b->getTransform()->getPostion().z;
                 }
                 catch(LTEException* e)
                 {
@@ -42,9 +42,8 @@ namespace LTE
     void batchRenderer::batchSceneData()
     {
 
-        for(std::weak_ptr<LTE::gameObject> toRenderWeak: *Scene->objects)
+        for(std::shared_ptr<LTE::gameObject> toRender: gameObjectsCash)
         {
-            std::shared_ptr<LTE::gameObject> toRender = toRenderWeak.lock();
             if(!toRender)
                 continue;
 
@@ -54,7 +53,7 @@ namespace LTE
                 std::shared_ptr<material> objMat = toRender->getComponent<material>();
                 if(!obj || !objMat)
                     continue;
-                shaderRenderBuffer *s  = submitShape(obj, objMat);
+                shaderRenderBuffer *s  = submitShape(toRender);
                 if(!s)
                     continue;
                 shadersToRender.insert(s);
@@ -112,7 +111,17 @@ namespace LTE
 
     void batchRenderer::renderScene()
     {
-        ViewProjectionMatrix = Scene->camera->getComponent<coreCameraControler>()->getCamera()->getViewProjectionMatrix();
+        gameObjectsCash = Scene->getGameObjectCacheByComponentType<mesh>();
+        try
+        {
+            ViewProjectionMatrix = Scene->camera->getComponent<coreCameraControler>()->getCamera()->getViewProjectionMatrix();
+            /* code */
+        }
+        catch(ComponentNotFoundException *e)
+        {
+            ViewProjectionMatrix = {{0, 0, 0, 0}};
+        }
+        
         
         graphicsContext::getRenderApi()->SetClearColor(Scene->backgroundColor->getRGBA());
         graphicsContext::getRenderApi()->Clear();

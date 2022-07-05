@@ -3,7 +3,7 @@ var class_l_t_e_1_1tilemap_1_1tile_builder =
     [ "tileBuilder", "d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html#a3c222fd5a27a9391b539c1fbd18fcd51", null ],
     [ "~tileBuilder", "d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html#ae69657e51135074a358b08755a0633a1", null ],
     [ "AddCompponnetToTile", "d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html#ac50ddeefc5f4b2754894573507dd526b", null ],
-    [ "build", "d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html#a0df8d46fd01f08ccf5764576c74b6acc", null ],
+    [ "build", "d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html#aace60a7fa1c0a0b38e5e34b78f1aecc1", null ],
     [ "getLayer", "d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html#aaa76c9ab3c6681a3bb68f57cb8cc2a3b", null ],
     [ "getTilePostion", "d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html#a296a16e5d783b788aa0a7f4b237dfcb9", null ],
     [ "reset", "d5/da1/class_l_t_e_1_1tilemap_1_1tile_builder.html#a865537002c7274401d2ea96e217cec41", null ],

@@ -7,46 +7,42 @@ namespace LTE
     material::material(const std::string& textureFilePath, glm::vec4 baseColor): texturePath(textureFilePath)
     {
         this->baseColor = baseColor;
+        tex = assetManager::getAsset<texture>(texturePath);
     }
 
     material::material(const std::string& textureFilePath, int tileXIndex, int tileYIndex): 
         texturePath(textureFilePath), tileXIndex(tileXIndex), tileYIndex(tileYIndex)
     {
         this->baseColor = {0.0f, 0.0f, 0.0f, 0.0f};
-        
+        tex = assetManager::getAsset<texture>(texturePath);
     }
 
     material::material(const std::string& textureFilePath, int tileIndex):
         texturePath(textureFilePath), tileIndex(tileIndex)
     {
         this->baseColor = {0.0f, 0.0f, 0.0f, 0.0f};
-
+        tex = assetManager::getAsset<texture>(texturePath);
     }
+
 
 
     material::material(const std::string& textureFilePath): texturePath(textureFilePath)
     {
         this->baseColor = {0.0f, 0.0f, 0.0f, 0.0f};
-        
+        tex = assetManager::getAsset<texture>(texturePath);
     }
 
     material::material(glm::vec4 baseColor): texturePath("")
     {
         this->baseColor = baseColor;
     }
-
-    void material::init(std::shared_ptr< LTE::gameObject>)
+    material::material(material *temp):
+        texturePath(temp->texturePath), tileIndex(temp->tileIndex), tileXIndex(temp->tileXIndex), tileYIndex(temp->tileYIndex)
     {
-        if(texturePath != ""){
-            tex = assetManager::getAsset<texture>(texturePath);
-        }
+        this->baseColor = temp->baseColor;
+        tex = assetManager::getAsset<texture>(texturePath);
     }
 
-
-    void material::end()
-    {
-
-    }
 
     void material::bind()
     {
@@ -98,7 +94,6 @@ namespace LTE
     {
         return tex;
     }
-
 
     textureId material::getTextureId()
     {

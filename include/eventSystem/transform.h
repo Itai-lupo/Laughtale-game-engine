@@ -22,21 +22,12 @@ namespace LTE
             
         
         public:
-            transform(glm::mat3 trans):
+            transform(glm::mat3 trans = {{0, 0, 0}, {0, 0, 0}, {1, 1, 1}}):
                 postion(trans[0]), rotation(trans[1]), scale(trans[2])
             {
                 
             }
-
-            virtual void init(std::shared_ptr<LTE::gameObject> parent)
-            {
-            }
-
-            virtual void end()
-            {
-
-            }
-
+            
             void setPostion(const glm::vec3& postion)
             {
                 this->postion = postion;

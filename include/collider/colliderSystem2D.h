@@ -7,21 +7,23 @@
 
 namespace LTE
 {
+    class scene;
     class colliderSystem2D
     {
         private:
-            std::vector<std::weak_ptr< LTE::gameObject>> squreColliders;
             std::thread *t;
-            sceneId parentScene;
-        public:
-            colliderSystem2D(sceneId parentScene):parentScene(parentScene){}
-            void init();
-            void close();
-
-            void addSqureCollider(std::weak_ptr< LTE::gameObject>collider){ squreColliders.push_back(collider); }
-            void removeSqureCollider(gameObjectId);
+            scene *parentScene;
+            std::map<gameObjectId, std::vector<std::weak_ptr<gameObject>>> activeCollisions;
 
             void checkCollision();
+            bool isEqual(std::shared_ptr<gameObject> a, std::shared_ptr<gameObject> b);
+            bool checkXBonds(float selfRight, float selfLeft, float otherRight, float otherLeft);
+            bool checkYBonds(float selfTop, float selfBottom, float otherTop, float otherBottom);
+
+        public:
+            colliderSystem2D(scene *parentScene);
+            ~colliderSystem2D();
+
 
     };
 } 

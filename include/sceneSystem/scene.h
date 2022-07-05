@@ -28,27 +28,26 @@ namespace LTE
             batchRenderer *render;
             sceneEventsManger *eventsManger;
             gameObjectsManger *sceneHierarchy;
+            colliderSystem2D *sceneCollider;
+            sceneId id;
 
         public:
-            scene();
+            scene(sceneId id);
             ~scene(){
-                sceneCollider->close();
-
+                delete render;
+                delete fbo;
+                delete eventsManger;
+                delete sceneHierarchy;
+                delete sceneCollider;
+                delete backgroundColor;
             }
 
-            sceneId id;
-            colliderSystem2D *sceneCollider;
+            sceneId getId(){ return id; }
 
             std::shared_ptr<gameObject> camera;
-            std::vector<std::weak_ptr<gameObject>> *objects;
-            
             material *backgroundColor;
 
-            void removeById(gameObjectId id);
-            
             virtual void onWindowRender(windowRenderData *sendor) override;
-            
-            
 
             float getAspectRation()
             {
@@ -56,12 +55,6 @@ namespace LTE
             }
 
             void renderToTextureAtEvent(const std::string& texturePath, const std::string& eventPath);
-            
-            void pushObjectToRender(std::weak_ptr<gameObject> obj);
-            void pushPhysicsObject(std::weak_ptr<gameObject> obj);
-            
-            void removeObjectToRender(gameObjectId objId);
-            void removePhysicsObject(gameObjectId objId);
 
             void renderScene();
 
@@ -71,11 +64,17 @@ namespace LTE
             }
 
 
-            gameObjectId addGameObject(std::function<void(gameObjectBuilder *Builder)> buildGameObject);
-            std::shared_ptr<gameObject>getGameObjectByName(const std::string& name);
-            std::shared_ptr<gameObject>getGameObjectById(gameObjectId id);
+            std::shared_ptr<gameObject> addGameObject(const std::string& name);
+            std::shared_ptr<gameObject> getGameObjectByName(const std::string& name);
+            std::shared_ptr<gameObject> getGameObjectById(gameObjectId id);
             void removeGameObjectById(gameObjectId id);
             void forEachObject(std::function<void(std::shared_ptr<gameObject>)> callback);
+
+            template<typename t>
+            std::vector<std::shared_ptr<gameObject>> getGameObjectCacheByComponentType()
+            {
+                return sceneHierarchy->getGameObjectCacheByComponentType<t>();
+            }
     };
 
 }

@@ -16,7 +16,5 @@ var searchData=
   ['printpcminfo_13',['printPCMInfo',['../d5/d49/class_l_t_e_1_1linux_sound_device.html#a65b0863c45a34f30bd9bc1aa10a41194',1,'LTE::linuxSoundDevice']]],
   ['push_14',['push',['../d9/db3/class_l_t_e_1_1_vertex_buffer_layout.html#a8073f972948efa928cf89936f8583f09',1,'LTE::VertexBufferLayout']]],
   ['pushelement_15',['pushElement',['../d2/dcd/class_l_t_e_1_1_vertex_buffer.html#aa6265877a30dd83bf4221c87447b9a07',1,'LTE::VertexBuffer']]],
-  ['pushobjecttorender_16',['pushObjectToRender',['../d6/d26/class_l_t_e_1_1scene.html#ade4939cea82ad642a11ff6cc4dec9a18',1,'LTE::scene']]],
-  ['pushphysicsobject_17',['pushPhysicsObject',['../d6/d26/class_l_t_e_1_1scene.html#a5868911f802a59439e0c8e30ffe14004',1,'LTE::scene']]],
-  ['pushshape_18',['pushShape',['../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#a5a65bbdb4ad36a5f4efeab3bc585fe59',1,'LTE::shaderRenderBuffer']]]
+  ['pushshape_16',['pushShape',['../d1/d3d/class_l_t_e_1_1shader_render_buffer.html#ab0e13e2208a1a3d5cc5b8c95ba0dfc38',1,'LTE::shaderRenderBuffer']]]
 ];

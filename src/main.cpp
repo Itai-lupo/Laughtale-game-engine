@@ -35,23 +35,19 @@ class cube: LTE::osEvent
         LTE::windowPieceId winId; 
         std::string name;
     public:
-        LTE::gameObjectId id;
-        void init(LTE::gameObjectBuilder *builder){ 
-            builder->
-                setObjectName(name)->
-                setObjectTransform({{ 0.0f, 0.0f, 0.0f}, {1.5f, 0.0f, 0.0f}, { 1.0f, 1.0f, 1.0f}})->
-                addComponent(LTE::mesh::build([=, this](LTE::mesh::meshBuilder *builder)
-                    {
-                        builder->setIndexBuffer(pilarIndices, 6 * 6)->
-                        setVertices(pilarPostions, 8*3)->
-                        setShaderName("res/moduleLoading/shaders/Basic.glsl");
-                    }))->
-                addComponent(new LTE::material(glm::vec4({1.0f, 1.0f, 0.0f, 1.0f})));
-        }
+        std::shared_ptr<LTE::gameObject> cubeObj;
 
         cube(LTE::windowPieceId winId, const std::string& name): LTE::osEvent({LTE::osEventsType::WindowClose}), winId(winId), name(name)
         {
-            id =  gameScene->addGameObject([this](LTE::gameObjectBuilder *builder){init(builder); });
+            cubeObj =  gameScene->addGameObject(name);
+            cubeObj->getTransform()->changeXRotation(1.5f);
+            cubeObj->addComponent<LTE::mesh>(LTE::mesh::build([=, this](LTE::mesh::meshBuilder *builder)
+                {
+                    builder->setIndexBuffer(pilarIndices, 6 * 6)->
+                    setVertices(pilarPostions, 8*3)->
+                    setShaderName("res/moduleLoading/shaders/Basic.glsl");
+                }));
+            cubeObj->addComponent<LTE::material>(glm::vec4({1.0f, 1.0f, 0.0f, 1.0f}));
         }
         
         virtual void onWindowClose(LTE::osEventData *sendor)
@@ -169,9 +165,7 @@ class editor: LTE::osEvent
                     }
                     if(ImGui::Button("+"))
                     {
-                        gameScene->addGameObject([&](LTE::gameObjectBuilder *b){
-                            b->setObjectName(buffer);
-                        });
+                        gameScene->addGameObject(buffer);
                     }
                     ImGui::EndPopup();
                 }
@@ -202,19 +196,19 @@ class editor: LTE::osEvent
                         if (ImGui::MenuItem("material"))
                         {
                             if(!selectionContext->hasComponent<LTE::material>())
-                                selectionContext->setComponent<LTE::material>(std::make_shared<LTE::material>(glm::vec4{0, 0, 0, 0}));
+                                selectionContext->addComponent<LTE::material>(glm::vec4{0, 0, 0, 0});
                             ImGui::CloseCurrentPopup();
                         }
 
                         if (ImGui::MenuItem("mesh"))
                         {
                             if(!selectionContext->hasComponent<LTE::mesh>())
-                                selectionContext->setComponent<LTE::mesh>(std::shared_ptr<LTE::mesh>(LTE::mesh::build([=, this](LTE::mesh::meshBuilder *builder)
+                                selectionContext->addComponent<LTE::mesh>(LTE::mesh::build([=, this](LTE::mesh::meshBuilder *builder)
                                                 {
                                                     builder->setIndexBuffer(pilarIndices, 6 * 6)->
                                                     setVertices(pilarPostions, 8*3)->
                                                     setShaderName("res/moduleLoading/shaders/Basic.glsl");
-                                                })));
+                                                }));
                             ImGui::CloseCurrentPopup();
                         }
 
@@ -299,19 +293,16 @@ int main()
         build->setTitle("LTE editor")->useImGui();
     });
 
-    LTE::sceneId sceneId =  LTE::sceneManger::addScene([=](LTE::sceneBuilder *build)
-    {
-        build->setBackgroundColor(new LTE::material(glm::vec4({0.2f, 0.2f, 0.2f, 1.0f})));
-    });
+    gameScene =  LTE::sceneManger::addScene();
 
-    gameScene = LTE::sceneManger::getScene(sceneId);
+    gameScene->backgroundColor->setBaseColor({0.2f, 0.2f, 0.2f, 1.0f});
 
     editor *e = new editor(winId);
 
     cube *c1 = new cube(winId, "cube 1");
     cube *c2 = new cube(winId, "cube 2");
     
-    LTE::sceneManger::getScene(sceneId)->renderToTextureAtEvent("LTE editor/screen texture", "window render/LTE editor/render scene");
+    gameScene->renderToTextureAtEvent("LTE editor/screen texture", "window render/LTE editor/render scene");
 
     LTE::app::run();
     LTE::app::close();

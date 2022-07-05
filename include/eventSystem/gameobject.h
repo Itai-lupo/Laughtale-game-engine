@@ -12,20 +12,16 @@
 #include "LTEError.h"
 namespace LTE
 {
-    class gameObjectBuilder;
     class gameObject
     {     
         private:
             gameObjectId id;
             std::string name = "";
-            std::shared_ptr<transform> ObjectTransform;
-            sceneId parentScene;
+            std::shared_ptr<transform> objectTransform;
             std::vector<std::shared_ptr<component>> components;
 
         public:    
-            std::weak_ptr<gameObject> self;
-            gameObject(sceneId parentScene):parentScene(parentScene){}
-            friend class gameObjectBuilder;
+            gameObject(gameObjectId id, const std::string& name): name(name), id(id), objectTransform(std::make_shared<transform>()){}
 
             const std::string& getName(){ return name; }
             void setName(const std::string& name){ this->name = name; }
@@ -61,15 +57,14 @@ namespace LTE
                 return false;
             }   
 
-            template<typename T> 
-            void setComponent(std::shared_ptr<component> componentToAdd)
+            template<typename T, typename... args> 
+            void addComponent(args&&... a)
             {
                 if(id == 0)
                     throw new ComponentNotFoundException("entitys with id 0 have no data ");
 
-                componentToAdd->setParent(id, parentScene);
-                componentToAdd->init(self.lock());
-                components.push_back(componentToAdd);
+                std::shared_ptr<component> toAdd = std::make_shared<T>(a...);
+                components.push_back(toAdd);
             }    
 
             template<typename T> 
@@ -89,114 +84,62 @@ namespace LTE
                     components.erase(it);
             }    
 
-            void end()
+            ~gameObject()
             {
                 for(auto c: components)
                 {
-                    c->end();
                     c.reset();
                 }
                 components.clear();
-                ObjectTransform->end();
-                ObjectTransform.reset();
+                id = 0;
             }
 
-            transform *getTransform()
-            {
-                return ObjectTransform.get();
-            }
 
-            std::shared_ptr<transform> getTransformPtr()
+            std::shared_ptr<transform> getTransform()
             {
-                return ObjectTransform;
+                return objectTransform;
             }
 
             void forEachComponent(std::function<void(std::shared_ptr<component>)> callback)
             {
-                callback(ObjectTransform);
+                callback(objectTransform);
                 for (uint64_t i = 0; i < components.size(); i++)
                 {
                     callback(components[i]);
                 }
-            }
-
-            virtual ~gameObject()
-            {
-                id = 0;
-            }            
+            }      
     };
-
-    class gameObjectBuilder
-    {
-        protected:
-            std::shared_ptr<gameObject> prodect;
-        
-        public:
-            gameObjectBuilder()
-            {
-                
-            }
-
-            gameObjectBuilder *setObjectName(const std::string& name)
-            {
-                prodect->name = name;
-                return this;
-            }
-
-            gameObjectBuilder *setObjectTransform(glm::mat3 trans)
-            {
-                prodect->ObjectTransform = std::make_shared<transform>(trans);
-                return this;
-            }
-
-            
-            gameObjectBuilder *addComponent(component *toAdd)
-            {
-                prodect->components.push_back(std::shared_ptr<component>(toAdd));
-                return this;
-            }     
-
-            gameObjectBuilder *reset(sceneId parentScene)
-            {
-                prodect = std::make_shared<gameObject>(parentScene);
-                return this;
-            }
-
-
-            std::shared_ptr<gameObject> build(gameObjectId id)
-            {
-                prodect->self = prodect;
-                if(!prodect->ObjectTransform)
-                    prodect->ObjectTransform = std::make_shared<transform>(glm::mat3());
-
-                prodect->id = id;
-                for(std::shared_ptr<component> c: prodect->components){
-                    c->setParent(id, prodect->parentScene);
-                    c->init(prodect);
-                }
-                return prodect;
-            }
-
-    };
-    
-    
 
     class gameObjectsManger
     {
         private:
-            gameObjectBuilder *builder;
-            std::vector<std::shared_ptr< LTE::gameObject>> gameObjects;
+            std::vector<std::shared_ptr<gameObject>> gameObjects;
             gameObjectId nextGameObjectId = 1;
 
         public:
-            gameObjectsManger();
+            gameObjectsManger(){}
             ~gameObjectsManger();
 
-            gameObjectId addGameObject(std::function<void(gameObjectBuilder *Builder)> buildGameObject, sceneId parentScene);
-            std::shared_ptr< LTE::gameObject>getGameObjectByName(const std::string& name);
-            std::shared_ptr< LTE::gameObject>getGameObjectById(gameObjectId id);
+            std::shared_ptr<gameObject> addGameObject(const std::string& name);
             void removeGameObjectById(gameObjectId id);
+            
+            std::shared_ptr<gameObject> getGameObjectByName(const std::string& name);
+            std::shared_ptr<gameObject> getGameObjectById(gameObjectId id);
+
+            
             void forEachObject(std::function<void(std::shared_ptr<gameObject>)> callback);
+
+            template<typename t>
+            std::vector<std::shared_ptr<gameObject>> getGameObjectCacheByComponentType()
+            {
+                std::vector<std::shared_ptr<gameObject>> cache;
+                forEachObject([&](std::shared_ptr<gameObject> temp)
+                {
+                    if(temp->hasComponent<t>())
+                        cache.push_back(temp);
+                });
+                return cache;
+            }
 
     };
 

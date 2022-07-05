@@ -75,10 +75,9 @@ namespace LTE
 
 
         public:
-            virtual void init(std::shared_ptr< LTE::gameObject> parent) override;
-            virtual void end() override;
-
-
+            envelope();
+            ~envelope();
+            
             void setId(apoEnvelopeId id){ this->id = id; }
             apoEnvelopeId getId() { return id; }
 

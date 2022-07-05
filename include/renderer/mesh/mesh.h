@@ -82,6 +82,15 @@ namespace LTE
                     return builder->res;
                 }
 
+                mesh(mesh *temp)
+                {
+                    indices = temp->indices;
+                    count = temp->count;
+                    vertexs = temp->vertexs;
+                    size = temp->size;
+                    shaderToUse = temp->shaderToUse;                    
+                }
+
                 ~mesh(){}
 
                 void setIndexBuffer(uint32_t *indices, uint32_t count);
@@ -95,12 +104,8 @@ namespace LTE
                 std::string getShaderName();
                 int getSize();
                 float *getVB();
-                float *getVertices();
                 uint32_t* getIB();
-
-                virtual void init(std::shared_ptr< LTE::gameObject>) override;
-                virtual void end() override;
-
+                
                 virtual std::string getName() override
                 { 
                     return "mesh";
@@ -110,5 +115,7 @@ namespace LTE
                 {
                     
                 }
+
+                
     };
 }
