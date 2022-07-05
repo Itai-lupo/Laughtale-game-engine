@@ -45,6 +45,13 @@ namespace LTE
     {
 
     }
+    void orthographicCameraControler::setAspectRatio(float aspectRatio)
+    {
+        if(this->aspectRatio == aspectRatio)
+            return;
+        this->aspectRatio = aspectRatio;
+        camera.SetProjection(-aspectRatio * zoomLevel, aspectRatio * zoomLevel, -zoomLevel, zoomLevel);
+    }
 
     orthographicCameraControler::~orthographicCameraControler()
     {

@@ -24,7 +24,6 @@ namespace LTE
     class scene: osEvent
     {
         private:
-            framebuffer *fbo;
             batchRenderer *render;
             sceneEventsManger *eventsManger;
             gameObjectsManger *sceneHierarchy;
@@ -35,7 +34,6 @@ namespace LTE
             scene(sceneId id);
             ~scene(){
                 delete render;
-                delete fbo;
                 delete eventsManger;
                 delete sceneHierarchy;
                 delete sceneCollider;

@@ -22,7 +22,7 @@ namespace LTE
 
     }
 
-    void simpleQuadRenderer::renderScene()
+    void simpleQuadRenderer::renderScene(uint32_t width, uint32_t  hight)
     {
         
         graphicsContext::getRenderApi()->SetClearColor({1, 0, 0, 1});

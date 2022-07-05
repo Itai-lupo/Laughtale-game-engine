@@ -268,7 +268,6 @@ class editor: LTE::osEvent
 
             ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
 
-            // uint64_t textureID = m_Framebuffer->GetColorAttachmentRendererID();
             ImGui::Image(reinterpret_cast<void*>(LTE::assetManager::getAsset<LTE::texture>("LTE editor/screen texture")->getId() ), ImVec2{ viewportPanelSize.x, viewportPanelSize.y  }, ImVec2{ 0, 1 }, ImVec2{ 1, 0 });
             ImGui::End();
             ImGui::PopStyleVar();

@@ -177,9 +177,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d3/df5/class_l_t_e_1_1os_event.html#a0fa013fc78167fcf7f3c6f94ef5addb5">LTE::osEvent</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  281</span>        {</div>
-<div class="line"><span class="lineno">  282</span>            <a class="code hl_variable" href="../../d0/d13/class_l_t_e_1_1app.html#a5adef4179f126155e3d437262ee1c315">LTE::app::keepRunning</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  283</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">  280</span>        {</div>
+<div class="line"><span class="lineno">  281</span>            <a class="code hl_variable" href="../../d0/d13/class_l_t_e_1_1app.html#a5adef4179f126155e3d437262ee1c315">LTE::app::keepRunning</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  282</span>        }</div>
 <div class="ttc" id="aclass_l_t_e_1_1app_html_a5adef4179f126155e3d437262ee1c315"><div class="ttname"><a href="../../d0/d13/class_l_t_e_1_1app.html#a5adef4179f126155e3d437262ee1c315">LTE::app::keepRunning</a></div><div class="ttdeci">static bool keepRunning</div><div class="ttdef"><b>Definition:</b> app.h:26</div></div>
 </div><!-- fragment -->
 </div>
@@ -403,23 +403,22 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  268</span> </div>
 <div class="line"><span class="lineno">  269</span>            ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();</div>
 <div class="line"><span class="lineno">  270</span> </div>
-<div class="line"><span class="lineno">  271</span>            <span class="comment">// uint64_t textureID = m_Framebuffer-&gt;GetColorAttachmentRendererID();</span></div>
-<div class="line"><span class="lineno">  272</span>            ImGui::Image(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(LTE::assetManager::getAsset&lt;LTE::texture&gt;(<span class="stringliteral">&quot;LTE editor/screen texture&quot;</span>)-&gt;getId() ), ImVec2{ viewportPanelSize.x, viewportPanelSize.y  }, ImVec2{ 0, 1 }, ImVec2{ 1, 0 });</div>
-<div class="line"><span class="lineno">  273</span>            ImGui::End();</div>
-<div class="line"><span class="lineno">  274</span>            ImGui::PopStyleVar();</div>
-<div class="line"><span class="lineno">  275</span> </div>
-<div class="line"><span class="lineno">  276</span>            ImGui::End();</div>
-<div class="line"><span class="lineno">  277</span> </div>
-<div class="line"><span class="lineno">  278</span>        }</div>
+<div class="line"><span class="lineno">  271</span>            ImGui::Image(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(LTE::assetManager::getAsset&lt;LTE::texture&gt;(<span class="stringliteral">&quot;LTE editor/screen texture&quot;</span>)-&gt;getId() ), ImVec2{ viewportPanelSize.x, viewportPanelSize.y  }, ImVec2{ 0, 1 }, ImVec2{ 1, 0 });</div>
+<div class="line"><span class="lineno">  272</span>            ImGui::End();</div>
+<div class="line"><span class="lineno">  273</span>            ImGui::PopStyleVar();</div>
+<div class="line"><span class="lineno">  274</span> </div>
+<div class="line"><span class="lineno">  275</span>            ImGui::End();</div>
+<div class="line"><span class="lineno">  276</span> </div>
+<div class="line"><span class="lineno">  277</span>        }</div>
 <div class="ttc" id="aclass_l_t_e_1_1material_html"><div class="ttname"><a href="../../dc/dda/class_l_t_e_1_1material.html">LTE::material</a></div><div class="ttdef"><b>Definition:</b> material.h:15</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1material_html_ad2ff04cdbbdd2bb8e2151a8ebce4fb86"><div class="ttname"><a href="../../dc/dda/class_l_t_e_1_1material.html#ad2ff04cdbbdd2bb8e2151a8ebce4fb86">LTE::material::displayComponentProprties</a></div><div class="ttdeci">virtual void displayComponentProprties() override</div><div class="ttdef"><b>Definition:</b> material.h:64</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1mesh_1_1mesh_builder_html"><div class="ttname"><a href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html">LTE::mesh::meshBuilder</a></div><div class="ttdef"><b>Definition:</b> mesh.h:24</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1mesh_1_1mesh_builder_html_aaf34d2886359138366773a6cf33177c9"><div class="ttname"><a href="../../d1/dc9/class_l_t_e_1_1mesh_1_1mesh_builder.html#aaf34d2886359138366773a6cf33177c9">LTE::mesh::meshBuilder::setIndexBuffer</a></div><div class="ttdeci">meshBuilder * setIndexBuffer(uint32_t *indices, uint32_t count)</div><div class="ttdef"><b>Definition:</b> mesh.h:32</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1mesh_html"><div class="ttname"><a href="../../d0/d6c/class_l_t_e_1_1mesh.html">LTE::mesh</a></div><div class="ttdef"><b>Definition:</b> mesh.h:21</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1mesh_html_a0a75e6d008a219e5a604a1d9e303a243"><div class="ttname"><a href="../../d0/d6c/class_l_t_e_1_1mesh.html#a0a75e6d008a219e5a604a1d9e303a243">LTE::mesh::build</a></div><div class="ttdeci">static mesh * build(std::function&lt; void(meshBuilder *)&gt; buildFunc)</div><div class="ttdef"><b>Definition:</b> mesh.h:74</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_a175550c54709e4c719913e94b906b148"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">LTE::scene::backgroundColor</a></div><div class="ttdeci">material * backgroundColor</div><div class="ttdef"><b>Definition:</b> scene.h:48</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_a22390168010d11dadd0250827580578d"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a22390168010d11dadd0250827580578d">LTE::scene::addGameObject</a></div><div class="ttdeci">std::shared_ptr&lt; gameObject &gt; addGameObject(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> scene.cpp:37</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_aa3cd16b5cadb68db455e563113027667"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#aa3cd16b5cadb68db455e563113027667">LTE::scene::forEachObject</a></div><div class="ttdeci">void forEachObject(std::function&lt; void(std::shared_ptr&lt; gameObject &gt;)&gt; callback)</div><div class="ttdef"><b>Definition:</b> scene.cpp:57</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a175550c54709e4c719913e94b906b148"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">LTE::scene::backgroundColor</a></div><div class="ttdeci">material * backgroundColor</div><div class="ttdef"><b>Definition:</b> scene.h:46</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a22390168010d11dadd0250827580578d"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a22390168010d11dadd0250827580578d">LTE::scene::addGameObject</a></div><div class="ttdeci">std::shared_ptr&lt; gameObject &gt; addGameObject(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> scene.cpp:36</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_aa3cd16b5cadb68db455e563113027667"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#aa3cd16b5cadb68db455e563113027667">LTE::scene::forEachObject</a></div><div class="ttdeci">void forEachObject(std::function&lt; void(std::shared_ptr&lt; gameObject &gt;)&gt; callback)</div><div class="ttdef"><b>Definition:</b> scene.cpp:56</div></div>
 <div class="ttc" id="amain_8cpp_html_a458d5030425f11c9e380d39632fb000f"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a458d5030425f11c9e380d39632fb000f">pilarPostions</a></div><div class="ttdeci">float pilarPostions[8 *3]</div><div class="ttdef"><b>Definition:</b> main.cpp:9</div></div>
 <div class="ttc" id="amain_8cpp_html_addc1c84bbfb8140ed4c41045bd8a8031"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#addc1c84bbfb8140ed4c41045bd8a8031">pilarIndices</a></div><div class="ttdeci">unsigned int pilarIndices[6 *6]</div><div class="ttdef"><b>Definition:</b> main.cpp:22</div></div>
 </div><!-- fragment -->

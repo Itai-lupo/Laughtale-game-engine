@@ -42,19 +42,19 @@ namespace LTE
         api->init();
         meshFactory = app::getGraphicAPIFactory(type)->createMeshAbsrtactFactory();
 		
-		
-
-
         uint64_t startTime = app::getTime();
         uint64_t now = app::getTime();
+        framebuffer *fbo = new framebuffer(app::getWindowManger()->getWindow(windowId)->Width, app::getWindowManger()->getWindow(windowId)->Height);
 
-        windowRenderData *sendorData = new windowRenderData(startTime, startTime, 0);
+        windowRenderData *sendorData = new windowRenderData(fbo, startTime, startTime, 0);
 
         sendorData->windowId = windowId;
 
-        const std::string textureToRender = app::getWindowManger()->getWindow(windowId)->Title + "/" + "screen texture"; 
-        
+        const std::string textureToRender = app::getWindowManger()->getWindow(windowId)->Title + "/" + "screen texture";
+
+        fbo->attachColorRenderTarget(assetManager::getAsset<texture>(textureToRender), 0);
         contextRenderEngine = new simpleQuadRenderer(textureToRender);
+        
         ImGuiEvents *ImGuiE;
 
         if(app::getWindowManger()->getWindow(windowId)->useImGui)
@@ -71,12 +71,13 @@ namespace LTE
             if(changeViewPort)
             {
                 api->SetViewport(x, y, width, height);
+                fbo->resize(width, height);
                 changeViewPort = false;
             }
             
             if(windowRun)
                 app::getEventManger()->trigerEvent(sendorData, osEventsType::windowRender);
-            contextRenderEngine->renderScene();
+            contextRenderEngine->renderScene(width, height);
 
             if(windowRun && app::getWindowManger()->getWindow(windowId)->useImGui)
                 ImGuiE->onImGuiUpdate(app::getWindowManger()->getWindow(windowId), sendorData);

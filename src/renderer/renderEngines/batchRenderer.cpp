@@ -5,6 +5,7 @@
 #include "LTEError.h"
 #include "app.h"
 
+
 #include <algorithm>
 
 namespace LTE
@@ -109,11 +110,12 @@ namespace LTE
         }
     }
 
-    void batchRenderer::renderScene()
+    void batchRenderer::renderScene(uint32_t width, uint32_t  hight)
     {
         gameObjectsCash = Scene->getGameObjectCacheByComponentType<mesh>();
         try
         {
+            Scene->camera->getComponent<coreCameraControler>()->setAspectRatio((float)width/(float)hight);
             ViewProjectionMatrix = Scene->camera->getComponent<coreCameraControler>()->getCamera()->getViewProjectionMatrix();
             /* code */
         }

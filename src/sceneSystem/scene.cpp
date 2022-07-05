@@ -15,7 +15,6 @@ namespace LTE
         sceneCollider = new colliderSystem2D(this);
         backgroundColor = new material(glm::vec4({0.05f, 0.05f, 0.55f, 1.0f}));
         
-        fbo = new framebuffer(1280, 720);
         render = new batchRenderer(this);
         eventsManger = new sceneEventsManger();
         sceneHierarchy = new gameObjectsManger();
@@ -23,15 +22,15 @@ namespace LTE
 
     void scene::renderToTextureAtEvent(const std::string& texturePath, const std::string& eventPath)
     {
-        fbo->attachColorRenderTarget(assetManager::getAsset<texture>(texturePath), 0);
+
     }
 
     void scene::onWindowRender(windowRenderData *sendor)
     {
         onlyRunOnWindow = sendor->windowId;
-        fbo->bind();
-        render->renderScene();
-        fbo->unbind();
+        sendor->fbo->bind();
+        render->renderScene(sendor->fbo->getWidth(), sendor->fbo->getHight());
+        sendor->fbo->unbind();
     }
 
     std::shared_ptr<gameObject> scene::addGameObject(const std::string& name)

@@ -12,7 +12,7 @@ namespace LTE
             virtual ~coreRenderer() = default;          
 
 
-            virtual void renderScene() = 0;
+            virtual void renderScene(uint32_t width, uint32_t  hight) = 0;
     };
     
     

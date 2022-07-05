@@ -1,7 +1,16 @@
 <map id="include/eventSystem/osEvents/osEventTypes/windowRenderData.h" name="include/eventSystem/osEvents/osEventTypes/windowRenderData.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,172,61"/>
-<area shape="rect" id="node2" href="$d8/dac/os_event_data_8h.html" title=" " alt="" coords="35,109,142,136"/>
-<area shape="rect" id="node3" href="$d5/dc4/core_8h.html" title=" " alt="" coords="60,184,117,211"/>
-<area shape="rect" id="node4" title=" " alt="" coords="14,259,75,285"/>
-<area shape="rect" id="node5" title=" " alt="" coords="100,259,168,285"/>
+<area shape="rect" id="node1" title=" " alt="" coords="343,5,509,61"/>
+<area shape="rect" id="node2" href="$d8/dac/os_event_data_8h.html" title=" " alt="" coords="622,184,729,211"/>
+<area shape="rect" id="node6" href="$d4/dd2/framebuffer_8h.html" title=" " alt="" coords="335,109,432,136"/>
+<area shape="rect" id="node3" href="$d5/dc4/core_8h.html" title=" " alt="" coords="675,259,732,285"/>
+<area shape="rect" id="node4" title=" " alt="" coords="627,333,689,360"/>
+<area shape="rect" id="node5" title=" " alt="" coords="713,333,781,360"/>
+<area shape="rect" id="node7" href="$df/dba/texture_8h.html" title=" " alt="" coords="312,184,383,211"/>
+<area shape="rect" id="node9" title=" " alt="" coords="5,259,124,285"/>
+<area shape="rect" id="node8" title=" " alt="" coords="163,333,217,360"/>
+<area shape="rect" id="node10" href="$d3/d3e/asset_8h.html" title=" " alt="" coords="199,259,263,285"/>
+<area shape="rect" id="node11" href="$d1/d8c/logger_8h.html" title=" " alt="" coords="287,259,354,285"/>
+<area shape="rect" id="node13" title=" " alt="" coords="379,259,471,285"/>
+<area shape="rect" id="node14" title=" " alt="" coords="495,259,651,285"/>
+<area shape="rect" id="node12" title=" " alt="" coords="270,333,371,360"/>
 </map>

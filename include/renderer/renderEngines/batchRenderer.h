@@ -39,7 +39,7 @@ namespace LTE
             batchRenderer(scene *Scene): Scene(Scene){}
 
 
-            void renderScene();
+            void renderScene(uint32_t width, uint32_t  hight);
     };
     
     

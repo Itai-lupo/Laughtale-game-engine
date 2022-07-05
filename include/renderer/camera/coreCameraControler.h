@@ -11,6 +11,7 @@ namespace LTE
     
             virtual coreCamera *getCamera() = 0;
             virtual float getAspectRatio() = 0;
+            virtual void setAspectRatio(float) = 0;
 
             
             virtual std::string getName() override

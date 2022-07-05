@@ -174,13 +174,12 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   15</span>        sceneCollider = <span class="keyword">new</span> colliderSystem2D(<span class="keyword">this</span>);</div>
 <div class="line"><span class="lineno">   16</span>        <a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">backgroundColor</a> = <span class="keyword">new</span> material(glm::vec4({0.05f, 0.05f, 0.55f, 1.0f}));</div>
 <div class="line"><span class="lineno">   17</span>        </div>
-<div class="line"><span class="lineno">   18</span>        fbo = <span class="keyword">new</span> framebuffer(1280, 720);</div>
-<div class="line"><span class="lineno">   19</span>        render = <span class="keyword">new</span> batchRenderer(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   20</span>        eventsManger = <span class="keyword">new</span> sceneEventsManger();</div>
-<div class="line"><span class="lineno">   21</span>        sceneHierarchy = <span class="keyword">new</span> gameObjectsManger();</div>
-<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="line"><span class="lineno">   18</span>        render = <span class="keyword">new</span> batchRenderer(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   19</span>        eventsManger = <span class="keyword">new</span> sceneEventsManger();</div>
+<div class="line"><span class="lineno">   20</span>        sceneHierarchy = <span class="keyword">new</span> gameObjectsManger();</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1os_event_html_ad813267cba5aa31492d79181d2bc0e7a"><div class="ttname"><a href="../../d3/df5/class_l_t_e_1_1os_event.html#ad813267cba5aa31492d79181d2bc0e7a">LTE::osEvent::osEvent</a></div><div class="ttdeci">osEvent(std::vector&lt; osEventsType &gt; eventsToUse)</div><div class="ttdef"><b>Definition:</b> osEvents.cpp:10</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_a175550c54709e4c719913e94b906b148"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">LTE::scene::backgroundColor</a></div><div class="ttdeci">material * backgroundColor</div><div class="ttdef"><b>Definition:</b> scene.h:48</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a175550c54709e4c719913e94b906b148"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">LTE::scene::backgroundColor</a></div><div class="ttdeci">material * backgroundColor</div><div class="ttdef"><b>Definition:</b> scene.h:46</div></div>
 <div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2afc09e93901ba98e25e7c2ed7514ad750"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2afc09e93901ba98e25e7c2ed7514ad750">LTE::windowRender</a></div><div class="ttdeci">@ windowRender</div><div class="ttdef"><b>Definition:</b> osEvents.h:24</div></div>
 </div><!-- fragment -->
 </div>
@@ -207,14 +206,13 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                    {</div>
-<div class="line"><span class="lineno">   37</span>                <span class="keyword">delete</span> render;</div>
-<div class="line"><span class="lineno">   38</span>                <span class="keyword">delete</span> fbo;</div>
-<div class="line"><span class="lineno">   39</span>                <span class="keyword">delete</span> eventsManger;</div>
-<div class="line"><span class="lineno">   40</span>                <span class="keyword">delete</span> sceneHierarchy;</div>
-<div class="line"><span class="lineno">   41</span>                <span class="keyword">delete</span> sceneCollider;</div>
-<div class="line"><span class="lineno">   42</span>                <span class="keyword">delete</span> <a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">backgroundColor</a>;</div>
-<div class="line"><span class="lineno">   43</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                    {</div>
+<div class="line"><span class="lineno">   36</span>                <span class="keyword">delete</span> render;</div>
+<div class="line"><span class="lineno">   37</span>                <span class="keyword">delete</span> eventsManger;</div>
+<div class="line"><span class="lineno">   38</span>                <span class="keyword">delete</span> sceneHierarchy;</div>
+<div class="line"><span class="lineno">   39</span>                <span class="keyword">delete</span> sceneCollider;</div>
+<div class="line"><span class="lineno">   40</span>                <span class="keyword">delete</span> <a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">backgroundColor</a>;</div>
+<div class="line"><span class="lineno">   41</span>            }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -234,9 +232,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> sceneHierarchy-&gt;<a class="code hl_function" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#ad13755c0f90230c599f2e69010df7b64">addGameObject</a>(name);</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> sceneHierarchy-&gt;<a class="code hl_function" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#ad13755c0f90230c599f2e69010df7b64">addGameObject</a>(name);</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1game_objects_manger_html_ad13755c0f90230c599f2e69010df7b64"><div class="ttname"><a href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#ad13755c0f90230c599f2e69010df7b64">LTE::gameObjectsManger::addGameObject</a></div><div class="ttdeci">std::shared_ptr&lt; gameObject &gt; addGameObject(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> gameobject.cpp:14</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -276,9 +274,9 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
-<div class="line"><span class="lineno">   59</span>        sceneHierarchy-&gt;<a class="code hl_function" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#ad54a3a9684fbbd23a66b317d93fde338">forEachObject</a>(callback);</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>        sceneHierarchy-&gt;<a class="code hl_function" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#ad54a3a9684fbbd23a66b317d93fde338">forEachObject</a>(callback);</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1game_objects_manger_html_ad54a3a9684fbbd23a66b317d93fde338"><div class="ttname"><a href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#ad54a3a9684fbbd23a66b317d93fde338">LTE::gameObjectsManger::forEachObject</a></div><div class="ttdeci">void forEachObject(std::function&lt; void(std::shared_ptr&lt; gameObject &gt;)&gt; callback)</div><div class="ttdef"><b>Definition:</b> gameobject.cpp:62</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -314,10 +312,10 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   53</span>            {</div>
-<div class="line"><span class="lineno">   54</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a0456c344be902b83958375424f515935">camera</a>-&gt;getComponent&lt;coreCameraControler&gt;()-&gt;getAspectRatio();</div>
-<div class="line"><span class="lineno">   55</span>            }</div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_a0456c344be902b83958375424f515935"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a0456c344be902b83958375424f515935">LTE::scene::camera</a></div><div class="ttdeci">std::shared_ptr&lt; gameObject &gt; camera</div><div class="ttdef"><b>Definition:</b> scene.h:47</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>            {</div>
+<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a0456c344be902b83958375424f515935">camera</a>-&gt;getComponent&lt;coreCameraControler&gt;()-&gt;getAspectRatio();</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a0456c344be902b83958375424f515935"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a0456c344be902b83958375424f515935">LTE::scene::camera</a></div><div class="ttdeci">std::shared_ptr&lt; gameObject &gt; camera</div><div class="ttdef"><b>Definition:</b> scene.h:45</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -343,9 +341,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   62</span>            {</div>
-<div class="line"><span class="lineno">   63</span>                <span class="keywordflow">return</span> eventsManger;</div>
-<div class="line"><span class="lineno">   64</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">return</span> eventsManger;</div>
+<div class="line"><span class="lineno">   62</span>            }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -374,9 +372,9 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
-<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> sceneHierarchy-&gt;<a class="code hl_function" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#a170f08c9c6c9091896dde979f926f794">getGameObjectById</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> sceneHierarchy-&gt;<a class="code hl_function" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#a170f08c9c6c9091896dde979f926f794">getGameObjectById</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1game_objects_manger_html_a170f08c9c6c9091896dde979f926f794"><div class="ttname"><a href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#a170f08c9c6c9091896dde979f926f794">LTE::gameObjectsManger::getGameObjectById</a></div><div class="ttdeci">std::shared_ptr&lt; gameObject &gt; getGameObjectById(gameObjectId id)</div><div class="ttdef"><b>Definition:</b> gameobject.cpp:36</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -405,9 +403,9 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> sceneHierarchy-&gt;<a class="code hl_function" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#af9432764c7fe1500b2252c0479e917d0">getGameObjectByName</a>(name);</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> sceneHierarchy-&gt;<a class="code hl_function" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#af9432764c7fe1500b2252c0479e917d0">getGameObjectByName</a>(name);</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1game_objects_manger_html_af9432764c7fe1500b2252c0479e917d0"><div class="ttname"><a href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#af9432764c7fe1500b2252c0479e917d0">LTE::gameObjectsManger::getGameObjectByName</a></div><div class="ttdeci">std::shared_ptr&lt; gameObject &gt; getGameObjectByName(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> gameobject.cpp:22</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -445,9 +443,9 @@ template&lt;typename t &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   75</span>            {</div>
-<div class="line"><span class="lineno">   76</span>                <span class="keywordflow">return</span> sceneHierarchy-&gt;<a class="code hl_function" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#a585f948319d63317bd3bf0ee1fb485ff">getGameObjectCacheByComponentType</a>&lt;t&gt;();</div>
-<div class="line"><span class="lineno">   77</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>            {</div>
+<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">return</span> sceneHierarchy-&gt;<a class="code hl_function" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#a585f948319d63317bd3bf0ee1fb485ff">getGameObjectCacheByComponentType</a>&lt;t&gt;();</div>
+<div class="line"><span class="lineno">   75</span>            }</div>
 <div class="ttc" id="aclass_l_t_e_1_1game_objects_manger_html_a585f948319d63317bd3bf0ee1fb485ff"><div class="ttname"><a href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#a585f948319d63317bd3bf0ee1fb485ff">LTE::gameObjectsManger::getGameObjectCacheByComponentType</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; gameObject &gt; &gt; getGameObjectCacheByComponentType()</div><div class="ttdef"><b>Definition:</b> gameobject.h:133</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -484,7 +482,7 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   45</span>{ <span class="keywordflow">return</span> id; }</div>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>{ <span class="keywordflow">return</span> id; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -513,25 +511,25 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d3/df5/class_l_t_e_1_1os_event.html#a0f813dc1c280f015815228396f7e1a9a">LTE::osEvent</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
-<div class="line"><span class="lineno">   31</span>        <a class="code hl_variable" href="../../d3/df5/class_l_t_e_1_1os_event.html#a223165ce1a547753ad53ccd72b8f0131">onlyRunOnWindow</a> = sendor-&gt;windowId;</div>
-<div class="line"><span class="lineno">   32</span>        fbo-&gt;<a class="code hl_function" href="../../da/da3/class_l_t_e_1_1framebuffer.html#af9c67e56d3e1f5ac90ba7abb6270fa70">bind</a>();</div>
-<div class="line"><span class="lineno">   33</span>        render-&gt;<a class="code hl_function" href="../../dc/ddb/class_l_t_e_1_1batch_renderer.html#a1d151b9d86f95c543b05504646fae958">renderScene</a>();</div>
-<div class="line"><span class="lineno">   34</span>        fbo-&gt;<a class="code hl_function" href="../../da/da3/class_l_t_e_1_1framebuffer.html#ad9bc52fcb2d48a5c13a7b9cb8d709076">unbind</a>();</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1batch_renderer_html_a1d151b9d86f95c543b05504646fae958"><div class="ttname"><a href="../../dc/ddb/class_l_t_e_1_1batch_renderer.html#a1d151b9d86f95c543b05504646fae958">LTE::batchRenderer::renderScene</a></div><div class="ttdeci">void renderScene()</div><div class="ttdef"><b>Definition:</b> batchRenderer.cpp:112</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1framebuffer_html_ad9bc52fcb2d48a5c13a7b9cb8d709076"><div class="ttname"><a href="../../da/da3/class_l_t_e_1_1framebuffer.html#ad9bc52fcb2d48a5c13a7b9cb8d709076">LTE::framebuffer::unbind</a></div><div class="ttdeci">void unbind()</div><div class="ttdef"><b>Definition:</b> framebuffer.h:54</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1framebuffer_html_af9c67e56d3e1f5ac90ba7abb6270fa70"><div class="ttname"><a href="../../da/da3/class_l_t_e_1_1framebuffer.html#af9c67e56d3e1f5ac90ba7abb6270fa70">LTE::framebuffer::bind</a></div><div class="ttdeci">void bind()</div><div class="ttdef"><b>Definition:</b> framebuffer.h:48</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>    {</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="../../d3/df5/class_l_t_e_1_1os_event.html#a223165ce1a547753ad53ccd72b8f0131">onlyRunOnWindow</a> = sendor-&gt;windowId;</div>
+<div class="line"><span class="lineno">   31</span>        sendor-&gt;fbo-&gt;bind();</div>
+<div class="line"><span class="lineno">   32</span>        render-&gt;<a class="code hl_function" href="../../dc/ddb/class_l_t_e_1_1batch_renderer.html#abd72fef370d88ea0f4b91e8cfe317f92">renderScene</a>(sendor-&gt;fbo-&gt;getWidth(), sendor-&gt;fbo-&gt;getHight());</div>
+<div class="line"><span class="lineno">   33</span>        sendor-&gt;fbo-&gt;unbind();</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+<div class="ttc" id="aclass_l_t_e_1_1batch_renderer_html_abd72fef370d88ea0f4b91e8cfe317f92"><div class="ttname"><a href="../../dc/ddb/class_l_t_e_1_1batch_renderer.html#abd72fef370d88ea0f4b91e8cfe317f92">LTE::batchRenderer::renderScene</a></div><div class="ttdeci">void renderScene(uint32_t width, uint32_t hight)</div><div class="ttdef"><b>Definition:</b> batchRenderer.cpp:113</div></div>
 <div class="ttc" id="aclass_l_t_e_1_1os_event_html_a223165ce1a547753ad53ccd72b8f0131"><div class="ttname"><a href="../../d3/df5/class_l_t_e_1_1os_event.html#a223165ce1a547753ad53ccd72b8f0131">LTE::osEvent::onlyRunOnWindow</a></div><div class="ttdeci">windowPieceId onlyRunOnWindow</div><div class="ttdef"><b>Definition:</b> osEvents.h:70</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d26/class_l_t_e_1_1scene_a22d974e4b1f813b7a267261ce9e35416_cgraph.png" border="0" usemap="#ad6/d26/class_l_t_e_1_1scene_a22d974e4b1f813b7a267261ce9e35416_cgraph" alt=""/></div>
 <map name="ad6/d26/class_l_t_e_1_1scene_a22d974e4b1f813b7a267261ce9e35416_cgraph" id="ad6/d26/class_l_t_e_1_1scene_a22d974e4b1f813b7a267261ce9e35416_cgraph">
-<area shape="rect" title=" " alt="" coords="5,64,200,91"/>
-<area shape="rect" href="../../da/da3/class_l_t_e_1_1framebuffer.html#af9c67e56d3e1f5ac90ba7abb6270fa70" title=" " alt="" coords="255,5,402,32"/>
-<area shape="rect" href="../../dc/ddb/class_l_t_e_1_1batch_renderer.html#a1d151b9d86f95c543b05504646fae958" title=" " alt="" coords="261,57,397,98"/>
-<area shape="rect" href="../../da/da3/class_l_t_e_1_1framebuffer.html#ad9bc52fcb2d48a5c13a7b9cb8d709076" title=" " alt="" coords="248,123,409,149"/>
+<area shape="rect" title=" " alt="" coords="5,107,200,133"/>
+<area shape="rect" href="../../da/da3/class_l_t_e_1_1framebuffer.html#af9c67e56d3e1f5ac90ba7abb6270fa70" title=" " alt="" coords="262,5,409,32"/>
+<area shape="rect" href="../../da/da3/class_l_t_e_1_1framebuffer.html#a75a8d79e308108eed4ac8e508d5635ff" title=" " alt="" coords="249,56,421,83"/>
+<area shape="rect" href="../../da/da3/class_l_t_e_1_1framebuffer.html#a7949c0e8526f6a6d449c9a91348a2901" title=" " alt="" coords="248,107,423,133"/>
+<area shape="rect" href="../../dc/ddb/class_l_t_e_1_1batch_renderer.html#abd72fef370d88ea0f4b91e8cfe317f92" title=" " alt="" coords="267,158,403,199"/>
+<area shape="rect" href="../../da/da3/class_l_t_e_1_1framebuffer.html#ad9bc52fcb2d48a5c13a7b9cb8d709076" title=" " alt="" coords="255,224,416,251"/>
 </map>
 </div>
 
@@ -552,9 +550,9 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
-<div class="line"><span class="lineno">   54</span>        sceneHierarchy-&gt;<a class="code hl_function" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#aa172bca285a3a77c2fcade53d08c7a62">removeGameObjectById</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        sceneHierarchy-&gt;<a class="code hl_function" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#aa172bca285a3a77c2fcade53d08c7a62">removeGameObjectById</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1game_objects_manger_html_aa172bca285a3a77c2fcade53d08c7a62"><div class="ttname"><a href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#aa172bca285a3a77c2fcade53d08c7a62">LTE::gameObjectsManger::removeGameObjectById</a></div><div class="ttdeci">void removeGameObjectById(gameObjectId id)</div><div class="ttdef"><b>Definition:</b> gameobject.cpp:49</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -610,20 +608,10 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
-<div class="line"><span class="lineno">   26</span>        fbo-&gt;<a class="code hl_function" href="../../da/da3/class_l_t_e_1_1framebuffer.html#a1bc560dbf7979b83551ddb6bf272fc0d">attachColorRenderTarget</a>(assetManager::getAsset&lt;texture&gt;(texturePath), 0);</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1framebuffer_html_a1bc560dbf7979b83551ddb6bf272fc0d"><div class="ttname"><a href="../../da/da3/class_l_t_e_1_1framebuffer.html#a1bc560dbf7979b83551ddb6bf272fc0d">LTE::framebuffer::attachColorRenderTarget</a></div><div class="ttdeci">void attachColorRenderTarget(texture *attachmentData, colorAttachmentSlot attachmentSlot)</div><div class="ttdef"><b>Definition:</b> framebuffer.h:60</div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d6/d26/class_l_t_e_1_1scene_a5f1092527c4525980fe1a2f85a1a5163_cgraph.png" border="0" usemap="#ad6/d26/class_l_t_e_1_1scene_a5f1092527c4525980fe1a2f85a1a5163_cgraph" alt=""/></div>
-<map name="ad6/d26/class_l_t_e_1_1scene_a5f1092527c4525980fe1a2f85a1a5163_cgraph" id="ad6/d26/class_l_t_e_1_1scene_a5f1092527c4525980fe1a2f85a1a5163_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,192,47"/>
-<area shape="rect" href="../../da/da3/class_l_t_e_1_1framebuffer.html#a1bc560dbf7979b83551ddb6bf272fc0d" title=" " alt="" coords="240,5,399,47"/>
-</map>
-</div>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
