@@ -38,8 +38,26 @@ namespace LTE
             virtual void setAspectRatio(float aspectRatio) override;
             virtual float getAspectRatio() { return  aspectRatio; }
 
+
+            virtual std::string getName() override
+            { 
+                return "orthographicCameraControler";
+            }
+
             virtual coreCamera *getCamera() override;
 
 
+    };
+
+
+    class orthographicCameraControlerFactory: public componentAbstractFactory
+    {
+        public:
+            virtual ~orthographicCameraControlerFactory() = default;
+
+            virtual std::shared_ptr<component> createComponent() override
+            {
+                return std::make_shared<orthographicCameraControler>(1);
+            }
     };
 }

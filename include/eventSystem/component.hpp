@@ -1,8 +1,10 @@
 #pragma once
 #include <functional>
 #include <vector>
-#include "core.hpp"
 #include <string>
+#include <memory.h>
+
+#include "core.hpp"
 
 namespace LTE
 {
@@ -17,4 +19,11 @@ namespace LTE
             virtual void displayComponentProprties() = 0;
     };
 
+    class componentAbstractFactory
+    {
+        public:
+            virtual ~componentAbstractFactory() = default;
+
+            virtual std::shared_ptr<component> createComponent() = 0;
+    };
 }

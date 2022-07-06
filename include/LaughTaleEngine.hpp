@@ -6,6 +6,7 @@
 #include "logger.hpp"
 
 #include "gameobject.hpp"
+#include "componentsFactory.hpp"
 
 #include "windowManger.hpp"
 #include "MouseButtonCodes.hpp"

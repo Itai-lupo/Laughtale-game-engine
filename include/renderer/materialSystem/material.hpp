@@ -66,4 +66,15 @@ namespace LTE
     			ImGui::ColorEdit4("Color", glm::value_ptr(baseColor));
             }
     };
+
+    class matrialFactory: public componentAbstractFactory
+    {
+        public:
+            virtual ~matrialFactory() = default;
+
+            virtual std::shared_ptr<component> createComponent() override
+            {
+                return std::make_shared<material>(glm::vec4{1, 1, 1, 1});
+            }
+    };
 }

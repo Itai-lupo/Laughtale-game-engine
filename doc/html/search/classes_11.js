@@ -18,5 +18,6 @@ var searchData=
   ['soundfilesplayer_15',['soundFilesPlayer',['../d4/d0c/class_l_t_e_1_1sound_files_player.html',1,'LTE']]],
   ['soundsynthesizer_16',['soundSynthesizer',['../d2/dff/class_l_t_e_1_1sound_synthesizer.html',1,'LTE']]],
   ['spritedimensionsdata_17',['spriteDimensionsData',['../d7/d91/struct_l_t_e_1_1sprite_dimensions_data.html',1,'LTE']]],
-  ['squrecollider_18',['squreCollider',['../dd/d78/class_l_t_e_1_1squre_collider.html',1,'LTE']]]
+  ['squrecollider_18',['squreCollider',['../dd/d78/class_l_t_e_1_1squre_collider.html',1,'LTE']]],
+  ['squrecolliderfactory_19',['squreColliderFactory',['../da/dda/class_l_t_e_1_1squre_collider_factory.html',1,'LTE']]]
 ];

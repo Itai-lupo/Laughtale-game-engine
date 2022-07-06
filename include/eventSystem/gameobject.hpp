@@ -9,7 +9,10 @@
 #include "logger.hpp"
 #include "component.hpp"
 #include "transform.hpp"
+#include "componentsFactory.hpp"
 #include "LTEError.hpp"
+
+
 namespace LTE
 {
     class gameObject
@@ -65,6 +68,28 @@ namespace LTE
 
                 std::shared_ptr<component> toAdd = std::make_shared<T>(a...);
                 components.push_back(toAdd);
+            }    
+
+            bool hasComponent(const std::string& name)
+            {
+                if(id == 0)
+                    throw new ComponentNotFoundException("entitys with id 0 have no data ");
+                
+                for (auto comp: components)
+                {
+                    if(comp->getName() == name)
+                        return true; 
+                }
+
+                return false;
+            }   
+
+            void addComponent(const std::string& name)
+            {
+                if(id == 0)
+                    throw new ComponentNotFoundException("entitys with id 0 have no data ");
+
+                components.push_back(componentsFactory::createComponent(name));
             }    
 
             template<typename T> 

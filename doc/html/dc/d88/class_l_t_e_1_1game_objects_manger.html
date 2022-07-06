@@ -136,7 +136,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  120</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -333,15 +333,15 @@ template&lt;typename t &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  134</span>            {</div>
-<div class="line"><span class="lineno">  135</span>                std::vector&lt;std::shared_ptr&lt;gameObject&gt;&gt; cache;</div>
-<div class="line"><span class="lineno">  136</span>                <a class="code hl_function" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#ad54a3a9684fbbd23a66b317d93fde338">forEachObject</a>([&amp;](std::shared_ptr&lt;gameObject&gt; temp)</div>
-<div class="line"><span class="lineno">  137</span>                {</div>
-<div class="line"><span class="lineno">  138</span>                    <span class="keywordflow">if</span>(temp-&gt;hasComponent&lt;t&gt;())</div>
-<div class="line"><span class="lineno">  139</span>                        cache.push_back(temp);</div>
-<div class="line"><span class="lineno">  140</span>                });</div>
-<div class="line"><span class="lineno">  141</span>                <span class="keywordflow">return</span> cache;</div>
-<div class="line"><span class="lineno">  142</span>            }</div>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>            {</div>
+<div class="line"><span class="lineno">  160</span>                std::vector&lt;std::shared_ptr&lt;gameObject&gt;&gt; cache;</div>
+<div class="line"><span class="lineno">  161</span>                <a class="code hl_function" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#ad54a3a9684fbbd23a66b317d93fde338">forEachObject</a>([&amp;](std::shared_ptr&lt;gameObject&gt; temp)</div>
+<div class="line"><span class="lineno">  162</span>                {</div>
+<div class="line"><span class="lineno">  163</span>                    <span class="keywordflow">if</span>(temp-&gt;hasComponent&lt;t&gt;())</div>
+<div class="line"><span class="lineno">  164</span>                        cache.push_back(temp);</div>
+<div class="line"><span class="lineno">  165</span>                });</div>
+<div class="line"><span class="lineno">  166</span>                <span class="keywordflow">return</span> cache;</div>
+<div class="line"><span class="lineno">  167</span>            }</div>
 <div class="ttc" id="aclass_l_t_e_1_1game_objects_manger_html_ad54a3a9684fbbd23a66b317d93fde338"><div class="ttname"><a href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#ad54a3a9684fbbd23a66b317d93fde338">LTE::gameObjectsManger::forEachObject</a></div><div class="ttdeci">void forEachObject(std::function&lt; void(std::shared_ptr&lt; gameObject &gt;)&gt; callback)</div><div class="ttdef"><b>Definition:</b> gameobject.cpp:62</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
