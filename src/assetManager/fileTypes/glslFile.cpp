@@ -1,7 +1,7 @@
-#include "glslFile.h"
-#include "shaderRenderBuffer.h"
-#include "windowManger.h"
-#include "logger.h"
+#include "glslFile.hpp"
+#include "shaderRenderBuffer.hpp"
+#include "windowManger.hpp"
+#include "logger.hpp"
 
 #include <string>
 #include <iostream>

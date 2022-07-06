@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "LaughTaleEngine.h"
+#include "LaughTaleEngine.hpp"
 #include <iostream>
 #include <stdio.h>
 

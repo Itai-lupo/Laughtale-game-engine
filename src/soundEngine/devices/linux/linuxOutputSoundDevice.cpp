@@ -1,7 +1,7 @@
 #pragma once
-#include "core.h"
-#include "linuxOutputSoundDevice.h"
-#include "logger.h"
+#include "core.hpp"
+#include "linuxOutputSoundDevice.hpp"
+#include "logger.hpp"
 
 namespace LTE
 {

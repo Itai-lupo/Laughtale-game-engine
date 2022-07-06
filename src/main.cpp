@@ -1,4 +1,4 @@
-#include "LaughTaleEngine.h"
+#include "LaughTaleEngine.hpp"
 #include <imgui/imgui.h>
 #include <imgui/imgui_internal.h>
 #include <glm/gtc/type_ptr.hpp>
@@ -35,7 +35,7 @@ class cube: LTE::osEvent
         LTE::windowPieceId winId; 
         std::string name;
     public:
-        std::shared_ptr<LTE::gameObject> cubeObj;
+        std::shared_ptr<LTE::gameObject> cubeObj; 
 
         cube(LTE::windowPieceId winId, const std::string& name): LTE::osEvent({LTE::osEventsType::WindowClose}), winId(winId), name(name)
         {
@@ -55,7 +55,7 @@ class cube: LTE::osEvent
             LTE::app::keepRunning = false;
         }
 
-};
+}; 
 
 
 class editor: LTE::osEvent
@@ -135,9 +135,7 @@ class editor: LTE::osEvent
             ImGui::Begin("Scene Hierarchy");
             gameScene->forEachObject(
                 [&, this]( std::shared_ptr<LTE::gameObject> obj)
-                {
-                    // auto& tag = obj->GetComponent<TagComponent>().Tag;
-		
+                {		
                     ImGuiTreeNodeFlags flags = ((selectionContext == obj) ? ImGuiTreeNodeFlags_Selected : 0) | ImGuiTreeNodeFlags_OpenOnArrow;
                     bool opened = ImGui::TreeNodeEx((void*)obj->getId(), flags, obj->getName().c_str());
                     if (ImGui::IsItemClicked())

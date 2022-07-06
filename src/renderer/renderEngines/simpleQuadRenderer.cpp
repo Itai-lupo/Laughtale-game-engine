@@ -1,9 +1,9 @@
-#include "simpleQuadRenderer.h"
-#include "meshAbsrtactFactory.h"
-#include "shaderTypes.h"
-#include "windowManger.h"
-#include "app.h"
-#include "assetManager.h"
+#include "simpleQuadRenderer.hpp"
+#include "meshAbsrtactFactory.hpp"
+#include "shaderTypes.hpp"
+#include "windowManger.hpp"
+#include "app.hpp"
+#include "assetManager.hpp"
 
 namespace LTE
 {

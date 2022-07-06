@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('d1/de5/class_l_t_e_1_1open_g_l_index_b
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d0/d2b/open_g_l_index_buffer_8h_source.html">openGLIndexBuffer.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d7/db8/open_g_l_index_buffer_8hpp_source.html">openGLIndexBuffer.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LTE::openGLIndexBuffer:</div>
 <div class="dyncontent">
@@ -180,8 +180,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">   15</span>                :<a class="code hl_function" href="../../da/d48/class_l_t_e_1_1index_buffer_render_api.html#a560a418e8229c77816773901c7ba53ee">indexBufferRenderApi</a>(<a class="code hl_variable" href="../../da/d48/class_l_t_e_1_1index_buffer_render_api.html#ad245ee5758235c5730144b037bc3a655">parentContainer</a>){}</div>
-<div class="ttc" id="aclass_l_t_e_1_1index_buffer_render_api_html_a560a418e8229c77816773901c7ba53ee"><div class="ttname"><a href="../../da/d48/class_l_t_e_1_1index_buffer_render_api.html#a560a418e8229c77816773901c7ba53ee">LTE::indexBufferRenderApi::indexBufferRenderApi</a></div><div class="ttdeci">indexBufferRenderApi(indexBuffer *parentContainer)</div><div class="ttdef"><b>Definition:</b> indexBuffer.h:22</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1index_buffer_render_api_html_ad245ee5758235c5730144b037bc3a655"><div class="ttname"><a href="../../da/d48/class_l_t_e_1_1index_buffer_render_api.html#ad245ee5758235c5730144b037bc3a655">LTE::indexBufferRenderApi::parentContainer</a></div><div class="ttdeci">indexBuffer * parentContainer</div><div class="ttdef"><b>Definition:</b> indexBuffer.h:16</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1index_buffer_render_api_html_a560a418e8229c77816773901c7ba53ee"><div class="ttname"><a href="../../da/d48/class_l_t_e_1_1index_buffer_render_api.html#a560a418e8229c77816773901c7ba53ee">LTE::indexBufferRenderApi::indexBufferRenderApi</a></div><div class="ttdeci">indexBufferRenderApi(indexBuffer *parentContainer)</div><div class="ttdef"><b>Definition:</b> indexBuffer.hpp:22</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1index_buffer_render_api_html_ad245ee5758235c5730144b037bc3a655"><div class="ttname"><a href="../../da/d48/class_l_t_e_1_1index_buffer_render_api.html#ad245ee5758235c5730144b037bc3a655">LTE::indexBufferRenderApi::parentContainer</a></div><div class="ttdeci">indexBuffer * parentContainer</div><div class="ttdef"><b>Definition:</b> indexBuffer.hpp:16</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -200,9 +200,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
-<div class="line"><span class="lineno">   16</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glDeleteBuffers(1, &amp;RendererID));</div>
+<div class="line"><span class="lineno">   16</span>        <a class="code hl_define" href="../../d1/d80/handle_open_gl_errors_8hpp.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glDeleteBuffers(1, &amp;RendererID));</div>
 <div class="line"><span class="lineno">   17</span>    }</div>
-<div class="ttc" id="ahandle_open_gl_errors_8h_html_add165165c35549fda9fb0100e16e9739"><div class="ttname"><a href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a></div><div class="ttdeci">#define GL_CALL(x)</div><div class="ttdef"><b>Definition:</b> handleOpenGlErrors.h:4</div></div>
+<div class="ttc" id="ahandle_open_gl_errors_8hpp_html_add165165c35549fda9fb0100e16e9739"><div class="ttname"><a href="../../d1/d80/handle_open_gl_errors_8hpp.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a></div><div class="ttdeci">#define GL_CALL(x)</div><div class="ttdef"><b>Definition:</b> handleOpenGlErrors.hpp:4</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -234,10 +234,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
 <div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../da/d48/class_l_t_e_1_1index_buffer_render_api.html#a3a9b5d26f991c8d9abc22173bb09f694">changeId</a> != <a class="code hl_variable" href="../../da/d48/class_l_t_e_1_1index_buffer_render_api.html#ad245ee5758235c5730144b037bc3a655">parentContainer</a>-&gt;<a class="code hl_function" href="../../d6/d2f/class_l_t_e_1_1index_buffer.html#a84ba9cbaf2e7a22650e10bd7079f29ff">getChangeId</a>())</div>
 <div class="line"><span class="lineno">   22</span>            setData();</div>
-<div class="line"><span class="lineno">   23</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, RendererID));</div>
+<div class="line"><span class="lineno">   23</span>        <a class="code hl_define" href="../../d1/d80/handle_open_gl_errors_8hpp.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, RendererID));</div>
 <div class="line"><span class="lineno">   24</span>    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1index_buffer_html_a84ba9cbaf2e7a22650e10bd7079f29ff"><div class="ttname"><a href="../../d6/d2f/class_l_t_e_1_1index_buffer.html#a84ba9cbaf2e7a22650e10bd7079f29ff">LTE::indexBuffer::getChangeId</a></div><div class="ttdeci">unsigned int getChangeId()</div><div class="ttdef"><b>Definition:</b> indexBuffer.h:70</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1index_buffer_render_api_html_a3a9b5d26f991c8d9abc22173bb09f694"><div class="ttname"><a href="../../da/d48/class_l_t_e_1_1index_buffer_render_api.html#a3a9b5d26f991c8d9abc22173bb09f694">LTE::indexBufferRenderApi::changeId</a></div><div class="ttdeci">std::atomic&lt; int &gt; changeId</div><div class="ttdef"><b>Definition:</b> indexBuffer.h:17</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1index_buffer_html_a84ba9cbaf2e7a22650e10bd7079f29ff"><div class="ttname"><a href="../../d6/d2f/class_l_t_e_1_1index_buffer.html#a84ba9cbaf2e7a22650e10bd7079f29ff">LTE::indexBuffer::getChangeId</a></div><div class="ttdeci">unsigned int getChangeId()</div><div class="ttdef"><b>Definition:</b> indexBuffer.hpp:70</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1index_buffer_render_api_html_a3a9b5d26f991c8d9abc22173bb09f694"><div class="ttname"><a href="../../da/d48/class_l_t_e_1_1index_buffer_render_api.html#a3a9b5d26f991c8d9abc22173bb09f694">LTE::indexBufferRenderApi::changeId</a></div><div class="ttdeci">std::atomic&lt; int &gt; changeId</div><div class="ttdef"><b>Definition:</b> indexBuffer.hpp:17</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -275,12 +275,12 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="../../da/d48/class_l_t_e_1_1index_buffer_render_api.html#aab72acb1728c56477427856cdbca54df">LTE::indexBufferRenderApi</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>
-<div class="line"><span class="lineno">    9</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glGenBuffers(1, &amp;RendererID));</div>
-<div class="line"><span class="lineno">   10</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, RendererID));</div>
-<div class="line"><span class="lineno">   11</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBufferData(GL_ELEMENT_ARRAY_BUFFER, <a class="code hl_variable" href="../../da/d48/class_l_t_e_1_1index_buffer_render_api.html#ad245ee5758235c5730144b037bc3a655">parentContainer</a>-&gt;<a class="code hl_function" href="../../d6/d2f/class_l_t_e_1_1index_buffer.html#afcca135f90433710403e8c6a252e03f0">getCount</a>() * <span class="keyword">sizeof</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>), <a class="code hl_variable" href="../../da/d48/class_l_t_e_1_1index_buffer_render_api.html#ad245ee5758235c5730144b037bc3a655">parentContainer</a>-&gt;<a class="code hl_function" href="../../d6/d2f/class_l_t_e_1_1index_buffer.html#add84d1c26ab7b28da454ad1d470f5c74">geIndices</a>(), GL_STATIC_DRAW));</div>
+<div class="line"><span class="lineno">    9</span>        <a class="code hl_define" href="../../d1/d80/handle_open_gl_errors_8hpp.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glGenBuffers(1, &amp;RendererID));</div>
+<div class="line"><span class="lineno">   10</span>        <a class="code hl_define" href="../../d1/d80/handle_open_gl_errors_8hpp.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, RendererID));</div>
+<div class="line"><span class="lineno">   11</span>        <a class="code hl_define" href="../../d1/d80/handle_open_gl_errors_8hpp.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBufferData(GL_ELEMENT_ARRAY_BUFFER, <a class="code hl_variable" href="../../da/d48/class_l_t_e_1_1index_buffer_render_api.html#ad245ee5758235c5730144b037bc3a655">parentContainer</a>-&gt;<a class="code hl_function" href="../../d6/d2f/class_l_t_e_1_1index_buffer.html#afcca135f90433710403e8c6a252e03f0">getCount</a>() * <span class="keyword">sizeof</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>), <a class="code hl_variable" href="../../da/d48/class_l_t_e_1_1index_buffer_render_api.html#ad245ee5758235c5730144b037bc3a655">parentContainer</a>-&gt;<a class="code hl_function" href="../../d6/d2f/class_l_t_e_1_1index_buffer.html#add84d1c26ab7b28da454ad1d470f5c74">geIndices</a>(), GL_STATIC_DRAW));</div>
 <div class="line"><span class="lineno">   12</span>    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1index_buffer_html_add84d1c26ab7b28da454ad1d470f5c74"><div class="ttname"><a href="../../d6/d2f/class_l_t_e_1_1index_buffer.html#add84d1c26ab7b28da454ad1d470f5c74">LTE::indexBuffer::geIndices</a></div><div class="ttdeci">unsigned int * geIndices()</div><div class="ttdef"><b>Definition:</b> indexBuffer.h:65</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1index_buffer_html_afcca135f90433710403e8c6a252e03f0"><div class="ttname"><a href="../../d6/d2f/class_l_t_e_1_1index_buffer.html#afcca135f90433710403e8c6a252e03f0">LTE::indexBuffer::getCount</a></div><div class="ttdeci">unsigned int getCount()</div><div class="ttdef"><b>Definition:</b> indexBuffer.h:60</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1index_buffer_html_add84d1c26ab7b28da454ad1d470f5c74"><div class="ttname"><a href="../../d6/d2f/class_l_t_e_1_1index_buffer.html#add84d1c26ab7b28da454ad1d470f5c74">LTE::indexBuffer::geIndices</a></div><div class="ttdeci">unsigned int * geIndices()</div><div class="ttdef"><b>Definition:</b> indexBuffer.hpp:65</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1index_buffer_html_afcca135f90433710403e8c6a252e03f0"><div class="ttname"><a href="../../d6/d2f/class_l_t_e_1_1index_buffer.html#afcca135f90433710403e8c6a252e03f0">LTE::indexBuffer::getCount</a></div><div class="ttdeci">unsigned int getCount()</div><div class="ttdef"><b>Definition:</b> indexBuffer.hpp:60</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -328,13 +328,13 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="../../da/d48/class_l_t_e_1_1index_buffer_render_api.html#a44e5e9261bbba8a53e4307fef53cb48a">LTE::indexBufferRenderApi</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
-<div class="line"><span class="lineno">   28</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));    </div>
+<div class="line"><span class="lineno">   28</span>        <a class="code hl_define" href="../../d1/d80/handle_open_gl_errors_8hpp.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));    </div>
 <div class="line"><span class="lineno">   29</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/renderer/openGL/<a class="el" href="../../d0/d2b/open_g_l_index_buffer_8h_source.html">openGLIndexBuffer.h</a></li>
+<li>include/renderer/openGL/<a class="el" href="../../d7/db8/open_g_l_index_buffer_8hpp_source.html">openGLIndexBuffer.hpp</a></li>
 <li>src/renderer/openGl/<a class="el" href="../../de/dec/open_g_l_index_buffer_8cpp.html">openGLIndexBuffer.cpp</a></li>
 </ul>
 </div><!-- contents -->

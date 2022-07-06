@@ -1,12 +1,12 @@
-#include "graphicsContext.h"
-#include "app.h"
+#include "graphicsContext.hpp"
+#include "app.hpp"
 #include <sys/prctl.h>
-#include "windowManger.h"
-#include "app.h"
-#include "ImGuiEvents.h"
-#include "batchRenderer.h"
-#include "simpleQuadRenderer.h"
-#include "assetManager.h"
+#include "windowManger.hpp"
+#include "app.hpp"
+#include "ImGuiEvents.hpp"
+#include "batchRenderer.hpp"
+#include "simpleQuadRenderer.hpp"
+#include "assetManager.hpp"
 
 namespace LTE
 {

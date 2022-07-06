@@ -1,7 +1,7 @@
-#include "gameobject.h"
+#include "gameobject.hpp"
 #include <stdlib.h>
-#include "LTEError.h"
-#include "logger.h"
+#include "LTEError.hpp"
+#include "logger.hpp"
 
 
 namespace LTE

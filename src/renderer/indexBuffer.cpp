@@ -1,5 +1,5 @@
-#include "indexBuffer.h"
-#include "graphicsContext.h"
+#include "indexBuffer.hpp"
+#include "graphicsContext.hpp"
 
 namespace LTE
 {

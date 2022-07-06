@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('d7/d5b/class_l_t_e_1_1_g_m_n_m_1_1asio
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d8/d62/asio_network_interface_8h_source.html">asioNetworkInterface.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d1/dc0/asio_network_interface_8hpp_source.html">asioNetworkInterface.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LTE::GMNM::asioNetworkInterface:</div>
 <div class="dyncontent">
@@ -187,11 +187,11 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   23</span>        }</div>
 <div class="line"><span class="lineno">   24</span>        <span class="keywordflow">catch</span>(<span class="keyword">const</span> std::exception&amp; e)</div>
 <div class="line"><span class="lineno">   25</span>        {</div>
-<div class="line"><span class="lineno">   26</span>            <a class="code hl_define" href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(e.what());</div>
+<div class="line"><span class="lineno">   26</span>            <a class="code hl_define" href="../../d6/da3/logger_8hpp.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(e.what());</div>
 <div class="line"><span class="lineno">   27</span>            connected = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   28</span>        }</div>
 <div class="line"><span class="lineno">   29</span>    }</div>
-<div class="ttc" id="alogger_8h_html_aae4cf1bd083983040d4d6572a9b0d8bf"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_ERROR(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:8</div></div>
+<div class="ttc" id="alogger_8hpp_html_aae4cf1bd083983040d4d6572a9b0d8bf"><div class="ttname"><a href="../../d6/da3/logger_8hpp.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_ERROR(toLog)</div><div class="ttdef"><b>Definition:</b> logger.hpp:8</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -422,14 +422,14 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
 <div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../d7/d5b/class_l_t_e_1_1_g_m_n_m_1_1asio_network_interface.html#ac7cd4e08dbf2d5321a9ab7bd58ec0ded">isConnected</a>())</div>
 <div class="line"><span class="lineno">   68</span>        {</div>
-<div class="line"><span class="lineno">   69</span>            <a class="code hl_define" href="../../d1/d8c/logger_8h.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a>(<span class="stringliteral">&quot;failed to send data, connecteion close&quot;</span>);</div>
+<div class="line"><span class="lineno">   69</span>            <a class="code hl_define" href="../../d6/da3/logger_8hpp.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a>(<span class="stringliteral">&quot;failed to send data, connecteion close&quot;</span>);</div>
 <div class="line"><span class="lineno">   70</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   71</span>        }</div>
 <div class="line"><span class="lineno">   72</span> </div>
 <div class="line"><span class="lineno">   73</span>        asio::write(*socketConnction, asio::buffer(data.getData(), data.getSize()));</div>
 <div class="line"><span class="lineno">   74</span>    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1_g_m_n_m_1_1asio_network_interface_html_ac7cd4e08dbf2d5321a9ab7bd58ec0ded"><div class="ttname"><a href="../../d7/d5b/class_l_t_e_1_1_g_m_n_m_1_1asio_network_interface.html#ac7cd4e08dbf2d5321a9ab7bd58ec0ded">LTE::GMNM::asioNetworkInterface::isConnected</a></div><div class="ttdeci">virtual bool isConnected() override</div><div class="ttdef"><b>Definition:</b> asioNetworkInterface.h:34</div></div>
-<div class="ttc" id="alogger_8h_html_ac50547ba95023ba6994629f68b4a39d4"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_WARNING(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:7</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1_g_m_n_m_1_1asio_network_interface_html_ac7cd4e08dbf2d5321a9ab7bd58ec0ded"><div class="ttname"><a href="../../d7/d5b/class_l_t_e_1_1_g_m_n_m_1_1asio_network_interface.html#ac7cd4e08dbf2d5321a9ab7bd58ec0ded">LTE::GMNM::asioNetworkInterface::isConnected</a></div><div class="ttdeci">virtual bool isConnected() override</div><div class="ttdef"><b>Definition:</b> asioNetworkInterface.hpp:34</div></div>
+<div class="ttc" id="alogger_8hpp_html_ac50547ba95023ba6994629f68b4a39d4"><div class="ttname"><a href="../../d6/da3/logger_8hpp.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_WARNING(toLog)</div><div class="ttdef"><b>Definition:</b> logger.hpp:7</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -445,7 +445,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/networkManager/<a class="el" href="../../d8/d62/asio_network_interface_8h_source.html">asioNetworkInterface.h</a></li>
+<li>include/networkManager/<a class="el" href="../../d1/dc0/asio_network_interface_8hpp_source.html">asioNetworkInterface.hpp</a></li>
 <li>src/networkManager/<a class="el" href="../../de/d1b/asio_network_interface_8cpp.html">asioNetworkInterface.cpp</a></li>
 </ul>
 </div><!-- contents -->

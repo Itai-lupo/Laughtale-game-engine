@@ -1,8 +1,8 @@
-#include "connection.h"
-#include "mesh.h"
+#include "connection.hpp"
+#include "mesh.hpp"
 #include <functional>
-#include "logger.h"
-#include "asioNetworkInterface.h"
+#include "logger.hpp"
+#include "asioNetworkInterface.hpp"
 #include <sys/prctl.h>
 
 namespace LTE::GMNM

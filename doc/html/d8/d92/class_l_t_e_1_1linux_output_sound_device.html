@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('d8/d92/class_l_t_e_1_1linux_output_sou
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../d9/dea/linux_output_sound_device_8h_source.html">linuxOutputSoundDevice.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d8/de8/linux_output_sound_device_8hpp_source.html">linuxOutputSoundDevice.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LTE::linuxOutputSoundDevice:</div>
 <div class="dyncontent">
@@ -238,7 +238,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   13</span>    {</div>
 <div class="line"><span class="lineno">   14</span>        <span class="keywordflow">if</span>(frames_to_play != <a class="code hl_variable" href="../../d5/d49/class_l_t_e_1_1linux_sound_device.html#abc37fcef63d2834c9f63e84f18221e62">frames_per_period</a>) </div>
 <div class="line"><span class="lineno">   15</span>        {</div>
-<div class="line"><span class="lineno">   16</span>            <a class="code hl_define" href="../../d1/d8c/logger_8h.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a>(<span class="stringliteral">&quot;frames_to_play must equal frames in period &lt;&quot;</span> + std::to_string(<a class="code hl_variable" href="../../d5/d49/class_l_t_e_1_1linux_sound_device.html#abc37fcef63d2834c9f63e84f18221e62">frames_per_period</a>) + <span class="stringliteral">&quot;&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   16</span>            <a class="code hl_define" href="../../d6/da3/logger_8hpp.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a>(<span class="stringliteral">&quot;frames_to_play must equal frames in period &lt;&quot;</span> + std::to_string(<a class="code hl_variable" href="../../d5/d49/class_l_t_e_1_1linux_sound_device.html#abc37fcef63d2834c9f63e84f18221e62">frames_per_period</a>) + <span class="stringliteral">&quot;&gt;&quot;</span>);</div>
 <div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">   18</span>        }</div>
 <div class="line"><span class="lineno">   19</span> </div>
@@ -253,21 +253,21 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   28</span>            <span class="keywordflow">return</span> -EPIPE;</div>
 <div class="line"><span class="lineno">   29</span>        }</div>
 <div class="line"><span class="lineno">   30</span>        </div>
-<div class="line"><span class="lineno">   31</span>        <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;error from writei: &quot;</span> + std::string(snd_strerror(frames_written)), frames_written &lt; 0);        </div>
-<div class="line"><span class="lineno">   32</span>        <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;short write, write &quot;</span> + std::to_string(frames_written) + <span class="stringliteral">&quot; frames&quot;</span>, frames_written != <a class="code hl_variable" href="../../d5/d49/class_l_t_e_1_1linux_sound_device.html#abc37fcef63d2834c9f63e84f18221e62">frames_per_period</a>);</div>
+<div class="line"><span class="lineno">   31</span>        <a class="code hl_define" href="../../d6/da3/logger_8hpp.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;error from writei: &quot;</span> + std::string(snd_strerror(frames_written)), frames_written &lt; 0);        </div>
+<div class="line"><span class="lineno">   32</span>        <a class="code hl_define" href="../../d6/da3/logger_8hpp.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a>(<span class="stringliteral">&quot;short write, write &quot;</span> + std::to_string(frames_written) + <span class="stringliteral">&quot; frames&quot;</span>, frames_written != <a class="code hl_variable" href="../../d5/d49/class_l_t_e_1_1linux_sound_device.html#abc37fcef63d2834c9f63e84f18221e62">frames_per_period</a>);</div>
 <div class="line"><span class="lineno">   33</span>            </div>
 <div class="line"><span class="lineno">   34</span> </div>
 <div class="line"><span class="lineno">   35</span>        <span class="keywordflow">return</span> frames_written;</div>
 <div class="line"><span class="lineno">   36</span>    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1linux_sound_device_html_aab15b0bd1330721faa3b921579f2420e"><div class="ttname"><a href="../../d5/d49/class_l_t_e_1_1linux_sound_device.html#aab15b0bd1330721faa3b921579f2420e">LTE::linuxSoundDevice::handle</a></div><div class="ttdeci">snd_pcm_t * handle</div><div class="ttdef"><b>Definition:</b> linuxSoundDevice.h:15</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1linux_sound_device_html_abc37fcef63d2834c9f63e84f18221e62"><div class="ttname"><a href="../../d5/d49/class_l_t_e_1_1linux_sound_device.html#abc37fcef63d2834c9f63e84f18221e62">LTE::linuxSoundDevice::frames_per_period</a></div><div class="ttdeci">snd_pcm_uframes_t frames_per_period</div><div class="ttdef"><b>Definition:</b> linuxSoundDevice.h:19</div></div>
-<div class="ttc" id="alogger_8h_html_a030a2caf9f43b4e2926c659309f955ef"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_CONDTION_LOG_ERROR(toLog, condition)</div><div class="ttdef"><b>Definition:</b> logger.h:12</div></div>
-<div class="ttc" id="alogger_8h_html_ac50547ba95023ba6994629f68b4a39d4"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_WARNING(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:7</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1linux_sound_device_html_aab15b0bd1330721faa3b921579f2420e"><div class="ttname"><a href="../../d5/d49/class_l_t_e_1_1linux_sound_device.html#aab15b0bd1330721faa3b921579f2420e">LTE::linuxSoundDevice::handle</a></div><div class="ttdeci">snd_pcm_t * handle</div><div class="ttdef"><b>Definition:</b> linuxSoundDevice.hpp:15</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1linux_sound_device_html_abc37fcef63d2834c9f63e84f18221e62"><div class="ttname"><a href="../../d5/d49/class_l_t_e_1_1linux_sound_device.html#abc37fcef63d2834c9f63e84f18221e62">LTE::linuxSoundDevice::frames_per_period</a></div><div class="ttdeci">snd_pcm_uframes_t frames_per_period</div><div class="ttdef"><b>Definition:</b> linuxSoundDevice.hpp:19</div></div>
+<div class="ttc" id="alogger_8hpp_html_a030a2caf9f43b4e2926c659309f955ef"><div class="ttname"><a href="../../d6/da3/logger_8hpp.html#a030a2caf9f43b4e2926c659309f955ef">LAUGHTALE_ENGINR_CONDTION_LOG_ERROR</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_CONDTION_LOG_ERROR(toLog, condition)</div><div class="ttdef"><b>Definition:</b> logger.hpp:12</div></div>
+<div class="ttc" id="alogger_8hpp_html_ac50547ba95023ba6994629f68b4a39d4"><div class="ttname"><a href="../../d6/da3/logger_8hpp.html#ac50547ba95023ba6994629f68b4a39d4">LAUGHTALE_ENGINR_LOG_WARNING</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_WARNING(toLog)</div><div class="ttdef"><b>Definition:</b> logger.hpp:7</div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/soundEngine/devices/linux/<a class="el" href="../../d9/dea/linux_output_sound_device_8h_source.html">linuxOutputSoundDevice.h</a></li>
+<li>include/soundEngine/devices/linux/<a class="el" href="../../d8/de8/linux_output_sound_device_8hpp_source.html">linuxOutputSoundDevice.hpp</a></li>
 <li>src/soundEngine/devices/linux/<a class="el" href="../../df/d57/linux_output_sound_device_8cpp.html">linuxOutputSoundDevice.cpp</a></li>
 </ul>
 </div><!-- contents -->

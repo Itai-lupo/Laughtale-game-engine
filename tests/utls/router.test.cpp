@@ -1,5 +1,5 @@
-#include "LaughTaleEngine.h"
-#include "dataStructers/router.h"
+#include "LaughTaleEngine.hpp"
+#include "dataStructers/router.hpp"
 #include <gtest/gtest.h>
 
 

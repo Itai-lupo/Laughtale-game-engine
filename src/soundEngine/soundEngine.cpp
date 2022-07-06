@@ -1,12 +1,12 @@
-#include "soundEngine.h"
-#include "logger.h"
-#include "app.h"
-#include "soundSynthesizer.h"
+#include "soundEngine.hpp"
+#include "logger.hpp"
+#include "app.hpp"
+#include "soundSynthesizer.hpp"
 #include <string>
 #include <glm/glm.hpp>
 #include <sys/prctl.h>
 
-#include "LTEError.h"
+#include "LTEError.hpp"
 
 namespace LTE
 {

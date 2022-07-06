@@ -1,7 +1,7 @@
-#include "openGLVertexBuffer.h"
-#include "glad/glad.h"
-#include "handleOpenGlErrors.h"
-#include "logger.h"
+#include "openGLVertexBuffer.hpp"
+#include <glad/glad.h>
+#include "handleOpenGlErrors.hpp"
+#include "logger.hpp"
 
 namespace LTE
 {

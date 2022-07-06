@@ -1,13 +1,13 @@
-#include "core.h"
-#include "window.h"
-#include "logger.h"
-#include "app.h"
+#include "core.hpp"
+#include "window.hpp"
+#include "logger.hpp"
+#include "app.hpp"
 
-#include "ImGuiEvents.h"
+#include "ImGuiEvents.hpp"
 #define IMGUI_IMPL_OPENGL_LOADER_GLAD
-#include "imgui.h"
-#include "imgui_impl_glfw.h"
-#include "imgui_impl_opengl3.h"
+#include <imgui.h>
+#include <imgui_impl_glfw.h>
+#include <imgui_impl_opengl3.h>
 
 #include <functional>
 

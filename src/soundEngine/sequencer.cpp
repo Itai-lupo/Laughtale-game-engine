@@ -1,9 +1,9 @@
-#include "sequencer.h"
-#include "soundEngine.h"
+#include "sequencer.hpp"
+#include "soundEngine.hpp"
 #include <chrono>
 #include <sys/prctl.h>
 
-#include "logger.h"
+#include "logger.hpp"
 namespace LTE
 {
     sequencer::sequencer( double bpm, int beats, int subBeats ): bpm(bpm), beats(beats), subBeats(subBeats), totalBeats(beats * subBeats), BeatTime(1.0/bpm)

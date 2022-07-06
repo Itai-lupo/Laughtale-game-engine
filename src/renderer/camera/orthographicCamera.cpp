@@ -1,8 +1,8 @@
-#include "orthographicCamera.h"
+#include "orthographicCamera.hpp"
 
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/string_cast.hpp>
-#include "logger.h"
+#include "logger.hpp"
 
 namespace LTE
 {

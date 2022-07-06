@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
-#include "LaughTaleEngine.h"
-#include "imgui.h"
+#include "LaughTaleEngine.hpp"
+#include <imgui.h>
 
 static inline LTE::scene *gameScene;
 

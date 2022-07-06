@@ -2,11 +2,11 @@
 #include <vector>
 #include <string>
 
-#include "scene.h"
-#include "graphicsContext.h"
-#include "batchRenderer.h"
-#include "window.h"
-#include "gameobject.h"
+#include "scene.hpp"
+#include "graphicsContext.hpp"
+#include "batchRenderer.hpp"
+#include "window.hpp"
+#include "gameobject.hpp"
 
 namespace LTE
 {

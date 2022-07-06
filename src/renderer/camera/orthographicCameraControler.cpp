@@ -1,10 +1,10 @@
-#include "app.h"
-#include "orthographicCameraControler.h"
-#include "logger.h"
-#include "MouseButtonCodes.h"
+#include "app.hpp"
+#include "orthographicCameraControler.hpp"
+#include "logger.hpp"
+#include "MouseButtonCodes.hpp"
 
-#include "window.h"
-#include "windowManger.h"
+#include "window.hpp"
+#include "windowManger.hpp"
 
 namespace LTE
 {
@@ -33,7 +33,6 @@ namespace LTE
             cameraPostion.y += ((win->inputManger->GetMouseY() - mouseLastPostion.y) * (1 / (float)win->Height)) * sendor->DeltaTime;
 
             camera.SetPosition(cameraPostion);
-            LAUGHTALE_ENGINR_LOG_INFO(win->inputManger->GetMouseX()  << ", " << cameraPostion.y);
         }
         mouseLastPostion = win->inputManger->GetMousePosition();
     }

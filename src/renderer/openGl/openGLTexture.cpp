@@ -1,8 +1,8 @@
-#include "glad/glad.h"
+#include <glad/glad.h>
+#include <stb_image.h>
 
-#include "openGLTexture.h"
-#include "stb_image.h"
-#include "handleOpenGlErrors.h"
+#include "openGLTexture.hpp"
+#include "handleOpenGlErrors.hpp"
 
 
 namespace LTE

@@ -1,7 +1,7 @@
-#include "soundSynthesizer.h"
-#include "soundEngine.h"
+#include "soundSynthesizer.hpp"
+#include "soundEngine.hpp"
 #include <algorithm>
-#include "logger.h"
+#include "logger.hpp"
 
 namespace LTE
 {

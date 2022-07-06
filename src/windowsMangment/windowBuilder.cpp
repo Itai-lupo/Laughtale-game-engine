@@ -1,10 +1,10 @@
 #include <string>
 
-#include "core.h"
-#include "window.h"
-#include "app.h"
-#include "graphicsContext.h"
-#include "windowBuilder.h"
+#include "core.hpp"
+#include "window.hpp"
+#include "app.hpp"
+#include "graphicsContext.hpp"
+#include "windowBuilder.hpp"
 
 
 namespace LTE

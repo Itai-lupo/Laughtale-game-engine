@@ -2,11 +2,11 @@
     "configurations": [
         {
             "name": "Linux",
+            "compilerArgs": [ "-Werror", "-Wall", "-Wextra", "-pedantic" ],
             "includePath": [
-                "${workspaceFolder}/**",
-                "${workspaceFolder}/include",
-                "${workspaceFolder}/vendor",
-                "${workspaceFolder}/DLLS"
+                "${workspaceFolder}/include/**",
+                "${workspaceFolder}/vendor/**",
+                "${workspaceFolder}/DLLS/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",

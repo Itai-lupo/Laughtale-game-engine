@@ -3,11 +3,11 @@
 #include <glm/glm.hpp>
 #include <glm/gtx/string_cast.hpp>
 
-#include "shaderRenderBuffer.h"
-#include "shaderTypes.h"
+#include "shaderRenderBuffer.hpp"
+#include "shaderTypes.hpp"
 
-#include "meshAbsrtactFactory.h"
-#include "graphicsContext.h"
+#include "meshAbsrtactFactory.hpp"
+#include "graphicsContext.hpp"
 
 namespace LTE
 {

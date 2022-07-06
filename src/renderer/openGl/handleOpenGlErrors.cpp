@@ -3,9 +3,9 @@
 
 using namespace std;
 
-#include "glad/glad.h"
-#include "handleOpenGlErrors.h"
-#include "logger.h"
+#include <glad/glad.h>
+#include "handleOpenGlErrors.hpp"
+#include "logger.hpp"
 
 void GLClearErrors()
 {

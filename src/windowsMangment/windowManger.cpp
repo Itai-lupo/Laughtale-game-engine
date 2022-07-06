@@ -1,10 +1,10 @@
-#include "windowManger.h"
-#include "logger.h"
+#include "windowManger.hpp"
+#include "logger.hpp"
 #include <string>
 #include <functional>
 #include <algorithm>
-#include "LTEError.h"
-#include "app.h"
+#include "LTEError.hpp"
+#include "app.hpp"
 
 namespace LTE
 {

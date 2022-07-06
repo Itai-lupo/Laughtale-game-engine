@@ -1,5 +1,5 @@
-#include "jpgFile.h"
-#include "windowManger.h"
+#include "jpgFile.hpp"
+#include "windowManger.hpp"
 
 namespace LTE
 {

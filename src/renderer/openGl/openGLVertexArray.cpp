@@ -1,8 +1,8 @@
-#include "handleOpenGlErrors.h"
-#include "openGLVertexArray.h"
-#include "glad/glad.h"
+#include "handleOpenGlErrors.hpp"
+#include "openGLVertexArray.hpp"
+#include <glad/glad.h>
 
-#include "logger.h"
+#include "logger.hpp"
 #include <string>
 
 namespace LTE

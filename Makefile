@@ -36,14 +36,14 @@ CPPFLAGS ?=   -std=c++20
 TEST_CPP_FLAGE = -lgtest -lgtest_main -lgmock  
 # CFLAGS :=
 
-CXXFLAGS += $(INC_FLAGS)  -MMD -MP   -g   -pthread -O0
+CXXFLAGS += $(INC_FLAGS)  -MMD -MP -g -pthread -O0 
 
 LDFLAGS =  $(LIB_FLAGS) -lboost_thread -lstdc++ -lgflags -lglog -lGL -lglfw   -lrt -lm -ldl -lasound
 
 
 $(OUTPUT_DIR)/$(TARGET_EXEC): $(OBJS)
 	mkdir -p output
-	$(CC) $(CPPFLAGS)   $(CXXFLAGS) $(OBJS)  -o $@ $(LDFLAGS)
+	$(CC) $(CPPFLAGS) $(CXXFLAGS) $(OBJS)  -o $@ $(LDFLAGS)
 
 print:
 	@echo ./include/ $(wildcard ./include/*/) $(wildcard ./include/*/*/) $(wildcard ./include/*/*/*/) $(wildcard ./include/*/*/*/*/)
@@ -87,6 +87,10 @@ clean:
 	$(RM) -f gtest.a gtest_main.a *.o
 	$(RM) -r $(BUILD_DIR) 
 	$(RM) -r $(OUTPUT_DIR)
+
+setEnv: $(LIB_DIR)
+	@echo $<
+	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$<:
 
 -include $(DEPS)
 -include $(TEST_DEPS)

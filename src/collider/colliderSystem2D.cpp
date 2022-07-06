@@ -1,7 +1,7 @@
-#include "colliderSystem2D.h"
-#include "collisionData.h"
-#include "app.h"
-#include "scene.h"
+#include "colliderSystem2D.hpp"
+#include "collisionData.hpp"
+#include "app.hpp"
+#include "scene.hpp"
 
 #include <algorithm>
 

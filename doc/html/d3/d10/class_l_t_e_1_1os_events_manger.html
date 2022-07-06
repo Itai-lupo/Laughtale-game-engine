@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('d3/d10/class_l_t_e_1_1os_events_manger
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../db/d4d/os_events_8h_source.html">osEvents.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../da/d2b/os_events_8hpp_source.html">osEvents.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -352,7 +352,7 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">  111</span>    {</div>
 <div class="line"><span class="lineno">  112</span>        <span class="keywordflow">if</span>(t != <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a56dc1caba3faed2f3806d5c7a00ea9fe">osEventsType::keyPressed</a> &amp;&amp; t != <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a4b448ca415ffcfff39ad10e90f87745e">osEventsType::keyReleased</a> &amp;&amp; t != <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2aee0062056f3ffae54e8250f085a86333">osEventsType::keyRepeat</a>) </div>
-<div class="line"><span class="lineno">  113</span>            <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a9d905beb21802d8bef4629dc7004acb4">LAUGHTALE_ENGINR_LOG_FATAL</a>(<span class="stringliteral">&quot;wrong os event type: &quot;</span> &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot; on event of type&quot;</span> &lt;&lt; <span class="stringliteral">&quot;KeyData&quot;</span>)</div>
+<div class="line"><span class="lineno">  113</span>            <a class="code hl_define" href="../../d6/da3/logger_8hpp.html#a9d905beb21802d8bef4629dc7004acb4">LAUGHTALE_ENGINR_LOG_FATAL</a>(<span class="stringliteral">&quot;wrong os event type: &quot;</span> &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot; on event of type&quot;</span> &lt;&lt; <span class="stringliteral">&quot;KeyData&quot;</span>)</div>
 <div class="line"><span class="lineno">  114</span> </div>
 <div class="line"><span class="lineno">  115</span>        for(osEvent *callback: eventList[t])</div>
 <div class="line"><span class="lineno">  116</span>        {</div>
@@ -367,10 +367,10 @@ template&lt;&gt; </div>
 <div class="line"><span class="lineno">  125</span>                callback-&gt;onkeyRepeat(sendor);</div>
 <div class="line"><span class="lineno">  126</span>        }</div>
 <div class="line"><span class="lineno">  127</span>    }</div>
-<div class="ttc" id="alogger_8h_html_a9d905beb21802d8bef4629dc7004acb4"><div class="ttname"><a href="../../d1/d8c/logger_8h.html#a9d905beb21802d8bef4629dc7004acb4">LAUGHTALE_ENGINR_LOG_FATAL</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_FATAL(toLog)</div><div class="ttdef"><b>Definition:</b> logger.h:9</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a4b448ca415ffcfff39ad10e90f87745e"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a4b448ca415ffcfff39ad10e90f87745e">LTE::keyReleased</a></div><div class="ttdeci">@ keyReleased</div><div class="ttdef"><b>Definition:</b> osEvents.h:34</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a56dc1caba3faed2f3806d5c7a00ea9fe"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a56dc1caba3faed2f3806d5c7a00ea9fe">LTE::keyPressed</a></div><div class="ttdeci">@ keyPressed</div><div class="ttdef"><b>Definition:</b> osEvents.h:33</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2aee0062056f3ffae54e8250f085a86333"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2aee0062056f3ffae54e8250f085a86333">LTE::keyRepeat</a></div><div class="ttdeci">@ keyRepeat</div><div class="ttdef"><b>Definition:</b> osEvents.h:35</div></div>
+<div class="ttc" id="alogger_8hpp_html_a9d905beb21802d8bef4629dc7004acb4"><div class="ttname"><a href="../../d6/da3/logger_8hpp.html#a9d905beb21802d8bef4629dc7004acb4">LAUGHTALE_ENGINR_LOG_FATAL</a></div><div class="ttdeci">#define LAUGHTALE_ENGINR_LOG_FATAL(toLog)</div><div class="ttdef"><b>Definition:</b> logger.hpp:9</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a4b448ca415ffcfff39ad10e90f87745e"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a4b448ca415ffcfff39ad10e90f87745e">LTE::keyReleased</a></div><div class="ttdeci">@ keyReleased</div><div class="ttdef"><b>Definition:</b> osEvents.hpp:34</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a56dc1caba3faed2f3806d5c7a00ea9fe"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a56dc1caba3faed2f3806d5c7a00ea9fe">LTE::keyPressed</a></div><div class="ttdeci">@ keyPressed</div><div class="ttdef"><b>Definition:</b> osEvents.hpp:33</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2aee0062056f3ffae54e8250f085a86333"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2aee0062056f3ffae54e8250f085a86333">LTE::keyRepeat</a></div><div class="ttdeci">@ keyRepeat</div><div class="ttdef"><b>Definition:</b> osEvents.hpp:35</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -442,7 +442,7 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">  161</span>    {</div>
 <div class="line"><span class="lineno">  162</span>        <span class="keywordflow">if</span>(t != <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a6d6ecdb873bd3110b380a881d8c68b59">osEventsType::MousePressed</a> &amp;&amp; t != <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a551ffdf39d7dbce22333cebe377a069b">osEventsType::MouseReleased</a>)</div>
-<div class="line"><span class="lineno">  163</span>            <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a9d905beb21802d8bef4629dc7004acb4">LAUGHTALE_ENGINR_LOG_FATAL</a>(<span class="stringliteral">&quot;wrong os event type: &quot;</span> &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot; on event of type&quot;</span> &lt;&lt; <span class="stringliteral">&quot;mouseClickData&quot;</span>)</div>
+<div class="line"><span class="lineno">  163</span>            <a class="code hl_define" href="../../d6/da3/logger_8hpp.html#a9d905beb21802d8bef4629dc7004acb4">LAUGHTALE_ENGINR_LOG_FATAL</a>(<span class="stringliteral">&quot;wrong os event type: &quot;</span> &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot; on event of type&quot;</span> &lt;&lt; <span class="stringliteral">&quot;mouseClickData&quot;</span>)</div>
 <div class="line"><span class="lineno">  164</span> </div>
 <div class="line"><span class="lineno">  165</span>        for(osEvent *callback: eventList[t])</div>
 <div class="line"><span class="lineno">  166</span>        {</div>
@@ -455,8 +455,8 @@ template&lt;&gt; </div>
 <div class="line"><span class="lineno">  173</span>                callback-&gt;onMouseReleased(sendor);</div>
 <div class="line"><span class="lineno">  174</span>        }</div>
 <div class="line"><span class="lineno">  175</span>    }</div>
-<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a551ffdf39d7dbce22333cebe377a069b"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a551ffdf39d7dbce22333cebe377a069b">LTE::MouseReleased</a></div><div class="ttdeci">@ MouseReleased</div><div class="ttdef"><b>Definition:</b> osEvents.h:39</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a6d6ecdb873bd3110b380a881d8c68b59"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a6d6ecdb873bd3110b380a881d8c68b59">LTE::MousePressed</a></div><div class="ttdeci">@ MousePressed</div><div class="ttdef"><b>Definition:</b> osEvents.h:38</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a551ffdf39d7dbce22333cebe377a069b"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a551ffdf39d7dbce22333cebe377a069b">LTE::MouseReleased</a></div><div class="ttdeci">@ MouseReleased</div><div class="ttdef"><b>Definition:</b> osEvents.hpp:39</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a6d6ecdb873bd3110b380a881d8c68b59"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a6d6ecdb873bd3110b380a881d8c68b59">LTE::MousePressed</a></div><div class="ttdeci">@ MousePressed</div><div class="ttdef"><b>Definition:</b> osEvents.hpp:38</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -568,7 +568,7 @@ template&lt;&gt; </div>
 <div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
 <div class="line"><span class="lineno">   79</span> </div>
 <div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span>(t != <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a53581230f22e3b2a485cee249aff6a32">osEventsType::WindowClose</a> &amp;&amp; t != <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a28b9590e811a5570f573ad49ff2d4cec">osEventsType::WindowFocus</a> &amp;&amp; t != <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a22a4358b5e2300708a4993aebb4c4598">osEventsType::WindowLostFocus</a>) </div>
-<div class="line"><span class="lineno">   81</span>            <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a9d905beb21802d8bef4629dc7004acb4">LAUGHTALE_ENGINR_LOG_FATAL</a>(<span class="stringliteral">&quot;wrong os event type: &quot;</span> &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot; on event of type&quot;</span> &lt;&lt; <span class="stringliteral">&quot;osEventData&quot;</span>)</div>
+<div class="line"><span class="lineno">   81</span>            <a class="code hl_define" href="../../d6/da3/logger_8hpp.html#a9d905beb21802d8bef4629dc7004acb4">LAUGHTALE_ENGINR_LOG_FATAL</a>(<span class="stringliteral">&quot;wrong os event type: &quot;</span> &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot; on event of type&quot;</span> &lt;&lt; <span class="stringliteral">&quot;osEventData&quot;</span>)</div>
 <div class="line"><span class="lineno">   82</span> </div>
 <div class="line"><span class="lineno">   83</span>        for(osEvent *callback: eventList[t])</div>
 <div class="line"><span class="lineno">   84</span>        {</div>
@@ -583,9 +583,9 @@ template&lt;&gt; </div>
 <div class="line"><span class="lineno">   93</span>                callback-&gt;onWindowLostFocus(sendor);</div>
 <div class="line"><span class="lineno">   94</span>        }</div>
 <div class="line"><span class="lineno">   95</span>    }</div>
-<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a22a4358b5e2300708a4993aebb4c4598"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a22a4358b5e2300708a4993aebb4c4598">LTE::WindowLostFocus</a></div><div class="ttdeci">@ WindowLostFocus</div><div class="ttdef"><b>Definition:</b> osEvents.h:28</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a28b9590e811a5570f573ad49ff2d4cec"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a28b9590e811a5570f573ad49ff2d4cec">LTE::WindowFocus</a></div><div class="ttdeci">@ WindowFocus</div><div class="ttdef"><b>Definition:</b> osEvents.h:27</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a53581230f22e3b2a485cee249aff6a32"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a53581230f22e3b2a485cee249aff6a32">LTE::WindowClose</a></div><div class="ttdeci">@ WindowClose</div><div class="ttdef"><b>Definition:</b> osEvents.h:25</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a22a4358b5e2300708a4993aebb4c4598"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a22a4358b5e2300708a4993aebb4c4598">LTE::WindowLostFocus</a></div><div class="ttdeci">@ WindowLostFocus</div><div class="ttdef"><b>Definition:</b> osEvents.hpp:28</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a28b9590e811a5570f573ad49ff2d4cec"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a28b9590e811a5570f573ad49ff2d4cec">LTE::WindowFocus</a></div><div class="ttdeci">@ WindowFocus</div><div class="ttdef"><b>Definition:</b> osEvents.hpp:27</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a53581230f22e3b2a485cee249aff6a32"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a53581230f22e3b2a485cee249aff6a32">LTE::WindowClose</a></div><div class="ttdeci">@ WindowClose</div><div class="ttdef"><b>Definition:</b> osEvents.hpp:25</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -618,7 +618,7 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
 <div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span>(t != <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2afc09e93901ba98e25e7c2ed7514ad750">osEventsType::windowRender</a> &amp;&amp; t != <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a69d5d9f0f53080911e34f14db6ad53e3">osEventsType::WindowImGuiRender</a>)</div>
-<div class="line"><span class="lineno">   61</span>            <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a9d905beb21802d8bef4629dc7004acb4">LAUGHTALE_ENGINR_LOG_FATAL</a>(<span class="stringliteral">&quot;wrong os event type: &quot;</span> &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot; on event of type&quot;</span> &lt;&lt; <span class="stringliteral">&quot;windowRenderData&quot;</span>)</div>
+<div class="line"><span class="lineno">   61</span>            <a class="code hl_define" href="../../d6/da3/logger_8hpp.html#a9d905beb21802d8bef4629dc7004acb4">LAUGHTALE_ENGINR_LOG_FATAL</a>(<span class="stringliteral">&quot;wrong os event type: &quot;</span> &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot; on event of type&quot;</span> &lt;&lt; <span class="stringliteral">&quot;windowRenderData&quot;</span>)</div>
 <div class="line"><span class="lineno">   62</span> </div>
 <div class="line"><span class="lineno">   63</span>        for(<span class="keywordtype">int</span> i = 0; i &lt; eventList[t].size(); i++)</div>
 <div class="line"><span class="lineno">   64</span>        {</div>
@@ -632,8 +632,8 @@ template&lt;&gt; </div>
 <div class="line"><span class="lineno">   72</span>        }</div>
 <div class="line"><span class="lineno">   73</span>        </div>
 <div class="line"><span class="lineno">   74</span>    }</div>
-<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a69d5d9f0f53080911e34f14db6ad53e3"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a69d5d9f0f53080911e34f14db6ad53e3">LTE::WindowImGuiRender</a></div><div class="ttdeci">@ WindowImGuiRender</div><div class="ttdef"><b>Definition:</b> osEvents.h:31</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2afc09e93901ba98e25e7c2ed7514ad750"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2afc09e93901ba98e25e7c2ed7514ad750">LTE::windowRender</a></div><div class="ttdeci">@ windowRender</div><div class="ttdef"><b>Definition:</b> osEvents.h:24</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a69d5d9f0f53080911e34f14db6ad53e3"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a69d5d9f0f53080911e34f14db6ad53e3">LTE::WindowImGuiRender</a></div><div class="ttdeci">@ WindowImGuiRender</div><div class="ttdef"><b>Definition:</b> osEvents.hpp:31</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2afc09e93901ba98e25e7c2ed7514ad750"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2afc09e93901ba98e25e7c2ed7514ad750">LTE::windowRender</a></div><div class="ttdeci">@ windowRender</div><div class="ttdef"><b>Definition:</b> osEvents.hpp:24</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -666,7 +666,7 @@ template&lt;&gt; </div>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">  131</span>    {</div>
 <div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span>(t != <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2aced1bb57f3b418808d13e59466f04224">osEventsType::WindowResize</a> &amp;&amp; t != <a class="code hl_enumvalue" href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a07517e4d1671e0e46fbfb23899ba1bbe">osEventsType::WindowMoved</a>)</div>
-<div class="line"><span class="lineno">  133</span>            <a class="code hl_define" href="../../d1/d8c/logger_8h.html#a9d905beb21802d8bef4629dc7004acb4">LAUGHTALE_ENGINR_LOG_FATAL</a>(<span class="stringliteral">&quot;wrong os event type: &quot;</span> &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot; on event of type&quot;</span> &lt;&lt; <span class="stringliteral">&quot;WindowResizeData&quot;</span>)</div>
+<div class="line"><span class="lineno">  133</span>            <a class="code hl_define" href="../../d6/da3/logger_8hpp.html#a9d905beb21802d8bef4629dc7004acb4">LAUGHTALE_ENGINR_LOG_FATAL</a>(<span class="stringliteral">&quot;wrong os event type: &quot;</span> &lt;&lt; t &lt;&lt; <span class="stringliteral">&quot; on event of type&quot;</span> &lt;&lt; <span class="stringliteral">&quot;WindowResizeData&quot;</span>)</div>
 <div class="line"><span class="lineno">  134</span> </div>
 <div class="line"><span class="lineno">  135</span>        for(osEvent *callback: eventList[t])</div>
 <div class="line"><span class="lineno">  136</span>        {</div>
@@ -679,13 +679,13 @@ template&lt;&gt; </div>
 <div class="line"><span class="lineno">  143</span>                callback-&gt;onWindowMoved(sendor);</div>
 <div class="line"><span class="lineno">  144</span>        }</div>
 <div class="line"><span class="lineno">  145</span>    }</div>
-<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a07517e4d1671e0e46fbfb23899ba1bbe"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a07517e4d1671e0e46fbfb23899ba1bbe">LTE::WindowMoved</a></div><div class="ttdeci">@ WindowMoved</div><div class="ttdef"><b>Definition:</b> osEvents.h:29</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2aced1bb57f3b418808d13e59466f04224"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2aced1bb57f3b418808d13e59466f04224">LTE::WindowResize</a></div><div class="ttdeci">@ WindowResize</div><div class="ttdef"><b>Definition:</b> osEvents.h:26</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2a07517e4d1671e0e46fbfb23899ba1bbe"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2a07517e4d1671e0e46fbfb23899ba1bbe">LTE::WindowMoved</a></div><div class="ttdeci">@ WindowMoved</div><div class="ttdef"><b>Definition:</b> osEvents.hpp:29</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2aced1bb57f3b418808d13e59466f04224"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2aced1bb57f3b418808d13e59466f04224">LTE::WindowResize</a></div><div class="ttdeci">@ WindowResize</div><div class="ttdef"><b>Definition:</b> osEvents.hpp:26</div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/eventSystem/osEvents/<a class="el" href="../../db/d4d/os_events_8h_source.html">osEvents.h</a></li>
+<li>include/eventSystem/osEvents/<a class="el" href="../../da/d2b/os_events_8hpp_source.html">osEvents.hpp</a></li>
 <li>src/eventSystem/osEvents/<a class="el" href="../../d4/da6/os_events_8cpp.html">osEvents.cpp</a></li>
 </ul>
 </div><!-- contents -->

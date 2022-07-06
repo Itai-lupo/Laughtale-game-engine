@@ -1,5 +1,5 @@
-#include "assetManager.h"
-#include "filesManager.h"
+#include "assetManager.hpp"
+#include "filesManager.hpp"
 
 namespace LTE
 {

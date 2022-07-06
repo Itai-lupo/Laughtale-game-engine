@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('d6/d26/class_l_t_e_1_1scene.html','../
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../db/d83/scene_8h_source.html">scene.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d5/d9b/scene_8hpp_source.html">scene.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LTE::scene:</div>
 <div class="dyncontent">
@@ -179,8 +179,8 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   20</span>        sceneHierarchy = <span class="keyword">new</span> gameObjectsManger();</div>
 <div class="line"><span class="lineno">   21</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1os_event_html_ad813267cba5aa31492d79181d2bc0e7a"><div class="ttname"><a href="../../d3/df5/class_l_t_e_1_1os_event.html#ad813267cba5aa31492d79181d2bc0e7a">LTE::osEvent::osEvent</a></div><div class="ttdeci">osEvent(std::vector&lt; osEventsType &gt; eventsToUse)</div><div class="ttdef"><b>Definition:</b> osEvents.cpp:10</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_a175550c54709e4c719913e94b906b148"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">LTE::scene::backgroundColor</a></div><div class="ttdeci">material * backgroundColor</div><div class="ttdef"><b>Definition:</b> scene.h:46</div></div>
-<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2afc09e93901ba98e25e7c2ed7514ad750"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2afc09e93901ba98e25e7c2ed7514ad750">LTE::windowRender</a></div><div class="ttdeci">@ windowRender</div><div class="ttdef"><b>Definition:</b> osEvents.h:24</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a175550c54709e4c719913e94b906b148"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a175550c54709e4c719913e94b906b148">LTE::scene::backgroundColor</a></div><div class="ttdeci">material * backgroundColor</div><div class="ttdef"><b>Definition:</b> scene.hpp:46</div></div>
+<div class="ttc" id="anamespace_l_t_e_html_a99c12433b71d661db0b26764c9c094a2afc09e93901ba98e25e7c2ed7514ad750"><div class="ttname"><a href="../../dc/d59/namespace_l_t_e.html#a99c12433b71d661db0b26764c9c094a2afc09e93901ba98e25e7c2ed7514ad750">LTE::windowRender</a></div><div class="ttdeci">@ windowRender</div><div class="ttdef"><b>Definition:</b> osEvents.hpp:24</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -315,7 +315,7 @@ Here is the call graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   51</span>            {</div>
 <div class="line"><span class="lineno">   52</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d6/d26/class_l_t_e_1_1scene.html#a0456c344be902b83958375424f515935">camera</a>-&gt;getComponent&lt;coreCameraControler&gt;()-&gt;getAspectRatio();</div>
 <div class="line"><span class="lineno">   53</span>            }</div>
-<div class="ttc" id="aclass_l_t_e_1_1scene_html_a0456c344be902b83958375424f515935"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a0456c344be902b83958375424f515935">LTE::scene::camera</a></div><div class="ttdeci">std::shared_ptr&lt; gameObject &gt; camera</div><div class="ttdef"><b>Definition:</b> scene.h:45</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1scene_html_a0456c344be902b83958375424f515935"><div class="ttname"><a href="../../d6/d26/class_l_t_e_1_1scene.html#a0456c344be902b83958375424f515935">LTE::scene::camera</a></div><div class="ttdeci">std::shared_ptr&lt; gameObject &gt; camera</div><div class="ttdef"><b>Definition:</b> scene.hpp:45</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -446,7 +446,7 @@ template&lt;typename t &gt; </div>
 <div class="fragment"><div class="line"><span class="lineno">   73</span>            {</div>
 <div class="line"><span class="lineno">   74</span>                <span class="keywordflow">return</span> sceneHierarchy-&gt;<a class="code hl_function" href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#a585f948319d63317bd3bf0ee1fb485ff">getGameObjectCacheByComponentType</a>&lt;t&gt;();</div>
 <div class="line"><span class="lineno">   75</span>            }</div>
-<div class="ttc" id="aclass_l_t_e_1_1game_objects_manger_html_a585f948319d63317bd3bf0ee1fb485ff"><div class="ttname"><a href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#a585f948319d63317bd3bf0ee1fb485ff">LTE::gameObjectsManger::getGameObjectCacheByComponentType</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; gameObject &gt; &gt; getGameObjectCacheByComponentType()</div><div class="ttdef"><b>Definition:</b> gameobject.h:133</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1game_objects_manger_html_a585f948319d63317bd3bf0ee1fb485ff"><div class="ttname"><a href="../../dc/d88/class_l_t_e_1_1game_objects_manger.html#a585f948319d63317bd3bf0ee1fb485ff">LTE::gameObjectsManger::getGameObjectCacheByComponentType</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; gameObject &gt; &gt; getGameObjectCacheByComponentType()</div><div class="ttdef"><b>Definition:</b> gameobject.hpp:133</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -518,7 +518,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   33</span>        sendor-&gt;fbo-&gt;unbind();</div>
 <div class="line"><span class="lineno">   34</span>    }</div>
 <div class="ttc" id="aclass_l_t_e_1_1batch_renderer_html_abd72fef370d88ea0f4b91e8cfe317f92"><div class="ttname"><a href="../../dc/ddb/class_l_t_e_1_1batch_renderer.html#abd72fef370d88ea0f4b91e8cfe317f92">LTE::batchRenderer::renderScene</a></div><div class="ttdeci">void renderScene(uint32_t width, uint32_t hight)</div><div class="ttdef"><b>Definition:</b> batchRenderer.cpp:113</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1os_event_html_a223165ce1a547753ad53ccd72b8f0131"><div class="ttname"><a href="../../d3/df5/class_l_t_e_1_1os_event.html#a223165ce1a547753ad53ccd72b8f0131">LTE::osEvent::onlyRunOnWindow</a></div><div class="ttdeci">windowPieceId onlyRunOnWindow</div><div class="ttdef"><b>Definition:</b> osEvents.h:70</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1os_event_html_a223165ce1a547753ad53ccd72b8f0131"><div class="ttname"><a href="../../d3/df5/class_l_t_e_1_1os_event.html#a223165ce1a547753ad53ccd72b8f0131">LTE::osEvent::onlyRunOnWindow</a></div><div class="ttdeci">windowPieceId onlyRunOnWindow</div><div class="ttdef"><b>Definition:</b> osEvents.hpp:70</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -644,7 +644,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/sceneSystem/<a class="el" href="../../db/d83/scene_8h_source.html">scene.h</a></li>
+<li>include/sceneSystem/<a class="el" href="../../d5/d9b/scene_8hpp_source.html">scene.hpp</a></li>
 <li>src/sceneSystem/<a class="el" href="../../da/d33/scene_8cpp.html">scene.cpp</a></li>
 </ul>
 </div><!-- contents -->

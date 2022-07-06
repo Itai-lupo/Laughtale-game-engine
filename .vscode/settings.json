@@ -141,7 +141,7 @@
         "README.md": true,
         "vendor/": true
     },
-    "C_Cpp.errorSquiggles": "Enabled",
+    "C_Cpp.errorSquiggles": "EnabledIfIncludesResolve",
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -165,5 +165,14 @@
         ]
     },
     "gtest-adapter.debugConfig": "debug tests",
-    "gtest-adapter.supportLocation": true
+    "gtest-adapter.supportLocation": true,
+    "cpp-class-helper.srcFolderPath": "/home/itailupo/Documents/programing projects/cpp/Laughtale-game-engine/src",
+    "cpp-class-helper.includeFolderPath": "/home/itailupo/Documents/programing projects/cpp/Laughtale-game-engine/include",
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/itailupo/Documents/programing projects/cpp/Laughtale-game-engine/output",
+            "binaryPath": "/home/itailupo/Documents/programing projects/cpp/Laughtale-game-engine/output/LTE_Editor.out",
+            "binaryArgs": []
+        }
+    ]
 }

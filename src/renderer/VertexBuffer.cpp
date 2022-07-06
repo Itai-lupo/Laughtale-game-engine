@@ -1,5 +1,5 @@
-#include "VertexBuffer.h"
-#include "graphicsContext.h"
+#include "VertexBuffer.hpp"
+#include "graphicsContext.hpp"
 
 namespace LTE
 {

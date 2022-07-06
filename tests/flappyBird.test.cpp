@@ -1,9 +1,9 @@
-#include "LaughTaleEngine.h"
+#include "LaughTaleEngine.hpp"
 
 #include <gtest/gtest.h>
 #include <vector>
 #include <string.h>
-#include "imgui.h"
+#include <imgui.h>
 
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>

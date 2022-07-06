@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('d7/ddd/class_l_t_e_1_1open_g_l_vertex_
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="../../dd/de7/open_g_l_vertex_array_8h_source.html">openGLVertexArray.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d6/d5a/open_g_l_vertex_array_8hpp_source.html">openGLVertexArray.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LTE::openGLVertexArray:</div>
 <div class="dyncontent">
@@ -178,8 +178,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">   17</span>: <a class="code hl_function" href="../../dc/d17/class_l_t_e_1_1vertex_array_render_api.html#ae09e08a5459bfc289e0ae4cd893363e0">vertexArrayRenderApi</a>(<a class="code hl_variable" href="../../dc/d17/class_l_t_e_1_1vertex_array_render_api.html#a75acb7fdbb25a02b6d92a1978e414acf">parentContainer</a>){}</div>
-<div class="ttc" id="aclass_l_t_e_1_1vertex_array_render_api_html_a75acb7fdbb25a02b6d92a1978e414acf"><div class="ttname"><a href="../../dc/d17/class_l_t_e_1_1vertex_array_render_api.html#a75acb7fdbb25a02b6d92a1978e414acf">LTE::vertexArrayRenderApi::parentContainer</a></div><div class="ttdeci">vertexArray * parentContainer</div><div class="ttdef"><b>Definition:</b> vertexArray.h:14</div></div>
-<div class="ttc" id="aclass_l_t_e_1_1vertex_array_render_api_html_ae09e08a5459bfc289e0ae4cd893363e0"><div class="ttname"><a href="../../dc/d17/class_l_t_e_1_1vertex_array_render_api.html#ae09e08a5459bfc289e0ae4cd893363e0">LTE::vertexArrayRenderApi::vertexArrayRenderApi</a></div><div class="ttdeci">vertexArrayRenderApi(vertexArray *parentContainer)</div><div class="ttdef"><b>Definition:</b> vertexArray.h:16</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1vertex_array_render_api_html_a75acb7fdbb25a02b6d92a1978e414acf"><div class="ttname"><a href="../../dc/d17/class_l_t_e_1_1vertex_array_render_api.html#a75acb7fdbb25a02b6d92a1978e414acf">LTE::vertexArrayRenderApi::parentContainer</a></div><div class="ttdeci">vertexArray * parentContainer</div><div class="ttdef"><b>Definition:</b> vertexArray.hpp:14</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1vertex_array_render_api_html_ae09e08a5459bfc289e0ae4cd893363e0"><div class="ttname"><a href="../../dc/d17/class_l_t_e_1_1vertex_array_render_api.html#ae09e08a5459bfc289e0ae4cd893363e0">LTE::vertexArrayRenderApi::vertexArrayRenderApi</a></div><div class="ttdeci">vertexArrayRenderApi(vertexArray *parentContainer)</div><div class="ttdef"><b>Definition:</b> vertexArray.hpp:16</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -198,9 +198,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
-<div class="line"><span class="lineno">   13</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glDeleteVertexArrays(1, &amp;rendererId));</div>
+<div class="line"><span class="lineno">   13</span>        <a class="code hl_define" href="../../d1/d80/handle_open_gl_errors_8hpp.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glDeleteVertexArrays(1, &amp;rendererId));</div>
 <div class="line"><span class="lineno">   14</span>    }</div>
-<div class="ttc" id="ahandle_open_gl_errors_8h_html_add165165c35549fda9fb0100e16e9739"><div class="ttname"><a href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a></div><div class="ttdeci">#define GL_CALL(x)</div><div class="ttdef"><b>Definition:</b> handleOpenGlErrors.h:4</div></div>
+<div class="ttc" id="ahandle_open_gl_errors_8hpp_html_add165165c35549fda9fb0100e16e9739"><div class="ttname"><a href="../../d1/d80/handle_open_gl_errors_8hpp.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a></div><div class="ttdeci">#define GL_CALL(x)</div><div class="ttdef"><b>Definition:</b> handleOpenGlErrors.hpp:4</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -232,9 +232,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   43</span>    {</div>
 <div class="line"><span class="lineno">   44</span>        <span class="keywordflow">if</span>(vb != <a class="code hl_variable" href="../../dc/d17/class_l_t_e_1_1vertex_array_render_api.html#a75acb7fdbb25a02b6d92a1978e414acf">parentContainer</a>-&gt;<a class="code hl_function" href="../../df/db4/class_l_t_e_1_1vertex_array.html#a0c6a792bbdd04ed8651326091fd88f89">getVB</a>())</div>
 <div class="line"><span class="lineno">   45</span>            setBuffer();</div>
-<div class="line"><span class="lineno">   46</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBindVertexArray(rendererId));</div>
+<div class="line"><span class="lineno">   46</span>        <a class="code hl_define" href="../../d1/d80/handle_open_gl_errors_8hpp.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBindVertexArray(rendererId));</div>
 <div class="line"><span class="lineno">   47</span>    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1vertex_array_html_a0c6a792bbdd04ed8651326091fd88f89"><div class="ttname"><a href="../../df/db4/class_l_t_e_1_1vertex_array.html#a0c6a792bbdd04ed8651326091fd88f89">LTE::vertexArray::getVB</a></div><div class="ttdeci">VertexBuffer * getVB()</div><div class="ttdef"><b>Definition:</b> vertexArray.h:55</div></div>
+<div class="ttc" id="aclass_l_t_e_1_1vertex_array_html_a0c6a792bbdd04ed8651326091fd88f89"><div class="ttname"><a href="../../df/db4/class_l_t_e_1_1vertex_array.html#a0c6a792bbdd04ed8651326091fd88f89">LTE::vertexArray::getVB</a></div><div class="ttdeci">VertexBuffer * getVB()</div><div class="ttdef"><b>Definition:</b> vertexArray.hpp:55</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -272,7 +272,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="../../dd/d88/class_l_t_e_1_1open_g_l_base.html#a34c24dc1a8cdc313ea48288f9e414a43">LTE::openGLBase</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
-<div class="line"><span class="lineno">   18</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glGenVertexArrays(1, &amp;rendererId));</div>
+<div class="line"><span class="lineno">   18</span>        <a class="code hl_define" href="../../d1/d80/handle_open_gl_errors_8hpp.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glGenVertexArrays(1, &amp;rendererId));</div>
 <div class="line"><span class="lineno">   19</span>        setBuffer();</div>
 <div class="line"><span class="lineno">   20</span>    }</div>
 </div><!-- fragment --><div class="dynheader">
@@ -312,13 +312,13 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="../../dd/d88/class_l_t_e_1_1open_g_l_base.html#a9293bf809aed85f8d7c36f7fb2a14c77">LTE::openGLBase</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
-<div class="line"><span class="lineno">   51</span>        <a class="code hl_define" href="../../d4/dbe/handle_open_gl_errors_8h.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBindVertexArray(0));</div>
+<div class="line"><span class="lineno">   51</span>        <a class="code hl_define" href="../../d1/d80/handle_open_gl_errors_8hpp.html#add165165c35549fda9fb0100e16e9739">GL_CALL</a>(glBindVertexArray(0));</div>
 <div class="line"><span class="lineno">   52</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/renderer/openGL/<a class="el" href="../../dd/de7/open_g_l_vertex_array_8h_source.html">openGLVertexArray.h</a></li>
+<li>include/renderer/openGL/<a class="el" href="../../d6/d5a/open_g_l_vertex_array_8hpp_source.html">openGLVertexArray.hpp</a></li>
 <li>src/renderer/openGl/<a class="el" href="../../d6/d18/open_g_l_vertex_array_8cpp.html">openGLVertexArray.cpp</a></li>
 </ul>
 </div><!-- contents -->

@@ -1,8 +1,8 @@
-#include "connectionsManager.h"
+#include "connectionsManager.hpp"
 #include <string>
 #include <algorithm>
-#include "logger.h"
-#include "mesh.h"
+#include "logger.hpp"
+#include "mesh.hpp"
 
 
 

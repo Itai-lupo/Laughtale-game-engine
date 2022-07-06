@@ -1,5 +1,5 @@
-#include "shader.h"
-#include "graphicsContext.h"
+#include "shader.hpp"
+#include "graphicsContext.hpp"
 
 namespace LTE
 {

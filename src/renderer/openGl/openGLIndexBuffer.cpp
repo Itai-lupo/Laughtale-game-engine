@@ -1,6 +1,6 @@
-#include "openGLIndexBuffer.h"
-#include "handleOpenGlErrors.h"
-#include "glad/glad.h"
+#include "openGLIndexBuffer.hpp"
+#include "handleOpenGlErrors.hpp"
+#include <glad/glad.h>
 
 namespace LTE
 {

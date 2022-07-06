@@ -1,4 +1,4 @@
-#include "guitar.h"
+#include "guitar.hpp"
 
 namespace LTE
 {

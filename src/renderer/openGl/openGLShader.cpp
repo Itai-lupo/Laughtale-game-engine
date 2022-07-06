@@ -1,16 +1,16 @@
-#include "openGLShader.h"
-#include "glad/glad.h"
+#include "openGLShader.hpp"
+#include <glad/glad.h>
 
 #include <string>
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include "logger.h"
+#include "logger.hpp"
 
 #include <glm/gtx/string_cast.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "handleOpenGlErrors.h"
+#include "handleOpenGlErrors.hpp"
 
 namespace LTE
 {

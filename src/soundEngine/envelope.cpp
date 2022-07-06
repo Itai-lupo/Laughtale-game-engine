@@ -1,10 +1,10 @@
-#include "envelope.h"
-#include "logger.h"
+#include "envelope.hpp"
+#include "logger.hpp"
 #include <glm/glm.hpp>
 #include <glm/gtc/constants.hpp>
 #include <algorithm>
-#include "soundEngine.h"
-#include "soundSynthesizer.h"
+#include "soundEngine.hpp"
+#include "soundSynthesizer.hpp"
 
 namespace LTE
 {

@@ -1,7 +1,7 @@
-#include "sceneEvents.h"
-#include "app.h"
-#include "logger.h"
-#include "sceneManger.h"
+#include "sceneEvents.hpp"
+#include "app.hpp"
+#include "logger.hpp"
+#include "sceneManger.hpp"
 
 #include <algorithm>
 
@@ -62,7 +62,7 @@ namespace LTE
         eventList[t].push_back(callback);
     }    
 
-#include "logger.h"
+#include "logger.hpp"
     template<>
     void sceneEventsManger::trigerEvent<collisionData>(collisionData *sendor, sceneEventsType t)
     {

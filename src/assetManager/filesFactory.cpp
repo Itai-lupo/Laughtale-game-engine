@@ -1,10 +1,10 @@
-#include "filesFactory.h"
-#include "logger.h"
+#include "filesFactory.hpp"
+#include "logger.hpp"
 
-#include "glslFile.h"
-#include "jpgFile.h"
-#include "mp3File.h"
-#include "pngFile.h"
+#include "glslFile.hpp"
+#include "jpgFile.hpp"
+#include "mp3File.hpp"
+#include "pngFile.hpp"
 
 namespace LTE
 {   

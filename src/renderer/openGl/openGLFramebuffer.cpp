@@ -1,7 +1,7 @@
-#include "openGLFramebuffer.h"
-#include "glad/glad.h"
-#include "handleOpenGlErrors.h"
-#include "app.h"
+#include "openGLFramebuffer.hpp"
+#include <glad/glad.h>
+#include "handleOpenGlErrors.hpp"
+#include "app.hpp"
 
 namespace LTE
 {

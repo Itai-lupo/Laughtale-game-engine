@@ -1,4 +1,4 @@
-#include "linuxAPI.h"
+#include "linuxAPI.hpp"
 #include <GLFW/glfw3.h>
 
 namespace LTE 

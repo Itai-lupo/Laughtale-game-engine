@@ -1,17 +1,17 @@
 #ifdef __linux__
 
-#include "logger.h"
+#include "logger.hpp"
 #include <GLFW/glfw3.h>
 
-#include "OSAbstractFactory.h"
-#include "linuxAbstractFactory.h"
-#include "linuxAPI.h"
-#include "window.h"
+#include "OSAbstractFactory.hpp"
+#include "linuxAbstractFactory.hpp"
+#include "linuxAPI.hpp"
+#include "window.hpp"
 
-#include "linuxInputSoundDevice.h"
-#include "linuxOutputSoundDevice.h"
-#include "linuxInput.h"
-#include "app.h"
+#include "linuxInputSoundDevice.hpp"
+#include "linuxOutputSoundDevice.hpp"
+#include "linuxInput.hpp"
+#include "app.hpp"
 
 #include <string>
 

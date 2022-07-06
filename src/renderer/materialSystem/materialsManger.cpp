@@ -1,7 +1,7 @@
-#include "materialsManger.h"
+#include "materialsManger.hpp"
 #include <algorithm>
-#include "logger.h"
-#include "material.h"
+#include "logger.hpp"
+#include "material.hpp"
 
 namespace LTE
 {

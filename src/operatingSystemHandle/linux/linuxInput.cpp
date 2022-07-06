@@ -1,6 +1,6 @@
-#include "linuxInput.h"
-#include "window.h"
-#include "core.h"
+#include "linuxInput.hpp"
+#include "window.hpp"
+#include "core.hpp"
 #include <GLFW/glfw3.h>
 
 namespace LTE

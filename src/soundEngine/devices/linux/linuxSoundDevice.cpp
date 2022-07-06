@@ -1,6 +1,6 @@
-#include "linuxSoundDevice.h"
-#include "logger.h"
-#include "LTEError.h"
+#include "linuxSoundDevice.hpp"
+#include "logger.hpp"
+#include "LTEError.hpp"
 
 namespace LTE
 {

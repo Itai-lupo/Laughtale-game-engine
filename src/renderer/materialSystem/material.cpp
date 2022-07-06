@@ -1,6 +1,6 @@
-#include "material.h"
-#include "openGLTexture.h"
-#include "windowManger.h"
+#include "material.hpp"
+#include "openGLTexture.hpp"
+#include "windowManger.hpp"
 
 namespace LTE
 {

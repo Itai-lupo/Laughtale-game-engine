@@ -1,5 +1,5 @@
-#include "asioNetworkInterface.h"
-#include "logger.h"
+#include "asioNetworkInterface.hpp"
+#include "logger.hpp"
 
 namespace LTE::GMNM
 {

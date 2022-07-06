@@ -1,4 +1,4 @@
-#include "soundFilesPlayer.h"
+#include "soundFilesPlayer.hpp"
 namespace LTE
 {
     soundFile::soundFile(std::string filePath)

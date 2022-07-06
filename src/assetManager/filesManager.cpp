@@ -1,7 +1,7 @@
 #include <filesystem>
 
-#include "filesManager.h"
-#include "filesFactory.h"
+#include "filesManager.hpp"
+#include "filesFactory.hpp"
 
 namespace LTE
 {

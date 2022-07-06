@@ -1,10 +1,10 @@
-#include "openGLrenderApi.h"
-#include "glad/glad.h"
-#include "handleOpenGlErrors.h"
+#include "openGLrenderApi.hpp"
+#include <glad/glad.h>
+#include "handleOpenGlErrors.hpp"
 #include <GLFW/glfw3.h>
 
-#include "app.h"
-#include "logger.h"
+#include "app.hpp"
+#include "logger.hpp"
 
 namespace LTE
 {

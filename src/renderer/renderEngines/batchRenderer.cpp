@@ -1,9 +1,9 @@
-#include "batchRenderer.h"
-#include "mesh.h"
-#include "windowManger.h"
-#include "shaderTypes.h"
-#include "LTEError.h"
-#include "app.h"
+#include "batchRenderer.hpp"
+#include "mesh.hpp"
+#include "windowManger.hpp"
+#include "shaderTypes.hpp"
+#include "LTEError.hpp"
+#include "app.hpp"
 
 
 #include <algorithm>

@@ -1,5 +1,5 @@
-#include "vertexArray.h"
-#include "graphicsContext.h"
+#include "vertexArray.hpp"
+#include "graphicsContext.hpp"
 
 namespace LTE
 {

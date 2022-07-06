@@ -1,5 +1,5 @@
-#include "framebuffer.h"
-#include "graphicsContext.h"
+#include "framebuffer.hpp"
+#include "graphicsContext.hpp"
 
 namespace LTE
 {

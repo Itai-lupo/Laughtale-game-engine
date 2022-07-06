@@ -1,5 +1,5 @@
-#include "texture.h"
-#include "graphicsContext.h"
+#include "texture.hpp"
+#include "graphicsContext.hpp"
 
 namespace LTE
 {

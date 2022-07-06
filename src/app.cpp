@@ -1,20 +1,20 @@
-#include "app.h"
+#include "app.hpp"
 
-#include "core.h"
-#include "logger.h"
-#include "windowManger.h"
-#include "indexBuffer.h"
-#include "soundEngine.h"
-#include "soundSynthesizer.h"
-#include "materialsManger.h"
-#include "connectionsManager.h"
-#include "filesManager.h"
-#include "sceneManger.h"
+#include "core.hpp"
+#include "logger.hpp"
+#include "windowManger.hpp"
+#include "indexBuffer.hpp"
+#include "soundEngine.hpp"
+#include "soundSynthesizer.hpp"
+#include "materialsManger.hpp"
+#include "connectionsManager.hpp"
+#include "filesManager.hpp"
+#include "sceneManger.hpp"
 
 #include <chrono>
 #include <string>
 
-#include "openGLAPIAbstractFactory.h"
+#include "openGLAPIAbstractFactory.hpp"
 
 namespace LTE
 {

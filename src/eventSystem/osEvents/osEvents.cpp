@@ -1,6 +1,6 @@
-#include "osEvents.h"
-#include "app.h"
-#include "logger.h"
+#include "osEvents.hpp"
+#include "app.hpp"
+#include "logger.hpp"
 
 #include <algorithm>
 

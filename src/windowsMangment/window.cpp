@@ -1,7 +1,7 @@
-#include "window.h"
-#include "ImGuiEvents.h"
-#include "openGLrenderApi.h"
-#include "app.h"
+#include "window.hpp"
+#include "ImGuiEvents.hpp"
+#include "openGLrenderApi.hpp"
+#include "app.hpp"
 
 namespace LTE 
 {
