@@ -177,7 +177,7 @@ namespace LTE
                                 { 
                                     builder->
                                         setIndexBuffer(tileIndices, 6)->
-                                        setShaderName("res/topDownScene/shaders/tile.glsl")->
+                                        setShaderName("topDownScene/shaders/tile.glsl")->
                                         setVertices(tilePostions, 12); 
                                 }));
                                         

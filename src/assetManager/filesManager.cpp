@@ -1,14 +1,49 @@
 #include <filesystem>
+#include <dlfcn.h>
+#include <stdlib.h>
 
 #include "filesManager.hpp"
 #include "filesFactory.hpp"
+
+#include "component.hpp"
+#include <memory>
 
 namespace LTE
 {
     file *createFile(const std::string& fileType){ return NULL; }
     
-    std::string fileManager::filesBasePath = "./res/";
+    std::string fileManager::filesBasePath = "./assets/";
     router<file*> fileManager::filesTree;
+
+    // todo: refactor into a file type, add preprocesor and add more contorle over what to load and the compiler argumant as well as stream the compiler output into ui debug console.
+    void compileAndLoadFileTemp()
+    {
+        system("clang -shared assets/src/testComponent.cpp -I include/utls -I include/eventSystem -I include/defines -lstdc++  -fdeclspec -fPIC -Wl,-undefined,error -Wl,-flat_namespace -fvisibility=hidden -o test.so");
+        
+        void *fLib = dlopen("./test.so", RTLD_LAZY);
+        if ( !fLib ) {
+            LAUGHTALE_ENGINR_LOG_ERROR("Cannot open library: " << dlerror());
+        }
+        
+
+        if ( fLib ) {
+            std::shared_ptr<component> ( *fn )() = (std::shared_ptr<component> ( * )()) dlsym(fLib, "createComponent");
+
+            if(fn)
+            {
+                std::shared_ptr<component> a = fn();
+                LAUGHTALE_ENGINR_LOG_INFO("A")
+                if(a)
+                    LAUGHTALE_ENGINR_LOG_INFO(a->getName())
+                else
+                    LAUGHTALE_ENGINR_LOG_INFO("E" << a)
+            }
+            else
+                LAUGHTALE_ENGINR_LOG_ERROR("Cannot get symbol from library: " << dlerror());
+
+            dlclose ( fLib );
+        }
+    }
     
     void fileManager::init()
     {
@@ -29,6 +64,8 @@ namespace LTE
                 }
             }
         }
+
+        
     }
 
     void fileManager::close()
@@ -38,6 +75,6 @@ namespace LTE
 
     file *fileManager::getFile(const std::string& filePath)
     {
-        return filesTree[filePath];
+        return filesTree["assets/" + filePath];
     }
 }

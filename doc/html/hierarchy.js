@@ -31,12 +31,6 @@ var hierarchy =
       [ "pilarSummener", "d3/ded/classpilar_summener.html", null ],
       [ "player", "dc/d2e/classplayer.html", null ]
     ] ],
-    [ "LTE::componentAbstractFactory", "d3/d05/class_l_t_e_1_1component_abstract_factory.html", [
-      [ "LTE::envelopeFactory", "d6/d25/class_l_t_e_1_1envelope_factory.html", null ],
-      [ "LTE::matrialFactory", "df/d93/class_l_t_e_1_1matrial_factory.html", null ],
-      [ "LTE::orthographicCameraControlerFactory", "db/d7d/class_l_t_e_1_1orthographic_camera_controler_factory.html", null ],
-      [ "LTE::squreColliderFactory", "da/dda/class_l_t_e_1_1squre_collider_factory.html", null ]
-    ] ],
     [ "LTE::componentsFactory", "d7/dd9/class_l_t_e_1_1components_factory.html", null ],
     [ "LTE::GMNM::connection", "d4/db6/class_l_t_e_1_1_g_m_n_m_1_1connection.html", null ],
     [ "LTE::GMNM::connectionsManager", "db/d40/class_l_t_e_1_1_g_m_n_m_1_1connections_manager.html", null ],

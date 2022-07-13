@@ -25,14 +25,4 @@ namespace LTE
             }
     };
 
-    class squreColliderFactory: public componentAbstractFactory
-    {
-        public:
-            virtual ~squreColliderFactory() = default;
-
-            virtual std::shared_ptr<component> createComponent() override
-            {
-                return std::make_shared<squreCollider>();
-            }
-    };
 }  

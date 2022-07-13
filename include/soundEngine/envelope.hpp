@@ -112,16 +112,4 @@ namespace LTE
                 
             }
     };
-
-
-    class envelopeFactory: public componentAbstractFactory
-    {
-        public:
-            virtual ~envelopeFactory() = default;
-
-            virtual std::shared_ptr<component> createComponent() override
-            {
-                return std::make_shared<envelope>();
-            }
-    };
 }

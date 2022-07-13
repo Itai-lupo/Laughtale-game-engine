@@ -114,8 +114,6 @@ namespace LTE
                 virtual void displayComponentProprties() override
                 {
                     
-                }
-
-                
+                }                
     };
 }

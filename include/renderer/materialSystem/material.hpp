@@ -4,13 +4,17 @@
 #include "materialsManger.hpp"
 #include "texture.hpp"
 #include "component.hpp"
+
 #include <string>
+
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
+
 #include <imgui/imgui.h>
 
 namespace LTE
 {
+    // NOTE(material, component)
     class material: public component
     {
         private:
@@ -63,18 +67,7 @@ namespace LTE
 
             virtual void displayComponentProprties() override
             {            
-    			ImGui::ColorEdit4("Color", glm::value_ptr(baseColor));
-            }
-    };
-
-    class matrialFactory: public componentAbstractFactory
-    {
-        public:
-            virtual ~matrialFactory() = default;
-
-            virtual std::shared_ptr<component> createComponent() override
-            {
-                return std::make_shared<material>(glm::vec4{1, 1, 1, 1});
+                ImGui::ColorEdit4("Color", glm::value_ptr(baseColor));
             }
     };
 }

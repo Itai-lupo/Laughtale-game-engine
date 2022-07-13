@@ -17,7 +17,7 @@ namespace LTE
         vertexBufferData->pushElement({LT_FLOAT, 2, false, 4});
         vertexArrayData = new vertexArray(vertexBufferData);
         
-        s = assetManager::getAsset<shaderRenderBuffer>("res/shaders/Basic.glsl")->getShader();
+        s = assetManager::getAsset<shaderRenderBuffer>("shaders/Basic.glsl")->getShader();
         
 
     }

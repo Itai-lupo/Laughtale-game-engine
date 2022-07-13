@@ -10,7 +10,6 @@ var dir_ba7ade5504fed6ca2f6d5924b6d0c0e0 =
       [ "LTE::orthographicCamera", "d9/dd5/class_l_t_e_1_1orthographic_camera.html", "d9/dd5/class_l_t_e_1_1orthographic_camera" ]
     ] ],
     [ "orthographicCameraControler.hpp", "d2/dd8/orthographic_camera_controler_8hpp.html", [
-      [ "LTE::orthographicCameraControler", "da/def/class_l_t_e_1_1orthographic_camera_controler.html", "da/def/class_l_t_e_1_1orthographic_camera_controler" ],
-      [ "LTE::orthographicCameraControlerFactory", "db/d7d/class_l_t_e_1_1orthographic_camera_controler_factory.html", "db/d7d/class_l_t_e_1_1orthographic_camera_controler_factory" ]
+      [ "LTE::orthographicCameraControler", "da/def/class_l_t_e_1_1orthographic_camera_controler.html", "da/def/class_l_t_e_1_1orthographic_camera_controler" ]
     ] ]
 ];

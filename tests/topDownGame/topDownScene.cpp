@@ -126,7 +126,7 @@ class topDownGame : public ::testing::Test
             gameScene->renderToTextureAtEvent("rpg/screen texture", "window render/obj file load test/render scene");
 
 
-            LTE::assetManager::getAsset<LTE::texture>("res/topDownScene/textures/Meta data assets files/ENVIRONMENT/tilesets/dungeon-tileset.png")->
+            LTE::assetManager::getAsset<LTE::texture>("topDownScene/textuMeta data assets files/ENVIRONMENT/tilesets/dungeon-tileset.png")->
                 setSprtieData(
                     {
                         {{1, 48}, {15, 15}},
@@ -134,7 +134,7 @@ class topDownGame : public ::testing::Test
                     
                     });
             
-            LTE::assetManager::getAsset<LTE::texture>("res/topDownScene/textures/Package/atlas_16x.png")->
+            LTE::assetManager::getAsset<LTE::texture>("topDownScene/textuPackage/atlas_16x.png")->
                 setSprtieData(
                     {
                         {{16, 112}, {16, 16}},                    
@@ -142,7 +142,7 @@ class topDownGame : public ::testing::Test
                         {{16, 197}, {16, 32}},                    
                     });
 
-            LTE::assetManager::getAsset<LTE::texture>("res/topDownScene/textures/PIPOYA FREE RPG Character Sprites NEKONIN/pipo-nekonin011.png")->
+            LTE::assetManager::getAsset<LTE::texture>("topDownScene/textuPIPOYA FREE RPG Character Sprites NEKONIN/pipo-nekonin011.png")->
                 setSprtieData({32, 32});
             
 
@@ -154,7 +154,7 @@ class topDownGame : public ::testing::Test
                                 [=](LTE::tilemap::tileBuilder *tileBuild)
                                 {
                                     tileBuild->
-                                        setTileMatrial(new LTE::material("res/topDownScene/textures/Package/atlas_16x.png"))->
+                                        setTileMatrial(new LTE::material("topDownScene/textuPackage/atlas_16x.png"))->
                                         setLayer(0)->
                                         setTilePostion({x, y});
                                 }
@@ -166,7 +166,7 @@ class topDownGame : public ::testing::Test
                         [=](LTE::tilemap::tileBuilder *tileBuild)
                         {
                             tileBuild->
-                                setTileMatrial(new LTE::material("res/topDownScene/textures/Package/atlas_16x.png"))->
+                                setTileMatrial(new LTE::material("topDownScene/textuPackage/atlas_16x.png"))->
                                 setLayer(0)->
                                 setTilePostion({0, i});
                         }
@@ -176,7 +176,7 @@ class topDownGame : public ::testing::Test
                         [=](LTE::tilemap::tileBuilder *tileBuild)
                         {
                             tileBuild->
-                                setTileMatrial(new LTE::material("res/topDownScene/textures/Package/atlas_16x.png"))->
+                                setTileMatrial(new LTE::material("topDownScene/textuPackage/atlas_16x.png"))->
                                 setLayer(0)->
                                 setTilePostion({9, i});
                         }
@@ -187,7 +187,7 @@ class topDownGame : public ::testing::Test
                         [=](LTE::tilemap::tileBuilder *tileBuild)
                         {
                             tileBuild->
-                                setTileMatrial(new LTE::material("res/topDownScene/textures/Package/atlas_16x.png", 2))->
+                                setTileMatrial(new LTE::material("topDownScene/textuPackage/atlas_16x.png", 2))->
                                 setLayer(0)->
                                 setTilePostion({i, 0});
                         }
@@ -197,7 +197,7 @@ class topDownGame : public ::testing::Test
                         [=](LTE::tilemap::tileBuilder *tileBuild)
                         {
                             tileBuild->
-                                setTileMatrial(new LTE::material("res/topDownScene/textures/Package/atlas_16x.png", 1))->
+                                setTileMatrial(new LTE::material("topDownScene/textuPackage/atlas_16x.png", 1))->
                                 setLayer(0)->
                                 setTilePostion({i, 9});
                         }
@@ -209,7 +209,7 @@ class topDownGame : public ::testing::Test
                     [=](LTE::tilemap::tileBuilder *tileBuild)
                     {
                         tileBuild->
-                            setTileMatrial(new LTE::material("res/topDownScene/textures/PIPOYA FREE RPG Character Sprites NEKONIN/pipo-nekonin011.png", 1, 3))->
+                            setTileMatrial(new LTE::material("topDownScene/textuPIPOYA FREE RPG Character Sprites NEKONIN/pipo-nekonin011.png", 1, 3))->
                             setLayer(1)->
                             setTilePostion({5, 5})->
                             AddCompponnetToTile(new player());

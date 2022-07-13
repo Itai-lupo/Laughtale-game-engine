@@ -18,12 +18,4 @@ namespace LTE
             virtual std::string getName() = 0;
             virtual void displayComponentProprties() = 0;
     };
-
-    class componentAbstractFactory
-    {
-        public:
-            virtual ~componentAbstractFactory() = default;
-
-            virtual std::shared_ptr<component> createComponent() = 0;
-    };
 }

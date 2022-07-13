@@ -95,16 +95,16 @@ $(document).ready(function(){initNavTree('d7/dd9/class_l_t_e_1_1components_facto
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af69a4de8b4d8e87abd59763d216bfe0e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd9/class_l_t_e_1_1components_factory.html#af69a4de8b4d8e87abd59763d216bfe0e">addComponentType</a> (const std::string &amp;componentType, <a class="el" href="../../d3/d05/class_l_t_e_1_1component_abstract_factory.html">componentAbstractFactory</a> *componentFactory)</td></tr>
-<tr class="separator:af69a4de8b4d8e87abd59763d216bfe0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08c4fab5e23635b56e5588a29f7c7af9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd9/class_l_t_e_1_1components_factory.html#a08c4fab5e23635b56e5588a29f7c7af9">addComponentType</a> (const std::string &amp;componentType, std::function&lt; std::shared_ptr&lt; <a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html">component</a> &gt;()&gt; componentFactory)</td></tr>
+<tr class="separator:a08c4fab5e23635b56e5588a29f7c7af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c2cacdd78b18b3a4375317baffbfb81"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html">component</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd9/class_l_t_e_1_1components_factory.html#a5c2cacdd78b18b3a4375317baffbfb81">createComponent</a> (const std::string &amp;componentType)</td></tr>
 <tr class="separator:a5c2cacdd78b18b3a4375317baffbfb81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65c1970dc8b531bd66b1b3ba3e904c05"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd9/class_l_t_e_1_1components_factory.html#a65c1970dc8b531bd66b1b3ba3e904c05">forEachComponentType</a> (std::function&lt; void(const std::string &amp;)&gt; callback)</td></tr>
 <tr class="separator:a65c1970dc8b531bd66b1b3ba3e904c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af69a4de8b4d8e87abd59763d216bfe0e" name="af69a4de8b4d8e87abd59763d216bfe0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af69a4de8b4d8e87abd59763d216bfe0e">&#9670;&nbsp;</a></span>addComponentType()</h2>
+<a id="a08c4fab5e23635b56e5588a29f7c7af9" name="a08c4fab5e23635b56e5588a29f7c7af9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08c4fab5e23635b56e5588a29f7c7af9">&#9670;&nbsp;</a></span>addComponentType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -121,7 +121,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d3/d05/class_l_t_e_1_1component_abstract_factory.html">componentAbstractFactory</a> *&#160;</td>
+          <td class="paramtype">std::function&lt; std::shared_ptr&lt; <a class="el" href="../../d9/d4b/class_l_t_e_1_1component.html">component</a> &gt;()&gt;&#160;</td>
           <td class="paramname"><em>componentFactory</em>&#160;</td>
         </tr>
         <tr>
@@ -168,7 +168,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
 <div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span>(componentsTypes[componentType])</div>
-<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span> componentsTypes[componentType]-&gt;createComponent();</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span> componentsTypes[componentType]();</div>
 <div class="line"><span class="lineno">   30</span>        <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">   31</span>        {</div>
 <div class="line"><span class="lineno">   32</span>            <a class="code hl_define" href="../../d6/da3/logger_8hpp.html#aae4cf1bd083983040d4d6572a9b0d8bf">LAUGHTALE_ENGINR_LOG_ERROR</a>(<span class="stringliteral">&quot;component type: &quot;</span> &lt;&lt; componentType &lt;&lt; <span class="stringliteral">&quot; not registry in the system. can&#39;t create component&quot;</span>);</div>

@@ -8,16 +8,16 @@
 
 namespace LTE
 {
-	std::map<std::string, componentAbstractFactory*> componentsFactory::componentsTypes = 
+	std::map<std::string, std::function<std::shared_ptr<component>()>> componentsFactory::componentsTypes = 
 	{
-		{"material", new matrialFactory()},
-		{"squreCollider", new squreColliderFactory()},
-		{"orthographicCameraControler", new orthographicCameraControlerFactory()},
-		{"envelope", new envelopeFactory()},
-		{"squreCollider", new squreColliderFactory()},
+		{"material", []() -> std::shared_ptr<component>{ return std::make_shared<material>(glm::vec4{1, 1, 1, 1}); }},
+		{"squreCollider", []() -> std::shared_ptr<component>{ return std::make_shared<squreCollider>(); }},
+		{"orthographicCameraControler", []() -> std::shared_ptr<component>{ return std::make_shared<orthographicCameraControler>(1); }},
+		{"envelope", []() -> std::shared_ptr<component>{ return std::make_shared<envelope>(); }},
+		{"squreCollider", []() -> std::shared_ptr<component>{ return std::make_shared<squreCollider>(); }}
 	};
 
-	void componentsFactory::addComponentType(const std::string& componentType, componentAbstractFactory* componentFactory)
+	void componentsFactory::addComponentType(const std::string& componentType, std::function<std::shared_ptr<component>()> componentFactory)
 	{
         componentsTypes[componentType] = componentFactory;
 
@@ -26,7 +26,7 @@ namespace LTE
 	std::shared_ptr<component> componentsFactory::createComponent(const std::string& componentType)
 	{
         if(componentsTypes[componentType])
-            return componentsTypes[componentType]->createComponent();
+            return componentsTypes[componentType]();
         else
         {
             LAUGHTALE_ENGINR_LOG_ERROR("component type: " << componentType << " not registry in the system. can't create component");

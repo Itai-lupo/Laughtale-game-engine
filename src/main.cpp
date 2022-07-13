@@ -45,7 +45,7 @@ class cube: LTE::osEvent
                 {
                     builder->setIndexBuffer(pilarIndices, 6 * 6)->
                     setVertices(pilarPostions, 8*3)->
-                    setShaderName("res/moduleLoading/shaders/Basic.glsl");
+                    setShaderName("shaders/cube.glsl");
                 }));
             cubeObj->addComponent<LTE::material>(glm::vec4({1.0f, 1.0f, 0.0f, 1.0f}));
         }
@@ -201,7 +201,7 @@ class editor: LTE::osEvent
                                         {
                                             builder->setIndexBuffer(pilarIndices, 6 * 6)->
                                             setVertices(pilarPostions, 8*3)->
-                                            setShaderName("res/moduleLoading/shaders/Basic.glsl");
+                                            setShaderName("shaders/cube.glsl");
                                         }));
                     ImGui::CloseCurrentPopup();
                 }

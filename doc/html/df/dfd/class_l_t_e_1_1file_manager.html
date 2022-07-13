@@ -130,9 +130,9 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
-<div class="line"><span class="lineno">   36</span>        filesTree.clearAndDelete();</div>
-<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>    {</div>
+<div class="line"><span class="lineno">   73</span>        filesTree.clearAndDelete();</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -221,9 +221,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   40</span>    {</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">return</span> filesTree[filePath];</div>
-<div class="line"><span class="lineno">   42</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>    {</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> filesTree[<span class="stringliteral">&quot;assets/&quot;</span> + filePath];</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -249,26 +249,28 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; dirEntry : std::filesystem::recursive_directory_iterator(filesBasePath))</div>
-<div class="line"><span class="lineno">   16</span>        {</div>
-<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">if</span> (!dirEntry.is_directory() &amp;&amp; std::string(dirEntry.path().extension()) != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><span class="lineno">   18</span>            {</div>
-<div class="line"><span class="lineno">   19</span>                filesTree.addRoute(std::string(dirEntry.path().relative_path()).erase(0, 2).append(<span class="stringliteral">&quot;/&quot;</span>));</div>
-<div class="line"><span class="lineno">   20</span> </div>
-<div class="line"><span class="lineno">   21</span>                std::string fileType = std::string(dirEntry.path().extension()).erase(0, 1);</div>
-<div class="line"><span class="lineno">   22</span>                std::string filePath = std::string(dirEntry.path()).erase(0, 2);</div>
-<div class="line"><span class="lineno">   23</span> </div>
-<div class="line"><span class="lineno">   24</span>                file *fileInDirEntry = <a class="code hl_function" href="../../d5/d69/class_l_t_e_1_1files_factory.html#a5015959845c7b58acad47e6cb4f57a10">filesFactory::createFile</a>(filePath, fileType);</div>
-<div class="line"><span class="lineno">   25</span>                <span class="keywordflow">if</span>(fileInDirEntry)</div>
-<div class="line"><span class="lineno">   26</span>                {</div>
-<div class="line"><span class="lineno">   27</span>                    fileInDirEntry-&gt;loadFileData();</div>
-<div class="line"><span class="lineno">   28</span>                    filesTree.addValue(filePath, fileInDirEntry);</div>
-<div class="line"><span class="lineno">   29</span>                }</div>
-<div class="line"><span class="lineno">   30</span>            }</div>
-<div class="line"><span class="lineno">   31</span>        }</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-<div class="ttc" id="aclass_l_t_e_1_1files_factory_html_a5015959845c7b58acad47e6cb4f57a10"><div class="ttname"><a href="../../d5/d69/class_l_t_e_1_1files_factory.html#a5015959845c7b58acad47e6cb4f57a10">LTE::filesFactory::createFile</a></div><div class="ttdeci">static file * createFile(const std::string &amp;filePath, std::string fileType)</div><div class="ttdef"><b>Definition:</b> filesFactory.cpp:25</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>    {</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; dirEntry : std::filesystem::recursive_directory_iterator(filesBasePath))</div>
+<div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">if</span> (!dirEntry.is_directory() &amp;&amp; std::string(dirEntry.path().extension()) != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">   53</span>            {</div>
+<div class="line"><span class="lineno">   54</span>                filesTree.addRoute(std::string(dirEntry.path().relative_path()).erase(0, 2).append(<span class="stringliteral">&quot;/&quot;</span>));</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>                std::string fileType = std::string(dirEntry.path().extension()).erase(0, 1);</div>
+<div class="line"><span class="lineno">   57</span>                std::string filePath = std::string(dirEntry.path()).erase(0, 2);</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>                file *fileInDirEntry = <a class="code hl_function" href="../../d5/d69/class_l_t_e_1_1files_factory.html#a5015959845c7b58acad47e6cb4f57a10">filesFactory::createFile</a>(filePath, fileType);</div>
+<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">if</span>(fileInDirEntry)</div>
+<div class="line"><span class="lineno">   61</span>                {</div>
+<div class="line"><span class="lineno">   62</span>                    fileInDirEntry-&gt;loadFileData();</div>
+<div class="line"><span class="lineno">   63</span>                    filesTree.addValue(filePath, fileInDirEntry);</div>
+<div class="line"><span class="lineno">   64</span>                }</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>        </div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+<div class="ttc" id="aclass_l_t_e_1_1files_factory_html_a5015959845c7b58acad47e6cb4f57a10"><div class="ttname"><a href="../../d5/d69/class_l_t_e_1_1files_factory.html#a5015959845c7b58acad47e6cb4f57a10">LTE::filesFactory::createFile</a></div><div class="ttdeci">static file * createFile(const std::string &amp;filePath, std::string fileType)</div><div class="ttdef"><b>Definition:</b> filesFactory.cpp:24</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

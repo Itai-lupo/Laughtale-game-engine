@@ -13,8 +13,7 @@ namespace LTE
         {"mp3", new mp3FileFactory()},
         {"glsl", new glslFileFactory},
         {"png", new pngFileFactory()},
-        {"jpg", new jpgFileFactory()},
-        {"txt", new jpgFileFactory()}
+        {"jpg", new jpgFileFactory()}
     };
 
     void filesFactory::addFileType(const std::string& fileExt, fileFactory* fileCreater)
@@ -24,7 +23,7 @@ namespace LTE
 
     file* filesFactory::createFile(const std::string& filePath, std::string fileType)
     {
-        if(fileTypes[fileType])
+        if(fileTypes.find(fileType) != fileTypes.end())
             return fileTypes[fileType]->createFile(filePath);
         else
         {

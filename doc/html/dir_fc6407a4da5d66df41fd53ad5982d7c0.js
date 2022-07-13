@@ -5,8 +5,7 @@ var dir_fc6407a4da5d66df41fd53ad5982d7c0 =
     [ "envelope.hpp", "d5/d5c/envelope_8hpp.html", [
       [ "LTE::sondSampelData", "d8/d6d/struct_l_t_e_1_1sond_sampel_data.html", "d8/d6d/struct_l_t_e_1_1sond_sampel_data" ],
       [ "LTE::osc", "d6/dd7/class_l_t_e_1_1osc.html", null ],
-      [ "LTE::envelope", "d2/d04/class_l_t_e_1_1envelope.html", "d2/d04/class_l_t_e_1_1envelope" ],
-      [ "LTE::envelopeFactory", "d6/d25/class_l_t_e_1_1envelope_factory.html", "d6/d25/class_l_t_e_1_1envelope_factory" ]
+      [ "LTE::envelope", "d2/d04/class_l_t_e_1_1envelope.html", "d2/d04/class_l_t_e_1_1envelope" ]
     ] ],
     [ "sequencer.hpp", "d1/d7f/sequencer_8hpp.html", [
       [ "LTE::note", "dd/dab/struct_l_t_e_1_1note.html", "dd/dab/struct_l_t_e_1_1note" ],

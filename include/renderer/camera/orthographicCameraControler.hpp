@@ -48,16 +48,4 @@ namespace LTE
 
 
     };
-
-
-    class orthographicCameraControlerFactory: public componentAbstractFactory
-    {
-        public:
-            virtual ~orthographicCameraControlerFactory() = default;
-
-            virtual std::shared_ptr<component> createComponent() override
-            {
-                return std::make_shared<orthographicCameraControler>(1);
-            }
-    };
 }
