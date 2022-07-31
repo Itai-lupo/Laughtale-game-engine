@@ -1,26 +1,4 @@
 # Laugh Tale game Engine
-## exprmintal game enigne for linux game dev
-
-run and compaile with ./run.sh
-debug and compaile tests with vs code debug tools
-run and compail tests with ./test.sh
-
-c/cpp files in ./src
-h files in ./include
-test.cpp files in ./tests, using gtest
-static libarise in ./vendor
-dynamic libarise in ./DLLS
-
-gen doc and commit and push to git ./push.sh
-
-project compiles with Makefile
-
-extrnal libraries used:
-      glog
-      GLFW
-      gflags
-      gtest
-      glm
-      imgui
-      stb_image
-      glad
+project over.
+see newTale game engine for my new game engine project.
+I decided to move to a new project in order to use every thing that I learned in this educational project and try to create a compilte game engine that works on indstry standarts and offer a real usable feature set.
